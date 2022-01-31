@@ -1,0 +1,177 @@
+/**=====================================================
+                FOOTER SECTION START
+=====================================================**/
+.footer {
+    padding: length(80) length(0);
+
+    .footerlogo,
+    .footnewsletter,
+    .aboutlist,
+    .contactlist,
+    .sociallist,
+    .contact-title,
+    .about-title,
+    .copyright-text {
+        position: relative;
+        z-index: 2;
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(80);
+
+        .stecnewsletter {
+            @include flex-column;
+            gap: length(40);
+
+            @include breakpoint(tablet991) {
+                align-items: center;
+            }
+
+            .footerlogo {
+                width: length(200);
+                height: length(56);
+                overflow: hidden;
+                @include flex-center;
+
+                img {
+                    @include wh100;
+                    object-fit: cover;
+                }
+            }
+
+            .footnewsletter {
+                background: $white;
+                padding: length(5);
+                width: length(332);
+                height: length(46);
+                @include flex-center-vert;
+
+                .inputfield {
+                    @include setBgColor(transparent, $gray-800);
+                    @include font-face($lorenza, style('normal'), size(13), weight('normal'), line-height(13, 13));
+                    padding: length(0) length(11);
+                    width: calc(100% - 6.125rem);
+                    @include h100;
+
+                    &::placeholder {
+                        color: $newsletterPlaceholder;
+                    }
+                }
+
+                .btn-subscribe {
+                    width: length(98);
+                    height: length(36);
+                    @include flex-center;
+                    text-align: center;
+                    @include setBgColor($blue, $white);
+                    @include font-face($raleway, style('normal'), size(12), weight('semibold'), line-height(12, 12));
+                    @include transitions;
+
+                    @include hover {
+                        background: $concernHoverBg;
+                    }
+                }
+            }
+        }
+
+        .aboutinfo {
+            @include flex-column;
+            gap: length(24);
+
+            @include breakpoint(tablet991) {
+                align-items: center;
+            }
+
+            .about-title {
+                @include font-face($lorenza, style('normal'), size(16), weight('medium'), line-height(26, 16));
+                color: $white;
+            }
+
+            .aboutlist {
+                @include list-vertical;
+                gap: length(24);
+
+                &-link {
+                    @include font-face($lorenza, style('normal'), size(16), weight('normal'), line-height(26, 16));
+                    color: $white;
+                    @include transitions;
+
+                    @include hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+
+        .contactinfo {
+            @include flex-column;
+            gap: length(24);
+
+            @include breakpoint(tablet991) {
+                align-items: center;
+            }
+
+            .contact-title {
+                @include font-face($lorenza, style('normal'), size(16), weight('medium'), line-height(26, 16));
+                color: $white;
+            }
+
+            .contactlist-sociallist {
+                @include flex-column;
+                gap: length(40);
+
+                @include breakpoint(tablet991) {
+                    align-items: center;
+                }
+
+                .contactlist {
+                    @include list-vertical;
+                    gap: length(12);
+
+                    @include breakpoint(tablet991) {
+                        align-items: center;
+                        text-align: center;
+                        max-width: 100%;
+                    }
+
+                    &-link {
+                        @include font-face($lorenza, style('normal'), size(16), weight('normal'), line-height(26, 16));
+                        color: $white;
+                        @include transitions;
+
+                        @include hover {
+                            color: $primary;
+                        }
+                    }
+                }
+
+                .sociallist {
+                    @include list-horizontal;
+                    gap: length(40);
+
+                    @include breakpoint(tablet991) {
+                        align-items: center;
+                    }
+
+                    @include breakpoint(phone575) {
+                        gap: length(24);
+                    }
+
+                    &-link {
+                        @include square(length(36));
+                        @include flex-center;
+                        @include circle;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+
+        .copyright-text {
+            color: $white;
+            @include font-face($lorenza, style('normal'), size(12), weight('normal'), line-height(20, 12));
+            text-align: center;
+        }
+    }
+}

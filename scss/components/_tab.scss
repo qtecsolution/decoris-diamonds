@@ -1,0 +1,33 @@
+.nav-tabs {
+    border-bottom: 0;
+    gap: length(19) length(24);
+
+    .nav-link {
+        color: transparent;
+        margin-bottom: length(0);
+        background: transparent;
+        border: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding: length(0);
+
+        &:hover:not(.active) {
+            border-color: transparent;
+            color: transparent;
+
+            .card-concern {
+                filter: $shadowBig;
+            }
+        }
+
+        &.active {
+            color: transparent;
+            background: transparent;
+            border-color: transparent;
+
+            .card-concern {
+                filter: $shadowBig;
+            }
+        }
+    }
+}

@@ -1,0 +1,121 @@
+/**=======================================================**
+                        HEADER SECTION START
+**=======================================================**/
+
+.header {
+    position: relative;
+    height: length(100);
+    z-index: 1000;
+    @include flex-center-vert;
+
+    &-content {
+        @include flex-center-between;
+
+        .brandlogo {
+            .link {
+                width: length(170);
+                height: length(48);
+                @include flex-center;
+                overflow: hidden;
+
+                img {
+                    @include wh100;
+                    object-fit: cover;
+
+                }
+            }
+        }
+
+        .mainmenu {
+            @include flex-center-between;
+            width: calc(100% - 10.625rem);
+
+            .mainlist {
+                @include list-horizontal;
+                gap: length(36);
+                width: calc(100% - 3rem);
+                justify-content: center;
+
+                @include breakpoint(tablet991) {
+                    display: none;
+                }
+
+                &-link {
+                    @include font-face($raleway, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+                    color: rgba($white, 0.6);
+                    overflow: hidden;
+
+                    .char {
+                        overflow: hidden;
+                        color: transparent;
+
+                        &:before,
+                        &:after {
+                            visibility: visible;
+                            color: rgba($white, 0.6);
+                            transition: transform 250ms cubic-bezier(0.9, 0, .2, 1);
+                            transition-delay: calc(0.2s + (0.02s * (var(--char-index))));
+                        }
+
+                        &:before {
+                            transition-delay: calc(0.02s * (var(--char-index)));
+                            transform: translateY(100%);
+                        }
+                    }
+
+                    &:hover:not(.active) {
+                        .char {
+                            &::before {
+                                transition-delay: calc(0.2s + (0.02s * (var(--char-index))));
+                                transform: translateY(0%);
+                                color: $white;
+                            }
+
+                            &::after {
+                                transition-delay: calc(0.02s * (var(--char-index)));
+                                transform: translateY(-100%);
+                            }
+                        }
+                    }
+
+                    &.active {
+                        .char {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+
+            .changelanguage {
+                width: length(48);
+                background: url("data:image/svg+xml,%3Csvg width='11' height='12' viewBox='0 0 11 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_255_35111' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='12'%3E%3Cpath d='M4.9826 8.15869L1.68519 4.39022C1.29623 3.9457 1.61191 3.25 2.20259 3.25H8.7974C9.38808 3.25 9.70376 3.9457 9.3148 4.39022L6.01739 8.15869C5.74348 8.47173 5.25651 8.47173 4.9826 8.15869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_255_35111)'%3E%3Crect y='0.5' width='11' height='11' fill='white' fill-opacity='0.6'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right;
+                color: rgba($white, 0.6);
+                @include font-face($raleway, style('normal'), size(14), weight('semibold'), line-height(14, 14));
+                appearance: none;
+                cursor: pointer;
+                text-align: center;
+            }
+        }
+    }
+
+    &.inverted {
+        position: fixed;
+        top: 0;
+        left: 0;
+        @include w100;
+        background: $black;
+        @extend %animation;
+        @extend %slideDownIn;
+
+        .mainmenu {
+            .changelanguage {
+                background-color: $black;
+                border: none;
+            }
+        }
+    }
+}
+
+/**=======================================================**
+                        HEADER SECTION END
+**=======================================================**/

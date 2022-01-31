@@ -1,0 +1,556 @@
+/**=====================================================
+                    STECH-BANNER
+=====================================================**/
+.stechbanner {
+    background: url(../images/stech-banner.png) no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    @include flex-center;
+
+    &-content {
+        @include flex-center-column;
+        text-align: center;
+        gap: length(36);
+
+        .banner-3d {
+            position: relative;
+            z-index: 2;
+            width: length(200);
+            height: length(400);
+
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
+
+        .banner-details {
+            position: relative;
+            z-index: 2;
+
+            .banner-title {
+                color: $white;
+                letter-spacing: length(1.6);
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+/**=====================================================
+            STECH-BANNER-SIMULATOR(CANVAS)
+=====================================================**/
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include wh100;
+    background: url(../images/stech-banner.png) no-repeat center center/cover;
+    z-index: 1;
+}
+
+/**=====================================================
+            STECH-BANNER-SIMULATOR(CANVAS)
+=====================================================**/
+.stechdigital {
+    background: $white;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    padding: length(160) length(0);
+
+    &-content {
+        @include flex-column;
+        gap: length(64);
+    }
+
+    &-header {
+        position: relative;
+
+        .ribbon {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            z-index: -1;
+            width: length(143);
+            height: length(256);
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
+
+        .stechdigital-title {
+            @include font-face($raleway, style('normal'), size(40), weight('bold'), line-height(60, 40));
+            color: $gray-800;
+        }
+    }
+
+    &-body {
+        .setchdigital-text {
+            @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            color: $gray-600;
+
+            .link {
+                @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            }
+        }
+    }
+}
+
+/**=====================================================
+            OUT-CONCERN SECTION START
+=====================================================**/
+.ourconcern {
+    background: $bodyBg;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0);
+
+    &-content {
+        @include flex-column;
+        gap: length(44);
+
+        .concern-brand {
+            @include flex-center-vert;
+            gap: length(19) length(24);
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+
+        .concern-info {
+            @include flex-end;
+
+            @include breakpoint(tablet991) {
+                justify-content: center;
+            }
+
+            .concern-thumbnail {
+                width: length(424);
+                height: length(638);
+                @include flex-center;
+                position: relative;
+                @include transitions;
+
+                @include breakpoint(phone768) {
+                    @include w100;
+                    height: length(424);
+                }
+
+                @include breakpoint(phone575) {
+                    overflow: hidden;
+                }
+
+                img {
+                    @include w100;
+                    object-fit: contain;
+                }
+
+                .info {
+                    position: absolute;
+                    bottom: 0;
+                    left: -20%;
+                    z-index: 2;
+                    @include setBgColor($gradient-1, $gray-50);
+                    width: length(330);
+                    height: length(342);
+                    @include flex-center-vert;
+
+                    @include breakpoint(phone768) {
+                        left: -8%;
+                    }
+
+                    @include breakpoint(phone575) {
+                        left: 0;
+                        @include w100;
+                        height: length(240);
+                    }
+
+                    &-title {
+                        @include breakpoint(phone768) {
+                            @include font-face($raleway, style('normal'), size(44), weight('medium'), line-height(55, 44));
+                        }
+
+                        @include breakpoint(phone575) {
+                            @include font-face($raleway, style('normal'), size(32), weight('medium'), line-height(43, 32));
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-details {
+        @include flex-column;
+        gap: length(12);
+        margin-top: length(80);
+    }
+
+    &-header {
+        position: relative;
+
+        .ribbon {
+            position: absolute;
+            top: auto;
+            bottom: length(0);
+            left: 0;
+            z-index: -1;
+            width: length(80);
+            height: length(140);
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
+
+        .ourconcern-title {
+            @include font-face($raleway, style('normal'), size(40), weight('bold'), line-height(60, 40));
+            color: $gray-800;
+        }
+    }
+
+    &-body {
+        .ourconcern-text {
+            @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+            color: $gray-600;
+        }
+
+    }
+}
+
+/**=====================================================
+            OUT-SERVICE SECTION START
+=====================================================**/
+.ourservice {
+    background: url(../images/pages/home/our-services/services-bg.png) no-repeat center center/cover;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0);
+    @include flex-column;
+    gap: length(80);
+
+    &-header {
+        position: relative;
+        z-index: 2;
+        margin: length(80) length(0) length(12);
+
+        .ribbon {
+            position: absolute;
+            top: auto;
+            bottom: length(0);
+            left: 0;
+            z-index: -1;
+            width: length(80);
+            height: length(140);
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
+
+        .service-title {
+            @include font-face($raleway, style('normal'), size(40), weight('bold'), line-height(60, 40));
+            color: $white;
+        }
+    }
+
+    &-body {
+        position: relative;
+        z-index: 2;
+
+        .service-text {
+            color: $white;
+        }
+    }
+
+    &-details {
+        overflow: hidden;
+
+        .services {
+            display: flex;
+            @include w100;
+            gap: length(24);
+            animation: marquee 10s linear infinite;
+
+            @include hover {
+                animation-play-state: paused;
+            }
+
+            @keyframes marquee {
+                0% {
+                    transform: translateX(100%);
+                }
+
+                100% {
+                    transform: translateX(-100%)
+                }
+            }
+        }
+    }
+}
+
+/**=====================================================
+            SERVICE-INFO SECTION START
+=====================================================**/
+.serviceinfo {
+    background: $white;
+    position: relative;
+    z-index: 2;
+
+    &-content {
+        @include flex-center-vert;
+        gap: 0;
+
+        .card-serviceinfo {
+            width: 25%;
+            @include transform(scaleX(1));
+            @include transitions;
+
+            @include hover {
+                // @include transform(scaleX(1.2));
+                width: 30%;
+            }
+        }
+    }
+}
+
+/**=====================================================
+                OUR-CLIENTS SECTION START
+=====================================================**/
+.ourclients {
+    background: $white;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0);
+
+    &-content {
+        @include flex-column;
+        gap: length(80);
+    }
+
+    &-details {
+        @include flex-column;
+        gap: length(12);
+        margin-top: length(80);
+    }
+
+    &-header {
+        position: relative;
+
+        .ribbon {
+            position: absolute;
+            top: auto;
+            bottom: length(0);
+            left: 0;
+            z-index: -1;
+            width: length(80);
+            height: length(140);
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: contain;
+            }
+        }
+
+        .ourclients-title {
+            @include font-face($raleway, style('normal'), size(40), weight('bold'), line-height(60, 40));
+            color: $gray-800;
+        }
+    }
+
+    &-body {
+        .ourclients-text {
+            @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+        }
+    }
+}
+
+/**=====================================================
+                COMPANY-VALUES SECTION START
+=====================================================**/
+.companyvalues {
+    background: $bodyBg;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    padding: length(80) length(0);
+
+    .companyvalue-thumbnail {
+        @include w100;
+        height: length(720);
+        overflow: hidden;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.05));
+            }
+        }
+    }
+
+    .companyvalus-details {
+        @include flex-column;
+        gap: length(80);
+
+        .companyvalues-header {
+            @include flex-column;
+            gap: length(12);
+
+            .companyvalues-head {
+                position: relative;
+
+                .ribbon {
+                    position: absolute;
+                    top: auto;
+                    bottom: length(0);
+                    left: 0;
+                    z-index: -1;
+                    width: length(80);
+                    height: length(140);
+                    @include flex-center;
+                    overflow: hidden;
+
+                    img {
+                        @include wh100;
+                        object-fit: contain;
+                    }
+                }
+
+                .companyvalues-title {
+                    @include font-face($raleway, style('normal'), size(40), weight('bold'), line-height(60, 40));
+                    color: $gray-800;
+                }
+            }
+
+            .companyvalue-text {
+                @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+                color: $gray-600;
+            }
+        }
+
+        .companyvalues-body {
+            .companyvalue {
+                @include flex-column;
+                gap: length(4);
+
+                &-header {
+                    @include flex-center-between;
+
+                    .valuetitle {
+                        @include font-face($raleway, style('normal'), weight('semibold'), size(16), line-height(25, 16));
+                        color: $gray-700;
+                    }
+
+                    .actualvalue {
+                        @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+                        color: $gray-700;
+                    }
+                }
+
+                &-body {
+                    .progress {
+                        background: $gray-400;
+                        height: length(8);
+                        @include radius(0);
+
+                        &-bar {
+                            background: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**=====================================================
+            OUR-STRATEGIES SECTION START
+=====================================================**/
+.ourstrategies {
+    background: $white;
+    padding: length(80) length(0);
+    position: relative;
+    z-index: 2;
+
+    .ourstrategies-details {
+        @include flex-column;
+        gap: length(12);
+
+        .strategies-header {
+            position: relative;
+            z-index: 2;
+
+            .ribbon {
+                position: absolute;
+                top: auto;
+                bottom: length(0);
+                left: 0;
+                z-index: -1;
+                width: length(80);
+                height: length(140);
+                @include flex-center;
+                overflow: hidden;
+
+                img {
+                    @include wh100;
+                    object-fit: contain;
+                }
+            }
+
+            .strategies-title {
+                @include font-face($raleway, style('normal'), size(40), weight('bold'), line-height(60, 40));
+                color: $gray-800;
+            }
+        }
+
+        .strategies-body {
+            position: relative;
+            z-index: 2;
+
+            .strategies-text {
+                color: $gray-600;
+            }
+        }
+    }
+
+    .ourstrategies-thumbnail {
+        position: relative;
+        @include w100;
+        height: length(493);
+        overflow: hidden;
+        @include flex-center;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.05));
+            }
+        }
+
+        .btn-playpause {
+            position: absolute;
+            @include position-center;
+            @include transparent-button;
+        }
+    }
+}
