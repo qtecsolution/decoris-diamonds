@@ -38,34 +38,6 @@
             min-height: length(300);
         }
 
-        .btn-close {
-            @include transparent-button;
-            background: $white;
-            @include square(length(28));
-            @include circle;
-            @include flex-center;
-            opacity: 1;
-            margin: length(0);
-            padding: length(0);
-            position: absolute;
-            top: length(0);
-            right: length(-40);
-            z-index: 100;
-
-
-            &:focus {
-                outline: none;
-                box-shadow: none;
-            }
-        }
-
-        iframe {
-            min-height: length(480);
-
-            @include breakpoint(phone768) {
-                min-height: length(300);
-            }
-        }
     }
 }
 

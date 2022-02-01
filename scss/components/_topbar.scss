@@ -1,0 +1,19 @@
+.topbar {
+    height: length(48);
+    @include flex-center;
+    text-align: center;
+    background: $primary;
+
+    &-content {
+        .topbarlink {
+            @include font-face($jost, style('normal'), size(14), weight('medium'), line-height(20, 14));
+            color: $white;
+            text-transform: uppercase;
+            @include transitions;
+
+            @include hover {
+                color: lighten($primary, 50%);
+            }
+        }
+    }
+}

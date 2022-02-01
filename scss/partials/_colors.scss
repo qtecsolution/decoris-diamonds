@@ -1,39 +1,14 @@
 // THEME COLORS
-$primary: #00FFAD;
-$primaryBackground: linear-gradient(180deg, #01FFAD 0%, rgba(196, 196, 196, 0) 100%);
+$primary: #333333;
+$secondary: #5A5A5A;
 
-// BACKGROUND COLORS
-$bodyBg: #F7FAFC;
-$concernHoverBg: #5A48FF;
-$grayBg: #C4C4C4;
-$blue: #0019FF;
-$newsletterPlaceholder: #7A828A;
+$primaryBg: #FDF9F2;
+$secondaryBg: #F9F8F8;
+$bannerBg: #F9F8F7;
 
-// GRADIENTS
-$gradient-1: linear-gradient(269.75deg, $concernHoverBg 8.49%, rgba(113, 113, 113, 0) 137%);
-$gradient-2: linear-gradient(180deg, #FFFFFF 0%, #FAFBFC 28.37%, #EDEFF2 59.78%, #D7DBE2 92.52%, #D1D5DE 100%);
-$gradient-3: linear-gradient(180deg, $blue 0%, #00FFAD 100%);
-$gradient-4: linear-gradient(180deg, #01FFAD 0%, #0122FC 100%);
-$gradient-5: linear-gradient(0deg, #000000, #000000);
-
-// TEXT COLORS
-
-// VERIENTS
-$gray-50: #FAFAFA;
-$gray-200: #EDF2F7;
-$gray-300: #E2E8F0;
-$gray-400: #CBD5E0;
-$gray-600: #718096;
-$gray-700: #4A5568;
-$gray-700: #2D3748;
-$gray-800: #2D3748;
+$dividerBg: #DEE2E6;
 
 // NORMAL COLORS
-$black: black;
-$white: white;
+$black: #000000;
+$white: #ffffff;
 
-// SHADOWS
-$shadow-1: rgba(12, 26, 75, 0.1);
-$shadow-2: rgba(20, 37, 63, 0.06);
-
-$shadowBig: drop-shadow(0 0 .0625rem $shadow-1) drop-shadow(0 .625rem 1rem $shadow-2);

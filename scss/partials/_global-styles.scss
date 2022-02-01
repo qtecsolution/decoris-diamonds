@@ -125,8 +125,7 @@ html {
 }
 
 body {
-    @include setBgColor($bodyBg, $gray-600);
-    @include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
+	@include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(24, 14));
     margin: 0;
     padding: 0;
     overflow-x: hidden;

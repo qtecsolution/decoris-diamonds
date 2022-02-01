@@ -1,26 +1,17 @@
 /**==================================================
                 GOOGLE FONT CDN
 ==================================================**/
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 /**==================================================
                 FONTS INFO START
 ==================================================**/
-$raleway: 'Raleway';
-$lorenza: 'Lorenza';
+$futuraBK: 'Futura Bk';
+$playfairDisplay: 'Playfair Display';
+$jost: 'Jost';
 $font-styles: ('normal': normal, 'italic': italic, 'oblique': oblique);
 $font-weights: ('thin':100, 'light': 300, 'normal': normal, 'medium': 500, 'semibold': 600, 'bold': 700, 'black': 900);
 
-/**===============================================
-                LORENZA FONTS PATH
-===============================================**/
-
-$lorenza-thin-path: '../fonts/Lorenza/Lorenza-Thin';
-$lorenza-normal-path: '../fonts/Lorenza/Lorenza';
-$lorenza-medium-path: '../fonts/Lorenza/Lorenza-Medium';
-
-$path-1: url('../fonts/Lorenza/Lorenza.woff2') format('woff2'),
-url('../fonts/Lorenza/Lorenza.woff') format('woff');
 
 // SET FONT-FAMILY
 @function family($font-family) {
@@ -64,101 +55,19 @@ url('../fonts/Lorenza/Lorenza.woff') format('woff');
 }
 
 @font-face {
-	font-family: 'Lorenza';
-	src: url('../fonts/Lorenza/Lorenza.woff2') format('woff2'),
-		url('../fonts/Lorenza/Lorenza.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+    font-family: 'Futura Bk';
+    src: url('../fonts/Futura-Bk-Book/Futura-Book.woff2') format('woff2'),
+        url('../fonts/Futura-Bk-Book/Futura-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-@font-face {
-	font-family: 'Lorenza';
-	src: url('../fonts/Lorenza/Lorenza-Medium.woff2') format('woff2'),
-		url('../fonts/Lorenza/Lorenza-Medium.woff') format('woff');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Lorenza';
-	src: url('../fonts/Lorenza/Lorenza-Medium.woff2') format('woff2'),
-		url('../fonts/Lorenza/Lorenza-Medium.woff') format('woff');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Lorenza';
-	src: url('../fonts/Lorenza/Lorenza.woff2') format('woff2'),
-		url('../fonts/Lorenza/Lorenza.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
 
 /**======================================
             HEADING STYLES
 =======================================**/
 
 .text {
-	@include font-face($lorenza, style('normal'), size(18), weight('normal'), line-height(30, 18));
-}
-
-.big-title-1 {
-	@include font-face($raleway,
-		style('normal'),
-		size(64),
-		weight('medium'),
-		line-height(75, 64));
-}
-
-h1 {
-	@include font-face($raleway,
-		style('normal'),
-		size(36),
-		weight('bold'),
-		line-height(49, 36));
-}
-
-h2 {
-	@include font-face($raleway,
-		style('normal'),
-		weight('semibold'),
-		size(28),
-		line-height(38, 28));
-}
-
-h3 {
-	@include font-face($raleway,
-		style('normal'),
-		weight('semibold'),
-		size(20),
-		line-height(27.3, 20));
-}
-
-h4 {
-	@include font-face($raleway,
-		style('normal'),
-		weight('bold'),
-		size(18),
-		line-height(22, 18));
-}
-
-h5 {
-	@include font-face($raleway,
-		style('normal'),
-		weight('semibold'),
-		size(16),
-		line-height(25, 16));
-}
-
-h6 {
-	@include font-face($raleway,
-		style('normal'),
-		weight('bold'),
-		size(16),
-		line-height(24, 16));
+	@include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(24, 14));
 }
