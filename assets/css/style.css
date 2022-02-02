@@ -624,119 +624,20 @@ select {
 /*------------------------------------*\
     breakpoint usage
 \*------------------------------------*/
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.flex-col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.flex-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.flex-center-vert {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.flex-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.flex-center-col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.flex-between {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.flex-center-between {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.flex-baseline {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
-.flex-center-baseline {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.decories-container {
+  max-width: 107.5rem;
+  margin-inline: auto;
 }
 
 /**=======================================================**
                         HEADER SECTION START
 **=======================================================**/
+.header {
+  background: #ffffff;
+}
+
 .header-top {
-  max-width: 106.5625rem;
+  max-width: 107.5rem;
   margin-inline: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -923,7 +824,7 @@ select {
 }
 
 .header-bottom .mainnav {
-  max-width: 106.5625rem;
+  max-width: 107.5rem;
   margin-inline: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -976,6 +877,443 @@ select {
 /**=====================================================**
                         HOME-CARDS
 =======================================================**/
+.product {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.125rem;
+}
+
+.product-header {
+  width: 100%;
+  height: 12.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .product-header {
+    height: 17.5rem;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .product-header {
+    height: 19.625rem;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .product-header {
+    height: 21.8125rem;
+  }
+}
+
+.product-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.product-header img:not([disabled]):hover {
+  -webkit-transform: scale(1.075);
+  transform: scale(1.075);
+}
+
+.product-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.product-title {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.product-title:not([disabled]):hover {
+  color: #5A5A5A;
+}
+
+.product-category {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.product-price {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #000000;
+}
+
+@media screen and (min-width: 30rem) {
+  .product-price {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 0.875rem;
+    font-weight: normal;
+    line-height: 1.6;
+  }
+}
+
+.cardproduct {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.125rem;
+}
+
+.cardproduct-header {
+  width: 100%;
+  height: 17.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .cardproduct-header {
+    height: 19.625rem;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .cardproduct-header {
+    height: 19.625rem;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .cardproduct-header {
+    height: 26.25rem;
+  }
+}
+
+.cardproduct-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.cardproduct-header img:not([disabled]):hover {
+  -webkit-transform: scale(1.075);
+  transform: scale(1.075);
+}
+
+.cardproduct-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.cardproduct-title {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.cardproduct-title:not([disabled]):hover {
+  color: #5A5A5A;
+}
+
+.cardproduct-text {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #333333;
+  min-height: 4.1875rem;
+}
+
+.feature {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.125rem;
+}
+
+.feature-header {
+  width: 100%;
+  height: 12.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .feature-header {
+    height: 17.5rem;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .feature-header {
+    height: 19.625rem;
+  }
+}
+
+.feature-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.feature-header img:not([disabled]):hover {
+  -webkit-transform: scale(1.075);
+  transform: scale(1.075);
+}
+
+.feature-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.feature-title {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #000000;
+}
+
+.feature-text {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.cardbrand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.75rem;
+  text-align: center;
+}
+
+.cardbrand-header {
+  overflow: hidden;
+  max-height: 36.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardbrand-header img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.cardbrand-header img:not([disabled]):hover {
+  -webkit-transform: scale(1.075);
+  transform: scale(1.075);
+}
+
+.cardbrand-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.9375rem;
+}
+
+.cardbrand-body .brandtitle {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.625rem;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #333333;
+}
+
+.cardbrand-body .brandinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.cardbrand-body .brandinfo .brandtext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #5A5A5A;
+}
+
 .modal-content {
   border-radius: 0rem;
   border-radius: 0rem;
@@ -1195,6 +1533,12 @@ polygon {
   border-bottom: solid 0.0625rem #DEE2E6;
 }
 
+@media screen and (min-width: 48rem) {
+  .homebanner {
+    padding: 5rem 0rem;
+  }
+}
+
 @media screen and (min-width: 62rem) {
   .homebanner {
     border-top: none;
@@ -1311,4 +1655,616 @@ polygon {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+/**=====================================================
+                    HOME-FILTER
+=====================================================**/
+.homefilter {
+  padding: 2.5rem 1.25rem;
+}
+
+.homefilter-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.125rem;
+}
+
+.homefilter-header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .homefilter-header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.homefilter-header .filter-result {
+  width: 100%;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .homefilter-header .filter-result {
+    width: 50%;
+  }
+}
+
+.homefilter-header .filter-result .result {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.homefilter-header .filter-sorting {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .homefilter-header .filter-sorting {
+    width: 50%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+.homefilter-header .filter-sorting .sorting .form-select {
+  border: none;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.homefilter-header .filter-sorting .sorting .form-select:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  border: none;
+}
+
+.homefilter-header .filter-sorting .filter .btn-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.3125rem;
+  padding: 0.3125rem;
+  width: 6rem;
+  height: 2rem;
+  border: solid 0.0625rem #333333;
+  background: #ffffff;
+}
+
+.homefilter-header .filter-sorting .filter .btn-filter .icon {
+  height: 1rem;
+  width: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.homefilter-header .filter-sorting .filter .btn-filter .btntext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.homefilter-header .filter-sorting .filter .btn-filter:not([disabled]):hover {
+  background: #333333;
+}
+
+.homefilter-header .filter-sorting .filter .btn-filter:not([disabled]):hover .icon svg path {
+  stroke: #e6e6e6;
+}
+
+.homefilter-header .filter-sorting .filter .btn-filter:not([disabled]):hover .btntext {
+  color: #e6e6e6;
+}
+
+.homefilter-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .homefilter-body {
+    gap: 2.75rem 1.5rem;
+  }
+}
+
+.homefilter-body .productlink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: calc((100% / 2) - 1.5rem);
+  -webkit-margin-end: auto;
+          margin-inline-end: auto;
+}
+
+@media screen and (min-width: 48rem) {
+  .homefilter-body .productlink {
+    width: calc((100% / 3) - 1.5rem);
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .homefilter-body .productlink {
+    width: calc((100% / 4) - 1.5rem);
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  .homefilter-body .productlink {
+    width: calc((100% / 5) - 1.5rem);
+  }
+}
+
+/**=====================================================
+                    TESTIMONIAL
+=====================================================**/
+.testimonial {
+  background: #FDF9F2;
+  padding: 2.5rem 1.25rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .testimonial {
+    padding: 5rem 0rem;
+  }
+}
+
+.testimonial-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.testimonial-content .testimonialtext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #5A5A5A;
+}
+
+/**=====================================================
+                    RING-STYLE
+=====================================================**/
+.ringstyle {
+  padding: 2.5rem 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .ringstyle {
+    gap: 5rem;
+  }
+}
+
+.ringstyle .divider {
+  width: 100%;
+  height: 0.0625rem;
+  background: #DEE2E6;
+}
+
+.ringstyle-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  text-align: center;
+}
+
+.ringstyle-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+}
+
+.ringstyle-details .weddingstyletitle {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #333333;
+}
+
+.ringstyle-details .weddingstyletext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #5A5A5A;
+}
+
+/**=====================================================
+                    DEPTH-AND-WIDTH
+=====================================================**/
+.depthandwidth {
+  padding: 0rem 1.25rem 2.5rem;
+}
+
+.depthandwidth-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.depthandwidth-details .depthtitle {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #333333;
+}
+
+.depthandwidth-details .depthinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.375rem;
+}
+
+.depthandwidth-details .depthinfo-text {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #5A5A5A;
+}
+
+/**=====================================================
+                    HOME-PRODUCTS
+=====================================================**/
+.homeproducts {
+  padding: 0rem 1.25rem 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .homeproducts {
+    gap: 5rem;
+  }
+}
+
+.homeproducts .divider {
+  width: 100%;
+  height: 0.0625rem;
+  background: #DEE2E6;
+}
+
+.homeproducts-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2.5rem 1.875rem;
+}
+
+.homeproducts-content .productlink {
+  width: 60%;
+  margin-inline: auto;
+  height: 100%;
+}
+
+@media screen and (min-width: 30rem) {
+  .homeproducts-content .productlink {
+    width: 46%;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 62rem) {
+  .homeproducts-content .productlink {
+    width: 31%;
+  }
+}
+
+/**=====================================================
+                    HOME-BRANDS
+=====================================================**/
+.homebrands {
+  padding: 2.5rem 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .homebrands {
+    gap: 5rem;
+  }
+}
+
+.homebrands .divider {
+  width: 100%;
+  height: 0.0625rem;
+  background: #DEE2E6;
+}
+
+.homebrands-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4.25rem 1.875rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .homebrands-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+/**=====================================================
+                    PRODUCT-INFO
+=====================================================**/
+.productinfo {
+  padding: 2.5rem 1.25rem;
+}
+
+.productinfo-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.25rem;
+  text-align: center;
+}
+
+.productinfo-details .infobox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.productinfo-details .infobox .infotitle {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.625rem;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #333333;
+}
+
+.productinfo-details .infobox .infotexts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.productinfo-details .infobox .infotexts .infotext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #5A5A5A;
+}
+
+/**=====================================================
+                    NEWSLETTER
+=====================================================**/
+.newsletter {
+  background: #F9F8F8;
+  padding: 5rem 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.75rem;
+  text-align: center;
+}
+
+.newsletter-title {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.8125rem;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #333333;
+  letter-spacing: -0.015rem;
 }

@@ -25,7 +25,9 @@ $breakpoints: (break-320: 320,
     break-1224: 1224,
     break-1280: 1280,
     break-1366: 1366,
-    break-1400: 1399);
+    break-1399: 1399,
+    break-1400: 1400
+    );
 
 /*------------------------------------*\
     breakpoint functions
@@ -44,8 +46,8 @@ $breakpoints: (break-320: 320,
 @mixin breakpoint($breakpoints) {
 
     // MAX WIDTH
-    @if $breakpoints==desktop1400 {
-        @media screen and (max-width: break(break-1400)) {
+    @if $breakpoints==desktop1399 {
+        @media screen and (max-width: break(break-1399)) {
             @content;
         }
     }
@@ -243,6 +245,12 @@ $breakpoints: (break-320: 320,
         }
     }
 
+    @else if $breakpoints==laptop1400 {
+        @media screen and (min-width: break(break-1400)) {
+            @content;
+        }
+    }
+
     // Smartphones (portrait and landscape)
     @else if $breakpoints==mobile {
         @media only screen and (min-width: break(break-320)) and (max-width: break(break-480)) {
@@ -324,7 +332,7 @@ $breakpoints: (break-320: 320,
 // }
 
 // MAX-WIDTH
-// @include breakpoint(desktop1400) {}
+// @include breakpoint(desktop1399) {}
 // @include breakpoint(desktop1366) {}
 // @include breakpoint(desktop1224) {}
 // @include breakpoint(desktop1200) {}
@@ -358,6 +366,7 @@ $breakpoints: (break-320: 320,
 // @include breakpoint(laptop1169) {}
 // @include breakpoint(laptop1199) {}
 // @include breakpoint(laptop1200) {}
+// @include breakpoint(laptop1400) {}
 
 // MIN-MAX WIDTH
 // 320-480

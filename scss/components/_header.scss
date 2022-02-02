@@ -3,8 +3,10 @@
 **=======================================================**/
 
 .header {
+    background: $white;
+    
     &-top {
-        max-width: length(1705);
+        max-width: length(1720);
         margin-inline: auto;
         @include flex-center-between;
         padding: length(20);
@@ -115,7 +117,7 @@
         }
 
         .mainnav {
-            max-width: length(1705);
+            max-width: length(1720);
             margin-inline: auto;
             @include flex-center;
             padding: length(36) length(20);
@@ -125,6 +127,7 @@
                 gap: length(60);
 
                 &-link {
+                    // max-width: length(324);
                     @include font-face($futuraBK, style('normal'), size(17), weight('normal'), line-height(22, 17));
                     color: $primary;
                     text-transform: uppercase;
