@@ -406,19 +406,68 @@
 .newsletter {
     background: $secondaryBg;
     padding: length(80) length(20);
-    @include flex-center-column;
-    gap: length(28);
     text-align: center;
 
     &-title {
-        @include font-face($playfairDisplay, style('normal'), size(29), weight('normal'), line-height(37.7, 29));
+        @include font-face($playfairDisplay, style('normal'), size(20), weight('normal'), line-height(28.7, 20));
         color: $primary;
         letter-spacing: length(-0.24);
+        
+        @include breakpoint(mobile480) {
+            @include font-face($playfairDisplay, style('normal'), size(29), weight('normal'), line-height(37.7, 29));
+        }
     }
 
     &-content {
-        .subscribe {
+        @include flex-center-column;
+        gap: length(28);
 
+        .subscribe {
+            @include w100;
+            @include flex-column;
+            gap: length(28);
+
+            @include breakpoint(tab992) {
+                flex-direction: row;
+            }
+
+            .inputbox {
+                @include w100;
+
+                @include breakpoint(tab992) {
+                    width: length(412);
+                }
+
+                .inputfield {
+                    @include w100;
+                    padding: length(12) length(18);
+                    @include font-face($futuraBK, style('normal'), size(13), weight('normal'), line-height(16.9, 13));
+                    color: $primary;
+                    @include border(solid, 1, transparent);
+                    @include transitions;
+
+                    &::placeholder {
+                        color: $textPlaceholder;
+                    }
+
+                    &:focus {
+                        border-color: $secondary;
+                    }
+                }
+            }
+
+            .submitbox {
+                .btn-submit {
+                    padding: length(10) length(22);
+                    text-align: center;
+                    @include setBgColor($submitBg, $white);
+                    @include transitions;
+
+                    @include hover {
+                        background: darken($color: $submitBg, $amount: 15%);
+                    }
+                }
+            }
         }
     }
 }

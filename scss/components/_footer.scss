@@ -2,4 +2,101 @@
                 FOOTER SECTION START
 =====================================================**/
 .footer {
+    padding: length(80) length(20) length(24);
+
+    &-info {
+        @include flex-column;
+        gap: length(32);
+
+        .footerlogo {
+            width: length(104);
+            height: length(58);
+            overflow: hidden;
+            @include flex-center;
+
+            img {
+                max-width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .footertext {
+            @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(16.9, 12));
+            color: $primary;
+            
+            @include breakpoint(mobile480) {
+                @include font-face($futuraBK, style('normal'), size(13), weight('normal'), line-height(16.9, 13));
+            }
+        }
+
+        .footerbrands {
+            display: none;
+
+            @include breakpoint(mobile575) {
+                @include flex-center-vert;
+                gap: length(14);
+            }
+
+            .footbrandthumb {
+                width: length(150);
+
+                @include breakpoint(mobile768) {
+                    width: length(200);
+                }
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    &-details {
+        @include flex-column;
+
+        .footinfo {
+            @include flex-column;
+            gap: length(14);
+
+            .footertitle {
+                @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(16.9, 12));
+                color: $black;
+                text-transform: uppercase;
+                
+                @include breakpoint(mobile768) {
+                    @include font-face($futuraBK, style('normal'), size(13), weight('normal'), line-height(16.9, 13));
+                }
+            }
+
+            .footerlist-sociallist {
+                @include flex-column;
+                gap: length(18);
+
+                .sociallist {
+                    @include list-horizontal;
+                    gap: length(22);
+                }
+            }
+    
+            .footerlist {
+                @include list-vertical;
+                gap: length(12);
+    
+                &-link {
+                    @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(19.5, 12));
+                    color: $footerText;
+                    @include transitions;
+
+                    @include breakpoint(mobile480) {
+                        @include font-face($futuraBK, style('normal'), size(13), weight('normal'), line-height(19.5, 13));
+                    }
+
+                    @include hover {
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
 }
