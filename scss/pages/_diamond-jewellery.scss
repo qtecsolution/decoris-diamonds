@@ -1,0 +1,136 @@
+
+/**=====================================================
+                    JEWELLERY-SLIDE
+=====================================================**/
+.jewelleryslide {
+    margin-top: length(24);
+    max-height: length(566);
+
+    &-content {
+        .carousel {
+            &-caption {
+                background: $overlayBg;
+                @include position-center;
+                @include flex-center;
+                @include wh100;
+
+                .caption-info {
+                    width: length(367);
+                    @include flex-center-column;
+                    gap: length(12);
+                    @include position-center;
+                    text-align: center;
+                    
+                    h5 {
+                        @include font-face($playfairDisplay, style('normal'), size(26), weight('bold'), line-height(33.8, 26));
+                        color: $white;
+                    }
+
+                    p {
+                        margin-bottom: length(10);
+                        @include font-face($futuraBK, style('normal'), size(16), weight('medium'), line-height(27.2, 16));
+                        color: $white;
+                    }
+
+                    .btn-hero {
+                        @include font-face($futuraBK, style('normal'), size(12), weight('medium'), line-height(19.2, 12));
+                        padding: length(12) length(38);
+                        text-transform: uppercase;
+                        text-align: center;
+                        @include border(solid, 1, $white);
+                        @include setBgColor(transparent, $white);
+                        @include transitions;
+            
+                        @include hover {
+                            @include setBgColor($white, $primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.jewellerydivider {
+    margin: length(80) length(0);
+    @include w100;
+    height: length(1);
+    background: $dividerBg;
+}
+
+/**=====================================================
+                    JEWELLERY-COLLECTION
+=====================================================**/
+.jewellerycollection {
+    .cardcollection {
+        padding: length(48) length(24);
+        @include border(solid, 1, $dividerBg);
+        @include flex-column;
+        gap: length(12);
+
+        .collectiontitle {
+            @include font-face($playfairDisplay, style('normal'), size(26), weight('normal'), line-height(33.8, 26));
+            color: $primary;
+        }
+        .collectiontext {
+            @include font-face($futuraBK, style('normal'), size(14), weight('medium'), line-height(23.8, 14));
+            color: $secondary;
+            margin-bottom: length(12);
+        }
+
+        .shopcollect {
+            .btn-hero {
+                @include font-face($futuraBK, style('normal'), size(12), weight('medium'), line-height(19.2, 12));
+                padding: length(12) length(38);
+                text-transform: uppercase;
+                text-align: center;
+                @include border(solid, 1, $black);
+                @include setBgColor($white, $black);
+                @include transitions;
+    
+                @include hover {
+                    @include setBgColor($black, $white);
+                }
+            }
+        }
+        .ratinglist {
+            @include list-horizontal;
+            gap: length(4);
+        }
+    }
+}
+
+/**=====================================================
+                    JEWELLERY-DISCOVER
+=====================================================**/
+.discover {
+    padding: length(80) length(20);
+}
+
+/**=====================================================
+                    JEWELLERY-CATEGORYSHOP
+=====================================================**/
+.categoryshop {
+    padding: length(80) length(20);
+
+    &-content {
+        @include flex-column;
+        gap: length(40);
+    }
+
+    &-header {
+        @include flex-center-column;
+        gap: length(8);
+        text-align: center;
+
+        .categoryshoptitle {
+            @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+            color: $primary;
+        }
+        
+        .categoryshoptext {
+            @include font-face($futuraBK, style('normal'), size(14), weight('medium'), line-height(23.8, 14));
+            color: $secondary;
+        }
+    }
+}

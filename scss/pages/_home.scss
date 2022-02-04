@@ -460,6 +460,7 @@
                 .btn-submit {
                     padding: length(10) length(22);
                     text-align: center;
+                    @include font-face($futuraBK, style('normal'), size(12), weight('medium'), line-height(19.2, 12));
                     @include setBgColor($submitBg, $white);
                     @include transitions;
 

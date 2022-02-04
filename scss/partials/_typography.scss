@@ -62,12 +62,3 @@ $font-weights: ('thin':100, 'light': 300, 'normal': normal, 'medium': 500, 'semi
     font-style: normal;
     font-display: swap;
 }
-
-
-/**======================================
-            HEADING STYLES
-=======================================**/
-
-.text {
-	@include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(24, 14));
-}

@@ -16,28 +16,327 @@
 
         .btn-close {
             @include transparent-button;
-            @include square(length(28));
-            @include circle;
+            @include square(length(24));
             @include flex-center;
             opacity: 1;
-            margin: length(0);
+            overflow: hidden;
+            margin-left: auto;
             padding: length(0);
+            @include transitiontransform;
 
             &:focus {
                 outline: none;
                 box-shadow: none;
             }
+
+            @include hover {
+                @include transform(rotate(90deg));
+            }
         }
     }
 
     &-body {
-        position: relative;
-        min-height: length(480);
+        @include flex-column;
+        gap: length(40);
 
-        @include breakpoint(phone768) {
-            min-height: length(300);
+        .meeting-contactdescript {
+            display: flex;
+            flex-direction: column;
+
+            @include breakpoint(tab992) {
+                flex-direction: row;
+            }
+
+            .meeting {
+                @include flex-column;
+                gap: length(16);
+                @include w100;
+                padding: length(24);
+
+                @include breakpoint(tab992) {
+                    width: 50%;
+                }
+
+                &-header {
+                    .meetingtitle {
+                        @include font-face($futuraBK, style('normal'), size(18), weight('medium'), line-height(22.5, 18));
+                        color: $black;
+                    }
+                }
+
+                &-body {
+                    @include flex-column;
+                    gap: length(32);
+
+                    .interested {
+                        @include flex-column;
+                        gap: length(20);
+                        
+                        .inputlabel {
+                            @include font-face($futuraBK, style('normal'), size(15), weight('medium'), line-height(19.95, 15));
+                            color: $black;
+                        }
+
+                        .interestedbox {
+                            @include flex-column;
+                            gap: length(12);
+
+                            .interested {
+                                input[type="checkbox"] {
+                                    &:checked ~ .interestlabel {
+                                        color: $black;
+
+                                        &::before {
+                                            border-color: $textSuccess;
+                                            background: $textSuccess;
+                                        }
+
+                                        &::after {
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+
+                                .interestlabel {
+                                    position: relative;
+                                    @include font-face($futuraBK, style('normal'), size(14), weight('medium'), line-height(22.4, 14));
+                                    color: $primary;
+                                    @include flex-center-vert;
+                                    padding-left: length(30);
+                                    cursor: pointer;
+
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        top: 50%;
+                                        left: length(0);
+                                        @include square(length(18));
+                                        @include transform(translateY(-50%));
+                                        @include border(solid, 1, $black);
+                                        @include transitiontransform;
+                                    }
+
+                                    &::after {
+                                        content: '';
+                                        position: absolute;
+                                        top: 45%;
+                                        left: length(7);
+                                        width: length(4);
+                                        height: length(10);
+                                        @include transform(translateY(-50%) rotate(45deg));
+                                        @include border(solid, 1, $white);
+                                        border-top: none;
+                                        border-left: none;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        @include transitiontransform;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .infobox {
+                        @include flex-column;
+                        gap: length(8);
+                        
+                        .inputlabel {
+                            @include font-face($futuraBK, style('normal'), size(15), weight('medium'), line-height(18, 15));
+                            color: $black;
+                            letter-spacing: length(0.08);
+                        }
+                        
+                        .note {
+                            @include font-face($futuraBK, style('normal'), size(15), weight('medium'), line-height(18, 15));
+                            color: $black;
+                            letter-spacing: length(0.08);
+                        }
+
+                        .datetimebox {
+                            @include flex-column;
+                            gap: length(32);
+
+                            .inputfield {
+                                padding: length(16);
+                                @include border(solid, 1, $inputBorder);
+                                @include w100;
+                                @include font-face($futuraBK, style('normal'), size(15), weight('medium'), line-height(18, 15));
+                                color: $black;
+                                letter-spacing: length(0.08);
+                                @include transitions;
+
+                                &:focus {
+                                    border-color: $black;
+                                }
+                            }
+
+                            .form-select {
+                                padding: length(16);
+                                border: none;
+                                @include radius(0);
+                                @include border(solid, 1, $inputBorder);
+                                @include w100;
+                                @include font-face($futuraBK, style('normal'), size(15), weight('medium'), line-height(18, 15));
+                                color: $black;
+                                letter-spacing: length(0.08);
+                                @include transitions;
+
+                                &:focus {
+                                    border-color: $black;
+                                    box-shadow: none;
+                                    outline: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .contactdescript {
+                @include w100;
+                padding: length(24);
+                @include flex-column;
+                gap: length(32);
+                @include border-single(top, solid, 1, $formBorder);
+
+                @include breakpoint(tab992) {
+                    width: 50%;
+                    @include border-single(left, solid, 1, $formBorder);
+                    border-top: none;
+                }
+
+                .contactdescripttitle {
+                    @include font-face($futuraBK, style('normal'), size(18), weight('medium'), line-height(22.5, 18));
+                    color: $black;
+                    @include w100;
+                }
+                    
+                .contactdescript-info {
+                    @include w100;
+                    @include flex-column;
+                    gap: length(16);
+
+                    .bio {
+                        @include w100;
+                        @include flex-column;
+                        gap: length(8);
+
+                        label {
+                            @include font-face($futuraBK, style('normal'), size(14), weight('medium'), line-height(22.4, 14));
+                            color: $primary;
+                        }
+
+                        .inputfield {
+                            padding: length(16);
+                            @include border(solid, 1, $inputBorder);
+                            @include w100;
+                            @include font-face($futuraBK, style('normal'), size(15), weight('medium'), line-height(18, 15));
+                            color: $black;
+                            letter-spacing: length(0.08);
+                            @include transitions;
+
+                            &:focus {
+                                border-color: $black;
+                            }
+                        }
+                    }
+
+                    .checkbio {
+                        @include w100;
+
+                        input[type="checkbox"] {
+                            &:checked ~ .confirmlabel {
+                                color: $black;
+
+                                &::before {
+                                    border-color: $textSuccess;
+                                    background: $textSuccess;
+                                }
+
+                                &::after {
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        }
+
+                        .confirmlabel {
+                            position: relative;
+                            @include font-face($futuraBK, style('normal'), size(14), weight('medium'), line-height(22.4, 14));
+                            color: $primary;
+                            padding-left: length(30);
+                            cursor: pointer;
+                            width: 100%;
+
+                            &::selection {
+                                background: $white;
+                            }
+
+                            .link {
+                                @include font-face($futuraBK, style('normal'), size(14), weight('medium'), line-height(22.4, 14));
+                                color: $black;
+                                text-decoration: underline;
+                                @include transitions;
+
+                                &::selection {
+                                    background: $white;
+                                }
+
+                                @include hover {
+                                    text-decoration: none;
+                                }
+                            }
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                left: length(0);
+                                @include square(length(18));
+                                @include transform(translateY(-50%));
+                                @include border(solid, 1, $black);
+                                @include transitiontransform;
+                            }
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 45%;
+                                left: length(7);
+                                width: length(4);
+                                height: length(10);
+                                @include transform(translateY(-50%) rotate(45deg));
+                                @include border(solid, 1, $white);
+                                border-top: none;
+                                border-left: none;
+                                opacity: 0;
+                                visibility: hidden;
+                                @include transitiontransform;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
+        .submitbox {
+            padding-bottom: length(60);
+
+            .btn-submit {
+                padding: length(10) length(28);
+                text-align: center;
+                @include setBgColor($white, $black);
+                @include border(solid, 1, $black);
+                @include font-face($futuraBK, style('normal'), size(12), weight('medium'), line-height(19.2, 12));
+                @include transitions;
+                text-transform: uppercase;
+
+                @include hover {
+                    @include setBgColor($black, $white);
+                }
+            }
+        }
     }
 }
 

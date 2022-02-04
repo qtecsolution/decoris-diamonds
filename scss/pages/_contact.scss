@@ -1,0 +1,269 @@
+
+
+/**=====================================================
+                    CONTACT
+=====================================================**/
+.contact {
+    padding: length(80) length(20);
+
+    &-content {
+        @include flex-column;
+        gap: length(40);
+    }
+    
+    &-header {
+        @include flex-center-column;
+        gap: length(12);
+        text-align: center;
+
+        .contacttitle {
+            @include font-face($playfairDisplay, style('normal'), size(20), weight('normal'), line-height(28.7, 20));
+            color: $primary;
+
+            @include breakpoint(mobile480) {
+                @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+            }
+        }
+
+        .contacttext {
+            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.8, 14));
+            color: $secondary;
+        }
+
+        .contactlink {
+            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.8, 14));
+            color: $primary;
+            text-decoration: underline;
+            @include transitions;
+
+            @include hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &-body {
+        @include border-single(top, solid, 1, $showroomBorder);
+        padding-top: length(10);
+
+        .showroominfo {
+            .showroomlist {
+                @include flex-center-between;
+                flex-wrap: wrap;
+                gap: length(24);
+                padding-bottom: length(18);
+
+                .btn-tab {
+                    @include flex-center-column;
+                    gap: length(4);
+                    text-align: center;
+                    @include transparent-button;
+                    width: calc((100% / 2) - 1.5rem);
+
+                    @include breakpoint(mobile575) {
+                        width: calc((100% / 3) - 1.5rem);
+                    }
+
+                    @include breakpoint(laptop1024) {
+                        width: calc((100% / 6) - 1.5rem);
+                    }
+
+                    .city {
+                        @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(27.2, 16));
+                        color: $primary;
+                    }
+
+                    .country {
+                        @include font-face($futuraBK, style('normal'), size(13), weight('normal'), line-height(22.1, 13));
+                        color: $black;
+                    }
+
+                    &.active {
+                        .city {
+                            text-decoration: underline;
+                        }
+    
+                        .country {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .contact-thumb {
+                overflow: hidden;
+                min-height: length(514);
+                @include flex-center;
+                @include w100;
+
+                img {
+                    @include square(82);
+                    object-fit: contain;
+                    @include transitiontransform;
+        
+                    @include hover {
+                        @include transform(scale(1.1));
+                    }
+                }
+            }
+
+            .schedules {
+                background: $scheduleBg;
+                @include h100;
+                padding: length(40) length(20);
+                @include flex-center;
+            }
+
+            .contact-detail {
+                @include flex-column;
+                gap: length(20);
+
+                .showroomtitle {
+                    margin-bottom: length(12);
+                    @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(34, 20));
+                    color: $white;
+                }
+
+                .showroomlink {
+                    @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(14.88, 12));
+                    color: $white;
+                    text-decoration: underline;
+                    @include transitions;
+
+                    @include hover {
+                        text-decoration: none;
+                    }
+                }
+                
+                .showroomschedule {
+                    @include flex-column;
+                    gap: length(14);
+
+                    .schedule {
+                        @include flex-center-vert;
+
+                        .day {
+                            width: 50%;
+                            text-align: left;
+                            .dayname {
+                                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(16.1, 14));
+                                color: $textSchedule;
+                            }
+                        }
+                        
+                        .time {
+                            width: 50%;
+                            text-align: left;
+
+                            .officetime {
+                                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(16.1, 14));
+                                color: $textSchedule;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .showroomaddress {
+            padding: length(80) length(20);
+
+            .offaddressbox {
+                @include w100;
+                @include flex-center;
+                @include border-single(bottom, solid, 1, rgba($black, 0.17));
+                padding-bottom: length(24);
+
+                @include breakpoint(tab992) {
+                    border-bottom: none;
+                    padding-right: length(48);
+                    @include border-single(right, solid, 1, rgba($black, 0.17));
+                }
+
+                .addrssoffice {
+                    @include flex-column;
+                    gap: length(14);
+
+                    .officetitle {
+                        @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(30.69, 18));
+                        color: $black;
+                    }
+
+                    .officelocation {
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                        color: $secondary;
+                        margin-bottom: length(16);
+                    }
+
+                    .officelink {
+                        @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(22.19, 14));
+                        color: $black;
+                        text-decoration: underline;
+
+                        @include hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            .addressinfos {
+                @include flex-column;
+                gap: length(22);
+                padding-top: length(24);
+
+                @include breakpoint(tab992) {
+                    padding-top: length(0);
+                    padding-left: length(48);
+                }
+                
+                .officetext {
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                    color: $secondary;
+                }
+
+                .appointbox {
+                    margin-top: length(16);
+
+                    .btn-hero {
+                        @include font-face($futuraBK, style('normal'), size(12), weight('medium'), line-height(19.2, 12));
+                        padding: length(12) length(38);
+                        text-transform: uppercase;
+                        text-align: center;
+                        @include border(solid, 1, $black);
+                        @include setBgColor($white, $black);
+                        @include transitions;
+            
+                        @include hover {
+                            @include setBgColor($black, $white);
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+/**=====================================================
+                    CONTACT
+=====================================================**/
+.mapsection {
+    height: lengh(370);
+    padding: length(0) length(20) length(80);
+
+    @include breakpoint(mobile768) {
+        height: lengh(570);
+    }
+
+    &-content {
+        @include wh100;
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+        }
+    }
+}

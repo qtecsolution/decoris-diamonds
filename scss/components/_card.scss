@@ -182,6 +182,73 @@
 
 // FEATURE STYLE END
 
+// FEATURE STYLE START
+
+.diamond {
+    @include wh100;
+    @include flex-center-column;
+    gap: length(18);
+
+    &-header {
+        @include w100;
+        height: length(200);
+        @include flex-center;
+        overflow: hidden;
+
+        @include breakpoint(mobile575) {
+            height: length(280);
+        }
+
+        @include breakpoint(mobile768) {
+            height: length(388);
+        }
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+            background: rgba($black, 0.03);
+        
+            @include hover {
+                @include transform(scale(1.075));
+            }
+        }
+    }
+
+    &-body {
+        @include flex-center-column;
+        gap: length(8);
+        text-align: center;
+    }
+    
+    &-title {
+        @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(34, 20));
+        color: $black;
+    }
+
+    &-text {
+        @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(22.4, 14));
+        color: $primary;
+    }
+
+    .link {
+        @include flex-center-vert;
+
+        .icon {
+            @include square(length(20));
+            @include flex-center;
+            overflow: hidden;
+        }
+
+        .text {
+            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.5, 15));
+            color: $black;
+        }
+    }
+}
+
+// FEATURE STYLE END
+
 // CARD-BRAND START
 
 .cardbrand {
@@ -218,13 +285,348 @@
         .brandinfo {
             @include flex-center-column;
             gap: length(32);
+            max-width: length(706);
 
             .brandtext {
                 @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.8, 14));
                 color: $secondary;
             }
         }
+
+        .links {
+            @include flex-center-column;
+            gap: length(8);
+
+            @include breakpoint(mobile500) {
+                flex-direction: row;
+                gap: length(10);
+            }
+
+            .link {
+                @include flex-center-vert;
+
+                .icon {
+                    @include square(length(20));
+                    @include flex-center;
+                    overflow: hidden;
+                }
+
+                .text {
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.5, 15));
+                    color: $black;
+                }
+            }
+        }
     }
 }
 
 // CARD-BRAND END
+
+/**=====================================================**
+                BESPOKE-CARDS
+=======================================================**/
+
+// CARD-SLIDER START
+.cardslider {
+    @include flex-center-column;
+    gap: length(24);
+    text-align: center;
+    @include transitions;
+
+    &-header {
+        max-width: length(423);
+        height: length(366);
+        @include flex-center;
+        position: relative;
+        overflow: hidden;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.1));
+            }
+        }
+
+        .linkbox {
+            position: absolute;
+            @include wh100;
+            background: rgba($black, 0.61);
+            @include flex-center;
+            opacity: 0;
+            visibility: hidden;
+            @include transitions;
+
+            .sliderlink {
+                padding: length(10) length(38);
+                @include setBgColor($white, $black);
+                text-align: center;
+                text-transform: uppercase;
+                @include transitiontransform;
+
+                @include hover {
+                    @include setBgColor($black, lighten($primary, 60%));
+                    @include transform(scale(0.9));
+                }
+            }
+        }
+    }
+
+    &-body {
+        .slidertext {
+            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.8, 14));
+            color: $secondary;
+        }
+    }
+
+    @include hover {
+        .linkbox {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+// CARD-SLIDER END
+
+
+// CARD-CAPTION START
+
+.cardcaption {
+    @include wh100;
+    @include flex-center-column;
+    gap: length(14);
+    text-align: center;
+
+    &-header {
+        @include flex-center-column;
+
+        .icon {
+            @include square(length(48));
+            @include flex-center;
+            overflow: hidden;
+        }
+
+        .captioninfo {
+            .captiontext {
+                @include font-face($playfairDisplay, style('italic'), size(20), weight('normal'), line-height(34.1, 20));
+                color: $textTestimonial;
+            }
+        }
+    }
+
+    &-body {
+        @include flex-center;
+
+        .author {
+            max-width: length(120);
+
+            .authorname {
+                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.8, 14));
+                color: $primary;
+            }
+        }
+    }
+}
+
+// CARD-CAPTION END
+
+// CARD-LINK START
+
+.cardlink {
+    max-width: length(424);
+    height: length(372);
+    @include flex-center;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        @include wh100;
+        object-fit: cover;
+        @include transitiontransform;
+    }
+
+    &-details {
+        @include flex-center;
+        align-items: flex-end;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: length(40);
+        opacity: 0;
+        visibility: hidden;
+        @include transitions;
+        
+        @include wh100;
+
+        .info {
+            max-width: length(330);
+            min-height: length(147);
+            padding: length(32);
+            background: rgba($white, 0.94);
+            box-shadow: $box-shadow-1;
+            @include flex-center;
+            text-align: center;
+
+            .infotext {
+                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.8, 14));
+                color: $primary;
+            }
+        }
+    }
+
+    @include hover {
+        img {
+            @include transform(scale(1.1));
+        }
+
+        .cardlink-details {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+// CARD-LINK END
+
+/**=====================================================**
+                    DIMOND-CARDS
+=======================================================**/
+
+// CARD-SLIDER START
+.diamondshopcard {
+    @include flex-center-column;
+    gap: length(8);
+    text-align: center;
+    @include transitions;
+
+    &-thumbnail {
+        width: length(114);
+        height: length(117);
+        @include border(solid, 1, $dimondBorder);
+        @include flex-center;
+        padding: length(16);
+        overflow: hidden;
+
+        img {
+            @include square(82);
+            object-fit: contain;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.1));
+            }
+        }
+    }
+
+    &-info {
+        .diamondshopcardtitle {
+            @include font-face($futuraBK, style('normal'), size(17), weight('normal'), line-height(22.1, 17));
+            color: $black;
+        }
+    }
+
+    @include hover {
+        
+    }
+}
+
+// CARD-SLIDER END
+
+// CARD-DISCOVER START
+.carddiscover {
+    @include flex-center-column;
+
+    &-header {
+        @include w100;
+        @include square(length(200));
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+            object-fit: contain;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.05));
+            }
+        }
+
+    }
+
+    &-body {
+        @include flex-center-column;
+        text-align: center;
+
+        .discovertitle {
+            @include font-face($futuraBK, style('normal'), size(18), weight('medium'), line-height(30.6, 18));
+            color: $primary;
+        }
+
+        .discovertext {
+            @include font-face($futuraBK, style('normal'), size(14), weight('medium'), line-height(23.8, 14));
+            color: $secondary;
+            margin-bottom: length(12);
+        }
+
+        .discoverlink {
+            @include font-face($jost, style('normal'), size(12), weight('medium'), line-height(19.2, 12));
+            text-transform: uppercase;
+            letter-spacing: length(1.44);
+            color: $black;
+            text-decoration: underline;
+
+            @include hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// CARD-DISCOVER END
+
+// CARD-JEWEL START
+
+.cardjewel {
+    @include flex-center-column;
+    text-align: center;
+    gap: length(20);
+
+    &-header {
+        @include w100;
+        @include flex-center;
+        height: length(279);
+        overflow: hidden;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+            background: rgba($black, 0.03);
+        
+            @include hover {
+                @include transform(scale(1.075));
+            }
+        }
+    }
+
+    &-body {
+        @include flex-center-column;
+        gap: length(4);
+        padding: length(0) length(20);
+
+        .jeweltitle {
+            @include font-face($futuraBK, style('normal'), size(18), weight('medium'), line-height(30.6, 18));
+            color: $black;
+        }
+
+        .jeweltext {
+            @include font-face($futuraBK, style('normal'), size(14), weight('medium'), line-height(23.8, 14));
+            color: $secondary;
+        }
+    }
+}
+
+// CARD-JEWEL END

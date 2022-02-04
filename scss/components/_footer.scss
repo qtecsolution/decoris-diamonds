@@ -99,4 +99,52 @@
             }
         }
     }
+
+    .divider {
+        @include w100;
+        height: length(1);
+        background: $dividerBg;
+        margin: length(44) length(0) length(22);
+    }
+
+    .copyright {
+        @include flex-column;
+        gap: length(14);
+
+        @include breakpoint(mobile768) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .privacy-policy {
+            .copyrightlink {
+                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(18.2, 14));
+                color: $footerText;
+                @include transitions;
+
+                @include hover {
+                    color: $black;
+                }
+            }
+        }
+
+        &-info {}
+
+        &-text {
+            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(18.2, 14));
+            color: $primary;
+        }
+
+        .paymentinfo {
+            @include flex-center-vert;
+            gap: length(8);
+
+            .payment-thumb {
+                img {
+                    @include wh100;
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,50 @@
+.swiper-button-prev,
+.swiper-button-next {
+    padding: length(12);
+    @include square(length(48));
+    @include circle;
+    @include flex-center;
+    overflow: hidden;
+    background: $white;
+    top: 30%;
+    top: length(188);
+
+    &::after {
+        display: none;
+    }
+}
+
+.swiper-button-prev {
+    left: length(0);
+    z-index: 100;
+}
+.swiper-button-next {
+    right: length(0);
+    z-index: 100;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    padding: length(12);
+    @include square(length(48));
+    @include circle;
+    @include flex-center;
+    overflow: hidden;
+    background: $white;
+    top: 50%;
+    @include transform(translateY(-50%));
+
+    &::after {
+        display: none;
+    }
+}
+
+.carousel-control-prev {
+    left: length(24);
+    z-index: 100;
+}
+
+.carousel-control-next {
+    right: length(24);
+    z-index: 100;
+}

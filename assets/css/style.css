@@ -222,17 +222,6 @@
   font-display: swap;
 }
 
-/**======================================
-            HEADING STYLES
-=======================================**/
-.text {
-  font-family: "Futura Bk";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1.71429;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -626,6 +615,11 @@ select {
 \*------------------------------------*/
 .decories-container {
   max-width: 107.5rem;
+  margin-inline: auto;
+}
+
+.dimond-container {
+  max-width: 82.5rem;
   margin-inline: auto;
 }
 
@@ -1065,6 +1059,78 @@ select {
   color: #000000;
 }
 
+.footer .divider {
+  width: 100%;
+  height: 0.0625rem;
+  background: #DEE2E6;
+  margin: 2.75rem 0rem 1.375rem;
+}
+
+.footer .copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .footer .copyright {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.footer .copyright .privacy-policy .copyrightlink {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #969696;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.footer .copyright .privacy-policy .copyrightlink:not([disabled]):hover {
+  color: #000000;
+}
+
+.footer .copyright-text {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #333333;
+}
+
+.footer .copyright .paymentinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.footer .copyright .paymentinfo .payment-thumb img {
+  width: 100%;
+  height: 100%;
+}
+
 /**=====================================================**
                         HOME-CARDS
 =======================================================**/
@@ -1404,6 +1470,139 @@ select {
   color: #333333;
 }
 
+.diamond {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.125rem;
+}
+
+.diamond-header {
+  width: 100%;
+  height: 12.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .diamond-header {
+    height: 17.5rem;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  .diamond-header {
+    height: 24.25rem;
+  }
+}
+
+.diamond-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.diamond-header img:not([disabled]):hover {
+  -webkit-transform: scale(1.075);
+  transform: scale(1.075);
+}
+
+.diamond-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.diamond-title {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #000000;
+}
+
+.diamond-text {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.diamond .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.diamond .link .icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.diamond .link .text {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #000000;
+}
+
 .cardbrand {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1494,6 +1693,7 @@ select {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
+  max-width: 44.125rem;
 }
 
 .cardbrand-body .brandinfo .brandtext {
@@ -1501,6 +1701,604 @@ select {
   font-style: normal;
   font-size: 0.875rem;
   font-weight: normal;
+  line-height: 1.7;
+  color: #5A5A5A;
+}
+
+.cardbrand-body .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media screen and (min-width: 31.25rem) {
+  .cardbrand-body .links {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 0.625rem;
+  }
+}
+
+.cardbrand-body .links .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardbrand-body .links .link .icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.cardbrand-body .links .link .text {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #000000;
+}
+
+/**=====================================================**
+                BESPOKE-CARDS
+=======================================================**/
+.cardslider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.cardslider-header {
+  max-width: 26.4375rem;
+  height: 22.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardslider-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.cardslider-header img:not([disabled]):hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.cardslider-header .linkbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.61);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.cardslider-header .linkbox .sliderlink {
+  padding: 0.625rem 2.375rem;
+  background: #ffffff;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.cardslider-header .linkbox .sliderlink:not([disabled]):hover {
+  background: #000000;
+  color: #cccccc;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.cardslider-body .slidertext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #5A5A5A;
+}
+
+.cardslider:not([disabled]):hover .linkbox {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cardcaption {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+  text-align: center;
+}
+
+.cardcaption-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cardcaption-header .icon {
+  height: 3rem;
+  width: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.cardcaption-header .captioninfo .captiontext {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.705;
+  color: #535353;
+}
+
+.cardcaption-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardcaption-body .author {
+  max-width: 7.5rem;
+}
+
+.cardcaption-body .author .authorname {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #333333;
+}
+
+.cardlink {
+  max-width: 26.5rem;
+  height: 23.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardlink img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.cardlink-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2.5rem;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.cardlink-details .info {
+  max-width: 20.625rem;
+  min-height: 9.1875rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.94);
+  -webkit-box-shadow: 0rem 0rem 0.0625rem rgba(12, 26, 75, 0.1), 0rem 0.625rem 1rem rgba(20, 37, 63, 0.06);
+          box-shadow: 0rem 0rem 0.0625rem rgba(12, 26, 75, 0.1), 0rem 0.625rem 1rem rgba(20, 37, 63, 0.06);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.cardlink-details .info .infotext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #333333;
+}
+
+.cardlink:not([disabled]):hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.cardlink:not([disabled]):hover .cardlink-details {
+  opacity: 1;
+  visibility: visible;
+}
+
+/**=====================================================**
+                    DIMOND-CARDS
+=======================================================**/
+.diamondshopcard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.diamondshopcard-thumbnail {
+  width: 7.125rem;
+  height: 7.3125rem;
+  border: solid 0.0625rem #ECECEC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.diamondshopcard-thumbnail img {
+  height: 82;
+  width: 82;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.diamondshopcard-thumbnail img:not([disabled]):hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.diamondshopcard-info .diamondshopcardtitle {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.0625rem;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #000000;
+}
+
+.carddiscover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.carddiscover-header {
+  width: 100%;
+  height: 12.5rem;
+  width: 12.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.carddiscover-header img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.carddiscover-header img:not([disabled]):hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.carddiscover-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.carddiscover-body .discovertitle {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #333333;
+}
+
+.carddiscover-body .discovertext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #5A5A5A;
+  margin-bottom: 0.75rem;
+}
+
+.carddiscover-body .discoverlink {
+  font-family: "Jost";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.6;
+  text-transform: uppercase;
+  letter-spacing: 0.09rem;
+  color: #000000;
+  text-decoration: underline;
+}
+
+.carddiscover-body .discoverlink:not([disabled]):hover {
+  text-decoration: none;
+}
+
+.cardjewel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  gap: 1.25rem;
+}
+
+.cardjewel-header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 17.4375rem;
+  overflow: hidden;
+}
+
+.cardjewel-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.cardjewel-header img:not([disabled]):hover {
+  -webkit-transform: scale(1.075);
+  transform: scale(1.075);
+}
+
+.cardjewel-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  padding: 0rem 1.25rem;
+}
+
+.cardjewel-body .jeweltitle {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #000000;
+}
+
+.cardjewel-body .jeweltext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
   line-height: 1.7;
   color: #5A5A5A;
 }
@@ -1525,9 +2323,8 @@ select {
 .modal-header .btn-close {
   background: transparent;
   border: none;
-  height: 1.75rem;
-  width: 1.75rem;
-  border-radius: 100%;
+  height: 1.5rem;
+  width: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1538,8 +2335,14 @@ select {
       -ms-flex-pack: center;
           justify-content: center;
   opacity: 1;
-  margin: 0rem;
+  overflow: hidden;
+  margin-left: auto;
   padding: 0rem;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
 .modal-header .btn-close:focus {
@@ -1548,15 +2351,548 @@ select {
           box-shadow: none;
 }
 
-.modal-body {
-  position: relative;
-  min-height: 30rem;
+.modal-header .btn-close:not([disabled]):hover {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
-@media screen and (max-width: 48rem) {
-  .modal-body {
-    min-height: 18.75rem;
+.modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.modal-body .meeting-contactdescript {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 62rem) {
+  .modal-body .meeting-contactdescript {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
+}
+
+.modal-body .meeting-contactdescript .meeting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .modal-body .meeting-contactdescript .meeting {
+    width: 50%;
+  }
+}
+
+.modal-body .meeting-contactdescript .meeting-header .meetingtitle {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #000000;
+}
+
+.modal-body .meeting-contactdescript .meeting-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.modal-body .meeting-contactdescript .meeting-body .interested {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+.modal-body .meeting-contactdescript .meeting-body .interested .inputlabel {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.33;
+  color: #000000;
+}
+
+.modal-body .meeting-contactdescript .meeting-body .interested .interestedbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.modal-body .meeting-contactdescript .meeting-body .interested .interestedbox .interested input[type="checkbox"]:checked ~ .interestlabel {
+  color: #000000;
+}
+
+.modal-body .meeting-contactdescript .meeting-body .interested .interestedbox .interested input[type="checkbox"]:checked ~ .interestlabel::before {
+  border-color: #69B756;
+  background: #69B756;
+}
+
+.modal-body .meeting-contactdescript .meeting-body .interested .interestedbox .interested input[type="checkbox"]:checked ~ .interestlabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-body .meeting-contactdescript .meeting-body .interested .interestedbox .interested .interestlabel {
+  position: relative;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 1.875rem;
+  cursor: pointer;
+}
+
+.modal-body .meeting-contactdescript .meeting-body .interested .interestedbox .interested .interestlabel::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0rem;
+  height: 1.125rem;
+  width: 1.125rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: solid 0.0625rem #000000;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.modal-body .meeting-contactdescript .meeting-body .interested .interestedbox .interested .interestlabel::after {
+  content: '';
+  position: absolute;
+  top: 45%;
+  left: 0.4375rem;
+  width: 0.25rem;
+  height: 0.625rem;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+  border: solid 0.0625rem #ffffff;
+  border-top: none;
+  border-left: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.modal-body .meeting-contactdescript .meeting-body .infobox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal-body .meeting-contactdescript .meeting-body .infobox .inputlabel {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000000;
+  letter-spacing: 0.005rem;
+}
+
+.modal-body .meeting-contactdescript .meeting-body .infobox .note {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000000;
+  letter-spacing: 0.005rem;
+}
+
+.modal-body .meeting-contactdescript .meeting-body .infobox .datetimebox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.modal-body .meeting-contactdescript .meeting-body .infobox .datetimebox .inputfield {
+  padding: 1rem;
+  border: solid 0.0625rem #CED3DB;
+  width: 100%;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000000;
+  letter-spacing: 0.005rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.modal-body .meeting-contactdescript .meeting-body .infobox .datetimebox .inputfield:focus {
+  border-color: #000000;
+}
+
+.modal-body .meeting-contactdescript .meeting-body .infobox .datetimebox .form-select {
+  padding: 1rem;
+  border: none;
+  border-radius: 0rem;
+  border-radius: 0rem;
+  border: solid 0.0625rem #CED3DB;
+  width: 100%;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000000;
+  letter-spacing: 0.005rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.modal-body .meeting-contactdescript .meeting-body .infobox .datetimebox .form-select:focus {
+  border-color: #000000;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+.modal-body .meeting-contactdescript .contactdescript {
+  width: 100%;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  border-top: solid 0.0625rem #D8D8D8;
+}
+
+@media screen and (min-width: 62rem) {
+  .modal-body .meeting-contactdescript .contactdescript {
+    width: 50%;
+    border-left: solid 0.0625rem #D8D8D8;
+    border-top: none;
+  }
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescripttitle {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #000000;
+  width: 100%;
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescript-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescript-info .bio {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescript-info .bio label {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescript-info .bio .inputfield {
+  padding: 1rem;
+  border: solid 0.0625rem #CED3DB;
+  width: 100%;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000000;
+  letter-spacing: 0.005rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescript-info .bio .inputfield:focus {
+  border-color: #000000;
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescript-info .checkbio {
+  width: 100%;
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescript-info .checkbio input[type="checkbox"]:checked ~ .confirmlabel {
+  color: #000000;
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescript-info .checkbio input[type="checkbox"]:checked ~ .confirmlabel::before {
+  border-color: #69B756;
+  background: #69B756;
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescript-info .checkbio input[type="checkbox"]:checked ~ .confirmlabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescript-info .checkbio .confirmlabel {
+  position: relative;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #333333;
+  padding-left: 1.875rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescript-info .checkbio .confirmlabel::-moz-selection {
+  background: #ffffff;
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescript-info .checkbio .confirmlabel::selection {
+  background: #ffffff;
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescript-info .checkbio .confirmlabel .link {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #000000;
+  text-decoration: underline;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescript-info .checkbio .confirmlabel .link::-moz-selection {
+  background: #ffffff;
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescript-info .checkbio .confirmlabel .link::selection {
+  background: #ffffff;
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescript-info .checkbio .confirmlabel .link:not([disabled]):hover {
+  text-decoration: none;
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescript-info .checkbio .confirmlabel::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0rem;
+  height: 1.125rem;
+  width: 1.125rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: solid 0.0625rem #000000;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.modal-body .meeting-contactdescript .contactdescript .contactdescript-info .checkbio .confirmlabel::after {
+  content: '';
+  position: absolute;
+  top: 45%;
+  left: 0.4375rem;
+  width: 0.25rem;
+  height: 0.625rem;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+  border: solid 0.0625rem #ffffff;
+  border-top: none;
+  border-left: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.modal-body .submitbox {
+  padding-bottom: 3.75rem;
+}
+
+.modal-body .submitbox .btn-submit {
+  padding: 0.625rem 1.75rem;
+  text-align: center;
+  background: #ffffff;
+  color: #000000;
+  border: solid 0.0625rem #000000;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.6;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  text-transform: uppercase;
+}
+
+.modal-body .submitbox .btn-submit:not([disabled]):hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  padding: 0.75rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  background: #ffffff;
+  top: 30%;
+  top: 11.75rem;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev {
+  left: 0rem;
+  z-index: 100;
+}
+
+.swiper-button-next {
+  right: 0rem;
+  z-index: 100;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  padding: 0.75rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  background: #ffffff;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev::after,
+.carousel-control-next::after {
+  display: none;
+}
+
+.carousel-control-prev {
+  left: 1.5rem;
+  z-index: 100;
+}
+
+.carousel-control-next {
+  right: 1.5rem;
+  z-index: 100;
 }
 
 .offcanvas-top {
@@ -1712,6 +3048,1215 @@ polygon {
 
 .topbar-content .topbarlink:not([disabled]):hover {
   color: #b3b3b3;
+}
+
+/**=====================================================
+                    JEWEL-STEPS
+=====================================================**/
+.jewelsteps {
+  padding: 2.5rem 0rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .jewelsteps {
+    padding: 5rem 0rem;
+  }
+}
+
+.jewelsteps-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.jewelsteps-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.jewelsteps-title {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #333333;
+}
+
+.jewelsteps-body .jeewlinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.jewelsteps-body .jeewlinfo:nth-child(odd) {
+  text-align: right;
+  justify-self: flex-end;
+}
+
+.jewelsteps-body .jeewlinfo:nth-child(even) {
+  text-align: left;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.jewelsteps-thumbnail {
+  width: 100%;
+  height: 22.375rem;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 48rem) {
+  .jewelsteps-thumbnail {
+    height: 28.625rem;
+  }
+}
+
+.jewelsteps-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.jewelsteps-thumbnail img:not([disabled]):hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.jewelsteps-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.jewelsteps-details .steptitles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.jewelsteps-details .steptitles .stepsubtitle {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #626262;
+  letter-spacing: 0.215rem;
+}
+
+.jewelsteps-details .steptitles .stepstitle {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.435;
+  color: #000000;
+}
+
+.jewelsteps-details .steptext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.70533;
+  color: #626262;
+}
+
+/**=====================================================
+                    HERO-BANNER
+=====================================================**/
+.herobanner {
+  background: url(../images/pages/bespoke/bespoke-jewellery/bespok-jewellery-thumb.png) no-repeat center center/cover;
+  padding: 8.625rem 1.25rem;
+}
+
+.herobanner-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.625rem;
+  text-align: center;
+}
+
+.herobanner-details .herotitle {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.625rem;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #ffffff;
+}
+
+.herobanner-details .herotext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #ffffff;
+  margin-bottom: 1.375rem;
+}
+
+.herobanner-details .btn-hero {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.6;
+  padding: 0.75rem 2.375rem;
+  text-transform: uppercase;
+  text-align: center;
+  border: solid 0.0625rem #ffffff;
+  background: transparent;
+  color: #ffffff;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.herobanner-details .btn-hero:not([disabled]):hover {
+  background: #ffffff;
+  color: #333333;
+}
+
+/**=====================================================
+                    DECORIES-DIAMONDS CREATION
+=====================================================**/
+.decoriscreations {
+  padding: 5rem 1.25rem;
+}
+
+.decoriscreations-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.decoriscreations-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+.decoriscreations-header .decortitle {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.07;
+  color: #333333;
+}
+
+.decoriscreations-header .decoritext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #333333;
+}
+
+.decoriscreations-body {
+  width: 100%;
+}
+
+/**=====================================================
+                    SEE-MORE
+=====================================================**/
+.bespoketestimonial-content .carousel {
+  height: 23.875rem;
+  margin: 5rem 1.25rem;
+}
+
+.bespoketestimonial-content .carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.bespoketestimonial-content .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.bespoketestimonial-content .carousel-caption {
+  height: 23.875rem;
+  background: #FAF9F7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.5rem 0rem;
+}
+
+/**=====================================================
+                    SEE-MORE
+=====================================================**/
+.seemore {
+  padding: 3.75rem 1.25rem;
+}
+
+.seemore-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.75rem;
+}
+
+.seemore-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.625rem;
+  text-align: center;
+  width: 100%;
+}
+
+.seemore-header .seemoretitle {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.07;
+  color: #333333;
+}
+
+.seemore-header .seemoretext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #5A5A5A;
+}
+
+/**=====================================================
+                    CONTACT
+=====================================================**/
+.contact {
+  padding: 5rem 1.25rem;
+}
+
+.contact-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.contact-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.contact-header .contacttitle {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.435;
+  color: #333333;
+}
+
+@media screen and (min-width: 30rem) {
+  .contact-header .contacttitle {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 1.875rem;
+    font-weight: normal;
+    line-height: 1.3;
+  }
+}
+
+.contact-header .contacttext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #5A5A5A;
+}
+
+.contact-header .contactlink {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #333333;
+  text-decoration: underline;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.contact-header .contactlink:not([disabled]):hover {
+  text-decoration: none;
+}
+
+.contact-body {
+  border-top: solid 0.0625rem rgba(21, 21, 21, 0.15);
+  padding-top: 0.625rem;
+}
+
+.contact-body .showroominfo .showroomlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.contact-body .showroominfo .showroomlist .btn-tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+  background: transparent;
+  border: none;
+  width: calc((100% / 2) - 1.5rem);
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .contact-body .showroominfo .showroomlist .btn-tab {
+    width: calc((100% / 3) - 1.5rem);
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .contact-body .showroominfo .showroomlist .btn-tab {
+    width: calc((100% / 6) - 1.5rem);
+  }
+}
+
+.contact-body .showroominfo .showroomlist .btn-tab .city {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #333333;
+}
+
+.contact-body .showroominfo .showroomlist .btn-tab .country {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #000000;
+}
+
+.contact-body .showroominfo .showroomlist .btn-tab.active .city {
+  text-decoration: underline;
+}
+
+.contact-body .showroominfo .showroomlist .btn-tab.active .country {
+  text-decoration: underline;
+}
+
+.contact-body .showroominfo .contact-thumb {
+  overflow: hidden;
+  min-height: 32.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.contact-body .showroominfo .contact-thumb img {
+  height: 82;
+  width: 82;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.contact-body .showroominfo .contact-thumb img:not([disabled]):hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.contact-body .showroominfo .schedules {
+  background: #0E0E0E;
+  height: 100%;
+  padding: 2.5rem 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-body .showroominfo .contact-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-body .showroominfo .contact-detail .showroomtitle {
+  margin-bottom: 0.75rem;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+.contact-body .showroominfo .contact-detail .showroomlink {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.24;
+  color: #ffffff;
+  text-decoration: underline;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.contact-body .showroominfo .contact-detail .showroomlink:not([disabled]):hover {
+  text-decoration: none;
+}
+
+.contact-body .showroominfo .contact-detail .showroomschedule {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+.contact-body .showroominfo .contact-detail .showroomschedule .schedule {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-body .showroominfo .contact-detail .showroomschedule .schedule .day {
+  width: 50%;
+  text-align: left;
+}
+
+.contact-body .showroominfo .contact-detail .showroomschedule .schedule .day .dayname {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.15;
+  color: #B9B8B8;
+}
+
+.contact-body .showroominfo .contact-detail .showroomschedule .schedule .time {
+  width: 50%;
+  text-align: left;
+}
+
+.contact-body .showroominfo .contact-detail .showroomschedule .schedule .time .officetime {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.15;
+  color: #B9B8B8;
+}
+
+.contact-body .showroomaddress {
+  padding: 5rem 1.25rem;
+}
+
+.contact-body .showroomaddress .offaddressbox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: solid 0.0625rem rgba(0, 0, 0, 0.17);
+  padding-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .contact-body .showroomaddress .offaddressbox {
+    border-bottom: none;
+    padding-right: 3rem;
+    border-right: solid 0.0625rem rgba(0, 0, 0, 0.17);
+  }
+}
+
+.contact-body .showroomaddress .offaddressbox .addrssoffice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+.contact-body .showroomaddress .offaddressbox .addrssoffice .officetitle {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.705;
+  color: #000000;
+}
+
+.contact-body .showroomaddress .offaddressbox .addrssoffice .officelocation {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.70533;
+  color: #5A5A5A;
+  margin-bottom: 1rem;
+}
+
+.contact-body .showroomaddress .offaddressbox .addrssoffice .officelink {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.585;
+  color: #000000;
+  text-decoration: underline;
+}
+
+.contact-body .showroomaddress .offaddressbox .addrssoffice .officelink:not([disabled]):hover {
+  text-decoration: none;
+}
+
+.contact-body .showroomaddress .addressinfos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.375rem;
+  padding-top: 1.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .contact-body .showroomaddress .addressinfos {
+    padding-top: 0rem;
+    padding-left: 3rem;
+  }
+}
+
+.contact-body .showroomaddress .addressinfos .officetext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.70533;
+  color: #5A5A5A;
+}
+
+.contact-body .showroomaddress .addressinfos .appointbox {
+  margin-top: 1rem;
+}
+
+.contact-body .showroomaddress .addressinfos .appointbox .btn-hero {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.6;
+  padding: 0.75rem 2.375rem;
+  text-transform: uppercase;
+  text-align: center;
+  border: solid 0.0625rem #000000;
+  background: #ffffff;
+  color: #000000;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.contact-body .showroomaddress .addressinfos .appointbox .btn-hero:not([disabled]):hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+/**=====================================================
+                    CONTACT
+=====================================================**/
+.mapsection {
+  height: lengh(370);
+  padding: 0rem 1.25rem 5rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .mapsection {
+    height: lengh(570);
+  }
+}
+
+.mapsection-content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.mapsection-content img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/**=====================================================
+                    DIAMOND-BANNER
+=====================================================**/
+.diamondbanner {
+  background: #F9F8F7 url(../images/pages/diamond/diamond-education/diamond-education.png) no-repeat center center/cover;
+  padding: 8.625rem 1.25rem;
+}
+
+.diamondbanner-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.625rem;
+  text-align: center;
+}
+
+.diamondbanner-details .diamondbannertitle {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.625rem;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 48rem) {
+  .diamondbanner-details .diamondbannertitle {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 3rem;
+    font-weight: normal;
+    line-height: 1.6;
+  }
+}
+
+.diamondbanner-details .diamondbannertext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #ffffff;
+  margin-bottom: 1.375rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .diamondbanner-details .diamondbannertext {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.6;
+  }
+}
+
+.diamondbanner-details .btn-hero {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.6;
+  padding: 0.75rem 2.375rem;
+  text-transform: uppercase;
+  text-align: center;
+  border: solid 0.0625rem #ffffff;
+  background: transparent;
+  color: #ffffff;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.diamondbanner-details .btn-hero:not([disabled]):hover {
+  background: #ffffff;
+  color: #333333;
+}
+
+/**=====================================================
+                    DIAMOND-SHOP
+=====================================================**/
+.diamondshop {
+  padding: 5rem 1.25rem;
+}
+
+.diamondshop-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.diamondshop-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.diamondshop-header .diamondshoptitle {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.625rem;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #333333;
+}
+
+@media screen and (min-width: 48rem) {
+  .diamondshop-header .diamondshoptitle {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 1.875rem;
+    font-weight: normal;
+    line-height: 1.3;
+  }
+}
+
+.diamondshop-header .dimondshoptext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.7;
+  color: #5A5A5A;
+}
+
+.diamondshop-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+/**=====================================================
+                    JEWELLERY-SLIDE
+=====================================================**/
+.jewelleryslide {
+  margin-top: 1.5rem;
+  max-height: 35.375rem;
+}
+
+.jewelleryslide-content .carousel-caption {
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), color-stop(86.04%, rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 86.04%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.jewelleryslide-content .carousel-caption .caption-info {
+  width: 22.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.jewelleryslide-content .carousel-caption .caption-info h5 {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.625rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #ffffff;
+}
+
+.jewelleryslide-content .carousel-caption .caption-info p {
+  margin-bottom: 0.625rem;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+.jewelleryslide-content .carousel-caption .caption-info .btn-hero {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.6;
+  padding: 0.75rem 2.375rem;
+  text-transform: uppercase;
+  text-align: center;
+  border: solid 0.0625rem #ffffff;
+  background: transparent;
+  color: #ffffff;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.jewelleryslide-content .carousel-caption .caption-info .btn-hero:not([disabled]):hover {
+  background: #ffffff;
+  color: #333333;
+}
+
+.jewellerydivider {
+  margin: 5rem 0rem;
+  width: 100%;
+  height: 0.0625rem;
+  background: #DEE2E6;
+}
+
+/**=====================================================
+                    JEWELLERY-COLLECTION
+=====================================================**/
+.jewellerycollection .cardcollection {
+  padding: 3rem 1.5rem;
+  border: solid 0.0625rem #DEE2E6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.jewellerycollection .cardcollection .collectiontitle {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.625rem;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #333333;
+}
+
+.jewellerycollection .cardcollection .collectiontext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #5A5A5A;
+  margin-bottom: 0.75rem;
+}
+
+.jewellerycollection .cardcollection .shopcollect .btn-hero {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.6;
+  padding: 0.75rem 2.375rem;
+  text-transform: uppercase;
+  text-align: center;
+  border: solid 0.0625rem #000000;
+  background: #ffffff;
+  color: #000000;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.jewellerycollection .cardcollection .shopcollect .btn-hero:not([disabled]):hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.jewellerycollection .cardcollection .ratinglist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+}
+
+/**=====================================================
+                    JEWELLERY-DISCOVER
+=====================================================**/
+.discover {
+  padding: 5rem 1.25rem;
+}
+
+/**=====================================================
+                    JEWELLERY-CATEGORYSHOP
+=====================================================**/
+.categoryshop {
+  padding: 5rem 1.25rem;
+}
+
+.categoryshop-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.categoryshop-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.categoryshop-header .categoryshoptitle {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+  color: #333333;
+}
+
+.categoryshop-header .categoryshoptext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #5A5A5A;
 }
 
 /**=====================================================
@@ -2541,6 +5086,11 @@ polygon {
 .newsletter-content .subscribe .submitbox .btn-submit {
   padding: 0.625rem 1.375rem;
   text-align: center;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.6;
   background: #353535;
   color: #ffffff;
   -webkit-transition: all 250ms ease-in-out;
