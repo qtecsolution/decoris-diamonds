@@ -20,6 +20,23 @@
     @include w100;
 
     &-header {
+        padding: length(24);
+
+        .brandlogo {
+            @include flex-center;
+            width: length(160);
+            height: length(80);
+            overflow: hidden;
+
+            img {
+                max-width: 100%;
+                object-fit: contain;
+
+                @include breakpoint(mobile768) {
+                    object-fit: cover;
+                }
+            }
+        }
 
         .btn-close {
             @include square(length(36));
@@ -45,16 +62,30 @@
             @include hover {
                 svg {
                     @include transform(rotate(90deg));
-
-                    path {
-                        // fill: $tertiary;
-                    }
                 }
             }
         }
     }
 
     &-body {
+
+        .mobilemenu {
+            @include flex-column;
+            gap: length(20);
+            padding: length(24);
+
+            .mobilelink {
+                @include font-face($futuraBK, style('normal'), size(17), weight('normal'), line-height(22, 17));
+                color: $primary;
+                text-transform: uppercase;
+                letter-spacing: length(1.04);
+                @include transitions;
+
+                @include hover {
+                    color: $black;
+                }
+            }
+        }
 
         &::-webkit-scrollbar {
             background: transparent;
