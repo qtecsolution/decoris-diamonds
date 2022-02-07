@@ -1,19 +1,19 @@
 .topbar {
-    height: length(48);
     @include flex-center;
     text-align: center;
-    background: $primary;
 
-    &-content {
-        .topbarlink {
-            @include font-face($jost, style('normal'), size(14), weight('medium'), line-height(20, 14));
-            color: $white;
-            text-transform: uppercase;
-            @include transitions;
+    .topbarlink {
+        @include font-face($jost, style('normal'), size(14), weight('light'), line-height(20, 14));
+        @include setBgColor($primary, $white);
+        text-transform: uppercase;
+        letter-spacing: length(1.12);
+        @include transitions;
+        padding: length(15) length(10);
+        @include flex-center;
+        @include w100;
 
-            @include hover {
-                color: lighten($primary, 50%);
-            }
+        @include hover {
+            @include setBgColor($footerText, $black);
         }
     }
 }

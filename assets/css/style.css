@@ -1164,7 +1164,13 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow: hidden;
+  -webkit-transition: transform 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 @media screen and (min-width: 35.9375rem) {
@@ -1185,7 +1191,28 @@ select {
   }
 }
 
-.product-header img {
+.product-header .front, .product-header .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* Safari */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.product-header .front img, .product-header .back img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -1198,9 +1225,15 @@ select {
   background: rgba(0, 0, 0, 0.03);
 }
 
-.product-header img:not([disabled]):hover {
+.product-header .front img:not([disabled]):hover, .product-header .back img:not([disabled]):hover {
   -webkit-transform: scale(1.075);
   transform: scale(1.075);
+}
+
+.product-header .back {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  z-index: 2;
 }
 
 .product-body {
@@ -1259,6 +1292,11 @@ select {
     font-weight: normal;
     line-height: 1.6;
   }
+}
+
+.product:not([disabled]):hover .product-header {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
 }
 
 .cardproduct {
@@ -2246,7 +2284,13 @@ select {
       -ms-flex-pack: center;
           justify-content: center;
   height: 17.4375rem;
-  overflow: hidden;
+  -webkit-transition: transform 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .cardjewel-header img {
@@ -2265,6 +2309,51 @@ select {
 .cardjewel-header img:not([disabled]):hover {
   -webkit-transform: scale(1.075);
   transform: scale(1.075);
+}
+
+.cardjewel-header .front, .cardjewel-header .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* Safari */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.cardjewel-header .front img, .cardjewel-header .back img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.cardjewel-header .front img:not([disabled]):hover, .cardjewel-header .back img:not([disabled]):hover {
+  -webkit-transform: scale(1.075);
+  transform: scale(1.075);
+}
+
+.cardjewel-header .back {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  z-index: 2;
 }
 
 .cardjewel-body {
@@ -2301,6 +2390,11 @@ select {
   font-weight: 500;
   line-height: 1.7;
   color: #5A5A5A;
+}
+
+.cardjewel:not([disabled]):hover .cardjewel-header {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
 }
 
 .modal-content {
@@ -3081,7 +3175,6 @@ polygon {
 }
 
 .topbar {
-  height: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3092,23 +3185,36 @@ polygon {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  background: #333333;
 }
 
-.topbar-content .topbarlink {
+.topbar .topbarlink {
   font-family: "Jost";
   font-style: normal;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.42857;
+  background: #333333;
   color: #ffffff;
   text-transform: uppercase;
+  letter-spacing: 0.07rem;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
+  padding: 0.9375rem 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
 }
 
-.topbar-content .topbarlink:not([disabled]):hover {
-  color: #b3b3b3;
+.topbar .topbarlink:not([disabled]):hover {
+  background: #969696;
+  color: #000000;
 }
 
 /**=====================================================

@@ -12,7 +12,8 @@
         @include w100;
         height: length(200);
         @include flex-center;
-        overflow: hidden;
+        @include transition(transform 0.5s ease);
+        transform-style: preserve-3d;
 
         @include breakpoint(mobile575) {
             height: length(280);
@@ -26,15 +27,32 @@
             height: length(349);
         }
 
-        img {
+        .front, .back {
+            position: absolute;
             @include wh100;
-            object-fit: contain;
-            @include transitiontransform;
-            background: rgba($black, 0.03);
-        
-            @include hover {
-                @include transform(scale(1.075));
+            @include flex-center;
+
+            /* Safari */
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            overflow: hidden;
+            transition: 1s;
+
+            img {
+                @include wh100;
+                object-fit: contain;
+                @include transitiontransform;
+                background: rgba($black, 0.03);
+            
+                @include hover {
+                    @include transform(scale(1.075));
+                }
             }
+        }
+
+        .back{
+            @include transform(rotateY(-180deg));
+            z-index: 2;
         }
     }
 
@@ -63,6 +81,12 @@
         
         @include breakpoint(mobile480) {
             @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(22.4, 14));
+        }
+    }
+
+    @include hover {
+        .product-header {
+            @include transform(rotateY(-180deg));
         }
     }
 }
@@ -598,7 +622,8 @@
         @include w100;
         @include flex-center;
         height: length(279);
-        overflow: hidden;
+        @include transition(transform 0.5s ease);
+        transform-style: preserve-3d;
 
         img {
             @include wh100;
@@ -609,6 +634,34 @@
             @include hover {
                 @include transform(scale(1.075));
             }
+        }
+
+        .front, .back {
+            position: absolute;
+            @include wh100;
+            @include flex-center;
+
+            /* Safari */
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            overflow: hidden;
+            transition: 1s;
+
+            img {
+                @include wh100;
+                object-fit: contain;
+                @include transitiontransform;
+                background: rgba($black, 0.03);
+            
+                @include hover {
+                    @include transform(scale(1.075));
+                }
+            }
+        }
+
+        .back{
+            @include transform(rotateY(-180deg));
+            z-index: 2;
         }
     }
 
@@ -625,6 +678,12 @@
         .jeweltext {
             @include font-face($futuraBK, style('normal'), size(14), weight('medium'), line-height(23.8, 14));
             color: $secondary;
+        }
+    }
+
+    @include hover {
+        .cardjewel-header {
+            @include transform(rotateY(-180deg));
         }
     }
 }
