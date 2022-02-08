@@ -1,4 +1,3 @@
-
 /**=====================================================
                     JEWEL-STEPS
 =====================================================**/
@@ -20,7 +19,7 @@
     }
 
     &-title {
-        @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+        @include font-face($playfairDisplay, style('normal'), size(34), weight('normal'), line-height(39, 34));
         color: $primary;
     }
 
@@ -32,7 +31,7 @@
                 text-align: right;
                 justify-self: flex-end;
             }
-    
+
             &:nth-child(even) {
                 text-align: left;
                 align-items: flex-start;
@@ -68,20 +67,24 @@
             gap: length(12);
 
             .stepsubtitle {
-                @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(15.6, 12));
+                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(24, 14));
                 color: $textStep;
                 letter-spacing: length(3.44);
             }
 
             .stepstitle {
-                @include font-face($playfairDisplay, style('normal'), size(20), weight('normal'), line-height(28.7, 20));
+                @include font-face($playfairDisplay, style('normal'), size(24), weight('normal'), line-height(32, 24));
                 color: $black;
             }
         }
 
         .steptext {
-            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+            @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(26, 16));
             color: $textStep;
+
+            @include breakpoint(mobile768) {
+                @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+            }
         }
     }
 
@@ -144,13 +147,17 @@
         gap: length(14);
 
         .decortitle {
-            @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(32.1, 30));
+            @include font-face($playfairDisplay, style('normal'), size(32), weight('normal'), line-height(40, 32));
             color: $primary;
         }
 
         .decoritext {
-            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.8, 14));
+            @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(24, 16));
             color: $primary;
+
+            @include breakpoint(mobile768) {
+                @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+            }
         }
     }
 
@@ -167,15 +174,15 @@
         .carousel {
             height: length(382);
             margin: length(80) length(20);
-            
+
             &-inner {
                 @include wh100;
             }
-        
+
             &-item {
                 @include wh100;
             }
-        
+
             &-caption {
                 height: length(382);
                 background: $testimonialBg;
@@ -204,13 +211,17 @@
         @include w100;
 
         .seemoretitle {
-            @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(32.1, 30));
+            @include font-face($playfairDisplay, style('normal'), size(34), weight('normal'), line-height(40, 34));
             color: $primary;
         }
 
         .seemoretext {
-            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.8, 14));
+            @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(24, 16));
             color: $secondary;
+
+            @include breakpoint(mobile768) {
+                @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+            }
         }
     }
 }

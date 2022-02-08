@@ -222,6 +222,18 @@
   font-display: swap;
 }
 
+/*------------------------------------*\
+    breakpoint vars
+\*------------------------------------*/
+/*------------------------------------*\
+    breakpoint functions
+\*------------------------------------*/
+/*------------------------------------*\
+    breakpoint mixin
+\*------------------------------------*/
+/*------------------------------------*\
+    breakpoint usage
+\*------------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -412,7 +424,7 @@ u::-moz-selection,
 ul::-moz-selection,
 var::-moz-selection,
 video::-moz-selection {
-  background: #333333;
+  background: #5A5A5A;
   color: #ffffff;
 }
 
@@ -502,7 +514,7 @@ u::selection,
 ul::selection,
 var::selection,
 video::selection {
-  background: #333333;
+  background: #5A5A5A;
   color: #ffffff;
 }
 
@@ -529,13 +541,24 @@ html {
 body {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.71429;
+  line-height: 1.5;
+  letter-spacing: 0.03rem;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   position: relative;
+}
+
+@media screen and (min-width: 48rem) {
+  body {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.3;
+  }
 }
 
 a {
@@ -601,18 +624,24 @@ select {
   cursor: pointer;
 }
 
-/*------------------------------------*\
-    breakpoint vars
-\*------------------------------------*/
-/*------------------------------------*\
-    breakpoint functions
-\*------------------------------------*/
-/*------------------------------------*\
-    breakpoint mixin
-\*------------------------------------*/
-/*------------------------------------*\
-    breakpoint usage
-\*------------------------------------*/
+p {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.625;
+}
+
+@media screen and (min-width: 48rem) {
+  p {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
+}
+
 .decories-container {
   max-width: 107.5rem;
   margin-inline: auto;
@@ -673,6 +702,11 @@ select {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.625rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: 1.875rem;
+  border-radius: 1.875rem;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
 }
 
 .header-top .headerlist-link .icon {
@@ -700,17 +734,21 @@ select {
   color: #333333;
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: normal;
-  line-height: 1.33333;
+  line-height: 1.64286;
   text-transform: uppercase;
-  letter-spacing: 0.01rem;
+  letter-spacing: 0.07rem;
 }
 
 @media screen and (min-width: 62rem) {
   .header-top .headerlist-link .text {
     display: block;
   }
+}
+
+.header-top .headerlist-link:not([disabled]):hover {
+  background: #eeeeee;
 }
 
 .header-top .headerlist-link:not([disabled]):hover svg path {
@@ -745,23 +783,16 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 8.75rem;
-  height: 4.375rem;
+  width: 10.5rem;
+  height: 3.5rem;
   overflow: hidden;
 }
 
 @media screen and (min-width: 62rem) {
   .header-center .sitelogo {
     width: 16.25rem;
-    height: 5rem;
+    height: 5.5rem;
     margin-inline: auto;
-  }
-}
-
-@media screen and (min-width: 48rem) {
-  .header-center .sitelogo {
-    width: 11.25rem;
-    height: 4.375rem;
   }
 }
 
@@ -884,8 +915,8 @@ select {
 }
 
 .footer-info .footerlogo {
-  width: 6.5rem;
-  height: 3.625rem;
+  width: 10.3125rem;
+  height: 3.5rem;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -910,16 +941,16 @@ select {
   font-size: 0.75rem;
   font-weight: normal;
   line-height: 1.40833;
-  color: #333333;
+  color: #969696;
 }
 
 @media screen and (min-width: 30rem) {
   .footer-info .footertext {
     font-family: "Futura Bk";
     font-style: normal;
-    font-size: 0.8125rem;
+    font-size: 1rem;
     font-weight: normal;
-    line-height: 1.3;
+    line-height: 1.7;
   }
 }
 
@@ -973,7 +1004,7 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0.875rem;
+  gap: 1.5rem;
 }
 
 .footer-details .footinfo .footertitle {
@@ -1037,26 +1068,43 @@ select {
 .footer-details .footinfo .footerlist-link {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.625;
+  line-height: 1.5;
   color: #969696;
+  position: relative;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
 
-@media screen and (min-width: 30rem) {
+.footer-details .footinfo .footerlist-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0.0625rem;
+  left: 0;
+  height: 0.0625rem;
+  width: 0;
+  background: #969696;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@media screen and (min-width: 48rem) {
   .footer-details .footinfo .footerlist-link {
     font-family: "Futura Bk";
     font-style: normal;
-    font-size: 0.8125rem;
+    font-size: 1.125rem;
     font-weight: normal;
-    line-height: 1.5;
+    line-height: 1.3;
   }
 }
 
 .footer-details .footinfo .footerlist-link:not([disabled]):hover {
   color: #000000;
+}
+
+.footer-details .footinfo .footerlist-link:not([disabled]):hover::before {
+  width: 100%;
 }
 
 .footer .divider {
@@ -1099,12 +1147,29 @@ select {
   font-weight: normal;
   line-height: 1.3;
   color: #969696;
+  position: relative;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
 
+.footer .copyright .privacy-policy .copyrightlink::before {
+  content: "";
+  position: absolute;
+  bottom: 0.0625rem;
+  left: 0;
+  height: 0.0625rem;
+  width: 0;
+  background: #969696;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
 .footer .copyright .privacy-policy .copyrightlink:not([disabled]):hover {
   color: #000000;
+}
+
+.footer .copyright .privacy-policy .copyrightlink:not([disabled]):hover::before {
+  width: 100%;
 }
 
 .footer .copyright-text {
@@ -1191,7 +1256,8 @@ select {
   }
 }
 
-.product-header .front, .product-header .back {
+.product-header .front,
+.product-header .back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1212,7 +1278,8 @@ select {
   transition: 1s;
 }
 
-.product-header .front img, .product-header .back img {
+.product-header .front img,
+.product-header .back img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -1225,7 +1292,8 @@ select {
   background: rgba(0, 0, 0, 0.03);
 }
 
-.product-header .front img:not([disabled]):hover, .product-header .back img:not([disabled]):hover {
+.product-header .front img:not([disabled]):hover,
+.product-header .back img:not([disabled]):hover {
   -webkit-transform: scale(1.075);
   transform: scale(1.075);
 }
@@ -1254,11 +1322,6 @@ select {
 }
 
 .product-title {
-  font-family: "Futura Bk";
-  font-style: normal;
-  font-size: 1.125rem;
-  font-weight: normal;
-  line-height: 1.6;
   color: #000000;
 }
 
@@ -1271,27 +1334,17 @@ select {
   font-style: normal;
   font-size: 0.875rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.85714;
   color: #333333;
 }
 
 .product-price {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.75rem;
+  font-size: 1.125rem;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.38889;
   color: #000000;
-}
-
-@media screen and (min-width: 30rem) {
-  .product-price {
-    font-family: "Futura Bk";
-    font-style: normal;
-    font-size: 0.875rem;
-    font-weight: normal;
-    line-height: 1.6;
-  }
 }
 
 .product:not([disabled]):hover .product-header {
@@ -1389,9 +1442,9 @@ select {
 .cardproduct-title {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.41667;
   color: #000000;
 }
 
@@ -1402,11 +1455,21 @@ select {
 .cardproduct-text {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.625;
   color: #333333;
   min-height: 4.1875rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .cardproduct-text {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 .feature {
@@ -1493,24 +1556,33 @@ select {
 .feature-title {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.58333;
   color: #000000;
 }
 
 .feature-text {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.625;
   color: #333333;
+}
+
+@media screen and (min-width: 48rem) {
+  .feature-text {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 .diamond {
   width: 100%;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1586,26 +1658,36 @@ select {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   text-align: center;
 }
 
 .diamond-title {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.41667;
   color: #000000;
 }
 
 .diamond-text {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.625;
   color: #333333;
+}
+
+@media screen and (min-width: 48rem) {
+  .diamond-text {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 .diamond .link {
@@ -1635,9 +1717,9 @@ select {
 .diamond .link .text {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.5;
   color: #000000;
 }
 
@@ -1710,9 +1792,9 @@ select {
 .cardbrand-body .brandtitle {
   font-family: "Playfair Display";
   font-style: normal;
-  font-size: 1.625rem;
+  font-size: 1.875rem;
   font-weight: normal;
-  line-height: 1.3;
+  line-height: 1.26667;
   color: #333333;
 }
 
@@ -1737,10 +1819,20 @@ select {
 .cardbrand-body .brandinfo .brandtext {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.625;
   color: #5A5A5A;
+}
+
+@media screen and (min-width: 48rem) {
+  .cardbrand-body .brandinfo .brandtext {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 .cardbrand-body .links {
@@ -1902,10 +1994,20 @@ select {
 .cardslider-body .slidertext {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.5;
   color: #5A5A5A;
+}
+
+@media screen and (min-width: 48rem) {
+  .cardslider-body .slidertext {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 .cardslider:not([disabled]):hover .linkbox {
@@ -2073,10 +2175,20 @@ select {
 .cardlink-details .info .infotext {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.5;
   color: #333333;
+}
+
+@media screen and (min-width: 48rem) {
+  .cardlink-details .info .infotext {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 .cardlink:not([disabled]):hover img {
@@ -2311,7 +2423,8 @@ select {
   transform: scale(1.075);
 }
 
-.cardjewel-header .front, .cardjewel-header .back {
+.cardjewel-header .front,
+.cardjewel-header .back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -2332,7 +2445,8 @@ select {
   transition: 1s;
 }
 
-.cardjewel-header .front img, .cardjewel-header .back img {
+.cardjewel-header .front img,
+.cardjewel-header .back img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -2345,7 +2459,8 @@ select {
   background: rgba(0, 0, 0, 0.03);
 }
 
-.cardjewel-header .front img:not([disabled]):hover, .cardjewel-header .back img:not([disabled]):hover {
+.cardjewel-header .front img:not([disabled]):hover,
+.cardjewel-header .back img:not([disabled]):hover {
   -webkit-transform: scale(1.075);
   transform: scale(1.075);
 }
@@ -2377,19 +2492,29 @@ select {
 .cardjewel-body .jeweltitle {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 1.125rem;
+  font-size: 1.4375rem;
   font-weight: 500;
-  line-height: 1.7;
+  line-height: 1.56522;
   color: #000000;
 }
 
 .cardjewel-body .jeweltext {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
-  line-height: 1.7;
+  line-height: 1.625;
   color: #5A5A5A;
+}
+
+@media screen and (min-width: 48rem) {
+  .cardjewel-body .jeweltext {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 .cardjewel:not([disabled]):hover .cardjewel-header {
@@ -3214,7 +3339,7 @@ polygon {
 
 .topbar .topbarlink:not([disabled]):hover {
   background: #969696;
-  color: #000000;
+  color: #ffffff;
 }
 
 /**=====================================================
@@ -3257,9 +3382,9 @@ polygon {
 .jewelsteps-title {
   font-family: "Playfair Display";
   font-style: normal;
-  font-size: 1.875rem;
+  font-size: 2.125rem;
   font-weight: normal;
-  line-height: 1.3;
+  line-height: 1.14706;
   color: #333333;
 }
 
@@ -3337,9 +3462,9 @@ polygon {
 .jewelsteps-details .steptitles .stepsubtitle {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: normal;
-  line-height: 1.3;
+  line-height: 1.71429;
   color: #626262;
   letter-spacing: 0.215rem;
 }
@@ -3347,19 +3472,29 @@ polygon {
 .jewelsteps-details .steptitles .stepstitle {
   font-family: "Playfair Display";
   font-style: normal;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: normal;
-  line-height: 1.435;
+  line-height: 1.33333;
   color: #000000;
 }
 
 .jewelsteps-details .steptext {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.70533;
+  line-height: 1.625;
   color: #626262;
+}
+
+@media screen and (min-width: 48rem) {
+  .jewelsteps-details .steptext {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 /**=====================================================
@@ -3474,19 +3609,29 @@ polygon {
 .decoriscreations-header .decortitle {
   font-family: "Playfair Display";
   font-style: normal;
-  font-size: 1.875rem;
+  font-size: 2rem;
   font-weight: normal;
-  line-height: 1.07;
+  line-height: 1.25;
   color: #333333;
 }
 
 .decoriscreations-header .decoritext {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.5;
   color: #333333;
+}
+
+@media screen and (min-width: 48rem) {
+  .decoriscreations-header .decoritext {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 .decoriscreations-body {
@@ -3566,19 +3711,29 @@ polygon {
 .seemore-header .seemoretitle {
   font-family: "Playfair Display";
   font-style: normal;
-  font-size: 1.875rem;
+  font-size: 2.125rem;
   font-weight: normal;
-  line-height: 1.07;
+  line-height: 1.17647;
   color: #333333;
 }
 
 .seemore-header .seemoretext {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.5;
   color: #5A5A5A;
+}
+
+@media screen and (min-width: 48rem) {
+  .seemore-header .seemoretext {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 /**=====================================================
@@ -3630,27 +3785,37 @@ polygon {
   .contact-header .contacttitle {
     font-family: "Playfair Display";
     font-style: normal;
-    font-size: 1.875rem;
+    font-size: 2.125rem;
     font-weight: normal;
-    line-height: 1.3;
+    line-height: 1.14706;
   }
 }
 
 .contact-header .contacttext {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.5;
   color: #5A5A5A;
+}
+
+@media screen and (min-width: 48rem) {
+  .contact-header .contacttext {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 .contact-header .contactlink {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.5;
   color: #333333;
   text-decoration: underline;
   -webkit-transition: all 250ms ease-in-out;
@@ -3725,13 +3890,33 @@ polygon {
   color: #333333;
 }
 
+@media screen and (min-width: 48rem) {
+  .contact-body .showroominfo .showroomlist .btn-tab .city {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
+}
+
 .contact-body .showroominfo .showroomlist .btn-tab .country {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.71429;
   color: #000000;
+}
+
+@media screen and (min-width: 48rem) {
+  .contact-body .showroominfo .showroomlist .btn-tab .country {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+  }
 }
 
 .contact-body .showroominfo .showroomlist .btn-tab.active .city {
@@ -3804,18 +3989,18 @@ polygon {
   margin-bottom: 0.75rem;
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.41667;
   color: #ffffff;
 }
 
 .contact-body .showroominfo .contact-detail .showroomlink {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.24;
+  line-height: 1.5;
   color: #ffffff;
   text-decoration: underline;
   -webkit-transition: all 250ms ease-in-out;
@@ -3854,10 +4039,20 @@ polygon {
 .contact-body .showroominfo .contact-detail .showroomschedule .schedule .day .dayname {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.15;
+  line-height: 1.5;
   color: #B9B8B8;
+}
+
+@media screen and (min-width: 48rem) {
+  .contact-body .showroominfo .contact-detail .showroomschedule .schedule .day .dayname {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 .contact-body .showroominfo .contact-detail .showroomschedule .schedule .time {
@@ -3868,10 +4063,20 @@ polygon {
 .contact-body .showroominfo .contact-detail .showroomschedule .schedule .time .officetime {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.15;
+  line-height: 1.5;
   color: #B9B8B8;
+}
+
+@media screen and (min-width: 48rem) {
+  .contact-body .showroominfo .contact-detail .showroomschedule .schedule .time .officetime {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 .contact-body .showroomaddress {
@@ -3915,28 +4120,38 @@ polygon {
 .contact-body .showroomaddress .offaddressbox .addrssoffice .officetitle {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-weight: normal;
-  line-height: 1.705;
+  line-height: 1.33333;
   color: #000000;
 }
 
 .contact-body .showroomaddress .offaddressbox .addrssoffice .officelocation {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.70533;
+  line-height: 1.625;
   color: #5A5A5A;
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .contact-body .showroomaddress .offaddressbox .addrssoffice .officelocation {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 .contact-body .showroomaddress .offaddressbox .addrssoffice .officelink {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.585;
+  line-height: 1.5;
   color: #000000;
   text-decoration: underline;
 }
@@ -3967,10 +4182,20 @@ polygon {
 .contact-body .showroomaddress .addressinfos .officetext {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.70533;
+  line-height: 1.625;
   color: #5A5A5A;
+}
+
+@media screen and (min-width: 48rem) {
+  .contact-body .showroomaddress .addressinfos .officetext {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 .contact-body .showroomaddress .addressinfos .appointbox {
@@ -4152,7 +4377,7 @@ polygon {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.75rem;
   text-align: center;
 }
 
@@ -4178,10 +4403,20 @@ polygon {
 .diamondshop-header .dimondshoptext {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.5;
   color: #5A5A5A;
+}
+
+@media screen and (min-width: 48rem) {
+  .diamondshop-header .dimondshoptext {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 .diamondshop-body {
@@ -4268,6 +4503,16 @@ polygon {
   color: #ffffff;
 }
 
+@media screen and (min-width: 48rem) {
+  .jewelleryslide-content .carousel-caption .caption-info p {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.72222;
+  }
+}
+
 .jewelleryslide-content .carousel-caption .caption-info .btn-hero {
   font-family: "Futura Bk";
   font-style: normal;
@@ -4310,33 +4555,44 @@ polygon {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.75rem;
+  height: 100%;
 }
 
 .jewellerycollection .cardcollection .collectiontitle {
   font-family: "Playfair Display";
   font-style: normal;
-  font-size: 1.625rem;
+  font-size: 1.875rem;
   font-weight: normal;
-  line-height: 1.3;
+  line-height: 1.26667;
   color: #333333;
 }
 
 .jewellerycollection .cardcollection .collectiontext {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
-  line-height: 1.7;
+  line-height: 1.625;
   color: #5A5A5A;
   margin-bottom: 0.75rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .jewellerycollection .cardcollection .collectiontext {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 .jewellerycollection .cardcollection .shopcollect .btn-hero {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.5;
   padding: 0.75rem 2.375rem;
   text-transform: uppercase;
   text-align: center;
@@ -4404,26 +4660,36 @@ polygon {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   text-align: center;
 }
 
 .categoryshop-header .categoryshoptitle {
   font-family: "Playfair Display";
   font-style: normal;
-  font-size: 1.875rem;
+  font-size: 2.125rem;
   font-weight: normal;
-  line-height: 1.3;
+  line-height: 1.17647;
   color: #333333;
 }
 
 .categoryshop-header .categoryshoptext {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
-  line-height: 1.7;
+  line-height: 1.625;
   color: #5A5A5A;
+}
+
+@media screen and (min-width: 48rem) {
+  .categoryshop-header .categoryshoptext {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 /**=====================================================
@@ -4481,9 +4747,9 @@ polygon {
   height: 6.875rem;
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
-  line-height: 1.47143;
+  line-height: 1.5;
   text-transform: uppercase;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
@@ -4529,7 +4795,12 @@ polygon {
   border-radius: 0rem;
   width: 100%;
   padding-left: 0;
-  padding-right: 0;
+  padding-right: 1.25rem;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 .faqsection .faq .accordion-button:not(.collapsed) {
@@ -4538,11 +4809,6 @@ polygon {
           box-shadow: none;
   background: transparent;
   outline: none;
-  font-family: "Futura Bk";
-  font-style: normal;
-  font-size: 1.125rem;
-  font-weight: 500;
-  line-height: 1.7;
   color: #000000;
 }
 
@@ -4569,9 +4835,9 @@ polygon {
 .faqsection .faq .accordion-body .faqtext {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.9375rem;
+  font-size: 1.0625rem;
   font-weight: 500;
-  line-height: 1.70667;
+  line-height: 1.88235;
   color: #5A5A5A;
 }
 
@@ -4638,9 +4904,9 @@ polygon {
 .homebanner-content .banner-header .banner-text {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.625;
   color: #5A5A5A;
 }
 
@@ -4670,6 +4936,11 @@ polygon {
           align-items: center;
   padding: 0rem;
   color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.1875;
 }
 
 .homebanner-content .banner-breadcrumb .breadcrumb-item::before {
@@ -4686,9 +4957,9 @@ polygon {
   color: #5A5A5A;
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.8125rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.1875;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
@@ -4954,10 +5225,20 @@ polygon {
 .testimonial-content .testimonialtext {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.625;
   color: #5A5A5A;
+}
+
+@media screen and (min-width: 48rem) {
+  .testimonial-content .testimonialtext {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 /**=====================================================
@@ -5019,7 +5300,7 @@ polygon {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 
 .ringstyle-details .weddingstyletitle {
@@ -5038,6 +5319,16 @@ polygon {
   font-weight: normal;
   line-height: 1.7;
   color: #5A5A5A;
+}
+
+@media screen and (min-width: 48rem) {
+  .ringstyle-details .weddingstyletext {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 /**=====================================================
@@ -5061,16 +5352,16 @@ polygon {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   text-align: center;
 }
 
 .depthandwidth-details .depthtitle {
   font-family: "Playfair Display";
   font-style: normal;
-  font-size: 1.875rem;
+  font-size: 2rem;
   font-weight: normal;
-  line-height: 1.3;
+  line-height: 1.21875;
   color: #333333;
 }
 
@@ -5088,7 +5379,7 @@ polygon {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1.375rem;
+  gap: 1.25rem;
 }
 
 .depthandwidth-details .depthinfo-text {
@@ -5098,6 +5389,16 @@ polygon {
   font-weight: normal;
   line-height: 1.7;
   color: #5A5A5A;
+}
+
+@media screen and (min-width: 48rem) {
+  .depthandwidth-details .depthinfo-text {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 /**=====================================================
@@ -5256,9 +5557,9 @@ polygon {
 .productinfo-details .infobox .infotitle {
   font-family: "Playfair Display";
   font-style: normal;
-  font-size: 1.625rem;
+  font-size: 1.875rem;
   font-weight: normal;
-  line-height: 1.3;
+  line-height: 1.26667;
   color: #333333;
 }
 
@@ -5282,10 +5583,20 @@ polygon {
 .productinfo-details .infobox .infotexts .infotext {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.5;
   color: #5A5A5A;
+}
+
+@media screen and (min-width: 48rem) {
+  .productinfo-details .infobox .infotexts .infotext {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.72222;
+  }
 }
 
 /**=====================================================
@@ -5370,9 +5681,9 @@ polygon {
   padding: 0.75rem 1.125rem;
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.8125rem;
+  font-size: 1rem;
   font-weight: normal;
-  line-height: 1.3;
+  line-height: 1.1875;
   color: #333333;
   border: solid 0.0625rem transparent;
   -webkit-transition: all 250ms ease-in-out;
@@ -5400,13 +5711,13 @@ polygon {
 }
 
 .newsletter-content .subscribe .submitbox .btn-submit {
-  padding: 0.625rem 1.375rem;
+  padding: 0.8125rem 1.375rem;
   text-align: center;
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.1875;
   background: #353535;
   color: #ffffff;
   -webkit-transition: all 250ms ease-in-out;

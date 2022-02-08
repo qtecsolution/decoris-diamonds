@@ -4,7 +4,7 @@
 
 .header {
     background: $white;
-    
+
     &-top {
         max-width: length(1720);
         margin-inline: auto;
@@ -23,6 +23,9 @@
             &-link {
                 @include flex-center-vert;
                 gap: length(10);
+                padding: length(8) length(14);
+                @include radius(30);
+                @include transitions;
 
                 .icon {
                     @include square(length(18));
@@ -37,9 +40,9 @@
                 .text {
                     display: none;
                     color: $primary;
-                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(20, 15));
+                    @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23, 14));
                     text-transform: uppercase;
-                    letter-spacing: length(0.16);
+                    letter-spacing: length(1.12);
 
                     @include breakpoint(tab992) {
                         display: block;
@@ -47,11 +50,14 @@
                 }
 
                 @include hover {
+                    background: $grayBg;
+
                     svg {
                         path {
                             stroke: $black;
                         }
                     }
+
                     .text {
                         color: $black;
                     }
@@ -66,19 +72,14 @@
 
         .sitelogo {
             @include flex-center;
-            width: length(140);
-            height: length(70);
+            width: length(168);
+            height: length(56);
             overflow: hidden;
 
             @include breakpoint(tab992) {
                 width: length(260);
-                height: length(80);
+                height: length(88);
                 margin-inline: auto;
-            }
-
-            @include breakpoint(mobile768) {
-                width: length(180);
-                height: length(70);
             }
 
             img {
@@ -110,7 +111,7 @@
     &-bottom {
         display: none;
         @include border-single(top, solid, 1, $dividerBg);
-        @include border-single( bottom, solid, 1, $dividerBg);
+        @include border-single(bottom, solid, 1, $dividerBg);
 
         @include breakpoint(tab992) {
             display: block;

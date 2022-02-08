@@ -4,8 +4,8 @@
 .homebanner {
     padding: length(44) length(0);
     background: $bannerBg;
-    @include border-single( top, solid, 1, $dividerBg);
-    @include border-single( bottom, solid, 1, $dividerBg);
+    @include border-single(top, solid, 1, $dividerBg);
+    @include border-single(bottom, solid, 1, $dividerBg);
 
     @include breakpoint(mobile768) {
         padding: length(80) length(0);
@@ -30,7 +30,7 @@
             }
 
             .banner-text {
-                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
+                @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(26, 16));
                 color: $secondary;
             }
         }
@@ -46,7 +46,8 @@
                     @include flex-center-vert;
                     padding: length(0);
                     color: $secondary;
-                    
+                    @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(19, 16));
+
                     &::before {
                         content: '';
                         padding: length(0);
@@ -59,7 +60,7 @@
 
                     a {
                         color: $secondary;
-                        @include font-face($futuraBK, style('normal'), size(13), weight('normal'), line-height(20.8, 13));
+                        @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(19, 16));
                         @include transitions;
 
                         @include hover {
@@ -193,11 +194,11 @@
             @include breakpoint(mobile768) {
                 width: calc((100% / 3) - 1.5rem);
             }
-            
+
             @include breakpoint(tab992) {
                 width: calc((100% / 4) - 1.5rem);
             }
-            
+
             @include breakpoint(laptop1400) {
                 width: calc((100% / 5) - 1.5rem);
             }
@@ -215,15 +216,19 @@
     @include breakpoint(mobile768) {
         padding: length(80) length(0);
     }
-    
+
     &-content {
         @include flex-center-column;
         gap: length(20);
         text-align: center;
 
         .testimonialtext {
-            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
+            @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(26, 16));
             color: $secondary;
+
+            @include breakpoint(mobile768) {
+                @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+            }
         }
     }
 }
@@ -245,7 +250,7 @@
         height: length(1);
         background: $dividerBg;
     }
-    
+
     &-content {
         @include flex-center-column;
         gap: length(40);
@@ -254,7 +259,7 @@
 
     &-details {
         @include flex-center-column;
-        gap: length(4);
+        gap: length(8);
 
         .weddingstyletitle {
             @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
@@ -264,6 +269,10 @@
         .weddingstyletext {
             @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.8, 14));
             color: $secondary;
+
+            @include breakpoint(mobile768) {
+                @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+            }
         }
     }
 }
@@ -276,21 +285,25 @@
 
     &-details {
         @include flex-center-column;
-        gap: length(8);
+        gap: length(16);
         text-align: center;
-        
+
         .depthtitle {
-            @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+            @include font-face($playfairDisplay, style('normal'), size(32), weight('normal'), line-height(39, 32));
             color: $primary;
         }
 
         .depthinfo {
             @include flex-center-column;
-            gap: length(22);
+            gap: length(20);
 
             &-text {
                 @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.5, 15));
                 color: $secondary;
+
+                @include breakpoint(mobile768) {
+                    @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+                }
             }
         }
     }
@@ -320,12 +333,12 @@
         justify-content: space-between;
         flex-wrap: wrap;
         gap: length(40) length(30);
-        
+
         .productlink {
             width: 60%;
             margin-inline: auto;
             @include h100;
-            
+
             @include breakpoint(mobile480) {
                 width: 46%;
                 margin: 0;
@@ -383,17 +396,21 @@
             gap: length(12);
 
             .infotitle {
-                @include font-face($playfairDisplay, style('normal'), size(26), weight('normal'), line-height(33.8, 26));
+                @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(38, 30));
                 color: $primary;
             }
 
             .infotexts {
                 @include flex-center-column;
                 gap: length(24);
-            
+
                 .infotext {
-                    @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.8, 14));
+                    @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(24, 16));
                     color: $secondary;
+
+                    @include breakpoint(mobile768) {
+                        @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+                    }
                 }
             }
         }
@@ -412,7 +429,7 @@
         @include font-face($playfairDisplay, style('normal'), size(20), weight('normal'), line-height(28.7, 20));
         color: $primary;
         letter-spacing: length(-0.24);
-        
+
         @include breakpoint(mobile480) {
             @include font-face($playfairDisplay, style('normal'), size(29), weight('normal'), line-height(37.7, 29));
         }
@@ -441,7 +458,7 @@
                 .inputfield {
                     @include w100;
                     padding: length(12) length(18);
-                    @include font-face($futuraBK, style('normal'), size(13), weight('normal'), line-height(16.9, 13));
+                    @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(19, 16));
                     color: $primary;
                     @include border(solid, 1, transparent);
                     @include transitions;
@@ -458,9 +475,9 @@
 
             .submitbox {
                 .btn-submit {
-                    padding: length(10) length(22);
+                    padding: length(13) length(22);
                     text-align: center;
-                    @include font-face($futuraBK, style('normal'), size(12), weight('medium'), line-height(19.2, 12));
+                    @include font-face($futuraBK, style('normal'), size(16), weight('medium'), line-height(19, 16));
                     @include setBgColor($submitBg, $white);
                     @include transitions;
 

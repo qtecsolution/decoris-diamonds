@@ -1,4 +1,3 @@
-
 /**=====================================================
                     DIAMOND-BANNER
 =====================================================**/
@@ -24,7 +23,7 @@
             @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.8, 14));
             color: $white;
             margin-bottom: length(22);
-            
+
             @include breakpoint(mobile768) {
                 @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(28.8, 18));
             }
@@ -59,7 +58,7 @@
 
     &-header {
         @include flex-center-column;
-        gap: length(4);
+        gap: length(12);
         text-align: center;
 
         .diamondshoptitle {
@@ -72,8 +71,12 @@
         }
 
         .dimondshoptext {
-            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.8, 14));
+            @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(24, 16));
             color: $secondary;
+
+            @include breakpoint(mobile768) {
+                @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+            }
         }
     }
 

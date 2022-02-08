@@ -13,7 +13,7 @@
         @include w100;
 
         @include hover {
-            @include setBgColor($footerText, $black);
+            @include setBgColor($footerText, $white);
         }
     }
 }

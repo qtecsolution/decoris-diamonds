@@ -13,6 +13,7 @@ $breakpoints: (break-320: 320,
     break-575: 575,
     break-600: 600,
     break-700: 700,
+    break-767: 767,
     break-768: 768,
     break-800: 800,
     break-991: 991,
@@ -26,8 +27,7 @@ $breakpoints: (break-320: 320,
     break-1280: 1280,
     break-1366: 1366,
     break-1399: 1399,
-    break-1400: 1400
-    );
+    break-1400: 1400);
 
 /*------------------------------------*\
     breakpoint functions
@@ -94,8 +94,8 @@ $breakpoints: (break-320: 320,
         }
     }
 
-    @else if $breakpoints==phone768 {
-        @media screen and (max-width: break(break-768)) {
+    @else if $breakpoints==phone767 {
+        @media screen and (max-width: break(break-767)) {
             @content;
         }
     }
@@ -251,71 +251,6 @@ $breakpoints: (break-320: 320,
         }
     }
 
-    // Smartphones (portrait and landscape)
-    @else if $breakpoints==mobile {
-        @media only screen and (min-width: break(break-320)) and (max-width: break(break-480)) {
-            @content;
-        }
-    }
-
-    // Smartphones (portrait and landscape)
-    @else if $breakpoints==smart {
-        @media only screen and (min-width: break(break-500)) and (max-width: break(break-767)) {
-            @content;
-        }
-    }
-
-    // Tablets
-    @else if $breakpoints==tablet {
-        @media only screen and (min-width: break(break-768)) and (max-width: break(break-991)) {
-            @content;
-        }
-    }
-
-    // iPads (portrait and landscape)
-    @else if $breakpoints==ipad {
-        @media only screen and (min-width: break(break-768)) and (max-width: break(break-1024)) {
-            @content;
-        }
-    }
-
-    // Laptop-Desktop
-    @else if $breakpoints==laptopmini {
-        @media only screen and (min-width: break(break-1024)) and (max-width: break(break-1169)) {
-            @content;
-        }
-    }
-
-    // Laptop-Desktop
-    @else if $breakpoints==laptop {
-        @media only screen and (min-width: break(break-1169)) and (max-width: break(break-1366)) {
-            @content;
-        }
-    }
-
-    // iPads (portrait)
-    @else if $breakpoints==ipadPortrait {
-        @media only screen and (min-width: break(break-768)) and (max-width : break(break-1024)) and (orientation: portrait) {
-            @content;
-        }
-    }
-
-    // iPads (landscape)
-    @else if $breakpoints==ipadLandscape {
-        @media only screen and (min-width: break(break-768)) and (max-width: break(break-1024)) and (orientation: landscape) {
-            @content;
-        }
-    }
-
-    // iPhone 4
-    @else if $breakpoints==iphone4 {
-
-        @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-        only screen and (min-device-pixel-ratio: 1.5) {
-            @content;
-        }
-    }
-
     // If the key doesn't exist in the map
     @else {
         @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
@@ -341,7 +276,7 @@ $breakpoints: (break-320: 320,
 // @include breakpoint(laptop1100) {}
 // @include breakpoint(desktop1024) {}
 // @include breakpoint(tablet991) {}
-// @include breakpoint(phone768) {}
+// @include breakpoint(phone767) {}
 // @include breakpoint(phone575) {}
 // @include breakpoint(phone500) {}
 // @include breakpoint(phone499) {}
@@ -367,21 +302,3 @@ $breakpoints: (break-320: 320,
 // @include breakpoint(laptop1199) {}
 // @include breakpoint(laptop1200) {}
 // @include breakpoint(laptop1400) {}
-
-// MIN-MAX WIDTH
-// 320-480
-// @include breakpoint(mobile) {}
-// 500-767
-// @include breakpoint(smart) {}
-// 768-991
-// @include breakpoint(tablet) {}
-// 768-1024
-// @include breakpoint(ipad) {}
-// 768-1024
-// @include breakpoint(ipadPortrait) {}
-// 768-1024
-// @include breakpoint(ipadLandscape) {}
-// 1024-1169
-// @include breakpoint(laptopmini) {}
-// 1169-1366
-// @include breakpoint(laptop) {}

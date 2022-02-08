@@ -100,7 +100,7 @@ video {
     border: 0;
 
     &::selection {
-        @include setBgColor($primary, $white);
+        @include setBgColor($secondary, $white);
     }
 }
 
@@ -125,11 +125,16 @@ html {
 }
 
 body {
-	@include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(24, 14));
+    @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(24, 16));
+    letter-spacing: length(0.48);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     position: relative;
+
+    @include breakpoint(mobile768) {
+        @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(23.4, 18));
+    }
 }
 
 a {
@@ -191,4 +196,12 @@ input[type="date"]:valid::before {
 
 select {
     cursor: pointer;
+}
+
+p {
+    @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(26, 16));
+
+    @include breakpoint(mobile768) {
+        @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+    }
 }

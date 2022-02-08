@@ -9,8 +9,8 @@
         gap: length(32);
 
         .footerlogo {
-            width: length(104);
-            height: length(58);
+            width: length(165);
+            height: length(56);
             overflow: hidden;
             @include flex-center;
 
@@ -22,10 +22,10 @@
 
         .footertext {
             @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(16.9, 12));
-            color: $primary;
-            
+            color: $footerText;
+
             @include breakpoint(mobile480) {
-                @include font-face($futuraBK, style('normal'), size(13), weight('normal'), line-height(16.9, 13));
+                @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(27.2, 16));
             }
         }
 
@@ -57,13 +57,13 @@
 
         .footinfo {
             @include flex-column;
-            gap: length(14);
+            gap: length(24);
 
             .footertitle {
                 @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(16.9, 12));
                 color: $black;
                 text-transform: uppercase;
-                
+
                 @include breakpoint(mobile768) {
                     @include font-face($futuraBK, style('normal'), size(13), weight('normal'), line-height(16.9, 13));
                 }
@@ -78,22 +78,38 @@
                     gap: length(22);
                 }
             }
-    
+
             .footerlist {
                 @include list-vertical;
                 gap: length(12);
-    
+
                 &-link {
-                    @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(19.5, 12));
+                    @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(24, 16));
                     color: $footerText;
+                    position: relative;
                     @include transitions;
 
-                    @include breakpoint(mobile480) {
-                        @include font-face($futuraBK, style('normal'), size(13), weight('normal'), line-height(19.5, 13));
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: length(1);
+                        left: 0;
+                        height: length(1);
+                        width: 0;
+                        background: $footerText;
+                        transition: .5s;
+                    }
+
+                    @include breakpoint(mobile768) {
+                        @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(23.4, 18));
                     }
 
                     @include hover {
                         color: $black;
+
+                        &::before {
+                            @include w100;
+                        }
                     }
                 }
             }
@@ -121,10 +137,26 @@
             .copyrightlink {
                 @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(18.2, 14));
                 color: $footerText;
+                position: relative;
                 @include transitions;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: length(1);
+                    left: 0;
+                    height: length(1);
+                    width: 0;
+                    background: $footerText;
+                    transition: .5s;
+                }
 
                 @include hover {
                     color: $black;
+
+                    &::before {
+                        @include w100;
+                    }
                 }
             }
         }

@@ -1,5 +1,3 @@
-
-
 /**=====================================================
                     CONTACT
 =====================================================**/
@@ -10,7 +8,7 @@
         @include flex-column;
         gap: length(40);
     }
-    
+
     &-header {
         @include flex-center-column;
         gap: length(12);
@@ -21,17 +19,21 @@
             color: $primary;
 
             @include breakpoint(mobile480) {
-                @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+                @include font-face($playfairDisplay, style('normal'), size(34), weight('normal'), line-height(39, 34));
             }
         }
 
         .contacttext {
-            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.8, 14));
+            @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(24, 16));
             color: $secondary;
+
+            @include breakpoint(mobile768) {
+                @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+            }
         }
 
         .contactlink {
-            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.8, 14));
+            @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(24, 16));
             color: $primary;
             text-decoration: underline;
             @include transitions;
@@ -71,18 +73,26 @@
                     .city {
                         @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(27.2, 16));
                         color: $primary;
+
+                        @include breakpoint(mobile768) {
+                            @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+                        }
                     }
 
                     .country {
-                        @include font-face($futuraBK, style('normal'), size(13), weight('normal'), line-height(22.1, 13));
+                        @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(24, 14));
                         color: $black;
+
+                        @include breakpoint(mobile768) {
+                            @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(24, 16));
+                        }
                     }
 
                     &.active {
                         .city {
                             text-decoration: underline;
                         }
-    
+
                         .country {
                             text-decoration: underline;
                         }
@@ -100,7 +110,7 @@
                     @include square(82);
                     object-fit: contain;
                     @include transitiontransform;
-        
+
                     @include hover {
                         @include transform(scale(1.1));
                     }
@@ -120,12 +130,12 @@
 
                 .showroomtitle {
                     margin-bottom: length(12);
-                    @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(34, 20));
+                    @include font-face($futuraBK, style('normal'), size(24), weight('normal'), line-height(34, 24));
                     color: $white;
                 }
 
                 .showroomlink {
-                    @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(14.88, 12));
+                    @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(24, 16));
                     color: $white;
                     text-decoration: underline;
                     @include transitions;
@@ -134,7 +144,7 @@
                         text-decoration: none;
                     }
                 }
-                
+
                 .showroomschedule {
                     @include flex-column;
                     gap: length(14);
@@ -145,19 +155,28 @@
                         .day {
                             width: 50%;
                             text-align: left;
+
                             .dayname {
-                                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(16.1, 14));
+                                @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(24, 16));
                                 color: $textSchedule;
+
+                                @include breakpoint(mobile768) {
+                                    @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+                                }
                             }
                         }
-                        
+
                         .time {
                             width: 50%;
                             text-align: left;
 
                             .officetime {
-                                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(16.1, 14));
+                                @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(24, 16));
                                 color: $textSchedule;
+
+                                @include breakpoint(mobile768) {
+                                    @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+                                }
                             }
                         }
                     }
@@ -185,18 +204,22 @@
                     gap: length(14);
 
                     .officetitle {
-                        @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(30.69, 18));
+                        @include font-face($futuraBK, style('normal'), size(24), weight('normal'), line-height(32, 24));
                         color: $black;
                     }
 
                     .officelocation {
-                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                        @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(26, 16));
                         color: $secondary;
                         margin-bottom: length(16);
+
+                        @include breakpoint(mobile768) {
+                            @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+                        }
                     }
 
                     .officelink {
-                        @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(22.19, 14));
+                        @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(24, 16));
                         color: $black;
                         text-decoration: underline;
 
@@ -216,10 +239,14 @@
                     padding-top: length(0);
                     padding-left: length(48);
                 }
-                
+
                 .officetext {
-                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                    @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(26, 16));
                     color: $secondary;
+
+                    @include breakpoint(mobile768) {
+                        @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+                    }
                 }
 
                 .appointbox {
@@ -233,7 +260,7 @@
                         @include border(solid, 1, $black);
                         @include setBgColor($white, $black);
                         @include transitions;
-            
+
                         @include hover {
                             @include setBgColor($black, $white);
                         }
