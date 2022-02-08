@@ -111,7 +111,7 @@
     &-bottom {
         display: none;
         @include border-single(top, solid, 1, $dividerBg);
-        @include border-single(bottom, solid, 1, $dividerBg);
+        // @include border-single(bottom, solid, 1, $dividerBg);
 
         @include breakpoint(tab992) {
             display: block;
@@ -121,22 +121,205 @@
             max-width: length(1720);
             margin-inline: auto;
             @include flex-center;
-            padding: length(36) length(20);
 
             .mainlist {
                 @include list-horizontal;
-                gap: length(60);
+                justify-content: center;
+                position: relative;
+                @include w100;
 
                 &-link {
-                    // max-width: length(324);
-                    @include font-face($futuraBK, style('normal'), size(17), weight('normal'), line-height(22, 17));
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(22, 15));
                     color: $primary;
-                    text-transform: uppercase;
+                    position: relative;
+                    padding: length(44);
                     letter-spacing: length(1.04);
+                    text-transform: uppercase;
+                    display: inline-block;
                     @include transitions;
 
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: auto;
+                        right: auto;
+                        width: calc(100% - 5.5rem);
+                        height: length(5);
+                        background: $primary;
+                        opacity: 0;
+                        visibility: hidden;
+                        @include transitions;
+                        z-index: 100;
+                    }
+                }
+
+                &-item {
+                    .megadropdown {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        right: 0;
+                        @include w100;
+                        max-width: length(1600);
+                        margin: 0 auto;
+                        background: $white;
+                        box-shadow: $dropdownshadow;
+                        z-index: 300;
+                        display: none;
+                        @extend %animation;
+                        @extend %slideUpIn;
+
+                        .megasubmenu {
+                            width: 25%;
+                            padding: length(40) length(30);
+                            @include flex-column;
+                            gap: length(15);
+                            @include h100;
+                            text-align: left;
+
+                            &-header {
+                                .megasubmenu-title {
+                                    @include font-face($futuraBK, style('normal'), size(15), weight('medium'), line-height(22, 15));
+                                    color: $primary;
+                                    position: relative;
+                                    letter-spacing: length(1.04);
+                                    text-transform: uppercase;
+                                }
+                            }
+
+                            &-body {
+                                display: flex;
+                                align-items: flex-start;
+                                
+                                .menuicon {
+                                    width: length(50);
+                                    max-width: 30%;
+                                    overflow: hidden;
+
+                                    img {
+                                        @include w100;
+                                        object-fit: contain;
+                                    }
+                                }
+
+                                .megasublist {
+                                    @include list-vertical;
+                                    margin-left: length(-10);
+
+                                    &-link {
+                                        @include flex-center-vert;
+                                        padding: length(5) length(16);
+                                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(22, 15));
+                                        color: $footerText;
+                                        @include transitions;
+
+                                        .megaicon {
+                                            width: length(100);
+                                            height: lenth(10);
+                                            overflow: hidden;
+                                        }
+    
+                                        @include hover {
+                                            color: $black;
+                                            font-weight: bold;
+
+                                            .megaicon {
+                                                svg {
+                                                    path {
+                                                        stroke: $black;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .shapelist {
+                                    flex-direction: row;
+                                    flex-wrap: wrap;
+                                    overflow: hidden;
+
+                                    .megasublist-link {
+                                        padding: 0;
+                                    }
+
+                                    .shape {
+                                        @include square(length(68));
+                                        overflow: hidden;
+
+                                        @include hover {
+                                            svg {
+                                                path {
+                                                    stroke: black;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
                     @include hover {
-                        color: $black;
+                        .megadropdown {
+                            display: flex;
+                        }
+
+                        .mainlist-link {
+                            color: $black;
+                            font-weight: bold;
+
+                            &::before {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+
+                .subdropdownitem {
+                    position: relative;
+
+                    .subdropdown {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        @include w100;
+                        min-width: length(200);
+                        max-width: length(1600);
+                        background: $white;
+                        padding: length(10);
+                        box-shadow: $dropdownshadow;
+                        display: none;
+                        @extend %animation;
+                        @extend %slideUpIn;
+                        z-index: 300;
+
+                        .submenu {
+                            .sublist {
+                                @include list-vertical;
+
+                                &-link {
+                                    padding: length(5) length(16);
+                                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(22, 15));
+                                    color: $footerText;
+                                    @include transitions;
+
+                                    @include hover {
+                                        color: $black;
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @include hover {
+                        .subdropdown {
+                            display: flex;
+                        }
                     }
                 }
             }

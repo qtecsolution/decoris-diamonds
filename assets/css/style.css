@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+.header-bottom .mainnav .mainlist-item .megadropdown, .header-bottom .mainnav .mainlist .subdropdownitem .subdropdown {
+  -webkit-animation-duration: 250ms;
+  animation-duration: 250ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
 @-webkit-keyframes slideDownIn {
   0% {
     -webkit-transform: translateY(-100%);
@@ -13,6 +20,7 @@
             transform: translateY(-100%);
   }
 }
+
 @keyframes slideDownIn {
   0% {
     -webkit-transform: translateY(-100%);
@@ -86,6 +94,11 @@
     -webkit-transform: translateY(20px);
             transform: translateY(20px);
   }
+}
+
+.header-bottom .mainnav .mainlist-item .megadropdown, .header-bottom .mainnav .mainlist .subdropdownitem .subdropdown {
+  -webkit-animation-name: slideUpIn;
+  animation-name: slideUpIn;
 }
 
 @-webkit-keyframes slideUpInMobile {
@@ -839,7 +852,6 @@ p {
 .header-bottom {
   display: none;
   border-top: solid 0.0625rem #DEE2E6;
-  border-bottom: solid 0.0625rem #DEE2E6;
 }
 
 @media screen and (min-width: 62rem) {
@@ -860,7 +872,6 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 2.25rem 1.25rem;
 }
 
 .header-bottom .mainnav .mainlist {
@@ -873,24 +884,248 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 3.75rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 100%;
 }
 
 .header-bottom .mainnav .mainlist-link {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 1.0625rem;
+  font-size: 0.9375rem;
   font-weight: normal;
-  line-height: 1.29412;
+  line-height: 1.46667;
   color: #333333;
-  text-transform: uppercase;
+  position: relative;
+  padding: 2.75rem;
   letter-spacing: 0.065rem;
+  text-transform: uppercase;
+  display: inline-block;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
 }
 
-.header-bottom .mainnav .mainlist-link:not([disabled]):hover {
+.header-bottom .mainnav .mainlist-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  right: auto;
+  width: calc(100% - 5.5rem);
+  height: 0.3125rem;
+  background: #333333;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  z-index: 100;
+}
+
+.header-bottom .mainnav .mainlist-item .megadropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 2.5rem 0.6875rem rgba(0, 0, 0, 0.11);
+          box-shadow: 0 0 2.5rem 0.6875rem rgba(0, 0, 0, 0.11);
+  z-index: 300;
+  display: none;
+}
+
+.header-bottom .mainnav .mainlist-item .megadropdown .megasubmenu {
+  width: 25%;
+  padding: 2.5rem 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.9375rem;
+  height: 100%;
+  text-align: left;
+}
+
+.header-bottom .mainnav .mainlist-item .megadropdown .megasubmenu-header .megasubmenu-title {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.46667;
+  color: #333333;
+  position: relative;
+  letter-spacing: 0.065rem;
+  text-transform: uppercase;
+}
+
+.header-bottom .mainnav .mainlist-item .megadropdown .megasubmenu-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.header-bottom .mainnav .mainlist-item .megadropdown .megasubmenu-body .menuicon {
+  width: 3.125rem;
+  max-width: 30%;
+  overflow: hidden;
+}
+
+.header-bottom .mainnav .mainlist-item .megadropdown .megasubmenu-body .menuicon img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.header-bottom .mainnav .mainlist-item .megadropdown .megasubmenu-body .megasublist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: -0.625rem;
+}
+
+.header-bottom .mainnav .mainlist-item .megadropdown .megasubmenu-body .megasublist-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.3125rem 1rem;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.46667;
+  color: #969696;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.header-bottom .mainnav .mainlist-item .megadropdown .megasubmenu-body .megasublist-link .megaicon {
+  width: 6.25rem;
+  height: lenth(10);
+  overflow: hidden;
+}
+
+.header-bottom .mainnav .mainlist-item .megadropdown .megasubmenu-body .megasublist-link:not([disabled]):hover {
   color: #000000;
+  font-weight: bold;
+}
+
+.header-bottom .mainnav .mainlist-item .megadropdown .megasubmenu-body .megasublist-link:not([disabled]):hover .megaicon svg path {
+  stroke: #000000;
+}
+
+.header-bottom .mainnav .mainlist-item .megadropdown .megasubmenu-body .shapelist {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.header-bottom .mainnav .mainlist-item .megadropdown .megasubmenu-body .shapelist .megasublist-link {
+  padding: 0;
+}
+
+.header-bottom .mainnav .mainlist-item .megadropdown .megasubmenu-body .shapelist .shape {
+  height: 4.25rem;
+  width: 4.25rem;
+  overflow: hidden;
+}
+
+.header-bottom .mainnav .mainlist-item .megadropdown .megasubmenu-body .shapelist .shape:not([disabled]):hover svg path {
+  stroke: black;
+}
+
+.header-bottom .mainnav .mainlist-item:not([disabled]):hover .megadropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-bottom .mainnav .mainlist-item:not([disabled]):hover .mainlist-link {
+  color: #000000;
+  font-weight: bold;
+}
+
+.header-bottom .mainnav .mainlist-item:not([disabled]):hover .mainlist-link::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.header-bottom .mainnav .mainlist .subdropdownitem {
+  position: relative;
+}
+
+.header-bottom .mainnav .mainlist .subdropdownitem .subdropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  min-width: 12.5rem;
+  max-width: 100rem;
+  background: #ffffff;
+  padding: 0.625rem;
+  -webkit-box-shadow: 0 0 2.5rem 0.6875rem rgba(0, 0, 0, 0.11);
+          box-shadow: 0 0 2.5rem 0.6875rem rgba(0, 0, 0, 0.11);
+  display: none;
+  z-index: 300;
+}
+
+.header-bottom .mainnav .mainlist .subdropdownitem .subdropdown .submenu .sublist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header-bottom .mainnav .mainlist .subdropdownitem .subdropdown .submenu .sublist-link {
+  padding: 0.3125rem 1rem;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.46667;
+  color: #969696;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.header-bottom .mainnav .mainlist .subdropdownitem .subdropdown .submenu .sublist-link:not([disabled]):hover {
+  color: #000000;
+  font-weight: bold;
+}
+
+.header-bottom .mainnav .mainlist .subdropdownitem:not([disabled]):hover .subdropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /**=======================================================**
@@ -3219,15 +3454,15 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.25rem;
-  padding: 1.5rem;
+  padding: 1.5rem 0.75rem;
 }
 
 .offcanvas-body .mobilemenu .mobilelink {
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 1.0625rem;
+  font-size: 0.75rem;
   font-weight: normal;
-  line-height: 1.29412;
+  line-height: 1.83333;
   color: #333333;
   text-transform: uppercase;
   letter-spacing: 0.065rem;
@@ -3237,6 +3472,279 @@ p {
 
 .offcanvas-body .mobilemenu .mobilelink:not([disabled]):hover {
   color: #000000;
+}
+
+.offcanvas-body .mobilemenu .accordion {
+  border-radius: 0rem;
+  border-radius: 0rem;
+  background: transparent;
+  width: 100%;
+}
+
+.offcanvas-body .mobilemenu .accordion-item {
+  background: transparent;
+  border-right: none;
+  border-left: none;
+  border-radius: 0rem;
+  border-radius: 0rem;
+  padding: 0.75rem 0rem;
+}
+
+.offcanvas-body .mobilemenu .accordion-item .mobiledropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+}
+
+.offcanvas-body .mobilemenu .accordion-item .mobiledropdown .link {
+  width: 60%;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 0.01956;
+  color: #333333;
+  position: relative;
+  letter-spacing: 0.065rem;
+  text-transform: uppercase;
+  display: inline-block;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.offcanvas-body .mobilemenu .accordion-item .mobiledropdown .link:not([disabled]):hover {
+  color: #000000;
+  font-weight: bold;
+}
+
+.offcanvas-body .mobilemenu .accordion-item .mobiledropdown .accordion-header {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 1.25rem;
+}
+
+.offcanvas-body .mobilemenu .accordion-item .mobiledropdown .accordion-header .accordion-button {
+  border-radius: 0rem;
+  border-radius: 0rem;
+  padding: 0rem;
+  background: transparent;
+}
+
+.offcanvas-body .mobilemenu .accordion-item .mobiledropdown .accordion-header .accordion-button::after {
+  height: 1.25rem;
+  width: 1.25rem;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23969696'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.offcanvas-body .mobilemenu .accordion-item .mobiledropdown .accordion-header .accordion-button:not(.collapsed) {
+  width: 100%;
+  padding: 0rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0rem;
+  border-radius: 0rem;
+  background: transparent;
+}
+
+.offcanvas-body .mobilemenu .accordion-item .mobiledropdown .accordion-header .accordion-button:not(.collapsed)::after {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(-180deg);
+  transform: translateY(-50%) rotate(-180deg);
+  right: 0rem;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23585858'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.offcanvas-body .mobilemenu .accordion-item .mobiledropdown .accordion-header .accordion-button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+  border: none;
+}
+
+.offcanvas-body .mobilemenu .accordion-body {
+  padding: 0rem;
+  width: 100%;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .megadropdown {
+  width: 100%;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .megadropdown .megasubmenu {
+  width: 100%;
+  padding: 1.5rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.9375rem;
+  height: 100%;
+  text-align: left;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .megadropdown .megasubmenu-header .megasubmenu-title {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.83333;
+  color: #333333;
+  position: relative;
+  letter-spacing: 0.065rem;
+  text-transform: uppercase;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .megadropdown .megasubmenu-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .megadropdown .megasubmenu-body .menuicon {
+  width: 3.125rem;
+  max-width: 30%;
+  overflow: hidden;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .megadropdown .megasubmenu-body .menuicon img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .megadropdown .megasubmenu-body .megasublist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: -0.625rem;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .megadropdown .megasubmenu-body .megasublist-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.3125rem 1rem;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.46667;
+  color: #969696;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .megadropdown .megasubmenu-body .megasublist-link .megaicon {
+  width: 6.25rem;
+  height: lenth(10);
+  overflow: hidden;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .megadropdown .megasubmenu-body .megasublist-link:not([disabled]):hover {
+  color: #000000;
+  font-weight: bold;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .megadropdown .megasubmenu-body .megasublist-link:not([disabled]):hover .megaicon svg path {
+  stroke: #000000;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .megadropdown .megasubmenu-body .shapelist {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .megadropdown .megasubmenu-body .shapelist .megasublist-link {
+  padding: 0;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .megadropdown .megasubmenu-body .shapelist .shape {
+  height: 4.25rem;
+  width: 4.25rem;
+  overflow: hidden;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .megadropdown .megasubmenu-body .shapelist .shape:not([disabled]):hover svg path {
+  stroke: black;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .subdropdown {
+  width: 100%;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.5rem 0rem;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .subdropdown .submenu .sublist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .subdropdown .submenu .sublist-link {
+  padding: 0.5rem 0rem;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.46667;
+  color: #969696;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.offcanvas-body .mobilemenu .accordion-body .subdropdown .submenu .sublist-link:not([disabled]):hover {
+  color: #000000;
+  font-weight: bold;
 }
 
 .offcanvas-body::-webkit-scrollbar {

@@ -72,10 +72,10 @@
         .mobilemenu {
             @include flex-column;
             gap: length(20);
-            padding: length(24);
+            padding: length(24) length(12);
 
             .mobilelink {
-                @include font-face($futuraBK, style('normal'), size(17), weight('normal'), line-height(22, 17));
+                @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(22, 12));
                 color: $primary;
                 text-transform: uppercase;
                 letter-spacing: length(1.04);
@@ -83,6 +83,209 @@
 
                 @include hover {
                     color: $black;
+                }
+            }
+
+            .accordion {
+                @include radius(0);
+                background: transparent;
+                @include w100;
+
+                &-item {
+                    background: transparent;
+                    border-right: none;
+                    border-left: none;
+                    @include radius(0);
+                    padding: length(12) length(0);
+
+                    .mobiledropdown {
+                        @include flex-center-vert;
+                        background: transparent;
+
+                        .link {
+                            width: 60%;
+                            @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(22, 1125));
+                            color: $primary;
+                            position: relative;
+                            letter-spacing: length(1.04);
+                            text-transform: uppercase;
+                            display: inline-block;
+                            @include transitions;
+
+                            @include hover {
+                                color: $black;
+                                font-weight: bold;
+                            }
+                        }
+
+                        .accordion-header {
+                            width: 40%;
+                            @include flex-end;
+                            height: length(20);
+
+                            .accordion-button {
+                                @include radius(0);
+                                padding: length(0);
+                                background: transparent;
+
+                                &::after {
+                                    @include square(length(20));
+                                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23969696'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                                }
+
+                                &:not(.collapsed) {
+                                    @include w100;
+                                    padding: length(0);
+                                    box-shadow: none;
+                                    @include radius(0);
+                                    background: transparent;
+
+                                    &::after {
+                                        position: absolute;
+                                        z-index: 100;
+                                        top: 50%;
+                                        @include transform(translateY(-50%) rotate(-180deg));
+                                        right: length(0);
+
+                                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23585858'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+                                    }
+                                }
+
+                                &:focus {
+                                    box-shadow: none;
+                                    background-color: transparent;
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-body {
+                    padding: length(0);
+                    @include w100;
+                    
+                    .megadropdown {
+                        @include w100;
+                        background: $white;
+                        @include flex-column;
+
+                        .megasubmenu {
+                            @include w100;
+                            padding: length(24) length(0);
+                            @include flex-column;
+                            gap: length(15);
+                            @include h100;
+                            text-align: left;
+
+                            &-header {
+                                .megasubmenu-title {
+                                    @include font-face($futuraBK, style('normal'), size(12), weight('medium'), line-height(22, 12));
+                                    color: $primary;
+                                    position: relative;
+                                    letter-spacing: length(1.04);
+                                    text-transform: uppercase;
+                                }
+                            }
+
+                            &-body {
+                                display: flex;
+                                align-items: flex-start;
+                                
+                                .menuicon {
+                                    width: length(50);
+                                    max-width: 30%;
+                                    overflow: hidden;
+
+                                    img {
+                                        @include w100;
+                                        object-fit: contain;
+                                    }
+                                }
+
+                                .megasublist {
+                                    @include list-vertical;
+                                    margin-left: length(-10);
+
+                                    &-link {
+                                        @include flex-center-vert;
+                                        padding: length(5) length(16);
+                                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(22, 15));
+                                        color: $footerText;
+                                        @include transitions;
+
+                                        .megaicon {
+                                            width: length(100);
+                                            height: lenth(10);
+                                            overflow: hidden;
+                                        }
+    
+                                        @include hover {
+                                            color: $black;
+                                            font-weight: bold;
+
+                                            .megaicon {
+                                                svg {
+                                                    path {
+                                                        stroke: $black;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .shapelist {
+                                    flex-direction: row;
+                                    flex-wrap: wrap;
+                                    overflow: hidden;
+
+                                    .megasublist-link {
+                                        padding: 0;
+                                    }
+
+                                    .shape {
+                                        @include square(length(68));
+                                        overflow: hidden;
+
+                                        @include hover {
+                                            svg {
+                                                path {
+                                                    stroke: black;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    .subdropdown {
+                        @include w100;
+                        background: $white;
+                        display: flex;
+                        padding: length(24) length(0);
+
+                        .submenu {
+                            .sublist {
+                                @include list-vertical;
+
+                                &-link {
+                                    padding: length(8) length(0);
+                                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(22, 15));
+                                    color: $footerText;
+                                    @include transitions;
+
+                                    @include hover {
+                                        color: $black;
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -96,6 +299,5 @@
             // background: $primary;
             @include radius(8);
         }
-
     }
 }
