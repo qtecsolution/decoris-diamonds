@@ -121,7 +121,7 @@
             max-width: length(1720);
             margin-inline: auto;
             @include flex-center;
-            padding: length(0) length(20);
+            padding: length(0) length(40);
 
             .mainlist {
                 @include list-horizontal;
@@ -163,7 +163,6 @@
                         top: 100%;
                         left: 0;
                         right: 0;
-                        @include w100;
                         max-width: length(1600);
                         margin: 0 auto;
                         background: $white;
