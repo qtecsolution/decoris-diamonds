@@ -121,6 +121,7 @@
             max-width: length(1720);
             margin-inline: auto;
             @include flex-center;
+            padding: length(0) length(20);
 
             .mainlist {
                 @include list-horizontal;
@@ -137,6 +138,8 @@
                     text-transform: uppercase;
                     display: inline-block;
                     @include transitions;
+
+                    @include breakpoint(desktop1169) {}
 
                     &::before {
                         content: '';

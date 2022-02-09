@@ -2,7 +2,7 @@
                     FAQ-SECTION
 =====================================================**/
 .faqsection {
-    padding: length(80) length(20);
+    padding: length(80) length(0);
 
     &-content {
         @include flex-center-column;

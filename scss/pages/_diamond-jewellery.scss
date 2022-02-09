@@ -114,14 +114,14 @@
                     JEWELLERY-DISCOVER
 =====================================================**/
 .discover {
-    padding: length(80) length(20);
+    padding: length(80) length(0);
 }
 
 /**=====================================================
                     JEWELLERY-CATEGORYSHOP
 =====================================================**/
 .categoryshop {
-    padding: length(80) length(20);
+    padding: length(80) length(0);
 
     &-content {
         @include flex-column;

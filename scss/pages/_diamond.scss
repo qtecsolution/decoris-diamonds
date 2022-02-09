@@ -3,7 +3,7 @@
 =====================================================**/
 .diamondbanner {
     background: $bannerBg url(../images/pages/diamond/diamond-education/diamond-education.png) no-repeat center center/cover;
-    padding: length(138) length(20);
+    padding: length(138) length(0);
 
     &-details {
         @include flex-center-column;
@@ -49,7 +49,7 @@
                     DIAMOND-SHOP
 =====================================================**/
 .diamondshop {
-    padding: length(80) length(20);
+    padding: length(80) length(0);
 
     &-content {
         @include flex-column;

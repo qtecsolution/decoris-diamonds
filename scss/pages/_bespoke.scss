@@ -95,7 +95,7 @@
 =====================================================**/
 .herobanner {
     background: url(../images/pages/bespoke/bespoke-jewellery/bespok-jewellery-thumb.png) no-repeat center center/cover;
-    padding: length(138) length(20);
+    padding: length(138) length(0);
 
     &-details {
         @include flex-center-column;
@@ -133,7 +133,7 @@
                     DECORIES-DIAMONDS CREATION
 =====================================================**/
 .decoriscreations {
-    padding: length(80) length(20);
+    padding: length(80) length(0);
 
     &-content {
         @include flex-center-column;
@@ -197,7 +197,7 @@
                     SEE-MORE
 =====================================================**/
 .seemore {
-    padding: length(60) length(20);
+    padding: length(60) length(0);
 
     &-content {
         @include flex-column;

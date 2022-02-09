@@ -81,7 +81,7 @@
                     HOME-FILTER
 =====================================================**/
 .homefilter {
-    padding: length(40) length(20);
+    padding: length(40) length(0);
 
     &-content {
         @include flex-column;
@@ -211,7 +211,7 @@
 =====================================================**/
 .testimonial {
     background: $primaryBg;
-    padding: length(40) length(20);
+    padding: length(40) length(0);
 
     @include breakpoint(mobile768) {
         padding: length(80) length(0);
@@ -237,7 +237,7 @@
                     RING-STYLE
 =====================================================**/
 .ringstyle {
-    padding: length(40) length(20);
+    padding: length(40) length(0);
     @include flex-column;
     gap: length(40);
 
@@ -281,7 +281,7 @@
                     DEPTH-AND-WIDTH
 =====================================================**/
 .depthandwidth {
-    padding: length(0) length(20) length(40);
+    padding: length(0) length(0) length(40);
 
     &-details {
         @include flex-center-column;
@@ -313,7 +313,7 @@
                     HOME-PRODUCTS
 =====================================================**/
 .homeproducts {
-    padding: length(0) length(20) length(40);
+    padding: length(0) length(0) length(40);
     @include flex-column;
     gap: length(40);
 
@@ -355,7 +355,7 @@
                     HOME-BRANDS
 =====================================================**/
 .homebrands {
-    padding: length(40) length(20);
+    padding: length(40) length(0);
     @include flex-column;
     gap: length(40);
 
@@ -384,7 +384,7 @@
                     PRODUCT-INFO
 =====================================================**/
 .productinfo {
-    padding: length(40) length(20);
+    padding: length(40) length(0);
 
     &-details {
         @include flex-center-column;
@@ -422,7 +422,7 @@
 =====================================================**/
 .newsletter {
     background: $secondaryBg;
-    padding: length(80) length(20);
+    padding: length(80) length(0);
     text-align: center;
 
     &-title {

@@ -2,7 +2,7 @@
                     CONTACT
 =====================================================**/
 .contact {
-    padding: length(80) length(20);
+    padding: length(80) length(0);
 
     &-content {
         @include flex-column;
@@ -277,7 +277,7 @@
 =====================================================**/
 .mapsection {
     height: lengh(370);
-    padding: length(0) length(20) length(80);
+    padding: length(0) length(0) length(80);
 
     @include breakpoint(mobile768) {
         height: lengh(570);
