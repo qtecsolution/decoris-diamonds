@@ -30,23 +30,29 @@
         }
 
         .footerbrands {
-            display: none;
+            @include flex-center-vert;
 
-            @include breakpoint(mobile575) {
-                @include flex-center-vert;
-                gap: length(14);
+            .thumbbox {
+
+                @include breakpoint(mobile768) {
+                    padding: length(10) length(15);
+                }
+            }
+
+            .thumbbox {
+
             }
 
             .footbrandthumb {
-                width: length(150);
+                max-width: length(65);
 
-                @include breakpoint(mobile768) {
-                    width: length(200);
+                @include breakpoint(laptop1400) {
+                    max-width: length(85);
                 }
 
                 img {
                     width: 100%;
-                    object-fit: cover;
+                    height: auto;
                 }
             }
         }

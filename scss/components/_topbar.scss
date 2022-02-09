@@ -12,6 +12,10 @@
         @include flex-center;
         @include w100;
 
+        @include breakpoint(desktop1399) {
+            @include font-face($jost, style('normal'), size(12), weight('thin'), line-height(18, 12));
+        }
+
         @include hover {
             @include setBgColor($footerText, $white);
         }

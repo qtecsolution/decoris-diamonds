@@ -25,16 +25,14 @@
         .brandlogo {
             @include flex-center;
             width: length(160);
+            max-width: 30%;
             height: length(80);
             overflow: hidden;
 
             img {
+                @include w100;
                 max-width: 100%;
                 object-fit: contain;
-
-                @include breakpoint(mobile768) {
-                    object-fit: cover;
-                }
             }
         }
 

@@ -16,7 +16,7 @@
 
         .btn-faq {
             padding: length(20);
-            @include setBgColor($bannerBg, $primary);
+            @include setBgColor($white, $primary);
             @include flex-center;
             text-align: center;
             @include border(solid, 1, $faqBtnBg);

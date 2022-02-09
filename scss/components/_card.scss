@@ -77,8 +77,13 @@
     }
 
     &-price {
-        @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(25, 18));
         color: $black;
+        @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(17, 12));
+        
+        @include breakpoint(mobile768) {
+            
+            @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(25, 18));
+        }
     }
 
     @include hover {

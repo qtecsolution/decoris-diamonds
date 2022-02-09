@@ -14,7 +14,7 @@
         // HEADER LIST
         .headerlist {
             @include list-horizontal;
-            gap: length(24);
+            gap: length(0);
 
             @include breakpoint(tab992) {
                 gap: length(60);
@@ -23,26 +23,32 @@
             &-link {
                 @include flex-center-vert;
                 gap: length(10);
-                padding: length(8) length(14);
+                padding: length(8) length(20);
                 @include radius(30);
-                @include transitions;
 
                 .icon {
                     @include square(length(18));
-                    @include flex-center;
-                    overflow: hidden;
+
+                    @include breakpoint(desktop1399) {
+                        @include square(length(16));
+                    }
 
                     svg {
                         @include wh100;
+                        margin-top: length(-10);
                     }
                 }
 
                 .text {
                     display: none;
                     color: $primary;
-                    @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23, 14));
+                    @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(14, 14));
                     text-transform: uppercase;
                     letter-spacing: length(1.12);
+
+                    @include breakpoint(desktop1399) {
+                        @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(12, 12));
+                    }
 
                     @include breakpoint(tab992) {
                         display: block;
@@ -51,16 +57,6 @@
 
                 @include hover {
                     background: $grayBg;
-
-                    svg {
-                        path {
-                            stroke: $black;
-                        }
-                    }
-
-                    .text {
-                        color: $black;
-                    }
                 }
             }
         }
@@ -72,7 +68,8 @@
 
         .sitelogo {
             @include flex-center;
-            width: length(168);
+            width: length(190);
+            max-width: 30%;
             height: length(56);
             overflow: hidden;
 
@@ -85,10 +82,6 @@
             img {
                 max-width: 100%;
                 object-fit: contain;
-
-                @include breakpoint(mobile768) {
-                    object-fit: cover;
-                }
             }
         }
 
@@ -111,7 +104,6 @@
     &-bottom {
         display: none;
         @include border-single(top, solid, 1, $dividerBg);
-        // @include border-single(bottom, solid, 1, $dividerBg);
 
         @include breakpoint(tab992) {
             display: block;
@@ -174,11 +166,15 @@
 
                         .megasubmenu {
                             width: 25%;
-                            padding: length(40) length(30);
+                            padding: length(40) length(20);
                             @include flex-column;
                             gap: length(15);
                             @include h100;
                             text-align: left;
+
+                            @include breakpoint(desktop1169) {
+                                padding: length(40) length(16);
+                            }
 
                             &-header {
                                 .megasubmenu-title {
@@ -187,6 +183,14 @@
                                     position: relative;
                                     letter-spacing: length(1.04);
                                     text-transform: uppercase;
+
+                                    @include breakpoint(desktop1169) {
+                                        @include font-face($futuraBK, style('normal'), size(13), weight('medium'), line-height(22, 15));
+                                    }
+
+                                    @include breakpoint(desktop1024) {
+                                        font-size: length(12);
+                                    }
                                 }
                             }
 
@@ -207,12 +211,12 @@
 
                                 .megasublist {
                                     @include list-vertical;
-                                    margin-left: length(-10);
+                                    // margin-left: length(-10);
 
                                     &-link {
                                         @include flex-center-vert;
                                         align-items: baseline;
-                                        padding: length(0) length(16);
+                                        padding: length(4) length(0);
                                         @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(22, 15));
                                         color: $footerText;
 
@@ -220,6 +224,14 @@
                                             width: length(100);
                                             height: length(30);
                                             overflow: hidden;
+
+                                            @include breakpoint(desktop1169) {
+                                                width: length(70);
+                                            }
+
+                                            @include breakpoint(desktop1024) {
+                                                width: length(60);
+                                            }
                                         }
     
                                         @include hover {

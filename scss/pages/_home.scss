@@ -179,16 +179,16 @@
     &-body {
         @include flex-center-vert;
         flex-wrap: wrap;
-        gap: length(24);
+        gap: length(8);
         @include w100;
 
-        @include breakpoint(mobile575) {
+        @include breakpoint(mobile768) {
             gap: length(44) length(24);
         }
 
         .productlink {
             @include flex-center;
-            width: calc((100% / 2) - 1.5rem);
+            width: calc((100% / 2) - .5rem);
             margin-inline-end: auto;
 
             @include breakpoint(mobile768) {
