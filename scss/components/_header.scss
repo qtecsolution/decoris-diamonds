@@ -211,14 +211,14 @@
 
                                     &-link {
                                         @include flex-center-vert;
-                                        padding: length(5) length(16);
+                                        align-items: baseline;
+                                        padding: length(0) length(16);
                                         @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(22, 15));
                                         color: $footerText;
-                                        @include transitions;
 
                                         .megaicon {
                                             width: length(100);
-                                            height: lenth(10);
+                                            height: length(30);
                                             overflow: hidden;
                                         }
     
