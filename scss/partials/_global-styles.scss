@@ -205,3 +205,9 @@ p {
         @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
     }
 }
+
+.findselect {
+    appearance: none;
+    background: url("data:image/svg+xml,%3Csvg width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 9.5L10.5 14.5L15.5 9.5' stroke='%235A5A5A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 1rem;
+    @include w100;
+}

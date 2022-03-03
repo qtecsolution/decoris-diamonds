@@ -1,0 +1,580 @@
+.decorisproductdetails {
+    .decories-container {
+        @include flex-column;
+        gap: length(24);
+
+        @include breakpoint(tab992) {
+            flex-direction: row;
+        }
+
+        .product-thumbnails {
+            position: relative;
+            @include w100;
+
+            @include breakpoint(tab992) {
+                width: 50%;
+            }
+
+            .slidernavigation {
+                position: absolute;
+                top: length(24);
+                left: length(30);
+            }
+
+            .gallery-main {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        @include w100;
+                        background: rgba($black, 0.1);
+                        border: none;
+
+                        @include breakpoint(phone414) {
+                            @include w100;
+                            height: length(400);
+                        }
+
+                        img {
+                            @include wh100;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+
+            .slidernavigation {
+                .gallery-navs {
+                    order: -1;
+
+                    .swiper-wrapper {
+                        width: length(100);
+                        height: length(440);
+                        @include flex-center-column;
+                        gap: length(10);
+
+                        @include breakpoint(phone575) {
+                            width: length(64);
+                            height: length(296);
+                        }
+
+                        .swiper-slide {
+                            cursor: pointer;
+                            background: rgba($black, 0.1);
+                            @include border(solid, 0.25, transparent);
+                            @include flex-center;
+
+                            img {
+                                transition: 0.3s;
+                                @include wh100;
+                                object-fit: cover;
+                            }
+
+                            &-active {
+                                opacity: 0.9;
+                            }
+
+                            &-thumb-active {
+                                opacity: 1;
+                                border-color: $secondary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .productinformations {
+            &-top {
+                .product-title {}
+
+                .product-text {}
+
+                .metals-colors {
+                    .metals {
+                        .metal-title {}
+
+                        .metal-value {}
+                    }
+
+                    .colors {
+                        @include flex-center-vert;
+                        gap: length(15);
+
+                        .colourbox {
+                            @include square(length(18));
+                            @include border(solid, 0.75, transparent);
+                            @include circle;
+                            @include flex-center;
+                            cursor: pointer;
+                            overflow: hidden;
+
+                            .colour {
+                                @include square(length(12));
+                                @include circle;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .divider {
+                @include w100;
+                height: length(1);
+                margin: length(32) length(0) length(28);
+                background: $dividerBg;
+            }
+
+            &-bottom {
+                .detailsbuttons {
+                    .btn-bordered {}
+                }
+
+                .notebox {
+                    .note {}
+                }
+
+                .sociallist {
+                    &-link {}
+                }
+            }
+        }
+    }
+}
+
+.stepmenu {
+    padding: length(50) length(0);
+    @include border-single(bottom, solid, 1, $dividerBg);
+
+    .stepnavigation {
+        @include w100;
+
+        @include breakpoint(phone767) {
+            max-width: 50%;
+            margin-inline: auto;
+        }
+
+        @include breakpoint(phone480) {
+            @include w100;
+        }
+    }
+
+    .stepmenunav {
+        @include flex-center;
+        gap: length(80);
+        @include w100;
+
+        @include breakpoint(desktop1399) {
+            gap: length(48);
+        }
+
+        @include breakpoint(desktop1199) {
+            gap: length(24);
+        }
+
+        @include breakpoint(phone767) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: length(16);
+        }
+
+        &-link {
+            @include flex-center-vert;
+            gap: length(16);
+
+            .counter {
+                color: $textStepLink;
+                @include square(length(30));
+                @include circle;
+                @include flex-center;
+                text-align: center;
+                @include border(solid, 1, $textStepLink);
+                padding: length(8);
+                overflow: hidden;
+                @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(19, 16));
+                color: $textStepLink;
+                letter-spacing: length(1.04);
+            }
+
+            .texticon {
+                @include flex-center-vert;
+                gap: length(10);
+                width: calc(100% - 2.875rem);
+
+                .text {
+                    width: calc(100% - 0.625rem);
+                    letter-spacing: length(1.04);
+                    @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(18, 14));
+                    color: $textStepLink;
+                }
+
+                .icon {
+                    margin-top: length(-4);
+                }
+            }
+
+            &:hover:not(.active) {
+                .counter {
+                    color: $black;
+                    border-color: $black;
+                }
+
+                .texticon {
+                    .text {
+                        color: $black;
+                    }
+
+                    .icon {
+                        svg {
+                            path {
+                                stroke: $black;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.active {
+                .counter {
+                    color: $black;
+                    border-color: $black;
+                }
+
+                .texticon {
+                    .text {
+                        color: $black;
+                    }
+
+                    .icon {
+                        svg {
+                            path {
+                                stroke: $black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.stepbreadcrumb {
+    padding: length(24) length(0);
+    @include border-single(bottom, solid, 1, $dividerBg);
+
+    .breadcrumb {
+        margin-bottom: length(0);
+        @include list-horizontal;
+        gap: length(5);
+
+        .divider {
+            @include square(length(15));
+            @include flex-center;
+            overflow: hidden;
+        }
+
+        &-item {
+            @include font-face($futuraBK, style('normal'), size(10), weight('normal'), line-height(13, 10));
+            letter-spacing: length(1.04);
+            color: $primary;
+            text-transform: uppercase;
+
+            a {
+                @include font-face($futuraBK, style('normal'), size(10), weight('normal'), line-height(13, 10));
+                letter-spacing: length(1.04);
+                color: $primary;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.stepjewellerycollection {
+    padding: length(60) length(0);
+
+    @include breakpoint(tab992) {
+        padding: length(130) length(0);
+    }
+}
+
+.findring {
+    @include border-single(bottom, solid, 1, $dividerBg);
+    padding-bottom: length(60);
+
+    &-content {
+        @include flex-column;
+        gap: length(32);
+
+        @include breakpoint(tab992) {
+            gap: length(60);
+        }
+    }
+
+    &-header {
+        @include flex-center-column;
+        gap: length(12);
+        text-align: center;
+
+        .findring-title {
+            @include font-face($playfairDisplay, style('normal'), size(24), weight('normal'), line-height(32, 24));
+            color: $black;
+
+            @include breakpoint(tab992) {
+                @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+            }
+        }
+
+        .findring-text {
+            @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(18, 12));
+            color: $primary;
+
+            @include breakpoint(mobile768) {
+                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+            }
+        }
+    }
+
+    &-body {
+        .findring-price {
+            @include flex-center-vert;
+            gap: length(16);
+
+            @include breakpoint(desktop1399) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .findingtitlebox {
+                @include flex-center-vert;
+                gap: length(8);
+
+                .findringlabel {
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                    color: $secondary;
+                    width: calc(100% - 1.5rem);
+                }
+
+                .icon {
+                    @include square(length(16));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    svg {
+                        @include wh100;
+                    }
+                }
+            }
+
+            .findpricebox {
+                @include flex-center-vert;
+                gap: length(16);
+
+                .selectbox {
+                    min-width: length(100);
+
+                    .findselect {
+                        padding: length(12) length(20);
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                        color: $secondary;
+                        @include border(solid, 1, $dividerBg);
+                    }
+                }
+
+                .textbox {
+                    .text {
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                        color: $secondary;
+                    }
+                }
+            }
+        }
+
+        .findring-colors {
+            @include flex-center-vert;
+            gap: length(16);
+
+            @include breakpoint(desktop1399) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .findingtitlebox {
+                @include flex-center-vert;
+                gap: length(8);
+
+                .findringlabel {
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                    color: $secondary;
+                    width: calc(100% - 1.5rem);
+                }
+
+                .icon {
+                    @include square(length(16));
+                    @include flex-center;
+                    overflow: hidden;
+                    margin-top: length(0);
+                }
+            }
+
+            .findcolorsbox {
+                @include flex-center-vert;
+                gap: length(10);
+
+                .btn-color {
+                    padding: length(12) length(20);
+                    @include setBgColor(transparent, $secondary);
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                    @include border(solid, 1, $dividerBg);
+                    @include flex-center;
+                    text-align: center;
+
+                    @include breakpoint(phone575) {
+                        padding: length(16);
+                        @include square(length(40));
+                    }
+                }
+            }
+        }
+
+        .colors-filters {
+            @include flex-center;
+            gap: length(60);
+
+            @include breakpoint(desktop1399) {
+                gap: length(40);
+            }
+
+            @include breakpoint(desktop1199) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: length(16);
+            }
+
+            .btn-clear {
+                @include transparent-button;
+                padding-bottom: length(4);
+                @include border-single(bottom, solid, 1, $secondary);
+                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                color: $secondary;
+
+                @include breakpoint(desktop1399) {
+                    align-self: flex-end;
+                }
+
+                @include breakpoint(desktop1199) {
+                    align-self: flex-start;
+                }
+            }
+        }
+    }
+}
+
+.additionalinfo {
+    padding: length(60) length(0);
+
+    @include breakpoint(tab992) {
+        padding: length(60) length(0) length(120);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(24);
+    }
+
+    &-header {
+        .additionalinfo-title {
+            @include font-face($playfairDisplay, style('normal'), size(24), weight('normal'), line-height(32, 24));
+            color: $black;
+
+            @include breakpoint(tab992) {
+                @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+            }
+        }
+    }
+
+    .additional-info,
+    .additional-list {
+        background: $bannerBg;
+        @include border(solid, 1, $dividerBg);
+        padding: length(30);
+        @include wh100;
+    }
+
+    .additional-info {
+        @include flex-column;
+        gap: length(24);
+
+        .additional-item {
+            display: flex;
+
+            .left-part {
+                width: 50%;
+
+                @include breakpoint(mobile768) {
+                    width: 30%;
+                }
+
+                .additionaltitle {
+                    @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(18, 12));
+                    color: $primary;
+
+                    @include breakpoint(mobile768) {
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                    }
+                }
+            }
+
+            .right-part {
+                width: 50%;
+
+                @include breakpoint(mobile768) {
+                    width: 70%;
+                }
+
+                .additionaltext {
+                    @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(18, 12));
+                    color: $primary;
+
+                    @include breakpoint(mobile768) {
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                    }
+                }
+            }
+        }
+    }
+
+    .additional-list {
+        @include flex-column;
+        gap: length(16);
+
+        &-header {
+            .additional-list-title {
+                @include font-face($playfairDisplay, style('normal'), size(20), weight('normal'), line-height(34.1, 20));
+                color: $primary;
+            }
+        }
+
+        .additionlist {
+            @include list-vertical;
+            gap: length(12);
+
+            &-item {
+                @include flex-center-vert;
+                gap: length(14);
+
+                .icon {
+                    @include square(length(16));
+                    @include flex-center;
+                    overflow: hidden;
+                }
+
+                .additionlist-text {
+                    @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(18, 12));
+                    color: $secondary;
+
+                    @include breakpoint(mobile768) {
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                    }
+                }
+            }
+        }
+    }
+}

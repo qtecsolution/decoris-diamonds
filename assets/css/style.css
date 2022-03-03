@@ -655,6 +655,14 @@ p {
   }
 }
 
+.findselect {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("data:image/svg+xml,%3Csvg width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 9.5L10.5 14.5L15.5 9.5' stroke='%235A5A5A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 1rem;
+  width: 100%;
+}
+
 .decories-container {
   max-width: 107.5rem;
   margin-inline: auto;
@@ -811,7 +819,6 @@ p {
   width: 11.875rem;
   max-width: 30%;
   height: 3.5rem;
-  overflow: hidden;
 }
 
 @media screen and (min-width: 62rem) {
@@ -858,6 +865,7 @@ p {
 .header-bottom {
   display: none;
   border-top: solid 0.0625rem #DEE2E6;
+  border-bottom: solid 0.0625rem #DEE2E6;
 }
 
 @media screen and (min-width: 62rem) {
@@ -5539,6 +5547,7 @@ polygon {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 0.25rem;
 }
 
 /**=====================================================
@@ -6287,4 +6296,916 @@ polygon {
 
 .newsletter-content .subscribe .submitbox .btn-submit:not([disabled]):hover {
   background: #0f0f0f;
+}
+
+.decorisproductdetails .decories-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .decorisproductdetails .decories-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.decorisproductdetails .decories-container .product-thumbnails {
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 62rem) {
+  .decorisproductdetails .decories-container .product-thumbnails {
+    width: 50%;
+  }
+}
+
+.decorisproductdetails .decories-container .product-thumbnails .slidernavigation {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.875rem;
+}
+
+.decorisproductdetails .decories-container .product-thumbnails .gallery-main .swiper-wrapper .swiper-slide {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+@media screen and (max-width: 25.875rem) {
+  .decorisproductdetails .decories-container .product-thumbnails .gallery-main .swiper-wrapper .swiper-slide {
+    width: 100%;
+    height: 25rem;
+  }
+}
+
+.decorisproductdetails .decories-container .product-thumbnails .gallery-main .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.decorisproductdetails .decories-container .product-thumbnails .slidernavigation .gallery-navs {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+.decorisproductdetails .decories-container .product-thumbnails .slidernavigation .gallery-navs .swiper-wrapper {
+  width: 6.25rem;
+  height: 27.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.625rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .decorisproductdetails .decories-container .product-thumbnails .slidernavigation .gallery-navs .swiper-wrapper {
+    width: 4rem;
+    height: 18.5rem;
+  }
+}
+
+.decorisproductdetails .decories-container .product-thumbnails .slidernavigation .gallery-navs .swiper-wrapper .swiper-slide {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.1);
+  border: solid 0.01562rem transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.decorisproductdetails .decories-container .product-thumbnails .slidernavigation .gallery-navs .swiper-wrapper .swiper-slide img {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.decorisproductdetails .decories-container .product-thumbnails .slidernavigation .gallery-navs .swiper-wrapper .swiper-slide-active {
+  opacity: 0.9;
+}
+
+.decorisproductdetails .decories-container .product-thumbnails .slidernavigation .gallery-navs .swiper-wrapper .swiper-slide-thumb-active {
+  opacity: 1;
+  border-color: #5A5A5A;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .metals-colors .colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.9375rem;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .metals-colors .colors .colourbox {
+  height: 1.125rem;
+  width: 1.125rem;
+  border: solid 0.04688rem transparent;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .metals-colors .colors .colourbox .colour {
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 100%;
+}
+
+.decorisproductdetails .decories-container .productinformations .divider {
+  width: 100%;
+  height: 0.0625rem;
+  margin: 2rem 0rem 1.75rem;
+  background: #DEE2E6;
+}
+
+.stepmenu {
+  padding: 3.125rem 0rem;
+  border-bottom: solid 0.0625rem #DEE2E6;
+}
+
+.stepmenu .stepnavigation {
+  width: 100%;
+}
+
+@media screen and (max-width: 47.9375rem) {
+  .stepmenu .stepnavigation {
+    max-width: 50%;
+    margin-inline: auto;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .stepmenu .stepnavigation {
+    width: 100%;
+  }
+}
+
+.stepmenu .stepmenunav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .stepmenu .stepmenunav {
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .stepmenu .stepmenunav {
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 47.9375rem) {
+  .stepmenu .stepmenunav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.stepmenu .stepmenunav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.stepmenu .stepmenunav-link .counter {
+  color: #B7B7B7;
+  height: 1.875rem;
+  width: 1.875rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border: solid 0.0625rem #B7B7B7;
+  padding: 0.5rem;
+  overflow: hidden;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.1875;
+  color: #B7B7B7;
+  letter-spacing: 0.065rem;
+}
+
+.stepmenu .stepmenunav-link .texticon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+  width: calc(100% - 2.875rem);
+}
+
+.stepmenu .stepmenunav-link .texticon .text {
+  width: calc(100% - 0.625rem);
+  letter-spacing: 0.065rem;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.28571;
+  color: #B7B7B7;
+}
+
+.stepmenu .stepmenunav-link .texticon .icon {
+  margin-top: -0.25rem;
+}
+
+.stepmenu .stepmenunav-link:hover:not(.active) .counter {
+  color: #000000;
+  border-color: #000000;
+}
+
+.stepmenu .stepmenunav-link:hover:not(.active) .texticon .text {
+  color: #000000;
+}
+
+.stepmenu .stepmenunav-link:hover:not(.active) .texticon .icon svg path {
+  stroke: #000000;
+}
+
+.stepmenu .stepmenunav-link.active .counter {
+  color: #000000;
+  border-color: #000000;
+}
+
+.stepmenu .stepmenunav-link.active .texticon .text {
+  color: #000000;
+}
+
+.stepmenu .stepmenunav-link.active .texticon .icon svg path {
+  stroke: #000000;
+}
+
+.stepbreadcrumb {
+  padding: 1.5rem 0rem;
+  border-bottom: solid 0.0625rem #DEE2E6;
+}
+
+.stepbreadcrumb .breadcrumb {
+  margin-bottom: 0rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.3125rem;
+}
+
+.stepbreadcrumb .breadcrumb .divider {
+  height: 0.9375rem;
+  width: 0.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.stepbreadcrumb .breadcrumb-item {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.625rem;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: 0.065rem;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.stepbreadcrumb .breadcrumb-item a {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.625rem;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: 0.065rem;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+.stepjewellerycollection {
+  padding: 3.75rem 0rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .stepjewellerycollection {
+    padding: 8.125rem 0rem;
+  }
+}
+
+.findring {
+  border-bottom: solid 0.0625rem #DEE2E6;
+  padding-bottom: 3.75rem;
+}
+
+.findring-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .findring-content {
+    gap: 3.75rem;
+  }
+}
+
+.findring-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.findring-header .findring-title {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  color: #000000;
+}
+
+@media screen and (min-width: 62rem) {
+  .findring-header .findring-title {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 1.875rem;
+    font-weight: normal;
+    line-height: 1.3;
+  }
+}
+
+.findring-header .findring-text {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #333333;
+}
+
+@media screen and (min-width: 48rem) {
+  .findring-header .findring-text {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 0.9375rem;
+    font-weight: normal;
+    line-height: 1.70533;
+  }
+}
+
+.findring-body .findring-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .findring-body .findring-price {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.findring-body .findring-price .findingtitlebox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.findring-body .findring-price .findingtitlebox .findringlabel {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.70533;
+  color: #5A5A5A;
+  width: calc(100% - 1.5rem);
+}
+
+.findring-body .findring-price .findingtitlebox .icon {
+  height: 1rem;
+  width: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.findring-body .findring-price .findingtitlebox .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.findring-body .findring-price .findpricebox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.findring-body .findring-price .findpricebox .selectbox {
+  min-width: 6.25rem;
+}
+
+.findring-body .findring-price .findpricebox .selectbox .findselect {
+  padding: 0.75rem 1.25rem;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.70533;
+  color: #5A5A5A;
+  border: solid 0.0625rem #DEE2E6;
+}
+
+.findring-body .findring-price .findpricebox .textbox .text {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.70533;
+  color: #5A5A5A;
+}
+
+.findring-body .findring-colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .findring-body .findring-colors {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.findring-body .findring-colors .findingtitlebox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.findring-body .findring-colors .findingtitlebox .findringlabel {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.70533;
+  color: #5A5A5A;
+  width: calc(100% - 1.5rem);
+}
+
+.findring-body .findring-colors .findingtitlebox .icon {
+  height: 1rem;
+  width: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  margin-top: 0rem;
+}
+
+.findring-body .findring-colors .findcolorsbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+}
+
+.findring-body .findring-colors .findcolorsbox .btn-color {
+  padding: 0.75rem 1.25rem;
+  background: transparent;
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.70533;
+  border: solid 0.0625rem #DEE2E6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .findring-body .findring-colors .findcolorsbox .btn-color {
+    padding: 1rem;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+.findring-body .colors-filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3.75rem;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .findring-body .colors-filters {
+    gap: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .findring-body .colors-filters {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.findring-body .colors-filters .btn-clear {
+  background: transparent;
+  border: none;
+  padding-bottom: 0.25rem;
+  border-bottom: solid 0.0625rem #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.70533;
+  color: #5A5A5A;
+}
+
+@media screen and (max-width: 87.4375rem) {
+  .findring-body .colors-filters .btn-clear {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+
+@media screen and (max-width: 74.9375rem) {
+  .findring-body .colors-filters .btn-clear {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+
+.additionalinfo {
+  padding: 3.75rem 0rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .additionalinfo {
+    padding: 3.75rem 0rem 7.5rem;
+  }
+}
+
+.additionalinfo-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.additionalinfo-header .additionalinfo-title {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  color: #000000;
+}
+
+@media screen and (min-width: 62rem) {
+  .additionalinfo-header .additionalinfo-title {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 1.875rem;
+    font-weight: normal;
+    line-height: 1.3;
+  }
+}
+
+.additionalinfo .additional-info,
+.additionalinfo .additional-list {
+  background: #F9F8F7;
+  border: solid 0.0625rem #DEE2E6;
+  padding: 1.875rem;
+  width: 100%;
+  height: 100%;
+}
+
+.additionalinfo .additional-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.additionalinfo .additional-info .additional-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.additionalinfo .additional-info .additional-item .left-part {
+  width: 50%;
+}
+
+@media screen and (min-width: 48rem) {
+  .additionalinfo .additional-info .additional-item .left-part {
+    width: 30%;
+  }
+}
+
+.additionalinfo .additional-info .additional-item .left-part .additionaltitle {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #333333;
+}
+
+@media screen and (min-width: 48rem) {
+  .additionalinfo .additional-info .additional-item .left-part .additionaltitle {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 0.9375rem;
+    font-weight: normal;
+    line-height: 1.70533;
+  }
+}
+
+.additionalinfo .additional-info .additional-item .right-part {
+  width: 50%;
+}
+
+@media screen and (min-width: 48rem) {
+  .additionalinfo .additional-info .additional-item .right-part {
+    width: 70%;
+  }
+}
+
+.additionalinfo .additional-info .additional-item .right-part .additionaltext {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #333333;
+}
+
+@media screen and (min-width: 48rem) {
+  .additionalinfo .additional-info .additional-item .right-part .additionaltext {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 0.9375rem;
+    font-weight: normal;
+    line-height: 1.70533;
+  }
+}
+
+.additionalinfo .additional-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.additionalinfo .additional-list-header .additional-list-title {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.705;
+  color: #333333;
+}
+
+.additionalinfo .additional-list .additionlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.additionalinfo .additional-list .additionlist-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.875rem;
+}
+
+.additionalinfo .additional-list .additionlist-item .icon {
+  height: 1rem;
+  width: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.additionalinfo .additional-list .additionlist-item .additionlist-text {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #5A5A5A;
+}
+
+@media screen and (min-width: 48rem) {
+  .additionalinfo .additional-list .additionlist-item .additionlist-text {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 0.9375rem;
+    font-weight: normal;
+    line-height: 1.70533;
+  }
 }

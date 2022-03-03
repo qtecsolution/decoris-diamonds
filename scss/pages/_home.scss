@@ -71,6 +71,7 @@
 
                 .divider {
                     @include flex-center;
+                    margin-top: length(4);
                 }
             }
         }

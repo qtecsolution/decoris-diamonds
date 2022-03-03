@@ -71,7 +71,6 @@
             width: length(190);
             max-width: 30%;
             height: length(56);
-            overflow: hidden;
 
             @include breakpoint(tab992) {
                 width: length(260);
@@ -104,6 +103,7 @@
     &-bottom {
         display: none;
         @include border-single(top, solid, 1, $dividerBg);
+        @include border-single(bottom, solid, 1, $dividerBg);
 
         @include breakpoint(tab992) {
             display: block;
@@ -197,7 +197,7 @@
                             &-body {
                                 display: flex;
                                 align-items: flex-start;
-                                
+
                                 .menuicon {
                                     width: length(50);
                                     max-width: 30%;
@@ -233,7 +233,7 @@
                                                 width: length(60);
                                             }
                                         }
-    
+
                                         @include hover {
                                             color: $black;
                                             font-weight: bold;
