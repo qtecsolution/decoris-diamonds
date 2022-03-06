@@ -1,0 +1,17 @@
+.ui-slider-pips {
+    .ui-slider-pip {
+        top: 0;
+        z-index: 100;
+
+        &:first-child,
+        &:last-child {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .ui-slider-pip-0 {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}

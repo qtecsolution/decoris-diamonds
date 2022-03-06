@@ -743,6 +743,10 @@
                         @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
                     }
 
+                    &:hover:not(.active) {
+                        @include setBgColor(lighten($secondary, 25%), $white);
+                    }
+
                     &.active {
                         @include setBgColor($secondary, $white);
                     }
@@ -751,5 +755,72 @@
         }
     }
 
-    &-body {}
+    &-body {
+        .diamondshapes {
+            @include flex-column;
+            gap: length(16);
+
+            &-header {
+                .shapetitle {
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                    color: $primary;
+                }
+            }
+
+            &-body {
+                @include flex-center-vert;
+                flex-wrap: wrap;
+                gap: length(20);
+
+                .btn-shape {
+                    @include square(length(46));
+                    @include flex-center;
+                    @include transparent-button;
+                    @include border(solid, 1, $dividerBg);
+                    padding: length(8);
+
+                    svg {
+                        @include square(length(30));
+                    }
+
+                    &:hover:not(.active) {
+                        border-color: $black;
+                    }
+
+                    &.active {
+                        border-color: $black;
+                    }
+                }
+            }
+        }
+
+        .diamondsrange {
+            @include flex-column;
+            gap: length(16);
+
+            &-header {
+                .rangetitle {
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                    color: $primary;
+                }
+            }
+
+            &-body {
+                .amounts {
+                    @include flex-center-between;
+                    margin-top: length(16);
+
+                    .amount {
+                        padding: length(5) length(40);
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                        @include border(solid, 1, $rangeValueBorder);
+                        @include flex-center;
+                        color: $rangeValueColor;
+                        max-width: length(160);
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
 }
