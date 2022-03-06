@@ -8,6 +8,10 @@
         @include flex-column;
         gap: length(32);
 
+        @include breakpoint(phone575) {
+            align-items: center;
+        }
+
         .footerlogo {
             width: length(165);
             height: length(56);
@@ -39,9 +43,7 @@
                 }
             }
 
-            .thumbbox {
-
-            }
+            .thumbbox {}
 
             .footbrandthumb {
                 max-width: length(65);
@@ -61,23 +63,32 @@
     &-details {
         @include flex-column;
 
+        @include breakpoint(phone575) {
+            align-items: center;
+            text-align: center;
+        }
+
         .footinfo {
             @include flex-column;
             gap: length(24);
 
+            @include breakpoint(phone575) {
+                align-items: center;
+            }
+
             .footertitle {
-                @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(16.9, 12));
+                @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(25.92, 16));
                 color: $black;
                 text-transform: uppercase;
-
-                @include breakpoint(mobile768) {
-                    @include font-face($futuraBK, style('normal'), size(13), weight('normal'), line-height(16.9, 13));
-                }
             }
 
             .footerlist-sociallist {
                 @include flex-column;
                 gap: length(18);
+
+                @include breakpoint(phone575) {
+                    align-items: center;
+                }
 
                 .sociallist {
                     @include list-horizontal;
@@ -90,7 +101,7 @@
                 gap: length(12);
 
                 &-link {
-                    @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(24, 16));
+                    @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(24, 14));
                     color: $footerText;
                     position: relative;
                     @include transitions;
@@ -104,10 +115,6 @@
                         width: 0;
                         background: $footerText;
                         transition: .5s;
-                    }
-
-                    @include breakpoint(mobile768) {
-                        @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(23.4, 18));
                     }
 
                     @include hover {
@@ -130,7 +137,7 @@
     }
 
     .copyright {
-        @include flex-column;
+        @include flex-center-column;
         gap: length(14);
 
         @include breakpoint(mobile768) {
@@ -167,11 +174,13 @@
             }
         }
 
-        &-info {}
-
         &-text {
             @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(18.2, 14));
             color: $primary;
+
+            @include breakpoint(phone480) {
+                @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20, 12));
+            }
         }
 
         .paymentinfo {

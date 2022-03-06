@@ -79,9 +79,9 @@
     &-price {
         color: $black;
         @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(17, 12));
-        
+
         @include breakpoint(mobile768) {
-            
+
             @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(25, 18));
         }
     }
@@ -718,3 +718,75 @@
 }
 
 // CARD-JEWEL END
+
+// CARD-PRODUCT-ABOUT START
+
+.card-prodabout {
+    @include flex-center-column;
+    gap: length(22);
+
+    &-header {
+        @include w100;
+        @include flex-center;
+        height: length(400);
+        @include transitiontransform;
+        overflow: hidden;
+
+        @include breakpoint(tab992) {
+            height: length(500);
+        }
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.05));
+            }
+        }
+    }
+
+    &-body {
+        @include flex-center-column;
+        text-align: center;
+        gap: length(22);
+
+        .prodabout-title {
+            @include font-face($playfairDisplay, style('normal'), size(24), weight('normal'), line-height(32, 24));
+            color: $primary;
+
+            @include breakpoint(tab992) {
+                @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+            }
+        }
+
+        .prodabout-text {
+            @include font-face($futuraBK, style('normal'), size(15), weight('medium'), line-height(25.58, 15));
+            color: $secondary;
+        }
+
+        .btn-more {
+            padding: length(12) length(32);
+            @include flex-center;
+            @include setBgColor($white, $black);
+            @include border(solid, 2, $primary);
+            @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(19.2, 12));
+            text-transform: uppercase;
+            text-align: center;
+            @include transitions;
+
+            @include hover {
+                @include setBgColor($primary, $white);
+            }
+        }
+    }
+
+    @include hover {
+        .cardjewel-header {
+            @include transform(rotateY(-180deg));
+        }
+    }
+}
+
+// CARD-PRODUCT-ABOUT END

@@ -23,8 +23,12 @@
             &-link {
                 @include flex-center-vert;
                 gap: length(10);
-                padding: length(8) length(20);
+                padding: length(8) length(8);
                 @include radius(30);
+
+                @include breakpoint(mobile360) {
+                    padding: length(8) length(20);
+                }
 
                 .icon {
                     @include square(length(18));

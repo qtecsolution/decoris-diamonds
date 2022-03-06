@@ -83,16 +83,43 @@
         }
 
         .productinformations {
-            &-top {
-                .product-title {}
+            padding: length(18) length(0);
 
-                .product-text {}
+            &-top {
+                .product-title {
+                    @include font-face($playfairDisplay, style('normal'), size(24), weight('normal'), line-height(32, 24));
+                    color: $primary;
+
+                    @include breakpoint(tab992) {
+                        @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+                    }
+                }
+
+                .product-text {
+                    margin: length(14) length(0);
+                    @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(18, 12));
+                    color: $secondary;
+
+                    @include breakpoint(mobile768) {
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                    }
+                }
 
                 .metals-colors {
-                    .metals {
-                        .metal-title {}
+                    @include flex-column;
+                    gap: length(14);
+                    margin-bottom: length(16);
 
-                        .metal-value {}
+                    .metals {
+                        .metal-title {
+                            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                            color: $secondary;
+                        }
+
+                        .metal-value {
+                            @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20.46, 12));
+                            color: $secondary;
+                        }
                     }
 
                     .colors {
@@ -114,6 +141,25 @@
                         }
                     }
                 }
+
+                .price-add {
+                    @include flex-column;
+                    gap: length(24);
+
+                    .price {
+                        @include font-face($futuraBK, style('normal'), size(15), weight('medium'), line-height(25.58, 15));
+                        color: $primary;
+                    }
+
+                    .btn-add {
+                        padding: length(12) length(32);
+                        @include flex-center;
+                        @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                        @include setBgColor($primary, $white);
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+                }
             }
 
             .divider {
@@ -124,16 +170,55 @@
             }
 
             &-bottom {
+                @include flex-column;
+                gap: length(18);
+
                 .detailsbuttons {
-                    .btn-bordered {}
+                    @include flex-center-vert;
+                    flex-wrap: wrap;
+                    gap: length(20);
+                    margin-bottom: length(18);
+
+                    .btn-bordered {
+                        padding: length(12) length(32);
+                        @include flex-center;
+                        @include setBgColor($white, $black);
+                        @include border(solid, 2, $primary);
+                        @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(19.2, 12));
+                        text-transform: uppercase;
+                        text-align: center;
+                        @include transitions;
+
+                        @include hover {
+                            @include setBgColor($primary, $white);
+                        }
+                    }
                 }
 
                 .notebox {
-                    .note {}
+                    max-width: 62%;
+                    padding: length(18) length(20);
+                    background: $bannerBg;
+
+                    .note {
+                        @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(19.2, 12));
+                        color: $secondary;
+                    }
                 }
 
                 .sociallist {
-                    &-link {}
+                    @include list-horizontal;
+                    gap: length(24);
+
+                    &-link {
+                        @include square(length(24));
+                        @include flex-center;
+                        overflow: hidden;
+
+                        svg {
+                            @include wh100;
+                        }
+                    }
                 }
             }
         }
@@ -154,6 +239,10 @@
 
         @include breakpoint(phone480) {
             @include w100;
+        }
+
+        @include breakpoint(mobile400) {
+            max-width: 75%;
         }
     }
 
@@ -577,4 +666,90 @@
             }
         }
     }
+}
+
+.productabout {
+    padding: length(60) length(0);
+
+    @include breakpoint(tab992) {
+        padding: length(100) length(0) length(80);
+    }
+}
+
+.filterproducts {
+    padding: length(60) length(0);
+
+    @include breakpoint(tab992) {
+        padding: length(70) length(0);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(32);
+
+        @include breakpoint(tab992) {
+            gap: length(72);
+        }
+    }
+
+    &-header {
+        @include flex-column;
+        gap: length(44);
+
+        .filterproduct-top {
+            @include flex-center-column;
+            gap: length(18);
+            text-align: center;
+
+            .filterproduct-title {
+                @include font-face($playfairDisplay, style('normal'), size(24), weight('normal'), line-height(32, 24));
+                color: $primary;
+
+                @include breakpoint(tab992) {
+                    @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+                }
+            }
+
+            .filterproduct-text {
+                @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(18, 12));
+                color: $secondary;
+
+                @include breakpoint(mobile768) {
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                }
+            }
+        }
+
+        .filterproduct-bottom {
+            @include flex-center;
+
+            .filterproductlist {
+                @include list-horizontal;
+                background: $tablistBg;
+                padding: length(6);
+
+                &-link {
+                    padding: length(12) length(40);
+                    display: inline-block;
+                    @include setBgColor(transparent, $primary);
+                    text-align: center;
+                    @include font-face($futuraBK, style('normal'), size(10), weight('normal'), line-height(20, 10));
+
+                    @include breakpoint(mobile360) {
+                        @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                    }
+
+                    @include breakpoint(mobile768) {
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                    }
+
+                    &.active {
+                        @include setBgColor($secondary, $white);
+                    }
+                }
+            }
+        }
+    }
+
+    &-body {}
 }
