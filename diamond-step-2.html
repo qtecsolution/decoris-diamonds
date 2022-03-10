@@ -9,7 +9,8 @@
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
     <!-- PRICE-RANGE SLIDER CSS -->
     <link rel="stylesheet" href="assets/css/jquery-ui.css">
-    <link rel="stylesheet" href="assets/css//jquery-ui-slider-pips.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui-slider-pips.css">
+    <link rel="stylesheet" href="assets/css/rSlider.css">
     <!-- SWIPER SLIDER CSS -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <!-- BOOTSTRAP CSS  -->
@@ -1185,7 +1186,7 @@
             <div class="filterproducts-content">
                 <!-- FILTER-PRODUCTS HEADER START -->
                 <div class="row">
-                    <div class="col-lg-6 mx-lg-auto col-12">
+                    <div class="col-lg-6 mx-lg-auto col-12 p-0">
                         <div class="filterproducts-header">
                             <div class="filterproduct-top">
                                 <h1 class="filterproduct-title">Loose Diamonds</h1>
@@ -1367,8 +1368,8 @@
                                 <!-- DIAMONDS-RANGE HEADER END -->
                                 
                                 <!-- DIAMONDS-RANGE BODY START -->
-                                <div class="diamondsrange-body">                                    
-                                    <div id="desktopcolorgrade-range"></div>
+                                <div class="diamondsrange-body">
+                                    <input type="text" id="colorGrade" class="slider">
                                 </div>
                                 <!-- DIAMONDS-RANGE BODY END -->
                             </div>
@@ -1385,8 +1386,10 @@
                                 <!-- DIAMONDS-RANGE HEADER END -->
                                 
                                 <!-- DIAMONDS-RANGE BODY START -->
-                                <div class="diamondsrange-body">                                    
-                                    <div id="desktopclarity-range"></div>
+                                <div class="diamondsrange-body">
+                                    <div class="slider-container">
+                                        <input type="text" id="clarityType" class="slider">
+                                    </div>
                                 </div>
                                 <!-- DIAMONDS-RANGE BODY END -->
                             </div>
@@ -1403,8 +1406,8 @@
                                 <!-- DIAMONDS-RANGE HEADER END -->
                                 
                                 <!-- DIAMONDS-RANGE BODY START -->
-                                <div class="diamondsrange-body">                                    
-                                    <div id="desktopcuttype-range"></div>
+                                <div class="diamondsrange-body">
+                                    <input type="text" id="cutType" class="slider">
                                 </div>
                                 <!-- DIAMONDS-RANGE BODY END -->
                             </div>
@@ -1442,7 +1445,941 @@
     </section>
     <!-- FILTER PRODUCTS END -->
 
+    <!-- ADVANCED-FILTER SECTION START -->
+    <section class="advancedfilter">
+        <div class="decories-container">
+            <div class="advancedfilter-content">
+                <!-- FILTER BUTTON START -->
+                <div class="filter">
+                    <button class="btn-filter" id="btn-filter">Advanced Filters</button>
+                </div>
+                <!-- FILTER BUTTON END -->
 
+                <!-- FILTER NAV START -->
+                <nav class="filternav">
+                    <ul class="filterlist">
+                        <li class="filterlist-item">
+                            <a href="#" class="filterlist-link">
+                                <span class="text">Certificate</span>
+                                <span class="icon">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 7.75L9 12.25L13.5 7.75" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.5 7.75L9 12.25L13.5 7.75" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
+
+                            <div class="filterdropdown">
+                                <div class="filtercheck">
+                                    <input type="checkbox" name="" id="checkfilter-1" hidden>
+                                    <label for="checkfilter-1" class="checklabel">GIA</label>
+                                </div>
+
+                                <div class="filtercheck">
+                                    <input type="checkbox" name="" id="checkfilter-2" hidden>
+                                    <label for="checkfilter-2" class="checklabel">IGI</label>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="filterlist-item">
+                            <a href="#" class="filterlist-link">
+                                <span class="text">Polish</span>
+                                <span class="icon">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 7.75L9 12.25L13.5 7.75" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.5 7.75L9 12.25L13.5 7.75" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
+
+                            <div class="filterdropdown">
+                                <div class="filtercheck">
+                                    <input type="checkbox" name="" id="checkfilter-3" hidden>
+                                    <label for="checkfilter-3" class="checklabel">Excellent</label>
+                                </div>
+
+                                <div class="filtercheck">
+                                    <input type="checkbox" name="" id="checkfilter-4" hidden>
+                                    <label for="checkfilter-4" class="checklabel">Very Good</label>
+                                </div>
+
+                                <div class="filtercheck">
+                                    <input type="checkbox" name="" id="checkfilter-5" hidden>
+                                    <label for="checkfilter-5" class="checklabel">Good</label>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="filterlist-item">
+                            <a href="#" class="filterlist-link">
+                                <span class="text">Symmetry</span>
+                                <span class="icon">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 7.75L9 12.25L13.5 7.75" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.5 7.75L9 12.25L13.5 7.75" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
+
+                            <div class="filterdropdown">
+                                <div class="filtercheck">
+                                    <input type="checkbox" name="" id="checkfilter-6" hidden>
+                                    <label for="checkfilter-6" class="checklabel">Excellent</label>
+                                </div>
+
+                                <div class="filtercheck">
+                                    <input type="checkbox" name="" id="checkfilter-7" hidden>
+                                    <label for="checkfilter-7" class="checklabel">Very Good</label>
+                                </div>
+
+                                <div class="filtercheck">
+                                    <input type="checkbox" name="" id="checkfilter-8" hidden>
+                                    <label for="checkfilter-8" class="checklabel">Good</label>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="filterlist-item">
+                            <a href="#" class="filterlist-link">
+                                <span class="text">Fluorescence</span>
+                                <span class="icon">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 7.75L9 12.25L13.5 7.75" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.5 7.75L9 12.25L13.5 7.75" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
+
+                            <div class="filterdropdown">
+                                <div class="filtercheck">
+                                    <input type="checkbox" name="" id="checkfilter-9" hidden>
+                                    <label for="checkfilter-9" class="checklabel">None</label>
+                                </div>
+
+                                <div class="filtercheck">
+                                    <input type="checkbox" name="" id="checkfilter-10" hidden>
+                                    <label for="checkfilter-10" class="checklabel">Faint</label>
+                                </div>
+
+                                <div class="filtercheck">
+                                    <input type="checkbox" name="" id="checkfilter-11" hidden>
+                                    <label for="checkfilter-11" class="checklabel">Medium</label>
+                                </div>
+
+                                <div class="filtercheck">
+                                    <input type="checkbox" name="" id="checkfilter-12" hidden>
+                                    <label for="checkfilter-12" class="checklabel">Strong</label>
+                                </div>
+
+                                <div class="filtercheck">
+                                    <input type="checkbox" name="" id="checkfilter-13" hidden>
+                                    <label for="checkfilter-13" class="checklabel">Very Strong</label>
+                                </div>
+
+                                <div class="filtercheck">
+                                    <input type="checkbox" name="" id="checkfilter-14" hidden>
+                                    <label for="checkfilter-14" class="checklabel">VSL</label>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="filterlist-item">
+                            <a href="#" class="filterlist-link">
+                                <span class="text">L/W Ratio</span>
+                                <span class="icon">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 7.75L9 12.25L13.5 7.75" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.5 7.75L9 12.25L13.5 7.75" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
+
+                            <div class="dropdownfilter">
+                                <div class="dropitembox">
+                                    <div class="from">
+                                        <label for="ratiofrom" class="inputlabel">Form</label>
+                                        <input type="text" placeholder="2" id="ratiofrom" class="inputfield">
+                                    </div>
+
+                                    <div class="from">
+                                        <label for="ratioto" class="inputlabel">To</label>
+                                        <input type="text" placeholder="10" id="ratioto" class="inputfield">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="filterlist-item">
+                            <a href="#" class="filterlist-link">
+                                <span class="text">Table</span>
+                                <span class="icon">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 7.75L9 12.25L13.5 7.75" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.5 7.75L9 12.25L13.5 7.75" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
+
+                            <div class="dropdownfilter">
+                                <div class="dropitembox">
+                                    <div class="from">
+                                        <label for="ratiofrom" class="inputlabel">Form</label>
+                                        <input type="text" placeholder="2" id="ratiofrom" class="inputfield">
+                                    </div>
+
+                                    <div class="from">
+                                        <label for="ratioto" class="inputlabel">To</label>
+                                        <input type="text" placeholder="10" id="ratioto" class="inputfield">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="filterlist-item">
+                            <a href="#" class="filterlist-link">
+                                <span class="text">Depth</span>
+                                <span class="icon">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.5 7.75L9 12.25L13.5 7.75" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.5 7.75L9 12.25L13.5 7.75" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
+
+                            <div class="dropdownfilter">
+                                <div class="dropitembox">
+                                    <div class="from">
+                                        <label for="ratiofrom" class="inputlabel">Form</label>
+                                        <input type="text" placeholder="2" id="ratiofrom" class="inputfield">
+                                    </div>
+
+                                    <div class="from">
+                                        <label for="ratioto" class="inputlabel">To</label>
+                                        <input type="text" placeholder="10" id="ratioto" class="inputfield">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- FILTER NAV END -->
+
+                <!-- FILTER SEARCH START -->
+                <div class="filtersearch">
+                    <input type="search" name="" placeholder="Search by Stock / Certificate" class="searchfield">
+                    <button class="btn-search" type="button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="#B7B7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.5 17.5L13.875 13.875" stroke="#B7B7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- FILTER SEARCH END -->
+            </div>
+        </div>
+    </section>
+    <!-- ADVANCED-FILTER SECTION END -->
+
+    <!-- HOME FILTER SECTION START -->
+    <section class="diamondfilter">
+        <div class="decories-container">
+            <div class="diamondfilter-content">
+                <!-- HOME-FILTER HEADER START -->
+                <div class="diamondfilter-header">
+                    <div class="filter-result">
+                        <p class="result">Result <span>&mdash;</span> 25567 diamonds found</p>
+                    </div>
+
+                    <div class="filter-sorting">
+                        <div class="sorting">
+                            <select class="form-select">
+                                <option selected>Sort By</option>
+                                <option value="1">New</option>
+                                <option value="2">Price: low to high</option>
+                                <option value="3">Price: high to low</option>
+                            </select>
+                        </div>
+                        
+                        <div class="tabfilter">
+                            <ul class="nav nav-tabs" id="diamondFilterTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="horizontalTabContent-tab" data-bs-toggle="tab" data-bs-target="#horizontalTabContent" type="button" role="tab" aria-controls="horizontalTabContent" aria-selected="false">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 6H21" stroke="#B7B7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8 12H21" stroke="#B7B7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8 18H21" stroke="#B7B7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M3 6H3.01" stroke="#B7B7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M3 12H3.01" stroke="#B7B7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M3 18H3.01" stroke="#B7B7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </li>
+
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="verticalTabContent-tab" data-bs-toggle="tab" data-bs-target="#verticalTabContent" type="button" role="tab" aria-controls="verticalTabContent" aria-selected="true">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 3H3V10H10V3Z" stroke="#B7B7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M10 3H3V10H10V3Z" stroke="#B7B7B7" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M21 3H14V10H21V3Z" stroke="#B7B7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M21 3H14V10H21V3Z" stroke="#B7B7B7" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M21 14H14V21H21V14Z" stroke="#B7B7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M21 14H14V21H21V14Z" stroke="#B7B7B7" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M10 14H3V21H10V14Z" stroke="#B7B7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M10 14H3V21H10V14Z" stroke="#B7B7B7" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- HOME-FILTER HEADER END -->
+
+                <div class="tab-content" id="diamondFilterTabContent">
+                    <!-- VERTICAL CONTENT START -->
+                    <div class="tab-pane fade show active" id="verticalTabContent" role="tabpanel" aria-labelledby="verticalTabContent-tab">
+                        <div class="tabinfo">
+                            <!-- HOME-FILTER BODY START -->
+                            <div class="diamondfilter-body">
+                                <!-- PRODUCT START -->
+                                <div class="card-vertical">
+                                    <div class="card-vertical-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-vertical-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+
+                                <!-- PRODUCT START -->
+                                <div class="card-vertical">
+                                    <div class="card-vertical-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-vertical-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+
+                                <!-- PRODUCT START -->
+                                <div class="card-vertical">
+                                    <div class="card-vertical-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-vertical-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+
+                                <!-- PRODUCT START -->
+                                <div class="card-vertical">
+                                    <div class="card-vertical-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-vertical-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+
+                                <!-- PRODUCT START -->
+                                <div class="card-vertical">
+                                    <div class="card-vertical-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-vertical-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+
+                                <!-- PRODUCT START -->
+                                <div class="card-vertical">
+                                    <div class="card-vertical-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-vertical-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+
+                                <!-- PRODUCT START -->
+                                <div class="card-vertical">
+                                    <div class="card-vertical-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-vertical-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+
+                                <!-- PRODUCT START -->
+                                <div class="card-vertical">
+                                    <div class="card-vertical-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-vertical-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+
+                                <!-- PRODUCT START -->
+                                <div class="card-vertical">
+                                    <div class="card-vertical-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-vertical-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+
+                                <!-- PRODUCT START -->
+                                <div class="card-vertical">
+                                    <div class="card-vertical-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-vertical-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+                            </div>
+                            <!-- HOME-FILTER BODY END -->
+                        </div>
+                    </div>
+                    <!-- VERTICAL CONTENT END -->
+
+                    <!-- HORIZONTAL CONTENT START -->
+                    <div class="tab-pane fade" id="horizontalTabContent" role="tabpanel" aria-labelledby="horizontalTabContent-tab">
+                        <div class="tabinfo">
+                            <!-- HOME-FILTER BODY START -->
+                            <div class="diamondfilter-products">
+                                <!-- PRODUCT START -->
+                                <div class="card-horizontal">
+                                    <div class="card-horizontal-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-horizontal-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+                                
+                                <!-- PRODUCT START -->
+                                <div class="card-horizontal">
+                                    <div class="card-horizontal-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-horizontal-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+
+                                <!-- PRODUCT START -->
+                                <div class="card-horizontal">
+                                    <div class="card-horizontal-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-horizontal-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+
+                                <!-- PRODUCT START -->
+                                <div class="card-horizontal">
+                                    <div class="card-horizontal-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-horizontal-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+
+                                <!-- PRODUCT START -->
+                                <div class="card-horizontal">
+                                    <div class="card-horizontal-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-horizontal-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+
+                                <!-- PRODUCT START -->
+                                <div class="card-horizontal">
+                                    <div class="card-horizontal-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-horizontal-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+
+                                <!-- PRODUCT START -->
+                                <div class="card-horizontal">
+                                    <div class="card-horizontal-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-horizontal-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+
+                                <!-- PRODUCT START -->
+                                <div class="card-horizontal">
+                                    <div class="card-horizontal-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-horizontal-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+
+                                <!-- PRODUCT START -->
+                                <div class="card-horizontal">
+                                    <div class="card-horizontal-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-horizontal-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+
+                                <!-- PRODUCT START -->
+                                <div class="card-horizontal">
+                                    <div class="card-horizontal-header">
+                                        <div class="card-thumbnail">
+                                            <img src="assets/images/pages/filter/filter-products/filter-1.png" alt="product-thumbnail">
+                                        </div>
+
+                                        <button class="btn-wishlist" type="button">
+                                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M26.0497 5.76246C25.4112 5.12372 24.6532 4.61702 23.8189 4.27132C22.9845 3.92561 22.0903 3.74768 21.1872 3.74768C20.2841 3.74768 19.3898 3.92561 18.5555 4.27132C17.7211 4.61702 16.9631 5.12372 16.3247 5.76246L14.9997 7.08746L13.6747 5.76246C12.385 4.47285 10.636 3.74835 8.81216 3.74835C6.98837 3.74835 5.23928 4.47285 3.94966 5.76246C2.66005 7.05208 1.93555 8.80117 1.93555 10.625C1.93555 12.4488 2.66005 14.1978 3.94966 15.4875L5.27466 16.8125L14.9997 26.5375L24.7247 16.8125L26.0497 15.4875C26.6884 14.849 27.1951 14.091 27.5408 13.2567C27.8865 12.4223 28.0644 11.5281 28.0644 10.625C28.0644 9.72185 27.8865 8.82759 27.5408 7.99327C27.1951 7.15894 26.6884 6.40091 26.0497 5.76246V5.76246Z" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="card-horizontal-body">
+                                        <div class="cardinfo">
+                                            <h5 class="title">Round 03.ct</h5>
+                                            <p class="price">$203.00</p>
+                                            <p class="size">L, S12, Very Good</p>
+                                        </div>
+
+                                        <div class="card-buttons">
+                                            <button type="button" class="btn-card btn-bordered">More Info</button>
+                                            <button type="button" class="btn-card btn-filled">Add To Ring</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PRODUCT START -->
+                            </div>
+                            <!-- HOME-FILTER BODY END -->
+                        </div>
+                    </div>
+                    <!-- HORIZONTAL CONTENT END -->
+                </div>
+                
+                <!-- PAGINATION START -->
+                <div class="paginationinfo">
+                    <p class="result">Showing 1<span>&ndash;</span>9 of 159 Product</p>
+
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.3493 1.40549C11.3566 1.63094 11.1863 1.76184 11.0398 1.90729C9.62226 3.32749 8.21198 4.75497 6.77988 6.16063C6.51091 6.42451 6.48598 6.55542 6.77053 6.83385C8.1829 8.21042 9.56826 9.614 10.963 11.0093C11.0731 11.1194 11.1977 11.2233 11.2735 11.3552C11.4043 11.5838 11.3991 11.8248 11.1977 12.0201C10.9993 12.2134 10.7657 12.231 10.5361 12.0794C10.4219 12.0045 10.3243 11.9027 10.2267 11.8051C8.63672 10.2145 7.04781 8.62391 5.4589 7.03124C5.06219 6.63334 5.05285 6.37153 5.44644 5.9757C7.07066 4.34564 8.70111 2.7218 10.3274 1.09278C10.5382 0.881878 10.7657 0.742663 11.0647 0.883956C11.2714 0.981614 11.3649 1.16135 11.3493 1.40549Z" fill="#DEE2E6"/>
+                                        <path d="M7.29937 0.833767C7.53304 0.823377 7.70647 0.931425 7.79266 1.14025C7.89443 1.38751 7.83109 1.60672 7.63481 1.79892C7.1654 2.25813 6.70431 2.72668 6.2401 3.19211C5.2504 4.18324 4.27213 5.1858 3.26478 6.16031C2.99062 6.42523 2.97296 6.56029 3.25751 6.83768C4.65638 8.20282 6.02928 9.5929 7.41153 10.9757C7.52161 11.0858 7.64104 11.1908 7.72827 11.3165C7.89547 11.5565 7.89443 11.81 7.67946 12.0209C7.46346 12.2328 7.21525 12.2307 6.97744 12.0499C6.86839 11.9668 6.77181 11.865 6.67419 11.7674C5.09774 10.1882 3.52233 8.60904 1.94692 7.02884C1.5419 6.62263 1.52944 6.38367 1.93342 5.97746C3.5566 4.34739 5.18602 2.72356 6.81439 1.09973C6.9494 0.96467 7.08232 0.8213 7.29937 0.833767Z" fill="#DEE2E6"/>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="page-item active">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>
+
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.6507 1.40549C1.64343 1.63094 1.81375 1.76184 1.96018 1.90729C3.37774 3.32749 4.78802 4.75497 6.22012 6.16063C6.48909 6.42451 6.51402 6.55542 6.22947 6.83385C4.8171 8.21042 3.43174 9.614 2.03703 11.0093C1.92695 11.1194 1.80232 11.2233 1.72651 11.3552C1.59566 11.5838 1.60085 11.8248 1.80232 12.0201C2.00068 12.2134 2.23434 12.231 2.46385 12.0794C2.57809 12.0045 2.67571 11.9027 2.77333 11.8051C4.36328 10.2145 5.95219 8.62391 7.5411 7.03124C7.93781 6.63334 7.94715 6.37153 7.55356 5.9757C5.92934 4.34564 4.29889 2.7218 2.67259 1.09278C2.46177 0.881878 2.23434 0.742663 1.93525 0.883956C1.72859 0.981614 1.63513 1.16135 1.6507 1.40549Z" fill="#5A5A5A"/>
+                                        <path d="M5.70063 0.833767C5.46696 0.823377 5.29353 0.931425 5.20734 1.14025C5.10557 1.38751 5.16891 1.60672 5.36519 1.79892C5.8346 2.25813 6.29569 2.72668 6.7599 3.19211C7.7496 4.18324 8.72787 5.1858 9.73522 6.16031C10.0094 6.42523 10.027 6.56029 9.74249 6.83768C8.34362 8.20282 6.97072 9.5929 5.58847 10.9757C5.47839 11.0858 5.35896 11.1908 5.27173 11.3165C5.10453 11.5565 5.10557 11.81 5.32054 12.0209C5.53654 12.2328 5.78475 12.2307 6.02256 12.0499C6.13161 11.9668 6.22819 11.865 6.32581 11.7674C7.90226 10.1882 9.47767 8.60904 11.0531 7.02884C11.4581 6.62263 11.4706 6.38367 11.0666 5.97746C9.4434 4.34739 7.81398 2.72356 6.18561 1.09973C6.0506 0.96467 5.91768 0.8213 5.70063 0.833767Z" fill="#5A5A5A"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- PAGINATION END -->
+            </div>
+        </div>
+    </section>
+    <!-- HOME FILTER SECTION END -->
 
     <!-- PRODUT-ABOUT START -->
     <section class="productabout">
@@ -1719,5 +2656,9 @@
     <script src="assets/js/jquery-ui-slider-pips.js"></script>
     <!-- PRICE-RANGE JS -->
     <script src="assets/js/rangeslider.js"></script>
+    <script src="assets/js/rSlider.js"></script>
+    <script src="assets/js/rangeslide.js"></script>
+    <!-- ADVANCED FILTER -->
+    <script src="assets/js/filter.js"></script>
 </body>
 </html>

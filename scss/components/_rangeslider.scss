@@ -1,17 +1,83 @@
-.ui-slider-pips {
-    .ui-slider-pip {
-        top: 0;
-        z-index: 100;
+.ui-slider-horizontal {
+    background: $secondary;
+    @include radius(8);
+    height: length(8);
+    border: none !important;
 
-        &:first-child,
-        &:last-child {
-            opacity: 0;
-            visibility: hidden;
+    .ui-slider-range {
+        background: $secondary;
+        @include radius(8);
+    }
+
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default,
+    .ui-button,
+    html .ui-button.ui-state-disabled:focus,
+    html .ui-button.ui-state-disabled:hover,
+    html .ui-button.ui-state-disabled:active {
+        background: $secondary;
+        @include square(length(18));
+        @include border(solid, 3, $white);
+        @include circle;
+        box-shadow: $handle-shadow;
+    }
+}
+
+.rs-container {
+    font-family: $futuraBK;
+    margin-top: length(-5);
+
+    .rs-bg {
+        border: none;
+        background: $secondary;
+        height: length(8);
+        @include radius(8);
+    }
+
+    .rs-selected {
+        border: none;
+        background: $secondary;
+        height: length(8);
+        @include radius(8);
+    }
+
+    .rs-pointer {
+        background: $secondary;
+        @include square(length(18));
+        @include border(solid, 3, $white);
+        @include circle;
+        box-shadow: $handle-shadow;
+
+        &::before,
+        &::after {
+            width: 0;
+            height: 0;
+            background-color: transparent;
+            left: 0;
+            top: 0;
         }
+    }
 
-        .ui-slider-pip-0 {
-            opacity: 0;
-            visibility: hidden;
+    .rs-scale {
+        top: length(-5);
+
+        span {
+            cursor: pointer;
+
+            &:first-of-type,
+            &:last-of-type {
+                &::before {
+                    display: none;
+                }
+            }
+
+            ins {
+                margin-top: length(30);
+                @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20.46, 12));
+                color: $primary;
+                cursor: pointer;
+            }
         }
     }
 }

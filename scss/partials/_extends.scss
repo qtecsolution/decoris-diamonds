@@ -26,15 +26,15 @@
 
 @keyframes slideDownInMobile {
 	0% {
-		transform: translateY(-20px);
+		transform: translateY(length(-20));
 	}
 
 	100% {
-		transform: translateY(10px);
+		transform: translateY(length(10));
 	}
 
 	0% {
-		transform: translateY(-20px);
+		transform: translateY(length(-20));
 	}
 }
 
@@ -45,15 +45,15 @@
 
 @keyframes slideUpIn {
 	0% {
-		transform: translateY(-20px);
+		transform: translateY(length(-20));
 	}
 
 	100% {
-		transform: translateY(0);
+		transform: translateY(length(0));
 	}
 
 	0% {
-		transform: translateY(20px);
+		transform: translateY(length(20));
 	}
 }
 
@@ -64,15 +64,15 @@
 
 @keyframes slideUpInMobile {
 	0% {
-		transform: translateY(size(40));
+		transform: translateY(length(40));
 	}
 
 	100% {
-		transform: translateY(size(25));
+		transform: translateY(length(25));
 	}
 
 	0% {
-		transform: translateY(size(40));
+		transform: translateY(length(40));
 	}
 }
 
@@ -83,15 +83,15 @@
 
 @keyframes slideLeftIn {
 	0% {
-		transform: translateX(100px);
+		transform: translateX(length(100));
 	}
 
 	100% {
-		transform: translateX(0);
+		transform: translateX(length(0));
 	}
 
 	0% {
-		transform: translateX(-100px);
+		transform: translateX(length(-100));
 	}
 }
 
@@ -102,7 +102,7 @@
 
 @keyframes slideRightIn {
 	0% {
-		transform: translateX(100px);
+		transform: translateX(length(100));
 	}
 
 	100% {
@@ -110,7 +110,7 @@
 	}
 
 	0% {
-		transform: translateX(100px);
+		transform: translateX(length(100));
 	}
 }
 

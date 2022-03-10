@@ -790,3 +790,134 @@
 }
 
 // CARD-PRODUCT-ABOUT END
+
+// CARD-VERTICAL START
+
+.card-vertical {
+    @include flex-center-column;
+    gap: length(12);
+    @include flex-center;
+    width: calc((100% / 2) - .5rem);
+    @include transitions;
+
+    @include breakpoint(mobile768) {
+        width: calc((100% / 3) - 1.5rem);
+    }
+
+    @include breakpoint(tab992) {
+        width: calc((100% / 4) - 1.5rem);
+    }
+
+    @include breakpoint(laptop1400) {
+        width: calc((100% / 5) - 1.5rem);
+    }
+
+    &-header {
+        position: relative;
+
+        .card-thumbnail {
+            overflow: hidden;
+            position: relative;
+            height: length(350);
+
+            img {
+                @include wh100;
+                object-fit: cover;
+                @include transitiontransform;
+
+                @include hover {
+                    @include transform(scale(1.05));
+                }
+            }
+        }
+
+        .btn-wishlist {
+            position: absolute;
+            top: length(16);
+            right: length(16);
+            @include square(length(32));
+            @include flex-center;
+            overflow: hidden;
+            @include transparent-button;
+            opacity: 0;
+            visibility: hidden;
+            @include transitions;
+        }
+    }
+
+    &-body {
+        @include flex-center-column;
+        gap: length(16);
+
+        .cardinfo {
+            @include flex-center-column;
+            gap: length(8);
+            text-align: center;
+
+            .title {
+                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
+                color: $primary;
+            }
+
+            .price {
+                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
+                color: $primary;
+            }
+
+            .size {
+                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
+                color: $primary;
+            }
+        }
+
+        .card-buttons {
+            @include flex-center;
+            overflow: hidden;
+            gap: length(10);
+
+            .btn-card {
+                @include transparent-button;
+                padding: length(12) length(32);
+                @include flex-center;
+                @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(19.2, 12));
+                text-align: center;
+                @include transitions;
+            }
+
+            .btn-bordered {
+                @include border(solid, 2, $primary);
+                @include setBgColor($white, $primary);
+
+                @include hover {
+                    @include setBgColor($primary, $white);
+                }
+            }
+
+            .btn-filled {
+                @include border(solid, 2, $primary);
+                @include setBgColor($primary, $white);
+
+                @include hover {
+                    @include setBgColor($white, $primary);
+                }
+            }
+        }
+    }
+
+    @include hover {
+        .card-vertical-header {
+            .btn-wishlist {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+// CARD-VERTICAL END
+
+// CARD-HORIZONTAL START
+
+.card-horizontal {}
+
+// CARD-HORIZONTAL END
