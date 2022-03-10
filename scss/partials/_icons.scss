@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'decoris-icons';
+    src: url('../fonts/decoris-icons.eot?4jqd76');
+    src: url('../fonts/decoris-icons.eot?4jqd76#iefix') format('embedded-opentype'),
+        url('../fonts/decoris-icons.ttf?4jqd76') format('truetype'),
+        url('../fonts/decoris-icons.woff?4jqd76') format('woff'),
+        url('../fonts/decoris-icons.svg?4jqd76#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'decoris-icons' !important;
+    // speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 30px;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-decoris-arrow:before {
+    content: "\e901";
+}
+
+.icon-decoris-bag:before {
+    content: "\e902";
+}
+
+.icon-decoris-chat:before {
+    content: "\e903";
+}
+
+.icon-decoris-like:before {
+    content: "\e904";
+}
+
+.icon-decoris-question:before {
+    content: "\e905";
+}
+
+.icon-decoris-review:before {
+    content: "\e906";
+}
+
+.icon-decoris-user:before {
+    content: "\e907";
+}

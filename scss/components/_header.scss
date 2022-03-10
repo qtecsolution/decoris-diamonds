@@ -22,24 +22,14 @@
 
             &-link {
                 @include flex-center-vert;
-                gap: length(10);
-                padding: length(8) length(8);
+                padding: length(0) length(8);
                 @include radius(30);
 
-                @include breakpoint(mobile360) {
-                    padding: length(8) length(20);
-                }
-
                 .icon {
-                    @include square(length(18));
-
-                    @include breakpoint(desktop1399) {
-                        @include square(length(16));
-                    }
-
-                    svg {
-                        @include wh100;
-                        margin-top: length(-10);
+                    i {
+                        font-size: length(38);
+                        vertical-align: middle;
+                        color: $primary;
                     }
                 }
 
@@ -50,9 +40,9 @@
                     text-transform: uppercase;
                     letter-spacing: length(1.12);
 
-                    @include breakpoint(desktop1399) {
-                        @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(12, 12));
-                    }
+                    // @include breakpoint(desktop1399) {
+                    //     @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(12, 12));
+                    // }
 
                     @include breakpoint(tab992) {
                         display: block;
