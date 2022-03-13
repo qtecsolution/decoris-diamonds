@@ -225,6 +225,260 @@
             }
         }
 
+        .bookappontment {
+            @include w100;
+            @include flex-column;
+            gap: length(18);
+            padding: length(24) length(0);
+
+            &-header {
+                @include flex-center-between;
+
+                .bookappontment-title {
+                    @include font-face($playfairDisplay, style('normal'), size(24), weight('normal'), line-height(32, 24));
+                    color: $primary;
+
+                    @include breakpoint(tab992) {
+                        @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+                    }
+                }
+
+                .btn-remove {
+                    @include transparent-button;
+                    @include square(length(24));
+                    @include circle;
+                    @include flex-center;
+                    overflow: hidden;
+
+                    svg {
+                        @include wh100;
+                    }
+                }
+            }
+
+            &-body {
+                @include w100;
+
+                .bookappontment-form {
+                    @include w100;
+                    @include flex-column;
+                    gap: length(16);
+
+                    .inputbox {
+                        @include flex-column;
+                        gap: length(8);
+
+                        .inputinfo {
+                            @include flex-column;
+                            gap: length(8);
+                        }
+
+                        .inputlabel {
+                            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                            color: $primary;
+                            letter-spacing: length(0.08);
+                        }
+
+                        .inputfield {
+                            @include border(solid, 1, $inputBorder);
+                            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                            color: $black;
+                            padding: length(12) length(20);
+
+                            &::placeholder {
+                                color: $placeholerText;
+                            }
+
+                            &:focus {
+                                border-color: $black;
+                                box-shadow: none;
+                                outline: none;
+                            }
+                        }
+
+                        .selectfield {
+                            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                            color: $primary;
+                            background: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L7 7.5L13 1.5' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 2%;
+                            @include border(solid, 1, $inputBorder);
+                            padding: length(12) length(20);
+                            -o-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+
+                            &:focus {
+                                border-color: $black;
+                                box-shadow: none;
+                                outline: none;
+                            }
+                        }
+
+                        .phoneinfo {
+                            @include flex-center-vert;
+
+                            .phninfo {
+                                width: length(100);
+                                overflow: hidden;
+                                @include h100;
+
+                                .selectphone {
+                                    background: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L7 7.5L13 1.5' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 12%;
+                                    @include border(solid, 0.5, $inputBorder);
+                                    -o-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                                    color: $black;
+                                    letter-spacing: length(0.08);
+                                    padding: length(16) length(20);
+                                    @include wh100;
+
+                                    &:focus {
+                                        border-color: $black;
+                                        box-shadow: none;
+                                        outline: none;
+                                    }
+                                }
+                            }
+
+                            .inputinfo {
+                                width: calc(100% - 6.25rem);
+                                @include h100;
+
+                                .inputfield {
+                                    &:focus {
+                                        border-color: $black;
+                                        box-shadow: none;
+                                        outline: none;
+                                    }
+                                }
+                            }
+                        }
+
+                        .inputs {
+                            @include flex-column;
+                            gap: length(16);
+                        }
+                    }
+
+                    .form-details {
+                        @include flex-column;
+                        gap: length(16);
+
+                        @include breakpoint(tab992) {
+                            flex-direction: row;
+                        }
+
+                        .inputbox {
+                            @include w100;
+
+                            @include breakpoint(tab992) {
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-footer {
+                @include flex-column;
+                gap: length(12);
+
+                .interest-title {
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                    color: $primary;
+                    letter-spacing: length(0.08);
+                }
+
+                .interest-info {
+                    @include flex-center-vert;
+                    flex-wrap: wrap;
+                    gap: length(12);
+                    margin-bottom: length(8);
+
+                    @include breakpoint(tab992) {
+                        gap: length(14) length(30);
+                    }
+
+                    .checkinterest {
+                        .interestcheck {
+                            &:checked~.checklabel {
+                                color: $black;
+
+                                &::before {
+                                    border-color: $secondary;
+                                    background: $secondary;
+                                }
+
+                                &::after {
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        }
+
+                        .checklabel {
+                            position: relative;
+                            @include font-face($futuraBK, style('normal'), size(14), weight('medium'), line-height(22.4, 14));
+                            color: $primary;
+                            @include flex-center-vert;
+                            padding-left: length(30);
+                            cursor: pointer;
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                left: length(0);
+                                @include square(length(18));
+                                @include transform(translateY(-50%));
+                                @include border(solid, 1, $inputBorder);
+                                @include transitiontransform;
+                                @include transitions;
+                                @include radius(2);
+                            }
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 45%;
+                                left: length(7);
+                                width: length(4);
+                                height: length(10);
+                                @include transform(translateY(-50%) rotate(45deg));
+                                @include border(solid, 1, $white);
+                                border-top: none;
+                                border-left: none;
+                                opacity: 0;
+                                visibility: hidden;
+                                @include transitions;
+                            }
+
+                            &::selection {
+                                background: transparent;
+                                color: $primary;
+                            }
+                        }
+                    }
+                }
+
+                .request {
+                    .btn-request {
+                        padding: length(12) length(32);
+                        text-align: center;
+                        @include setBgColor($primary, $white);
+                        @include font-face($futuraBK, style('normal'), size(12), weight('medium'), line-height(19.2, 12));
+                        text-transform: uppercase;
+                        @include transitions;
+
+                        @include hover {
+                            background: $secondary;
+                        }
+                    }
+                }
+            }
+        }
+
         .reviewdetails {
             padding: length(24);
             @include flex-column;
@@ -444,19 +698,6 @@
                 @include flex-column;
                 gap: length(20);
 
-                .ringsize {
-                    width: length(200);
-                    -o-appearance: none;
-                    -moz-appearance: none;
-                    appearance: none;
-                    background: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L7 7.5L13 1.5' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 10%;
-                    @include border(solid, 2, $black);
-                    @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(19.2, 12));
-                    color: $black;
-                    padding: length(12) length(30);
-                    text-transform: uppercase;
-                }
-
                 .btn-addtocart {
                     padding: length(13) length(13) length(11);
                     @include w100;
@@ -475,6 +716,19 @@
             }
         }
     }
+}
+
+.ringsize {
+    width: length(200);
+    -o-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L7 7.5L13 1.5' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 10%;
+    @include border(solid, 2, $black);
+    @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(19.2, 12));
+    color: $black;
+    padding: length(12) length(30);
+    text-transform: uppercase;
 }
 
 .stepmenu {

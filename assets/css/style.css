@@ -7191,6 +7191,413 @@ polygon {
   height: 100%;
 }
 
+.decorisproductdetails .decories-container .bookappontment {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.125rem;
+  padding: 1.5rem 0rem;
+}
+
+.decorisproductdetails .decories-container .bookappontment-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+
+.decorisproductdetails .decories-container .bookappontment-header .bookappontment-title {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  color: #333333;
+}
+
+@media screen and (min-width: 62rem) {
+  .decorisproductdetails .decories-container .bookappontment-header .bookappontment-title {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 1.875rem;
+    font-weight: normal;
+    line-height: 1.3;
+  }
+}
+
+.decorisproductdetails .decories-container .bookappontment-header .btn-remove {
+  background: transparent;
+  border: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.decorisproductdetails .decories-container .bookappontment-header .btn-remove svg {
+  width: 100%;
+  height: 100%;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body {
+  width: 100%;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .inputbox .inputinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .inputbox .inputlabel {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.70533;
+  color: #333333;
+  letter-spacing: 0.005rem;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .inputbox .inputfield {
+  border: solid 0.0625rem #CED3DB;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.70533;
+  color: #000000;
+  padding: 0.75rem 1.25rem;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .inputbox .inputfield::-webkit-input-placeholder {
+  color: #999999;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .inputbox .inputfield:-ms-input-placeholder {
+  color: #999999;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .inputbox .inputfield::-ms-input-placeholder {
+  color: #999999;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .inputbox .inputfield::placeholder {
+  color: #999999;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .inputbox .inputfield:focus {
+  border-color: #000000;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .inputbox .selectfield {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.70533;
+  color: #333333;
+  background: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L7 7.5L13 1.5' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 2%;
+  border: solid 0.0625rem #CED3DB;
+  padding: 0.75rem 1.25rem;
+  -o-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .inputbox .selectfield:focus {
+  border-color: #000000;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .inputbox .phoneinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .inputbox .phoneinfo .phninfo {
+  width: 6.25rem;
+  overflow: hidden;
+  height: 100%;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .inputbox .phoneinfo .phninfo .selectphone {
+  background: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L7 7.5L13 1.5' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 12%;
+  border: solid 0.03125rem #CED3DB;
+  -o-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.2;
+  color: #000000;
+  letter-spacing: 0.005rem;
+  padding: 1rem 1.25rem;
+  width: 100%;
+  height: 100%;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .inputbox .phoneinfo .phninfo .selectphone:focus {
+  border-color: #000000;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .inputbox .phoneinfo .inputinfo {
+  width: calc(100% - 6.25rem);
+  height: 100%;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .inputbox .phoneinfo .inputinfo .inputfield:focus {
+  border-color: #000000;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .inputbox .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .form-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .form-details {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .form-details .inputbox {
+  width: 100%;
+}
+
+@media screen and (min-width: 62rem) {
+  .decorisproductdetails .decories-container .bookappontment-body .bookappontment-form .form-details .inputbox {
+    width: 50%;
+  }
+}
+
+.decorisproductdetails .decories-container .bookappontment-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.decorisproductdetails .decories-container .bookappontment-footer .interest-title {
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.70533;
+  color: #333333;
+  letter-spacing: 0.005rem;
+}
+
+.decorisproductdetails .decories-container .bookappontment-footer .interest-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .decorisproductdetails .decories-container .bookappontment-footer .interest-info {
+    gap: 0.875rem 1.875rem;
+  }
+}
+
+.decorisproductdetails .decories-container .bookappontment-footer .interest-info .checkinterest .interestcheck:checked ~ .checklabel {
+  color: #000000;
+}
+
+.decorisproductdetails .decories-container .bookappontment-footer .interest-info .checkinterest .interestcheck:checked ~ .checklabel::before {
+  border-color: #5A5A5A;
+  background: #5A5A5A;
+}
+
+.decorisproductdetails .decories-container .bookappontment-footer .interest-info .checkinterest .interestcheck:checked ~ .checklabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.decorisproductdetails .decories-container .bookappontment-footer .interest-info .checkinterest .checklabel {
+  position: relative;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 1.875rem;
+  cursor: pointer;
+}
+
+.decorisproductdetails .decories-container .bookappontment-footer .interest-info .checkinterest .checklabel::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0rem;
+  height: 1.125rem;
+  width: 1.125rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: solid 0.0625rem #CED3DB;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  border-radius: 0.125rem;
+  border-radius: 0.125rem;
+}
+
+.decorisproductdetails .decories-container .bookappontment-footer .interest-info .checkinterest .checklabel::after {
+  content: '';
+  position: absolute;
+  top: 45%;
+  left: 0.4375rem;
+  width: 0.25rem;
+  height: 0.625rem;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+  border: solid 0.0625rem #ffffff;
+  border-top: none;
+  border-left: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.decorisproductdetails .decories-container .bookappontment-footer .interest-info .checkinterest .checklabel::-moz-selection {
+  background: transparent;
+  color: #333333;
+}
+
+.decorisproductdetails .decories-container .bookappontment-footer .interest-info .checkinterest .checklabel::selection {
+  background: transparent;
+  color: #333333;
+}
+
+.decorisproductdetails .decories-container .bookappontment-footer .request .btn-request {
+  padding: 0.75rem 2rem;
+  text-align: center;
+  background: #333333;
+  color: #ffffff;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.6;
+  text-transform: uppercase;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.decorisproductdetails .decories-container .bookappontment-footer .request .btn-request:not([disabled]):hover {
+  background: #5A5A5A;
+}
+
 .decorisproductdetails .decories-container .reviewdetails {
   padding: 1.5rem;
   display: -webkit-box;
@@ -7659,24 +8066,6 @@ polygon {
   gap: 1.25rem;
 }
 
-.decorisproductdetails .decories-container .reviewdetails-buttons .ringsize {
-  width: 12.5rem;
-  -o-appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-          appearance: none;
-  background: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L7 7.5L13 1.5' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 10%;
-  border: solid 0.125rem #000000;
-  font-family: "Futura Bk";
-  font-style: normal;
-  font-size: 0.75rem;
-  font-weight: normal;
-  line-height: 1.6;
-  color: #000000;
-  padding: 0.75rem 1.875rem;
-  text-transform: uppercase;
-}
-
 .decorisproductdetails .decories-container .reviewdetails-buttons .btn-addtocart {
   padding: 0.8125rem 0.8125rem 0.6875rem;
   width: 100%;
@@ -7697,6 +8086,24 @@ polygon {
 .decorisproductdetails .decories-container .reviewdetails-buttons .btn-addtocart:not([disabled]):hover {
   background: transparent;
   color: #5A5A5A;
+}
+
+.ringsize {
+  width: 12.5rem;
+  -o-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
+  background: url("data:image/svg+xml,%3Csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L7 7.5L13 1.5' stroke='%23333333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat center right 10%;
+  border: solid 0.125rem #000000;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #000000;
+  padding: 0.75rem 1.875rem;
+  text-transform: uppercase;
 }
 
 .stepmenu {

@@ -1225,7 +1225,7 @@
             <!-- PRODUCT-THUMBNAIL END -->
 
             <!-- PRODUCT-DETAIL START -->
-            <div class="productinformations">
+            <div class="productinformations d-none">
                 <div class="productinformations-top">
                     <h2 class="product-title">Diamond Engagement Ring</h2>
                     
@@ -1275,7 +1275,13 @@
                         <button class="btn-bordered" type="button">Find your ring</button>
                         <button class="btn-bordered" type="button">Enquire</button>
                         <button class="btn-bordered" type="button">Appointment booking</button>
-                        <button class="btn-bordered" type="button">Ring size</button>
+                        
+                        <select name="" id="" class="ringsize">
+                            <option value="">Select Ring size</option>
+                            <option value="">Size 1</option>
+                            <option value="">Size 2</option>
+                            <option value="">Size 3</option>
+                        </select>
                     </div>
 
                     <div class="notebox">
@@ -1324,6 +1330,149 @@
                 </div>
             </div>
             <!-- PRODUCT-DETAIL END -->
+
+            <!-- BOOK-APPONTMENT INFO START -->
+            <div class="bookappontment">
+                <!-- BOOK-APPOINTMENT HEADER START -->
+                <div class="bookappontment-header">
+                    <h2 class="bookappontment-title">Book An Appointment</h2>
+                    
+                    <button class="btn-remove" type="button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#DEE2E6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 9L9 15" stroke="#5A5A5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 9L15 15" stroke="#5A5A5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- BOOK-APPOINTMENT HEADER END -->
+
+                <!-- BOOK-APPOINTMENT BODY START -->
+                <div class="bookappontment-body">
+                    <form class="bookappontment-form">
+                        <div class="form-details">
+                            <div class="inputbox">
+                                <div class="inputinfo">
+                                    <label for="bookfirstname" class="inputlabel">First name</label>
+                                    <input type="text" placeholder="Enter first name" id="bookfirstname" class="inputfield">
+                                </div>
+                            </div>
+
+                            <div class="inputbox">
+                                <div class="inputinfo">
+                                    <label for="booklastname" class="inputlabel">Last name</label>
+                                    <input type="text" placeholder="Enter last name" id="booklastname" class="inputfield">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-info">
+                            <div class="inputbox">
+                                <div class="inputinfo">
+                                    <label for="bookemail" class="inputlabel">Email</label>
+                                    <input type="email" placeholder="Enter email" id="bookemail" class="inputfield">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-info">
+                            <div class="inputbox">
+                                <div class="inputinfo">
+                                    <label for="booklocation" class="inputlabel">Location</label>
+                                    <select name="" id="booklocation" class="selectfield">
+                                        <option value="">Dhaka, Bangladesh</option>
+                                        <option value="">Dhaka, Bangladesh</option>
+                                        <option value="">Dhaka, Bangladesh</option>
+                                        <option value="">Dhaka, Bangladesh</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-info">
+                            <div class="inputbox">
+                                <label class="inputlabel">Phone Number</label>
+                                <div class="phoneinfo">
+                                    <div class="phninfo">
+                                        <select name="" id="" class="selectphone">
+                                            <option value="">+880</option>
+                                            <option value="">+990</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="inputinfo">
+                                        <input type="tel" placeholder="" id="" class="inputfield">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-info">
+                            <div class="inputbox">
+                                <div class="inputs">
+                                    <div class="inputinfo">
+                                        <label for="bookappointments" class="inputlabel">Your Appointment</label>
+                                        <input type="text" placeholder="02/20/2022" id="bookappointments" class="inputfield">
+                                    </div>
+
+                                    <div class="inputinfo">
+                                        <input type="text" placeholder="Preferred appointment time" id="" class="inputfield">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- BOOK-APPOINTMENT BODY END -->
+
+                <!-- BOOK-APPOINTMENT FOOTER START -->
+                <div class="bookappontment-footer">
+                    <h5 class="interest-title">Areas of Interest:</h5>
+
+                    <div class="interest-info">
+                        <div class="checkinterest">
+                            <input type="checkbox" name="" id="interest-1" class="interestcheck" autocomplete="off" hidden>
+                            <label for="interest-1" class="checklabel">Engagement Rings</label>
+                        </div>
+                        
+                        <div class="checkinterest">
+                            <input type="checkbox" name="" id="interest-2" class="interestcheck" autocomplete="off" hidden>
+                            <label for="interest-2" class="checklabel">Wedding Bands</label>
+                        </div>
+
+                        <div class="checkinterest">
+                            <input type="checkbox" name="" id="interest-3" class="interestcheck" autocomplete="off" hidden>
+                            <label for="interest-3" class="checklabel">High Jewellery</label>
+                        </div>
+
+                        <div class="checkinterest">
+                            <input type="checkbox" name="" id="interest-4" class="interestcheck" autocomplete="off" hidden>
+                            <label for="interest-4" class="checklabel">Watches</label>
+                        </div>
+
+                        <div class="checkinterest">
+                            <input type="checkbox" name="" id="interest-5" class="interestcheck" autocomplete="off" hidden>
+                            <label for="interest-5" class="checklabel">Jewellery Collections</label>
+                        </div>
+
+                        <div class="checkinterest">
+                            <input type="checkbox" name="" id="interest-6" class="interestcheck" autocomplete="off" hidden>
+                            <label for="interest-6" class="checklabel">Wedding Jewellery</label>
+                        </div>
+                        
+                        <div class="checkinterest">
+                            <input type="checkbox" name="" id="interest-7" class="interestcheck" autocomplete="off" hidden>
+                            <label for="interest-7" class="checklabel">Other Services</label>
+                        </div>
+                    </div>
+
+                    <div class="request">
+                        <button class="btn-request" type="button">Request appointment</button>
+                    </div>
+                </div>
+                <!-- BOOK-APPOINTMENT FOOTER END -->
+            </div>
+            <!-- BOOK-APPONTMENT INFO END -->
         </div>
     </section>
     <!-- PRODUCT-DETAILS END -->
