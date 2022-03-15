@@ -1,5 +1,6 @@
 .decorisproductdetails {
     @include border-single(bottom, solid, 1, $dividerBg);
+    padding: length(32) length(0);
 
     .decories-container {
         @include flex-column;
@@ -19,7 +20,7 @@
 
             .slidernavigation {
                 position: absolute;
-                top: length(24);
+                top: length(42);
                 left: length(30);
             }
 
@@ -153,13 +154,45 @@
                         color: $primary;
                     }
 
-                    .btn-add {
-                        padding: length(12) length(32);
-                        @include flex-center;
-                        @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20, 12));
-                        @include setBgColor($primary, $white);
-                        text-align: center;
-                        text-transform: uppercase;
+                    .addinfo {
+                        @include flex-center-vert;
+                        gap: length(24);
+
+                        .btn-add {
+                            padding: length(12) length(32);
+                            @include flex-center;
+                            @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                            @include setBgColor($primary, $white);
+                            @include border(solid, 2, $primary);
+                            @include transitions;
+                            text-align: center;
+                            text-transform: uppercase;
+
+                            @include hover {
+                                @include setBgColor($white, $primary);
+                            }
+                        }
+
+                        .btn-wishlist {
+                            @include transparent-button;
+                            @include square(length(30));
+                            @include flex-center;
+                            overflow: hidden;
+                            
+                            svg {
+                                path {
+                                    @include transitions;
+                                }
+                            }
+
+                            @include hover {
+                                svg {
+                                    path {
+                                        stroke: $primary;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -1369,175 +1402,6 @@
     .filternav {
         margin-inline: auto;
         display: none;
-
-        .filterlist {
-            position: relative;
-            @include list-horizontal;
-            width: 0;
-
-            &-item {
-                position: relative;
-
-                .filterdropdown {
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                    background: $white;
-                    min-width: length(150);
-                    @include border(solid, 1, $dividerBg);
-                    padding: length(14) length(20);
-                    gap: length(8);
-                    @extend %animation;
-                    @extend %slideUpIn;
-                    display: none;
-
-                    .filtercheck {
-                        input[type="checkbox"] {
-                            &:checked~.checklabel {
-                                &::after {
-                                    border-color: $textStepLink;
-                                }
-                            }
-                        }
-
-                        .checklabel {
-                            position: relative;
-                            padding-left: length(30);
-                            cursor: pointer;
-                            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.87, 14));
-                            color: $primary;
-
-                            &::selection {
-                                color: $primary;
-                                background: transparent;
-                            }
-
-                            &::before,
-                            &::after {
-                                content: '';
-                                position: absolute;
-                                top: 50%;
-                            }
-
-                            &::before {
-                                @include square(length(18));
-                                @include border(solid, 1, $textStepLink);
-                                left: 0;
-                                @include transform(translateY(-50%));
-                                background: transparent;
-                                @include transitions;
-                            }
-
-                            &::after {
-                                width: length(5);
-                                height: length(10);
-                                @include border(solid, 1, transparent);
-                                border-top: 0;
-                                border-left: 0;
-                                @include transform(translateY(-65%) rotate(45deg));
-                                left: length(7);
-                                @include transitions;
-                            }
-                        }
-                    }
-                }
-
-                .dropdownfilter {
-                    position: absolute;
-                    top: 100%;
-                    right: 0;
-                    background: $white;
-                    min-width: length(150);
-                    @include border(solid, 1, $dividerBg);
-                    padding: length(20);
-                    @extend %animation;
-                    @extend %slideUpIn;
-                    display: none;
-
-                    .dropitembox {
-                        @include flex-center-vert;
-                        gap: length(12);
-                        padding: length(3) length(0);
-
-                        .from {
-                            width: length(140);
-                            @include flex-center-vert;
-                            overflow: hidden;
-
-                            .inputlabel {
-                                padding: length(10) length(15);
-                                @include flex-center;
-                                @include setBgColor($diamondLabelBg, $diamondLabelBorder);
-                                @include border(solid, 1, $diamondLabelBorder);
-                                border-right: 0;
-                                @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20.46, 12));
-                            }
-
-                            .inputfield {
-                                @include border(solid, 1, $diamondLabelBorder);
-                                padding: length(10) length(15);
-                                @include w100;
-                                color: $secondary;
-                                @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20.46, 12));
-                            }
-                        }
-                    }
-                }
-
-                @include hover {
-                    .filterdropdown {
-                        @include flex-column;
-                    }
-
-                    .dropdownfilter {
-                        display: flex;
-                    }
-
-                    .filterlist-link {
-                        .icon {
-                            margin-top: length(3);
-
-                            svg {
-                                @include transform(rotate(180deg));
-                            }
-                        }
-                    }
-                }
-
-                &:first-of-type {
-                    .filterlist-link {
-                        padding-left: length(20);
-                    }
-                }
-
-                &:last-of-type {
-                    .filterlist-link {
-                        padding-right: length(20);
-                    }
-                }
-            }
-
-            &-link {
-                padding: length(32) length(20);
-                @include flex-center-vert;
-                gap: length(6);
-
-                .text {
-                    @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20.46, 12));
-                    color: $primary;
-                }
-
-                .icon {
-                    @include square(length(18));
-                    @include flex-center;
-                    overflow: hidden;
-
-                    svg {
-                        @include transitiontransform;
-                    }
-                }
-            }
-        }
     }
 
     .filtersearch {
@@ -1563,6 +1427,176 @@
 
             &::placeholder {
                 color: $textStepLink;
+            }
+        }
+    }
+}
+
+.filterlist {
+    position: relative;
+    @include list-horizontal;
+    @include w100;
+
+    &-item {
+        position: relative;
+
+        .filterdropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: $white;
+            min-width: length(150);
+            @include border(solid, 1, $dividerBg);
+            padding: length(14) length(20);
+            gap: length(8);
+            @extend %animation;
+            @extend %slideUpIn;
+            display: none;
+            z-index: 100;
+
+            .filtercheck {
+                input[type="checkbox"] {
+                    &:checked~.checklabel {
+                        &::after {
+                            border-color: $textStepLink;
+                        }
+                    }
+                }
+
+                .checklabel {
+                    position: relative;
+                    padding-left: length(30);
+                    cursor: pointer;
+                    @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.87, 14));
+                    color: $primary;
+
+                    &::selection {
+                        color: $primary;
+                        background: transparent;
+                    }
+
+                    &::before,
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                    }
+
+                    &::before {
+                        @include square(length(18));
+                        @include border(solid, 1, $textStepLink);
+                        left: 0;
+                        @include transform(translateY(-50%));
+                        background: transparent;
+                        @include transitions;
+                    }
+
+                    &::after {
+                        width: length(5);
+                        height: length(10);
+                        @include border(solid, 1, transparent);
+                        border-top: 0;
+                        border-left: 0;
+                        @include transform(translateY(-65%) rotate(45deg));
+                        left: length(7);
+                        @include transitions;
+                    }
+                }
+            }
+        }
+
+        .dropdownfilter {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: $white;
+            min-width: length(150);
+            @include border(solid, 1, $dividerBg);
+            padding: length(20);
+            @extend %animation;
+            @extend %slideUpIn;
+            display: none;
+
+            .dropitembox {
+                @include flex-center-vert;
+                gap: length(12);
+                padding: length(3) length(0);
+
+                .from {
+                    width: length(140);
+                    @include flex-center-vert;
+                    overflow: hidden;
+
+                    .inputlabel {
+                        padding: length(10) length(15);
+                        @include flex-center;
+                        @include setBgColor($diamondLabelBg, $diamondLabelBorder);
+                        @include border(solid, 1, $diamondLabelBorder);
+                        border-right: 0;
+                        @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20.46, 12));
+                    }
+
+                    .inputfield {
+                        @include border(solid, 1, $diamondLabelBorder);
+                        padding: length(10) length(15);
+                        @include w100;
+                        color: $secondary;
+                        @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20.46, 12));
+                    }
+                }
+            }
+        }
+
+        @include hover {
+            .filterdropdown {
+                @include flex-column;
+            }
+
+            .dropdownfilter {
+                display: flex;
+            }
+
+            .filterlist-link {
+                .icon {
+                    margin-top: length(3);
+
+                    svg {
+                        @include transform(rotate(180deg));
+                    }
+                }
+            }
+        }
+
+        &:first-of-type {
+            .filterlist-link {
+                padding-left: length(20);
+            }
+        }
+
+        &:last-of-type {
+            .filterlist-link {
+                padding-right: length(20);
+            }
+        }
+    }
+
+    &-link {
+        padding: length(32) length(20);
+        @include flex-center-vert;
+        gap: length(6);
+
+        .text {
+            @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20.46, 12));
+            color: $primary;
+        }
+
+        .icon {
+            @include square(length(18));
+            @include flex-center;
+            overflow: hidden;
+
+            svg {
+                @include transitiontransform;
             }
         }
     }
@@ -1720,5 +1754,44 @@
                 }
             }
         }
+    }
+}
+
+.find-diamonds {
+    padding: length(50) length(0) length(180);
+
+    @include breakpoint(tab992) {
+        padding: length(24) length(0) length(64);
+    }
+
+    &-header {
+        max-width: length(400);
+        margin-inline: auto;
+        @include flex-center-column;
+        gap: length(12);
+        text-align: center;
+
+        .find-diamond-title {
+            @include font-face($playfairDisplay, style('normal'), size(24), weight('normal'), line-height(32, 24));
+            color: $black;
+
+            @include breakpoint(tab992) {
+                @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+            }
+        }
+
+        .find-diamond-text {
+            @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(18, 12));
+            color: $secondary;
+
+            @include breakpoint(mobile768) {
+                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+            }
+        }
+    }
+
+    &-body {
+        @include w100;
+        @include flex-center;
     }
 }

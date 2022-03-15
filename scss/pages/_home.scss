@@ -204,6 +204,24 @@
                 width: calc((100% / 5) - 1.5rem);
             }
         }
+
+        .homeproduct {
+            @include flex-center;
+            width: calc((100% / 2) - .5rem);
+            margin-inline-end: auto;
+
+            @include breakpoint(mobile768) {
+                width: calc((100% / 3) - 1.5rem);
+            }
+
+            @include breakpoint(tab992) {
+                width: calc((100% / 4) - 1.5rem);
+            }
+
+            @include breakpoint(laptop1400) {
+                width: calc((100% / 5) - 1.5rem);
+            }
+        }
     }
 }
 

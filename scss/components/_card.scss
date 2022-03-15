@@ -7,6 +7,32 @@
     @include w100;
     @include flex-center-column;
     gap: length(18);
+    position: relative;
+
+    .btn-wishlist {
+        position: absolute;
+        top: length(20);
+        right: length(20);
+        @include square(length(30));
+        @include flex-center;
+        @include transparent-button;
+        z-index: 100;
+
+        svg {
+            path {
+                @include transitions;
+            }
+        }
+
+
+        @include hover {
+            svg {
+                path {
+                    stroke: $primary;
+                }
+            }
+        }
+    }
 
     &-header {
         @include w100;
@@ -59,7 +85,42 @@
 
     &-body {
         @include flex-center-column;
-        text-align: center;
+        gap: length(16);
+
+        .productinfos {
+            @include flex-center-column;
+            text-align: center;
+        }
+
+        .product-colors {
+            @include flex-center;
+            gap: length(10);
+            margin-bottom: length(8);
+
+            .btn-color {
+                @include square(length(10));
+                @include flex-center;
+                @include circle;
+                @include transparent-button;
+            }
+        }
+
+        .viewproduct {
+            @include flex-center;
+
+            .btn-view {
+                display: inline-block;
+                padding: length(12) length(40);
+                @include border(solid, 2, $primary);
+                @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(19.2, 12));
+                @include setBgColor($white, $black);
+                @include transitions;
+
+                @include hover {
+                    @include setBgColor($primary,  $white);
+                }
+            }
+        }
     }
 
     &-title {
@@ -839,9 +900,15 @@
             @include flex-center;
             overflow: hidden;
             @include transparent-button;
-            opacity: 0;
-            visibility: hidden;
             @include transitions;
+
+            @include hover {
+                svg {
+                    path {
+                        stroke: $primary
+                    }
+                }
+            }
         }
     }
 
@@ -900,15 +967,6 @@
                 @include hover {
                     @include setBgColor($white, $primary);
                 }
-            }
-        }
-    }
-
-    @include hover {
-        .card-vertical-header {
-            .btn-wishlist {
-                opacity: 1;
-                visibility: visible;
             }
         }
     }
