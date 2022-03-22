@@ -178,7 +178,7 @@
                             @include square(length(30));
                             @include flex-center;
                             overflow: hidden;
-                            
+
                             svg {
                                 path {
                                     @include transitions;

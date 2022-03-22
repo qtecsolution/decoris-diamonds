@@ -18,19 +18,28 @@
         @include transparent-button;
         z-index: 100;
 
-        svg {
-            path {
-                @include transitions;
-            }
+        // svg {
+        //     path {
+        //         @include transitions;
+        //     }
+        // }
+
+        i {
+            color: $textSchedule;
+            font-size: length(48);
+            font-weight: 600;
         }
 
-
         @include hover {
-            svg {
-                path {
-                    stroke: $primary;
-                }
+            i {
+                color: $primary;
             }
+
+            // svg {
+            //     path {
+            //         stroke: $primary;
+            //     }
+            // }
         }
     }
 
@@ -92,16 +101,22 @@
             text-align: center;
         }
 
-        .product-colors {
-            @include flex-center;
-            gap: length(10);
-            margin-bottom: length(8);
+        .colors {
+            @include flex-center-vert;
+            gap: length(15);
 
-            .btn-color {
-                @include square(length(10));
-                @include flex-center;
+            .colourbox {
+                @include square(length(18));
+                @include border(solid, 0.75, transparent);
                 @include circle;
-                @include transparent-button;
+                @include flex-center;
+                cursor: pointer;
+                overflow: hidden;
+
+                .colour {
+                    @include square(length(12));
+                    @include circle;
+                }
             }
         }
 
@@ -117,7 +132,7 @@
                 @include transitions;
 
                 @include hover {
-                    @include setBgColor($primary,  $white);
+                    @include setBgColor($primary, $white);
                 }
             }
         }
@@ -902,12 +917,23 @@
             @include transparent-button;
             @include transitions;
 
+            i {
+                color: $textSchedule;
+                font-size: length(48);
+                font-weight: 600;
+            }
+
             @include hover {
-                svg {
-                    path {
-                        stroke: $primary
-                    }
+
+                i {
+                    color: $primary;
                 }
+
+                // svg {
+                //     path {
+                //         stroke: $primary
+                //     }
+                // }
             }
         }
     }
