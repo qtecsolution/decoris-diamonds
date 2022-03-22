@@ -9485,12 +9485,12 @@ polygon {
   top: 100%;
   left: 0;
   background: #ffffff;
-  min-width: 9.375rem;
+  min-width: 15.625rem;
   border: solid 0.0625rem #DEE2E6;
   padding: 0.875rem 1.25rem;
   gap: 0.5rem;
   display: none;
-  z-index: 100;
+  z-index: 500;
 }
 
 .filterlist-item .filterdropdown .filtercheck input[type="checkbox"]:checked ~ .checklabel::after {
@@ -9507,16 +9507,17 @@ polygon {
   font-weight: normal;
   line-height: 1.705;
   color: #333333;
+  width: 100%;
 }
 
 .filterlist-item .filterdropdown .filtercheck .checklabel::-moz-selection {
-  color: #333333;
   background: transparent;
+  color: #333333;
 }
 
 .filterlist-item .filterdropdown .filtercheck .checklabel::selection {
-  color: #333333;
   background: transparent;
+  color: #333333;
 }
 
 .filterlist-item .filterdropdown .filtercheck .checklabel::before, .filterlist-item .filterdropdown .filtercheck .checklabel::after {
@@ -9548,6 +9549,68 @@ polygon {
   left: 0.4375rem;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
+}
+
+.filterlist-item .filterdropdown .filtercheck .checklabel .colorbox {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.filterlist-item .filterdropdown .filtercheck .checklabel .colorbox .color {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.filterlist-item .filterdropdown .filtercheck .checklabel .shapeinfo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+}
+
+.filterlist-item .filterdropdown .filtercheck .checklabel .shapeinfo .shapetitle::-moz-selection {
+  background: transparent;
+  color: #333333;
+}
+
+.filterlist-item .filterdropdown .filtercheck .checklabel .shapeinfo .shapetitle::selection {
+  background: transparent;
+  color: #333333;
+}
+
+.filterlist-item .filterdropdown .filtercheck .checklabel .shapeinfo .iconbox {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.filterlist-item .filterdropdown .filtercheck .checklabel .shapeinfo .iconbox svg {
+  width: 100%;
+  height: 100%;
 }
 
 .filterlist-item .dropdownfilter {

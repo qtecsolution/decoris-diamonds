@@ -1445,14 +1445,14 @@
             top: 100%;
             left: 0;
             background: $white;
-            min-width: length(150);
+            min-width: length(250);
             @include border(solid, 1, $dividerBg);
             padding: length(14) length(20);
             gap: length(8);
             @extend %animation;
             @extend %slideUpIn;
             display: none;
-            z-index: 100;
+            z-index: 500;
 
             .filtercheck {
                 input[type="checkbox"] {
@@ -1469,10 +1469,10 @@
                     cursor: pointer;
                     @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.87, 14));
                     color: $primary;
+                    @include w100;
 
                     &::selection {
-                        color: $primary;
-                        background: transparent;
+                        @include setBgColor(transparent, $primary);
                     }
 
                     &::before,
@@ -1500,6 +1500,41 @@
                         @include transform(translateY(-65%) rotate(45deg));
                         left: length(7);
                         @include transitions;
+                    }
+
+                    .colorbox {
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        @include transform(translateY(-50%));
+                        @include square(length(24));
+
+                        .color {
+                            @include square(length(40));
+                            @include radius(8);
+                            overflow: hidden;
+                        }
+                    }
+
+                    .shapeinfo {
+                        @include w100;
+                        @include flex-center-between;
+
+                        .shapetitle {
+                            &::selection {
+                                @include setBgColor(transparent, $primary);
+                            }
+                        }
+
+                        .iconbox {
+                            @include square(length(24));
+                            @include flex-center;
+                            overflow: hidden;
+
+                            svg {
+                                @include wh100;
+                            }
+                        }
                     }
                 }
             }
