@@ -1,327 +1,140 @@
 /**=====================================================
                     HOME-BANNER
 =====================================================**/
-.homebanner {
-    padding: length(44) length(0);
-    background: $bannerBg;
-    @include border-single(top, solid, 1, $dividerBg);
-    @include border-single(bottom, solid, 1, $dividerBg);
 
-    @include breakpoint(mobile768) {
-        padding: length(80) length(0);
-    }
+.home-banner {
+    .banner-thumbnail {
+        @include w100;
+        height: auto;
+        overflow: hidden;
 
-    @include breakpoint(tab992) {
-        border-top: none;
-    }
-
-    &-content {
-        @include flex-column;
-        gap: length(44);
-
-        .banner-header {
-            @include flex-center-column;
-            gap: length(10);
-            text-align: center;
-
-            .banner-title {
-                @include font-face($futuraBK, style('normal'), size(30), weight('normal'), line-height(40, 30));
-                color: $primary;
-            }
-
-            .banner-text {
-                @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(26, 16));
-                color: $secondary;
-            }
+        @include breakpoint(tab992) {
+            height: length(640);
         }
 
-        .banner-breadcrumb {
-            @include flex-center;
+        img {
+            @include wh100;
+            object-fit: contain;
+            @include transitiontransform;
 
-            .breadcrumb {
-                margin: length(0);
-                gap: length(8);
+            @include breakpoint(tab992) {
+                object-fit: cover;
+            }
 
-                &-item {
-                    @include flex-center-vert;
-                    padding: length(0);
-                    color: $secondary;
-                    @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(19, 16));
-
-                    &::before {
-                        content: '';
-                        padding: length(0);
-                        display: none;
-                    }
-
-                    &.active {
-                        color: $black;
-                    }
-
-                    a {
-                        color: $secondary;
-                        @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(19, 16));
-                        @include transitions;
-
-                        @include hover {
-                            color: $black;
-                        }
-                    }
-                }
-
-                .divider {
-                    @include flex-center;
-                    margin-top: length(4);
-                }
+            @include hover {
+                @include transform(scale(1.1));
             }
         }
     }
 }
 
 /**=====================================================
-                    HOME-FILTER
+                    HOME-PRODUCT
 =====================================================**/
-.homefilter {
-    padding: length(40) length(0);
 
+.producthome {
+    @include border-single(bottom, solid, 1, $dividerBg);
+    padding: length(42) length(0);
+
+    @include breakpoint(tab992) {
+        padding: length(84) length(0);
+    }
+    
     &-content {
         @include flex-column;
-        gap: length(18);
+        gap: length(48);
+
+        @include breakpoint(tab992) {
+            gap: length(100);
+        }
     }
 
     &-header {
-        @include w100;
+        @include flex-center-column;
+        gap: length(32);
+        text-align: center;
+
+        .homeproductstitle {
+            color: $primary;
+            @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+        }
+
+        .textbox {
+            max-width: length(970);
+
+            .homeproductstext {
+                color: $secondary;
+                @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(27.2, 16));
+            }
+        }
+    }
+}
+
+/**=====================================================
+                    HOME-PRODUCT
+=====================================================**/
+.homeslider {
+    @include border-single(bottom, solid, 1, $dividerBg);
+    padding: length(42) length(20);
+
+    @include breakpoint(tab992) {
+        padding: length(84) length(0);
+    }
+
+    &-content {
         @include flex-column;
-        gap: length(8);
+        gap: length(48);
 
-        @include breakpoint(mobile575) {
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
+        @include breakpoint(tab992) {
+            gap: length(100);
+        }
+    }
+
+    &-header {
+        @include flex-center-column;
+        gap: length(32);
+        text-align: center;
+
+        .homeslider-title {
+            color: $primary;
+            @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
         }
 
-        .filter-result {
-            @include w100;
-
-            @include breakpoint(mobile575) {
-                width: 50%;
-            }
-
-            .result {
-                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
-                color: $primary;
-            }
-        }
-
-        .filter-sorting {
-            @include w100;
-            @include flex-center-between;
-            gap: length(20);
-
-            @include breakpoint(mobile575) {
-                width: 50%;
-                justify-content: flex-end;
-            }
-
-            .sorting {
-                .form-select {
-                    border: none;
-                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
-                    color: $primary;
-
-                    &:focus {
-                        box-shadow: none;
-                        outline: none;
-                        border: none;
-                    }
-                }
-            }
-
-            .filter {
-                .btn-filter {
-                    @include flex-center;
-                    gap: length(5);
-                    padding: length(5);
-                    width: length(96);
-                    height: length(32);
-                    @include border(solid, 1, $primary);
-                    background: $white;
-
-                    .icon {
-                        @include square(length(16));
-                        @include flex-center;
-                    }
-
-                    .btntext {
-                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
-                        color: $primary;
-                    }
-
-                    @include hover {
-                        background: $primary;
-
-                        .icon {
-                            svg {
-                                path {
-                                    stroke: lighten($primary, 70%);
-                                }
-                            }
-                        }
-
-                        .btntext {
-                            color: lighten($primary, 70%);
-                        }
-                    }
-                }
-            }
+        .homeslider-text {
+            color: $secondary;
+            @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(27.2, 16));
         }
     }
 
     &-body {
-        @include flex-center-vert;
-        flex-wrap: wrap;
-        gap: length(8);
-        @include w100;
+        position: relative;
 
-        @include breakpoint(mobile768) {
-            gap: length(44) length(24);
-        }
+        .slider-controls {
+            position: absolute;
+            top: 40%;
+            z-index: 100;
+            @include flex-center-between;
+            @include w100;
 
-        .productlink {
-            @include flex-center;
-            width: calc((100% / 2) - .5rem);
-            margin-inline-end: auto;
-
-            @include breakpoint(mobile768) {
-                width: calc((100% / 3) - 1.5rem);
+            .previous,
+            .next {
+                @include square(length(48));
+                @include circle;
+                @include flex-center;
+                background: $white;
+                box-shadow: $arrowshadow;
+                padding: length(12);
             }
 
-            @include breakpoint(tab992) {
-                width: calc((100% / 4) - 1.5rem);
+            .previous {
+                @include breakpoint(mobile575) {
+                    margin-left: length(-24);
+                }
             }
 
-            @include breakpoint(laptop1400) {
-                width: calc((100% / 5) - 1.5rem);
-            }
-        }
-
-        .homeproduct {
-            @include flex-center;
-            width: calc((100% / 2) - .5rem);
-            margin-inline-end: auto;
-
-            @include breakpoint(mobile768) {
-                width: calc((100% / 3) - 1.5rem);
-            }
-
-            @include breakpoint(tab992) {
-                width: calc((100% / 4) - 1.5rem);
-            }
-
-            @include breakpoint(laptop1400) {
-                width: calc((100% / 5) - 1.5rem);
-            }
-        }
-    }
-}
-
-/**=====================================================
-                    TESTIMONIAL
-=====================================================**/
-.testimonial {
-    background: $primaryBg;
-    padding: length(40) length(0);
-
-    @include breakpoint(mobile768) {
-        padding: length(80) length(0);
-    }
-
-    &-content {
-        @include flex-center-column;
-        gap: length(20);
-        text-align: center;
-
-        .testimonialtext {
-            @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(26, 16));
-            color: $secondary;
-
-            @include breakpoint(mobile768) {
-                @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
-            }
-        }
-    }
-}
-
-/**=====================================================
-                    RING-STYLE
-=====================================================**/
-.ringstyle {
-    padding: length(40) length(0);
-    @include flex-column;
-    gap: length(40);
-
-    @include breakpoint(mobile768) {
-        gap: length(80);
-    }
-
-    .divider {
-        @include w100;
-        height: length(1);
-        background: $dividerBg;
-    }
-
-    &-content {
-        @include flex-center-column;
-        gap: length(40);
-        text-align: center;
-    }
-
-    &-details {
-        @include flex-center-column;
-        gap: length(8);
-
-        .weddingstyletitle {
-            @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
-            color: $primary;
-        }
-
-        .weddingstyletext {
-            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.8, 14));
-            color: $secondary;
-
-            @include breakpoint(mobile768) {
-                @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
-            }
-        }
-    }
-}
-
-/**=====================================================
-                    DEPTH-AND-WIDTH
-=====================================================**/
-.depthandwidth {
-    padding: length(0) length(0) length(40);
-
-    &-details {
-        @include flex-center-column;
-        gap: length(16);
-        text-align: center;
-
-        .depthtitle {
-            @include font-face($playfairDisplay, style('normal'), size(32), weight('normal'), line-height(39, 32));
-            color: $primary;
-        }
-
-        .depthinfo {
-            @include flex-center-column;
-            gap: length(20);
-
-            &-text {
-                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.5, 15));
-                color: $secondary;
-
-                @include breakpoint(mobile768) {
-                    @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+            .next {
+                @include breakpoint(mobile575) {
+                    margin-right: length(-24);
                 }
             }
         }
@@ -329,182 +142,94 @@
 }
 
 /**=====================================================
-                    HOME-PRODUCTS
+                    LATEST-COLLECTIONS
 =====================================================**/
-.homeproducts {
-    padding: length(0) length(0) length(40);
-    @include flex-column;
-    gap: length(40);
+.latestcollection {
+    @include border-single(bottom, solid, 1, $dividerBg);
+    padding: length(42) length(20);
 
-    @include breakpoint(mobile768) {
-        gap: length(80);
-    }
-
-    .divider {
-        @include w100;
-        height: length(1);
-        background: $dividerBg;
+    @include breakpoint(tab992) {
+        padding: length(84) length(0);
     }
 
     &-content {
-        @include w100;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: length(40) length(30);
-
-        .productlink {
-            width: 60%;
-            margin-inline: auto;
-            @include h100;
-
-            @include breakpoint(mobile480) {
-                width: 46%;
-                margin: 0;
-            }
-
-            @include breakpoint(tab992) {
-                width: 31%;
-            }
-        }
-    }
-}
-
-/**=====================================================
-                    HOME-BRANDS
-=====================================================**/
-.homebrands {
-    padding: length(40) length(0);
-    @include flex-column;
-    gap: length(40);
-
-    @include breakpoint(mobile768) {
-        gap: length(80);
-    }
-
-    .divider {
-        @include w100;
-        height: length(1);
-        background: $dividerBg;
-    }
-
-    &-content {
-        @include w100;
-        @include flex-center-column;
-        gap: length(68) length(30);
+        @include flex-column;
+        gap: length(48);
 
         @include breakpoint(tab992) {
-            flex-wrap: wrap;
+            gap: length(100);
         }
     }
-}
 
-/**=====================================================
-                    PRODUCT-INFO
-=====================================================**/
-.productinfo {
-    padding: length(40) length(0);
-
-    &-details {
+    &-header {
         @include flex-center-column;
-        gap: length(36);
+        gap: length(32);
         text-align: center;
 
-        .infobox {
-            @include flex-center-column;
-            gap: length(12);
-
-            .infotitle {
-                @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(38, 30));
-                color: $primary;
-            }
-
-            .infotexts {
-                @include flex-center-column;
-                gap: length(24);
-
-                .infotext {
-                    @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(24, 16));
-                    color: $secondary;
-
-                    @include breakpoint(mobile768) {
-                        @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
-                    }
-                }
-            }
+        .collection-title {
+            color: $primary;
+            @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
         }
-    }
-}
 
-/**=====================================================
-                    NEWSLETTER
-=====================================================**/
-.newsletter {
-    background: $secondaryBg;
-    padding: length(80) length(0);
-    text-align: center;
-
-    &-title {
-        @include font-face($playfairDisplay, style('normal'), size(20), weight('normal'), line-height(28.7, 20));
-        color: $primary;
-        letter-spacing: length(-0.24);
-
-        @include breakpoint(mobile480) {
-            @include font-face($playfairDisplay, style('normal'), size(29), weight('normal'), line-height(37.7, 29));
+        .collection-text {
+            color: $secondary;
+            @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(27.2, 16));
         }
     }
 
-    &-content {
-        @include flex-center-column;
-        gap: length(28);
-
-        .subscribe {
-            @include w100;
-            @include flex-column;
-            gap: length(28);
-
-            @include breakpoint(tab992) {
-                flex-direction: row;
-            }
-
-            .inputbox {
+    &-body {
+        .collection {
+            &-header {
                 @include w100;
+                height: length(420);
+                overflow: hidden;
 
-                @include breakpoint(tab992) {
-                    width: length(412);
-                }
+                img {
+                    @include wh100;
+                    object-fit: cover;
+                    @include transitiontransform;
 
-                .inputfield {
-                    @include w100;
-                    padding: length(12) length(18);
-                    @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(19, 16));
-                    color: $primary;
-                    @include border(solid, 1, transparent);
-                    @include transitions;
-
-                    &::placeholder {
-                        color: $textPlaceholder;
-                    }
-
-                    &:focus {
-                        border-color: $secondary;
+                    @include hover {
+                        @include transform(scale(1.1));
                     }
                 }
             }
 
-            .submitbox {
-                .btn-submit {
-                    padding: length(13) length(22);
+            &-body {
+                padding: length(56) length(24) length(20);
+                @include flex-center-column;
+                gap: length(56);
+
+                .collection-title {
+                    color: $primary;
+                    @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+                }
+
+                .btn-shop {
+                    padding: length(12) length(38.5);
                     text-align: center;
-                    @include font-face($futuraBK, style('normal'), size(16), weight('medium'), line-height(19, 16));
-                    @include setBgColor($submitBg, $white);
+                    @include setBgColor($white, $black);
+                    @include border(solid, 2, $primary);
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.5, 15));
                     @include transitions;
 
                     @include hover {
-                        background: darken($color: $submitBg, $amount: 15%);
+                        @include setBgColor($primary, $white);
                     }
                 }
             }
         }
+    }
+}
+
+
+/**=====================================================
+                    LATEST-COLLECTIONS
+=====================================================**/
+.findmore {
+    padding: length(80) length(0) length(48);
+
+    @include breakpoint(tab992) {
+        padding: length(150) length(0) length(100);
     }
 }

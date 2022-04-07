@@ -1,0 +1,29 @@
+.about {
+    @include border-single(bottom, solid, 1, $dividerBg);
+    padding: length(80) length(0) length(48);
+
+    @include breakpoint(tab992) {
+        padding: length(118) length(0) length(70);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(32);
+        text-align: center;
+    }
+
+    &-title {
+        color: $primary;
+        @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+    }
+
+    &-details {
+        @include flex-center-column;
+        gap: length(24);
+
+        .about-text {
+            color: $secondary;
+            @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(27.2, 16));
+        }
+    }
+}

@@ -4,6 +4,7 @@
     &-content {
         @include radius(0);
         overflow: hidden;
+        border: none;
     }
 
     &-header {
@@ -23,6 +24,10 @@
             margin-left: auto;
             padding: length(0);
             @include transitiontransform;
+
+            svg {
+                @include wh100;
+            }
 
             &:focus {
                 outline: none;
@@ -341,3 +346,182 @@
 }
 
 // UPLOAD MEDALLION MODAL END
+
+
+.authmodal {
+    .modal-content {
+        @include radius(8);
+    }
+
+    .modal-body {
+        padding: length(34);
+
+        .verify {
+            @include flex-center-column;
+            gap: length(32);
+
+            &-header {
+                @include flex-center-column;
+                gap: length(18);
+                text-align: center;
+
+                .icon {
+                    @include square(length(50));
+                    @include flex-center;
+                    overflow: hidden;
+
+                    svg {
+                        @include wh100;
+                    }
+                }
+
+                .verifytitle {
+                    color: $primary;
+                    @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+                }
+
+                .verifytext {
+                    color: $black;
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                }
+            }
+
+            &-body {
+                @include flex-center-column;
+                gap: length(32);
+                @include w100;
+
+                .inputbox {
+                    @include flex-column;
+                    gap: length(12);
+                    @include w100;
+
+                    .inputlabel {
+                        color: $secondary;
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                        letter-spacing: length(0.08);
+                        text-transform: uppercase;
+                    }
+
+                    .inputfield {
+                        @include border(solid, 1, $secondary);
+                        padding: length(15) length(17);
+                        color: $primary;
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                        letter-spacing: length(0.08);
+
+                        &::placeholder {
+                            color: $textStepLink;
+                        }
+                    }
+                }
+
+                .submitbox {
+                    @include w100;
+                }
+
+                .btn-submit {
+                    padding: length(12);
+                    @include w100;
+                    @include setBgColor($checkboxbg, $white);
+                    border: none;
+                    @include font-face($futuraBK, style('normal'), size(12), weight('medium'), line-height(19.2, 12));
+
+                    @include hover {
+                        background: $secondary;
+                    }
+                }
+            }
+
+            &-footer {
+                .text {
+                    color: $secondary;
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
+
+                    .link {
+                        color: $secondary;
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
+                        @include transitions;
+
+                        @include hover {
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+
+        .lost {
+            @include flex-center-column;
+            gap: length(32);
+            
+            &-header {
+                @include flex-center-column;
+                gap: length(18);
+                text-align: center;
+
+                .lost-title {
+                    color: $primary;
+                    @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+                }
+
+                .lost-text {
+                    color: $black;
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                }
+            }
+            
+
+            &-body {
+                @include flex-center-column;
+                gap: length(32);
+                @include w100;
+
+                .inputbox {
+                    @include w100;
+                }
+
+                .inputinfo {
+                    @include flex-column;
+                    gap: length(12);
+                    @include w100;
+
+                    .inputlabel {
+                        color: $secondary;
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                        letter-spacing: length(0.08);
+                        text-transform: uppercase;
+                    }
+
+                    .inputfield {
+                        @include border(solid, 1, $secondary);
+                        padding: length(15) length(17);
+                        color: $primary;
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                        letter-spacing: length(0.08);
+
+                        &::placeholder {
+                            color: $textStepLink;
+                        }
+                    }
+                }
+
+                .submitbox {
+                    @include w100;
+                }
+
+                .btn-submit {
+                    padding: length(12);
+                    @include w100;
+                    @include setBgColor($checkboxbg, $white);
+                    border: none;
+                    @include font-face($futuraBK, style('normal'), size(12), weight('medium'), line-height(19.2, 12));
+
+                    @include hover {
+                        background: $secondary;
+                    }
+                }
+            }
+        }
+    }
+}

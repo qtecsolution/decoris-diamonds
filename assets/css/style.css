@@ -951,6 +951,12 @@ p {
   transition: all 250ms ease-in-out;
 }
 
+@media screen and (max-width: 73.0625rem) {
+  .header-bottom .mainnav .mainlist-link {
+    padding: 2.25rem;
+  }
+}
+
 .header-bottom .mainnav .mainlist-link::before {
   content: '';
   position: absolute;
@@ -3347,10 +3353,268 @@ p {
   color: #333333;
 }
 
+.productlink {
+  display: block;
+  width: 100%;
+}
+
+.homeproduct-header {
+  width: 100%;
+  height: 20.875rem;
+  overflow: hidden;
+}
+
+.homeproduct-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.homeproduct-header img:not([disabled]):hover {
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+.homeproduct-body {
+  padding: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.homeproduct-body .productinfos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.homeproduct-body .productinfos .product-title {
+  color: #333333;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.homeproduct-body .productinfos .product-type {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.7;
+}
+
+.homeproduct-body .product-price {
+  color: #000000;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  letter-spacing: -0.02rem;
+}
+
+.card-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.card-slider .slider-thumbnail {
+  width: 100%;
+  height: 19.375rem;
+}
+
+.card-slider .slider-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-slider .slider-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-slider .slider-body .slidert-title {
+  color: #333333;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.card-findmore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.card-findmore-header {
+  width: 100%;
+  height: 20.4375rem;
+  overflow: hidden;
+}
+
+.card-findmore-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.card-findmore-header img:not([disabled]):hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.card-findmore-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.75rem;
+}
+
+.card-findmore-body .findmore-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  padding: 0rem 0.875rem;
+}
+
+.card-findmore-body .findmore-details .findmore-title {
+  color: #333333;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.card-findmore-body .findmore-details .findmore-text {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.7;
+}
+
+.card-findmore-body .morelink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-findmore-body .morelink .findmore-link {
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  background: #ffffff;
+  color: #000000;
+  border: solid 0.125rem #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.7;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.card-findmore-body .morelink .findmore-link:not([disabled]):hover {
+  background: #333333;
+  color: #ffffff;
+}
+
 .modal-content {
   border-radius: 0rem;
   border-radius: 0rem;
   overflow: hidden;
+  border: none;
 }
 
 .modal-header {
@@ -3387,6 +3651,11 @@ p {
   transition: -webkit-transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.modal-header .btn-close svg {
+  width: 100%;
+  height: 100%;
 }
 
 .modal-header .btn-close:focus {
@@ -3864,6 +4133,351 @@ p {
 .modal-body .submitbox .btn-submit:not([disabled]):hover {
   background: #000000;
   color: #ffffff;
+}
+
+.authmodal .modal-content {
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.authmodal .modal-body {
+  padding: 2.125rem;
+}
+
+.authmodal .modal-body .verify {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.authmodal .modal-body .verify-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.125rem;
+  text-align: center;
+}
+
+.authmodal .modal-body .verify-header .icon {
+  height: 3.125rem;
+  width: 3.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.authmodal .modal-body .verify-header .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.authmodal .modal-body .verify-header .verifytitle {
+  color: #333333;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.authmodal .modal-body .verify-header .verifytext {
+  color: #000000;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.70533;
+}
+
+.authmodal .modal-body .verify-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.authmodal .modal-body .verify-body .inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.authmodal .modal-body .verify-body .inputbox .inputlabel {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.005rem;
+  text-transform: uppercase;
+}
+
+.authmodal .modal-body .verify-body .inputbox .inputfield {
+  border: solid 0.0625rem #5A5A5A;
+  padding: 0.9375rem 1.0625rem;
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.005rem;
+}
+
+.authmodal .modal-body .verify-body .inputbox .inputfield::-webkit-input-placeholder {
+  color: #B7B7B7;
+}
+
+.authmodal .modal-body .verify-body .inputbox .inputfield:-ms-input-placeholder {
+  color: #B7B7B7;
+}
+
+.authmodal .modal-body .verify-body .inputbox .inputfield::-ms-input-placeholder {
+  color: #B7B7B7;
+}
+
+.authmodal .modal-body .verify-body .inputbox .inputfield::placeholder {
+  color: #B7B7B7;
+}
+
+.authmodal .modal-body .verify-body .submitbox {
+  width: 100%;
+}
+
+.authmodal .modal-body .verify-body .btn-submit {
+  padding: 0.75rem;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), #333333;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #333333;
+  color: #ffffff;
+  border: none;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.authmodal .modal-body .verify-body .btn-submit:not([disabled]):hover {
+  background: #5A5A5A;
+}
+
+.authmodal .modal-body .verify-footer .text {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.authmodal .modal-body .verify-footer .text .link {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.6;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.authmodal .modal-body .verify-footer .text .link:not([disabled]):hover {
+  color: #000000;
+}
+
+.authmodal .modal-body .lost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.authmodal .modal-body .lost-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.125rem;
+  text-align: center;
+}
+
+.authmodal .modal-body .lost-header .lost-title {
+  color: #333333;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.authmodal .modal-body .lost-header .lost-text {
+  color: #000000;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.70533;
+}
+
+.authmodal .modal-body .lost-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.authmodal .modal-body .lost-body .inputbox {
+  width: 100%;
+}
+
+.authmodal .modal-body .lost-body .inputinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.authmodal .modal-body .lost-body .inputinfo .inputlabel {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.005rem;
+  text-transform: uppercase;
+}
+
+.authmodal .modal-body .lost-body .inputinfo .inputfield {
+  border: solid 0.0625rem #5A5A5A;
+  padding: 0.9375rem 1.0625rem;
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.005rem;
+}
+
+.authmodal .modal-body .lost-body .inputinfo .inputfield::-webkit-input-placeholder {
+  color: #B7B7B7;
+}
+
+.authmodal .modal-body .lost-body .inputinfo .inputfield:-ms-input-placeholder {
+  color: #B7B7B7;
+}
+
+.authmodal .modal-body .lost-body .inputinfo .inputfield::-ms-input-placeholder {
+  color: #B7B7B7;
+}
+
+.authmodal .modal-body .lost-body .inputinfo .inputfield::placeholder {
+  color: #B7B7B7;
+}
+
+.authmodal .modal-body .lost-body .submitbox {
+  width: 100%;
+}
+
+.authmodal .modal-body .lost-body .btn-submit {
+  padding: 0.75rem;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), #333333;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #333333;
+  color: #ffffff;
+  border: none;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.authmodal .modal-body .lost-body .btn-submit:not([disabled]):hover {
+  background: #5A5A5A;
 }
 
 .swiper-button-prev,
@@ -6034,6 +6648,762 @@ polygon {
   font-weight: 500;
   line-height: 1.88235;
   color: #5A5A5A;
+}
+
+/**=====================================================
+                    HOME-BANNER
+=====================================================**/
+.home-banner .banner-thumbnail {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 62rem) {
+  .home-banner .banner-thumbnail {
+    height: 40rem;
+  }
+}
+
+.home-banner .banner-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+@media screen and (min-width: 62rem) {
+  .home-banner .banner-thumbnail img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+.home-banner .banner-thumbnail img:not([disabled]):hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/**=====================================================
+                    HOME-PRODUCT
+=====================================================**/
+.producthome {
+  border-bottom: solid 0.0625rem #DEE2E6;
+  padding: 2.625rem 0rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .producthome {
+    padding: 5.25rem 0rem;
+  }
+}
+
+.producthome-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .producthome-content {
+    gap: 6.25rem;
+  }
+}
+
+.producthome-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.producthome-header .homeproductstitle {
+  color: #333333;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.producthome-header .textbox {
+  max-width: 60.625rem;
+}
+
+.producthome-header .textbox .homeproductstext {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.7;
+}
+
+/**=====================================================
+                    HOME-PRODUCT
+=====================================================**/
+.homeslider {
+  border-bottom: solid 0.0625rem #DEE2E6;
+  padding: 2.625rem 1.25rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .homeslider {
+    padding: 5.25rem 0rem;
+  }
+}
+
+.homeslider-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .homeslider-content {
+    gap: 6.25rem;
+  }
+}
+
+.homeslider-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.homeslider-header .homeslider-title {
+  color: #333333;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.homeslider-header .homeslider-text {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.7;
+}
+
+.homeslider-body {
+  position: relative;
+}
+
+.homeslider-body .slider-controls {
+  position: absolute;
+  top: 40%;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.homeslider-body .slider-controls .previous,
+.homeslider-body .slider-controls .next {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0.1875rem 0.3125rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.1875rem 0.3125rem rgba(0, 0, 0, 0.25);
+  padding: 0.75rem;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .homeslider-body .slider-controls .previous {
+    margin-left: -1.5rem;
+  }
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .homeslider-body .slider-controls .next {
+    margin-right: -1.5rem;
+  }
+}
+
+/**=====================================================
+                    LATEST-COLLECTIONS
+=====================================================**/
+.latestcollection {
+  border-bottom: solid 0.0625rem #DEE2E6;
+  padding: 2.625rem 1.25rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .latestcollection {
+    padding: 5.25rem 0rem;
+  }
+}
+
+.latestcollection-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .latestcollection-content {
+    gap: 6.25rem;
+  }
+}
+
+.latestcollection-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.latestcollection-header .collection-title {
+  color: #333333;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.latestcollection-header .collection-text {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.7;
+}
+
+.latestcollection-body .collection-header {
+  width: 100%;
+  height: 26.25rem;
+  overflow: hidden;
+}
+
+.latestcollection-body .collection-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.latestcollection-body .collection-header img:not([disabled]):hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.latestcollection-body .collection-body {
+  padding: 3.5rem 1.5rem 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.5rem;
+}
+
+.latestcollection-body .collection-body .collection-title {
+  color: #333333;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.latestcollection-body .collection-body .btn-shop {
+  padding: 0.75rem 2.40625rem;
+  text-align: center;
+  background: #ffffff;
+  color: #000000;
+  border: solid 0.125rem #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.7;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.latestcollection-body .collection-body .btn-shop:not([disabled]):hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+/**=====================================================
+                    LATEST-COLLECTIONS
+=====================================================**/
+.findmore {
+  padding: 5rem 0rem 3rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .findmore {
+    padding: 9.375rem 0rem 6.25rem;
+  }
+}
+
+.about {
+  border-bottom: solid 0.0625rem #DEE2E6;
+  padding: 5rem 0rem 3rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .about {
+    padding: 7.375rem 0rem 4.375rem;
+  }
+}
+
+.about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.about-title {
+  color: #333333;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.about-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-details .about-text {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.7;
+}
+
+.authentication {
+  border-bottom: solid 0.0625rem #DEE2E6;
+  padding: 3.125rem 0rem 5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .authentication {
+    padding: 6.25rem 0rem 9.375rem;
+  }
+}
+
+.authentication-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .authentication-content {
+    gap: 6.25rem;
+  }
+}
+
+.authentication-header .authentication-title {
+  color: #333333;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.authentication-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .authentication-body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 73.0625rem) {
+  .authentication-body {
+    gap: 5rem;
+  }
+}
+
+@media screen and (min-width: 87.5rem) {
+  .authentication-body {
+    gap: 6.25rem;
+  }
+}
+
+.authentication-body .divider {
+  width: 100%;
+  height: 0.0625rem;
+  background: #B7B7B7;
+}
+
+@media screen and (min-width: 62rem) {
+  .authentication-body .divider {
+    width: 0.0625rem;
+    height: auto;
+  }
+}
+
+.authentication-body .auth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .authentication-body .auth {
+    gap: 3.75rem;
+  }
+}
+
+.authentication-body .auth-header .auth-title {
+  color: #333333;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.authentication-body .auth-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.75rem;
+}
+
+.authentication-body .auth-body .inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.authentication-body .auth-body .inputbox .inputinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.authentication-body .auth-body .inputbox .inputinfo .inputlabel {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.005rem;
+  text-transform: uppercase;
+}
+
+.authentication-body .auth-body .inputbox .inputinfo .inputfield {
+  border: solid 0.0625rem #5A5A5A;
+  padding: 0.9375rem 1.0625rem;
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.005rem;
+}
+
+.authentication-body .auth-body .inputbox .inputinfo .inputfield::-webkit-input-placeholder {
+  color: #B7B7B7;
+}
+
+.authentication-body .auth-body .inputbox .inputinfo .inputfield:-ms-input-placeholder {
+  color: #B7B7B7;
+}
+
+.authentication-body .auth-body .inputbox .inputinfo .inputfield::-ms-input-placeholder {
+  color: #B7B7B7;
+}
+
+.authentication-body .auth-body .inputbox .inputinfo .inputfield::placeholder {
+  color: #B7B7B7;
+}
+
+.authentication-body .auth-body .inputbox .message {
+  margin-top: 0.625rem;
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.005rem;
+}
+
+.authentication-body .auth-body .inputbox .error-message {
+  color: #a80808;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.005rem;
+  display: none;
+}
+
+.authentication-body .auth-body .inputbox.error .inputinfo .inputfield {
+  border-color: #a80808;
+}
+
+.authentication-body .auth-body .inputbox.error .error-message {
+  display: block;
+}
+
+.authentication-body .auth-body .submitbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.authentication-body .auth-body .submitbox .btn-submit {
+  padding: 0.75rem 3.75rem;
+  background: #ffffff;
+  color: #000000;
+  border: solid 0.125rem #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.6;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  text-transform: uppercase;
+}
+
+.authentication-body .auth-body .submitbox .btn-submit:not([disabled]):hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+.authentication-body .auth-body .submitbox .rememberbox .remembercheck:checked ~ .rememberlabel::before {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), #333333;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #333333;
+}
+
+.authentication-body .auth-body .submitbox .rememberbox .remembercheck:checked ~ .rememberlabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.authentication-body .auth-body .submitbox .rememberbox .rememberlabel {
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer;
+  color: #444444;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.authentication-body .auth-body .submitbox .rememberbox .rememberlabel::-moz-selection {
+  background: transparent;
+  color: #444444;
+}
+
+.authentication-body .auth-body .submitbox .rememberbox .rememberlabel::selection {
+  background: transparent;
+  color: #444444;
+}
+
+.authentication-body .auth-body .submitbox .rememberbox .rememberlabel::before, .authentication-body .auth-body .submitbox .rememberbox .rememberlabel::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.authentication-body .auth-body .submitbox .rememberbox .rememberlabel::before {
+  background: #ffffff;
+  height: 1.125rem;
+  width: 1.125rem;
+  border: solid 0.0625rem #333333;
+  border-radius: 0.125rem;
+  border-radius: 0.125rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.authentication-body .auth-body .submitbox .rememberbox .rememberlabel::after {
+  width: 0.3125rem;
+  height: 0.75rem;
+  border: solid 0.125rem #ffffff;
+  border-top: 0;
+  border-left: 0;
+  left: 0.4375rem;
+  top: 45%;
+  -webkit-transform: translateY(-55%) rotate(45deg);
+  transform: translateY(-55%) rotate(45deg);
+  opacity: 0;
+  visibility: hidden;
 }
 
 /**=====================================================

@@ -1,0 +1,519 @@
+/**=====================================================
+                    HOME-BANNER
+=====================================================**/
+
+.homebanner {
+    padding: length(44) length(0);
+    background: $bannerBg;
+    @include border-single(top, solid, 1, $dividerBg);
+    @include border-single(bottom, solid, 1, $dividerBg);
+
+    @include breakpoint(mobile768) {
+        padding: length(80) length(0);
+    }
+
+    @include breakpoint(tab992) {
+        border-top: none;
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(44);
+
+        .banner-header {
+            @include flex-center-column;
+            gap: length(10);
+            text-align: center;
+
+            .banner-title {
+                @include font-face($futuraBK, style('normal'), size(30), weight('normal'), line-height(40, 30));
+                color: $primary;
+            }
+
+            .banner-text {
+                @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(26, 16));
+                color: $secondary;
+            }
+        }
+
+        .banner-breadcrumb {
+            @include flex-center;
+
+            .breadcrumb {
+                margin: length(0);
+                gap: length(8);
+
+                &-item {
+                    @include flex-center-vert;
+                    padding: length(0);
+                    color: $secondary;
+                    @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(19, 16));
+
+                    &::before {
+                        content: '';
+                        padding: length(0);
+                        display: none;
+                    }
+
+                    &.active {
+                        color: $black;
+                    }
+
+                    a {
+                        color: $secondary;
+                        @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(19, 16));
+                        @include transitions;
+
+                        @include hover {
+                            color: $black;
+                        }
+                    }
+                }
+
+                .divider {
+                    @include flex-center;
+                    margin-top: length(4);
+                }
+            }
+        }
+    }
+}
+
+/**=====================================================
+                    HOME-FILTER
+=====================================================**/
+
+.homefilter {
+    padding: length(40) length(0);
+
+    &-content {
+        @include flex-column;
+        gap: length(18);
+    }
+
+    &-header {
+        @include w100;
+        @include flex-column;
+        gap: length(8);
+
+        @include breakpoint(mobile575) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .filter-result {
+            @include w100;
+
+            @include breakpoint(mobile575) {
+                width: 50%;
+            }
+
+            .result {
+                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
+                color: $primary;
+            }
+        }
+
+        .filter-sorting {
+            @include w100;
+            @include flex-center-between;
+            gap: length(20);
+
+            @include breakpoint(mobile575) {
+                width: 50%;
+                justify-content: flex-end;
+            }
+
+            .sorting {
+                .form-select {
+                    border: none;
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
+                    color: $primary;
+
+                    &:focus {
+                        box-shadow: none;
+                        outline: none;
+                        border: none;
+                    }
+                }
+            }
+
+            .filter {
+                .btn-filter {
+                    @include flex-center;
+                    gap: length(5);
+                    padding: length(5);
+                    width: length(96);
+                    height: length(32);
+                    @include border(solid, 1, $primary);
+                    background: $white;
+
+                    .icon {
+                        @include square(length(16));
+                        @include flex-center;
+                    }
+
+                    .btntext {
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
+                        color: $primary;
+                    }
+
+                    @include hover {
+                        background: $primary;
+
+                        .icon {
+                            svg {
+                                path {
+                                    stroke: lighten($primary, 70%);
+                                }
+                            }
+                        }
+
+                        .btntext {
+                            color: lighten($primary, 70%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-body {
+        @include flex-center-vert;
+        flex-wrap: wrap;
+        gap: length(8);
+        @include w100;
+
+        @include breakpoint(mobile768) {
+            gap: length(44) length(24);
+        }
+
+        .productlink {
+            @include flex-center;
+            width: calc((100% / 2) - .5rem);
+            margin-inline-end: auto;
+
+            @include breakpoint(mobile768) {
+                width: calc((100% / 3) - 1.5rem);
+            }
+
+            @include breakpoint(tab992) {
+                width: calc((100% / 4) - 1.5rem);
+            }
+
+            @include breakpoint(laptop1400) {
+                width: calc((100% / 5) - 1.5rem);
+            }
+        }
+
+        .homeproduct {
+            @include flex-center;
+            width: calc((100% / 2) - .5rem);
+            margin-inline-end: auto;
+
+            @include breakpoint(mobile768) {
+                width: calc((100% / 3) - 1.5rem);
+            }
+
+            @include breakpoint(tab992) {
+                width: calc((100% / 4) - 1.5rem);
+            }
+
+            @include breakpoint(laptop1400) {
+                width: calc((100% / 5) - 1.5rem);
+            }
+        }
+    }
+}
+
+/**=====================================================
+                    TESTIMONIAL
+=====================================================**/
+
+.testimonial {
+    background: $primaryBg;
+    padding: length(40) length(0);
+
+    @include breakpoint(mobile768) {
+        padding: length(80) length(0);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(20);
+        text-align: center;
+
+        .testimonialtext {
+            @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(26, 16));
+            color: $secondary;
+
+            @include breakpoint(mobile768) {
+                @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+            }
+        }
+    }
+}
+
+/**=====================================================
+                    RING-STYLE
+=====================================================**/
+
+.ringstyle {
+    padding: length(40) length(0);
+    @include flex-column;
+    gap: length(40);
+
+    @include breakpoint(mobile768) {
+        gap: length(80);
+    }
+
+    .divider {
+        @include w100;
+        height: length(1);
+        background: $dividerBg;
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(40);
+        text-align: center;
+    }
+
+    &-details {
+        @include flex-center-column;
+        gap: length(8);
+
+        .weddingstyletitle {
+            @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+            color: $primary;
+        }
+
+        .weddingstyletext {
+            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(23.8, 14));
+            color: $secondary;
+
+            @include breakpoint(mobile768) {
+                @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+            }
+        }
+    }
+}
+
+/**=====================================================
+                    DEPTH-AND-WIDTH
+=====================================================**/
+
+.depthandwidth {
+    padding: length(0) length(0) length(40);
+
+    &-details {
+        @include flex-center-column;
+        gap: length(16);
+        text-align: center;
+
+        .depthtitle {
+            @include font-face($playfairDisplay, style('normal'), size(32), weight('normal'), line-height(39, 32));
+            color: $primary;
+        }
+
+        .depthinfo {
+            @include flex-center-column;
+            gap: length(20);
+
+            &-text {
+                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.5, 15));
+                color: $secondary;
+
+                @include breakpoint(mobile768) {
+                    @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+                }
+            }
+        }
+    }
+}
+
+/**=====================================================
+                    HOME-PRODUCTS
+=====================================================**/
+
+.homeproducts {
+    padding: length(0) length(0) length(40);
+    @include flex-column;
+    gap: length(40);
+
+    @include breakpoint(mobile768) {
+        gap: length(80);
+    }
+
+    .divider {
+        @include w100;
+        height: length(1);
+        background: $dividerBg;
+    }
+
+    &-content {
+        @include w100;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: length(40) length(30);
+
+        .productlink {
+            width: 60%;
+            margin-inline: auto;
+            @include h100;
+
+            @include breakpoint(mobile480) {
+                width: 46%;
+                margin: 0;
+            }
+
+            @include breakpoint(tab992) {
+                width: 31%;
+            }
+        }
+    }
+}
+
+/**=====================================================
+                    HOME-BRANDS
+=====================================================**/
+
+.homebrands {
+    padding: length(40) length(0);
+    @include flex-column;
+    gap: length(40);
+
+    @include breakpoint(mobile768) {
+        gap: length(80);
+    }
+
+    .divider {
+        @include w100;
+        height: length(1);
+        background: $dividerBg;
+    }
+
+    &-content {
+        @include w100;
+        @include flex-center-column;
+        gap: length(68) length(30);
+
+        @include breakpoint(tab992) {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+/**=====================================================
+                    PRODUCT-INFO
+=====================================================**/
+
+.productinfo {
+    padding: length(40) length(0);
+
+    &-details {
+        @include flex-center-column;
+        gap: length(36);
+        text-align: center;
+
+        .infobox {
+            @include flex-center-column;
+            gap: length(12);
+
+            .infotitle {
+                @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(38, 30));
+                color: $primary;
+            }
+
+            .infotexts {
+                @include flex-center-column;
+                gap: length(24);
+
+                .infotext {
+                    @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(24, 16));
+                    color: $secondary;
+
+                    @include breakpoint(mobile768) {
+                        @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(31, 18));
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**=====================================================
+                    NEWSLETTER
+=====================================================**/
+
+.newsletter {
+    background: $secondaryBg;
+    padding: length(80) length(0);
+    text-align: center;
+
+    &-title {
+        @include font-face($playfairDisplay, style('normal'), size(20), weight('normal'), line-height(28.7, 20));
+        color: $primary;
+        letter-spacing: length(-0.24);
+
+        @include breakpoint(mobile480) {
+            @include font-face($playfairDisplay, style('normal'), size(29), weight('normal'), line-height(37.7, 29));
+        }
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(28);
+
+        .subscribe {
+            @include w100;
+            @include flex-column;
+            gap: length(28);
+
+            @include breakpoint(tab992) {
+                flex-direction: row;
+            }
+
+            .inputbox {
+                @include w100;
+
+                @include breakpoint(tab992) {
+                    width: length(412);
+                }
+
+                .inputfield {
+                    @include w100;
+                    padding: length(12) length(18);
+                    @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(19, 16));
+                    color: $primary;
+                    @include border(solid, 1, transparent);
+                    @include transitions;
+
+                    &::placeholder {
+                        color: $textPlaceholder;
+                    }
+
+                    &:focus {
+                        border-color: $secondary;
+                    }
+                }
+            }
+
+            .submitbox {
+                .btn-submit {
+                    padding: length(13) length(22);
+                    text-align: center;
+                    @include font-face($futuraBK, style('normal'), size(16), weight('medium'), line-height(19, 16));
+                    @include setBgColor($submitBg, $white);
+                    @include transitions;
+
+                    @include hover {
+                        background: darken($color: $submitBg, $amount: 15%);
+                    }
+                }
+            }
+        }
+    }
+}

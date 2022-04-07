@@ -125,7 +125,9 @@
                     display: inline-block;
                     @include transitions;
 
-                    @include breakpoint(desktop1169) {}
+                    @include breakpoint(desktop1169) {
+                        padding: length(36);
+                    }
 
                     &::before {
                         content: '';

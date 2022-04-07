@@ -1005,3 +1005,143 @@
 .card-horizontal {}
 
 // CARD-HORIZONTAL END
+
+// HOMEPRODUCT START
+
+.productlink {
+    display: block;
+    @include w100;
+}
+
+.homeproduct {
+    &-header {
+        @include w100;
+        height: length(334);
+        overflow: hidden;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(0.95));
+            }
+        }
+    }
+
+    &-body {
+        padding: length(40);
+        @include flex-center-column;
+        gap: length(24);
+        text-align: center;
+
+        .productinfos {
+            @include flex-center-column;
+            gap: length(8);
+
+            .product-title {
+                color: $primary;
+                @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+            }
+
+            .product-type {
+                color: $secondary;
+                @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(27.2, 16));
+            }
+        }
+
+        .product-price {
+            color: $black;
+            @include font-face($futuraBK, style('normal'), size(24), weight('normal'), line-height(32, 24));
+            letter-spacing: length(-0.32);
+        }
+    }
+}
+
+// HOMEPRODUCT END
+
+.card-slider {
+    @include flex-column;
+    gap: length(32);
+    
+    .slider-thumbnail {
+        @include w100;
+        height: length(310);
+
+        img {
+            @include wh100;
+            object-fit: cover;
+        }
+    }
+
+    .slider-body {
+        @include flex-center;
+
+        .slidert-title {
+            color: $primary;
+            @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+            text-align: center;
+        }
+    }
+}
+
+.card-findmore {
+    @include flex-column;
+    gap: length(40);
+
+    &-header {
+        @include w100;
+        height: length(327);
+        overflow: hidden;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+            @include transitiontransform;
+
+            @include hover {
+                @include transform(scale(1.1));
+            }
+        }
+    }
+
+    &-body {
+        @include flex-center-column;
+        gap: length(60);
+
+        .findmore-details {
+            @include flex-center-column;
+            gap: length(24);
+            text-align: center;
+            padding: length(0) length(14);
+
+            .findmore-title {
+                color: $primary;
+                @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+            }
+
+            .findmore-text {
+                color: $secondary;
+                @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(27.2, 16));
+            }
+        }
+
+        .morelink {
+            @include flex-center;
+
+            .findmore-link {
+                padding: length(12) length(24);
+                text-align: center;
+                @include setBgColor($white, $black);
+                @include border(solid, 2, $primary);
+                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.5, 15));
+                @include transitions;
+
+                @include hover {
+                    @include setBgColor($primary, $white);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,204 @@
+.authentication {
+    @include border-single(bottom, solid, 1, $dividerBg);
+    padding: length(50) length(0) length(80);
+
+    @include breakpoint(tab992) {
+        padding: length(100) length(0) length(150);
+    }
+
+    &-content {
+        @include flex-center-column;
+        gap: length(48);
+
+        @include breakpoint(tab992) {
+            gap: length(100);
+        }
+    }
+
+    &-header {
+        .authentication-title {
+            color: $primary;
+            @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+            text-align: center;
+        }
+    }
+
+    &-body {
+        @include flex-column;
+        gap: length(48);
+
+        @include breakpoint(tab992) {
+            flex-direction: row;
+        }
+
+        @include breakpoint(laptop1169) {
+            gap: length(80);
+        }
+
+        @include breakpoint(laptop1400) {
+            gap: length(100);
+        }
+
+        .divider {
+            @include w100;
+            height: length(1);
+            background: $textStepLink;
+
+            @include breakpoint(tab992) {
+                width: length(1);
+                height: auto;
+            }
+        }
+
+        .auth {
+            @include flex-column;
+            gap: length(24);
+
+            @include breakpoint(tab992) {
+                gap: length(60);
+            }
+        
+            &-header {
+                .auth-title {
+                    color: $primary;
+                    @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+                }
+            }
+
+            &-body {
+                @include flex-column;
+                gap: length(28);
+
+                .inputbox {
+                    @include flex-column;
+                    gap: length(8);
+
+                    .inputinfo {
+                        @include flex-column;
+                        gap: length(12);
+
+                        .inputlabel {
+                            color: $secondary;
+                            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                            letter-spacing: length(0.08);
+                            text-transform: uppercase;
+                        }
+
+                        .inputfield {
+                            @include border(solid, 1, $secondary);
+                            padding: length(15) length(17);
+                            color: $primary;
+                            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                            letter-spacing: length(0.08);
+
+                            &::placeholder {
+                                color: $textStepLink;
+                            }
+                        }
+                    }
+
+                    .message {
+                        margin-top: length(10);
+                        color: $secondary;
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                        letter-spacing: length(0.08);
+                    }
+
+                    .error-message {
+                        color: $textdanger;
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                        letter-spacing: length(0.08);
+                        display: none;
+                    }
+
+                    &.error {
+                        .inputinfo {
+                            .inputfield {
+                                border-color: $textdanger;
+                            }
+                        }
+
+                        .error-message {
+                            display: block;
+                        }
+                    }
+                }
+
+                .submitbox {
+                    @include flex-center-vert;
+                    gap: length(16);
+
+                    .btn-submit {
+                        padding: length(12) length(60);
+                        @include setBgColor($white, $black);
+                        @include border(solid, 2, $primary);
+                        @include font-face($futuraBK, style('normal'), size(12), weight('medium'), line-height(19.2, 12));
+                        @include transitions;
+                        text-transform: uppercase;
+
+                        @include hover {
+                            @include setBgColor($primary, $white);
+                        }
+                    }
+
+                    .rememberbox {
+                        .remembercheck {
+                            &:checked ~ .rememberlabel {
+                                &::before {
+                                    background: $checkboxbg;
+                                }
+
+                                &::after {
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        }
+
+                        .rememberlabel {
+                            position: relative;
+                            padding-left: length(32);
+                            cursor: pointer;
+                            color: $checklabeltext;
+                            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(14, 14));
+                            text-transform: uppercase;
+
+                            &::selection {
+                                @include setBgColor(transparent, $checklabeltext);
+                            }
+
+                            &::before,
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                            }
+
+                            &::before {
+                                background: $white;
+                                @include square(length(18));
+                                @include border(solid, 1, $primary);
+                                @include radius(2);
+                                top: 50%;
+                                @include transform(translateY(-50%));
+                            }
+                            
+                            &::after {
+                                width: length(5);
+                                height: length(12);
+                                @include border(solid, 2, $white);
+                                border-top: 0;
+                                border-left: 0;
+                                left: length(7);
+                                top: 45%;
+                                @include transform(translateY(-55%) rotate(45deg));
+                                opacity: 0;
+                                visibility: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
