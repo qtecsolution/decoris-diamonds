@@ -2914,8 +2914,8 @@
     <!-- CHECKOUT-SECTION START -->
     <section class="checkout">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-12">
+            <div class="row g-5">
+                <div class="col-lg-7 col-12">
                     <div class="billing-details">
                         <div class="billing-header">
                             <h2 class="billing-title">Billing Details</h2>
@@ -3149,7 +3149,7 @@
                             <div class="payment">
                                 <div class="creditdescript">
                                     <div class="creditdescript-header">
-                                        <h5 class="title">Enter your credit card details</h5>
+                                        <h5 class="credit-title">Enter your credit card details</h5>
 
                                         <div class="thumbnail">
                                             <img src="assets/images/payment/payment-logos.svg" alt="thumbnail">
@@ -3158,12 +3158,12 @@
 
                                     <div class="creditdescript-body">
                                         <div class="savedpay">
-                                            <input type="checkbox" class="savepay" hidden id="savepay-1">
+                                            <input type="checkbox" class="savepay" id="savepay-1" checked hidden>
                                             <label for="savepay-1" class="savepaylabel">Pay with your Saved Payment Method</label>
                                         </div>
 
                                         <div class="savedpay">
-                                            <input type="checkbox" class="savepay" hidden id="savepay-2">
+                                            <input type="checkbox" class="savepay" id="savepay-2" hidden>
                                             <label for="savepay-2" class="savepaylabel">Pay with your New Credit Card.</label>
                                         </div>
                                     </div>
@@ -3216,8 +3216,8 @@
                                     </div>
 
                                     <div class="saveinfo">
-                                        <input type="checkbox" class="savecheck" id="savecheck" hidden>
-                                        <label for="savecheck">Save this card information to Payment Method</label>
+                                        <input type="checkbox" class="savecheck" id="savecheck" checked hidden>
+                                        <label for="savecheck" class="checklabel">Save this card information to Payment Method</label>
                                     </div>
                                 </div>
 
@@ -3229,8 +3229,117 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-12">
+                <div class="offset-lg-1 offset-0 col-lg-4 col-12">
+                    <div class="checkout-info">
+                        <div class="checkout-info-header">
+                            <h2 class="checkoutinfo-title">Your Order</h2>
+                        </div>
 
+                        <div class="checkout-info-body">
+                            <div class="checkoutitem">
+                                <div class="bagthumbnail">
+                                    <div class="thumbnail">
+                                        <img src="assets/images/mybag/bag-1.png" alt="thumbnail">
+                                    </div>
+                                </div>
+
+                                <div class="itemdetails">
+                                    <div class="name-model">
+                                        <p class="name">Geneva</p>
+                                        <p class="model">Metal:18K White Gold</p>
+                                    </div>
+
+                                    <div class="quantity">
+                                        <span class="quantity-title">QTY:</span>
+                                        <span class="quantity-counter">1</span>
+                                    </div>
+
+                                    <div class="pricebox">
+                                        <p class="price">$250.50</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <div class="checkoutitem">
+                                <div class="bagthumbnail">
+                                    <div class="thumbnail">
+                                        <img src="assets/images/mybag/bag-1.png" alt="thumbnail">
+                                    </div>
+                                </div>
+
+                                <div class="itemdetails">
+                                    <div class="name-model">
+                                        <p class="name">Geneva</p>
+                                        <p class="model">Metal:18K White Gold</p>
+                                    </div>
+
+                                    <div class="quantity">
+                                        <span class="quantity-title">QTY:</span>
+                                        <span class="quantity-counter">1</span>
+                                    </div>
+
+                                    <div class="pricebox">
+                                        <p class="price">$250.50</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="divider"></div>
+                        </div>
+
+                        <div class="checkout-info-footer">
+                            <div class="bagtotal">
+                                <div class="bagtotal-body">
+                                    <div class="subtotal">
+                                        <span class="subtotal-title">Subtotal</span>
+                                        <span class="subtotal-price">$299.00</span>
+                                    </div>
+    
+                                    <div class="shipping">
+                                        <span class="shipping-title">Shipping</span>
+                                        <span class="shipping-price">FREE</span>
+                                    </div>
+    
+                                    <div class="voucher">
+                                        <button class="btn-voucher collapsed" type="button" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseVoucher"
+                                            aria-expanded="false" aria-controls="collapseVoucher">
+                                            <span class="text">Voucher code</span>
+    
+                                            <span class="icon">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6 9L12 15L18 9" stroke="#333333" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M6 9L12 15L18 9" stroke="black" stroke-opacity="0.2"
+                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+                                        </button>
+    
+                                        <div class="collapse" id="collapseVoucher">
+                                            <div class="voucher-info">
+                                                <input type="text" class="voucherfield" placeholder="Enter your code">
+                                                <button class="btn-apply" type="button">Apply</button>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="discount">
+                                        <span class="discount-title">Discount</span>
+                                        <span class="discount-price">$ 00.00</span>
+                                    </div>
+    
+                                    <div class="total">
+                                        <span class="total-title">Total</span>
+                                        <span class="total-price">$ 319.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

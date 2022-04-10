@@ -1122,12 +1122,20 @@
 
             .findmore-title {
                 color: $primary;
-                @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+                @include font-face($playfairDisplay, style('normal'), size(20), weight('normal'), line-height(26, 20));
+                            
+                @include breakpoint(mobile768) {
+                    @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+                }
             }
 
             .findmore-text {
                 color: $secondary;
-                @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(27.2, 16));
+                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(24, 14));
+                            
+                @include breakpoint(mobile768) {
+                    @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(27.2, 16));
+                }
             }
         }
 

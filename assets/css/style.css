@@ -3570,18 +3570,38 @@ p {
   color: #333333;
   font-family: "Playfair Display";
   font-style: normal;
-  font-size: 1.875rem;
+  font-size: 1.25rem;
   font-weight: normal;
   line-height: 1.3;
+}
+
+@media screen and (min-width: 48rem) {
+  .card-findmore-body .findmore-details .findmore-title {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 1.875rem;
+    font-weight: normal;
+    line-height: 1.3;
+  }
 }
 
 .card-findmore-body .findmore-details .findmore-text {
   color: #5A5A5A;
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: normal;
-  line-height: 1.7;
+  line-height: 1.71429;
+}
+
+@media screen and (min-width: 48rem) {
+  .card-findmore-body .findmore-details .findmore-text {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.7;
+  }
 }
 
 .card-findmore-body .morelink {
@@ -7496,11 +7516,22 @@ polygon {
   color: #333333;
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.9375rem;
+  font-size: 0.75rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 2;
   letter-spacing: 0.005rem;
   padding: 1rem;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .checkout .billing-details .billing-body .billingform .inputbox .inputfield,
+  .checkout .billing-details .billing-body .deliverform .inputbox .inputfield {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 0.9375rem;
+    font-weight: normal;
+    line-height: 1.6;
+  }
 }
 
 .checkout .billing-details .billing-body .billingform .inputbox .inputfield::-webkit-input-placeholder,
@@ -7529,15 +7560,26 @@ polygon {
   color: #333333;
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.9375rem;
+  font-size: 0.75rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 2;
   letter-spacing: 0.005rem;
   padding: 1rem;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   background: url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_529_13897' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98252 7.65869L1.68511 3.89022C1.29615 3.4457 1.61184 2.75 2.20251 2.75H8.79733C9.388 2.75 9.70369 3.4457 9.31473 3.89022L6.01732 7.65869C5.74341 7.97173 5.25643 7.97173 4.98252 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_529_13897)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 4%;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .checkout .billing-details .billing-body .billingform .inputbox .selectfield,
+  .checkout .billing-details .billing-body .deliverform .inputbox .selectfield {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 0.9375rem;
+    font-weight: normal;
+    line-height: 1.6;
+  }
 }
 
 .checkout .billing-details .billing-body .billingform .inputbox textarea,
@@ -7587,9 +7629,19 @@ polygon {
   color: #333333;
   font-family: "Playfair Display";
   font-style: normal;
-  font-size: 1.875rem;
+  font-size: 1.25rem;
   font-weight: normal;
   line-height: 1.3;
+}
+
+@media screen and (min-width: 48rem) {
+  .checkout .billing-details .billing-body .btn-deliver .text {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-size: 1.875rem;
+    font-weight: normal;
+    line-height: 1.3;
+  }
 }
 
 .checkout .billing-details .billing-body .btn-deliver .icon {
@@ -7620,6 +7672,835 @@ polygon {
 .checkout .billing-details .billing-body .btn-deliver:not(.collapsed) .icon {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+
+.checkout .billing-details .billing-body .payment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+}
+
+.checkout .billing-details .billing-body .payment .creditdescript {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.checkout .billing-details .billing-body .payment .creditdescript-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .checkout .billing-details .billing-body .payment .creditdescript-header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+.checkout .billing-details .billing-body .payment .creditdescript-header .credit-title {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .checkout .billing-details .billing-body .payment .creditdescript-header .thumbnail {
+    height: 1.5rem;
+  }
+}
+
+.checkout .billing-details .billing-body .payment .creditdescript-header .thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 48rem) {
+  .checkout .billing-details .billing-body .payment .creditdescript-header .thumbnail img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    max-width: 100%;
+  }
+}
+
+.checkout .billing-details .billing-body .payment .creditdescript-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.checkout .billing-details .billing-body .payment .creditdescript-body .savedpay .savepay:checked ~ .savepaylabel::before {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), #333333;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #333333;
+}
+
+.checkout .billing-details .billing-body .payment .creditdescript-body .savedpay .savepay:checked ~ .savepaylabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.checkout .billing-details .billing-body .payment .creditdescript-body .savedpay .savepaylabel {
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer;
+  color: #444444;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.25;
+}
+
+@media screen and (min-width: 48rem) {
+  .checkout .billing-details .billing-body .payment .creditdescript-body .savedpay .savepaylabel {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.3;
+  }
+}
+
+.checkout .billing-details .billing-body .payment .creditdescript-body .savedpay .savepaylabel::-moz-selection {
+  background: transparent;
+  color: #444444;
+}
+
+.checkout .billing-details .billing-body .payment .creditdescript-body .savedpay .savepaylabel::selection {
+  background: transparent;
+  color: #444444;
+}
+
+.checkout .billing-details .billing-body .payment .creditdescript-body .savedpay .savepaylabel::before, .checkout .billing-details .billing-body .payment .creditdescript-body .savedpay .savepaylabel::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.checkout .billing-details .billing-body .payment .creditdescript-body .savedpay .savepaylabel::before {
+  background: #ffffff;
+  height: 1.125rem;
+  width: 1.125rem;
+  border: solid 0.0625rem #333333;
+  border-radius: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.checkout .billing-details .billing-body .payment .creditdescript-body .savedpay .savepaylabel::after {
+  width: 0.3125rem;
+  height: 0.625rem;
+  border: solid 0.125rem #ffffff;
+  border-top: 0;
+  border-left: 0;
+  left: 0.4375rem;
+  top: 46%;
+  -webkit-transform: translateY(-54%) rotate(45deg);
+  transform: translateY(-54%) rotate(45deg);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .creditinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .creditinfo .inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .creditinfo .inputbox .inputlabel {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.005rem;
+  text-transform: uppercase;
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .creditinfo .inputbox .inputfield {
+  border: solid 0.0625rem #5A5A5A;
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 2;
+  letter-spacing: 0.005rem;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .checkout .billing-details .billing-body .payment .paymentdetails .creditinfo .inputbox .inputfield {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 0.9375rem;
+    font-weight: normal;
+    line-height: 1.6;
+  }
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .creditinfo .inputbox .inputfield::-webkit-input-placeholder {
+  color: #B7B7B7;
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .creditinfo .inputbox .inputfield:-ms-input-placeholder {
+  color: #B7B7B7;
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .creditinfo .inputbox .inputfield::-ms-input-placeholder {
+  color: #B7B7B7;
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .creditinfo .inputbox .inputfield::placeholder {
+  color: #B7B7B7;
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .creditinfo .inputbox .inputinfo {
+  position: relative;
+  width: 100%;
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .creditinfo .inputbox .inputinfo .inputfield {
+  width: 100%;
+  padding-right: 3.75rem;
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .creditinfo .inputbox .inputinfo .cardicon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 1.5rem;
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .saveinfo .savecheck:checked ~ .checklabel::before {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), #333333;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #333333;
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .saveinfo .savecheck:checked ~ .checklabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .saveinfo .checklabel {
+  position: relative;
+  padding-left: 2rem;
+  cursor: pointer;
+  color: #444444;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .saveinfo .checklabel::-moz-selection {
+  background: transparent;
+  color: #444444;
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .saveinfo .checklabel::selection {
+  background: transparent;
+  color: #444444;
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .saveinfo .checklabel::before, .checkout .billing-details .billing-body .payment .paymentdetails .saveinfo .checklabel::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .saveinfo .checklabel::before {
+  background: #ffffff;
+  height: 1.125rem;
+  width: 1.125rem;
+  border: solid 0.0625rem #333333;
+  border-radius: 0.125rem;
+  border-radius: 0.125rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.checkout .billing-details .billing-body .payment .paymentdetails .saveinfo .checklabel::after {
+  width: 0.3125rem;
+  height: 0.75rem;
+  border: solid 0.125rem #ffffff;
+  border-top: 0;
+  border-left: 0;
+  left: 0.4375rem;
+  top: 45%;
+  -webkit-transform: translateY(-55%) rotate(45deg);
+  transform: translateY(-55%) rotate(45deg);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.checkout .billing-details .billing-body .payment .placeorder {
+  width: 100%;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .checkout .billing-details .billing-body .payment .placeorder {
+    width: 22.25rem;
+  }
+}
+
+.checkout .billing-details .billing-body .payment .placeorder .btn-order {
+  background: #ffffff;
+  color: #333333;
+  border: solid 0.125rem #333333;
+  width: 100%;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.005rem;
+  padding: 0.75rem;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.checkout .billing-details .billing-body .payment .placeorder .btn-order:not([disabled]):hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+.checkout-info {
+  background: #F7F7F7;
+  padding: 2rem 0.875rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.checkout-info-header .checkoutinfo-title {
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.33333;
+  letter-spacing: -0.02rem;
+}
+
+.checkout-info-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.checkout-info-body .checkoutitem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .checkout-info-body .checkoutitem {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: left;
+  }
+}
+
+.checkout-info-body .checkoutitem .bagthumbnail {
+  width: 11.5625rem;
+  height: 12.375rem;
+  border: solid 0.03125rem #DEE2E6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.25rem;
+  background: #ffffff;
+}
+
+.checkout-info-body .checkoutitem .bagthumbnail .thumbnail {
+  width: 11.1875rem;
+  height: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.checkout-info-body .checkoutitem .bagthumbnail .thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.checkout-info-body .checkoutitem .itemdetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .checkout-info-body .checkoutitem .itemdetails {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.checkout-info-body .checkoutitem .itemdetails .name-model {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkout-info-body .checkoutitem .itemdetails .name-model .name {
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+}
+
+.checkout-info-body .checkoutitem .itemdetails .name-model .model {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.005rem;
+}
+
+.checkout-info-body .checkoutitem .itemdetails .quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+
+.checkout-info-body .checkoutitem .itemdetails .quantity-title {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.3125;
+  letter-spacing: 0.005rem;
+}
+
+.checkout-info-body .checkoutitem .itemdetails .quantity-counter {
+  color: #242424;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3125;
+  letter-spacing: 0.005rem;
+}
+
+.checkout-info-body .checkoutitem .itemdetails .pricebox .price {
+  color: #000000;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+}
+
+.checkout-info-body .divider {
+  width: 100%;
+  height: 0.0625rem;
+  background: #EBEBEB;
+}
+
+.checkout-info-footer .bagtotal {
+  padding: 2rem;
+  background: #ffffff;
+  background: 0 -0.1875rem 0.375rem rgba(0, 0, 0, 0.08);
+}
+
+.checkout-info-footer .bagtotal-body .subtotal {
+  border-bottom: solid 0.0625rem #EBEBEB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.75rem;
+}
+
+.checkout-info-footer .bagtotal-body .subtotal-title {
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+}
+
+.checkout-info-footer .bagtotal-body .subtotal-price {
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+}
+
+.checkout-info-footer .bagtotal-body .shipping {
+  border-bottom: solid 0.0625rem #EBEBEB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  padding: 1.75rem 0rem;
+}
+
+.checkout-info-footer .bagtotal-body .shipping-title {
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+}
+
+.checkout-info-footer .bagtotal-body .shipping-price {
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+}
+
+.checkout-info-footer .bagtotal-body .voucher {
+  border-bottom: solid 0.0625rem #EBEBEB;
+  padding: 1.75rem 0rem;
+}
+
+.checkout-info-footer .bagtotal-body .voucher .btn-voucher {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+  background: transparent;
+  border: none;
+}
+
+.checkout-info-footer .bagtotal-body .voucher .btn-voucher .text {
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+}
+
+.checkout-info-footer .bagtotal-body .voucher .btn-voucher .icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  overflow: hidden;
+  margin-top: 0.25rem;
+}
+
+.checkout-info-footer .bagtotal-body .voucher .btn-voucher .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.checkout-info-footer .bagtotal-body .voucher .btn-voucher:not(.collapsed) .icon {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.checkout-info-footer .bagtotal-body .voucher-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1rem;
+}
+
+.checkout-info-footer .bagtotal-body .voucher-info .voucherfield {
+  background: #F7F7F7;
+  color: #333333;
+  padding: 0.75rem 1.5rem;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.02rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.checkout-info-footer .bagtotal-body .voucher-info .btn-apply {
+  padding: 0.75rem 1.5rem;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.02rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), #333333;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #333333;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.checkout-info-footer .bagtotal-body .voucher-info .btn-apply:not([disabled]):hover {
+  background: #5A5A5A;
+}
+
+.checkout-info-footer .bagtotal-body .discount {
+  border-bottom: solid 0.0625rem #EBEBEB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  padding: 1.75rem 0rem;
+}
+
+.checkout-info-footer .bagtotal-body .discount-title {
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+}
+
+.checkout-info-footer .bagtotal-body .discount-price {
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+}
+
+.checkout-info-footer .bagtotal-body .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  padding: 1.75rem 0rem;
+}
+
+.checkout-info-footer .bagtotal-body .total-title {
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+}
+
+.checkout-info-footer .bagtotal-body .total-price {
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+}
+
+.checkout-info-footer .bagtotal-footer .btn-checkout {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.02rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), #333333;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #333333;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.checkout-info-footer .bagtotal-footer .btn-checkout:not([disabled]):hover {
+  background: #5A5A5A;
 }
 
 /**=====================================================
