@@ -1002,7 +1002,7 @@
 
 // CARD-HORIZONTAL START
 
-.card-horizontal {}
+// .card-horizontal {}
 
 // CARD-HORIZONTAL END
 
@@ -1092,8 +1092,12 @@
 
     &-header {
         @include w100;
-        height: length(327);
+        height: auto;
         overflow: hidden;
+        
+        @include breakpoint(mobile575) {
+            height: length(327);
+        }
 
         img {
             @include wh100;

@@ -1,0 +1,17 @@
+.mybag {
+    @include border-single(bottom, solid, 1, $dividerBg);
+    padding: length(34) length(0) length(64);
+
+    @include breakpoint(tab992) {
+        padding: length(40) length(0) length(120);
+    }
+
+    .shoppingbag {
+        &-header {
+            .shoppingbag-title {
+                color: $primary;
+                @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+            }
+        }
+    }
+}
