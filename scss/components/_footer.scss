@@ -8,7 +8,7 @@
         @include flex-column;
         gap: length(32);
 
-        @include breakpoint(phone575) {
+        @include breakpoint(tablet991) {
             align-items: center;
         }
 
@@ -63,7 +63,7 @@
     &-details {
         @include flex-column;
 
-        @include breakpoint(phone575) {
+        @include breakpoint(tablet991) {
             align-items: center;
             text-align: center;
         }
@@ -72,7 +72,7 @@
             @include flex-column;
             gap: length(24);
 
-            @include breakpoint(phone575) {
+            @include breakpoint(tablet991) {
                 align-items: center;
             }
 
@@ -86,7 +86,7 @@
                 @include flex-column;
                 gap: length(18);
 
-                @include breakpoint(phone575) {
+                @include breakpoint(tablet991) {
                     align-items: center;
                 }
 

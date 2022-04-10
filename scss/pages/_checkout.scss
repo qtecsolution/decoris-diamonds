@@ -1,0 +1,106 @@
+.checkout {
+    @include border-single(bottom, solid, 1, $dividerBg);
+    padding: length(32) length(0) length(64);
+
+    @include breakpoint(tab992) {
+        padding: length(60) length(0) length(120);
+    }
+
+    .billing-details {
+        @include flex-column;
+        gap: length(40);
+
+        .billing-header {
+            .billing-title {
+                color: $primary;
+                @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+            }
+        }
+
+        .billing-body {
+            @include flex-column;
+            gap: length(60);
+
+            .billingform,
+            .deliverform {
+                @include flex-column;
+                gap: length(24);
+
+                .inputbox {
+                    @include flex-column;
+                    gap: length(12);
+
+                    .inputlabel {
+                        color: $secondary;
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                        letter-spacing: length(0.08);
+                        text-transform: uppercase;
+                    }
+
+                    .inputfield {
+                        @include border(solid, 1, $secondary);
+                        color: $primary;
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
+                        letter-spacing: length(0.08);
+                        padding: length(16);
+
+                        &::placeholder {
+                            color: $textStepLink;
+                        }
+                    }
+
+                    .selectfield {
+                        @include border(solid, 1, $secondary);
+                        color: $primary;
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
+                        letter-spacing: length(0.08);
+                        padding: length(16);
+                        appearance: none;
+                        background: url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_529_13897' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98252 7.65869L1.68511 3.89022C1.29615 3.4457 1.61184 2.75 2.20251 2.75H8.79733C9.388 2.75 9.70369 3.4457 9.31473 3.89022L6.01732 7.65869C5.74341 7.97173 5.25643 7.97173 4.98252 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_529_13897)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 4%;
+                    }
+
+                    textarea {
+                        resize: none;
+
+                        &::placeholder {
+                            color: $textStepLink;
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+
+            .btn-deliver {
+                @include w100;
+                @include flex-center-vert;
+                gap: length(20);
+                @include transparent-button;
+
+                .text {
+                    color: $primary;
+                    @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+                }
+
+                .icon {
+                    @include square(length(32));
+                    @include flex-center;
+                    @include transitiontransform;
+                    overflow: hidden;
+
+                    svg {
+                        @include wh100;
+                    }
+                }
+
+                &:not(.collapsed) {
+                    .icon {
+                        @include transform(rotate(180deg));
+                    }
+                }
+            }
+        }
+    }
+}

@@ -8,9 +8,333 @@
 
     .shoppingbag {
         &-header {
+            @include border-single(bottom, solid, 1, rgba($textStepLink, 0.5));
+            padding-bottom: length(34);
+
             .shoppingbag-title {
                 color: $primary;
                 @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+            }
+        }
+
+        &-body {
+            @include flex-column;
+
+            .shoppingitem {
+                padding: length(40) length(0);
+                @include border-single(bottom, solid, 1, rgba($textStepLink, 0.5));
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+
+                &-delete {
+                    @include flex-end;
+                    @include h100;
+
+                    .btn-remove {
+                        @include transparent-button;
+                        @include square(length(10));
+                        @include flex-center;
+                        overflow: hidden;
+
+                        svg {
+                            @include wh100;
+                            @include transitiontransform;
+                        }
+
+                        @include hover {
+                            svg {
+                                @include transform(rotate(90deg));
+
+                                path {
+                                    stroke: $textdanger;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-info {
+                    @include flex-center-column;
+                    gap: length(16);
+
+                    @include breakpoint(mobile768) {
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+
+                    .bagthumbnail {
+                        width: length(185);
+                        height: length(198);
+                        @include border(solid, 0.5, $dividerBg);
+                        @include flex-center;
+                        padding: length(4);
+
+                        .thumbnail {
+                            width: length(179);
+                            height: length(128);
+                            @include flex-center;
+
+                            img {
+                                @include wh100;
+                                object-fit: contain;
+                                @include transitiontransform;
+
+                                @include hover {
+                                    @include transform(scale(0.9));
+                                }
+                            }
+                        }
+                    }
+
+                    .name-model {
+                        @include flex-column;
+                        gap: length(12);
+                        @include w100;
+                        text-align: center;
+
+                        @include breakpoint(mobile768) {
+                            width: auto;
+                            text-align: left;
+                        }
+
+                        .name {
+                            color: $primary;
+                            @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(26, 20));
+                            letter-spacing: length(-0.32);
+                        }
+
+                        .model {
+                            color: $secondary;
+                            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                            letter-spacing: length(0.08);
+                        }
+                    }
+
+                    .quantity {
+                        @include flex-column;
+                        gap: length(12);
+                        text-align: center;
+
+                        @include breakpoint(mobile768) {
+                            width: auto;
+                            text-align: left;
+                        }
+
+                        &-title {
+                            color: $secondary;
+                            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                            letter-spacing: length(0.08);
+                        }
+
+                        &-box {
+                            @include flex-center-vert;
+
+                            .btn-decrement,
+                            .btn-increment {
+                                @include square(length(24));
+                                @include circle;
+                                @include flex-center;
+                                padding: length(6);
+                                overflow: hidden;
+                            }
+
+                            .inputfield {
+                                color: $textDark;
+                                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                                width: length(40);
+                                text-align: center;
+                                padding: length(8);
+                                @include transitions;
+                            }
+
+                            .btn-decrement {
+                                background: $decrementBg;
+                            }
+
+                            .btn-increment {
+                                background: $checkboxbg;
+                            }
+                        }
+
+                        .totalprice {
+                            .price {
+                                color: $primary;
+                                @include font-face($futuraBK, style('normal'), size(24), weight('normal'), line-height(32, 24));
+                                letter-spacing: length(-0.32);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bagtotal {
+        padding: length(32);
+        background: $totalBagBg;
+        @include flex-column;
+        gap: length(30);
+
+        &-header {
+            .bagtotal-title {
+                color: $primary;
+                @include font-face($futuraBK, style('normal'), size(24), weight('normal'), line-height(32, 24));
+                letter-spacing: length(-0.32);
+            }
+        }
+
+        &-body {
+            .subtotal {
+                @include border-single(bottom, solid, 1, $bagBorderColor);
+                @include flex-center-between;
+                padding-bottom: length(28);
+
+                &-title {
+                    color: $primary;
+                    @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(26, 20));
+                    letter-spacing: length(-0.32);
+                }
+
+                &-price {
+                    color: $primary;
+                    @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(26, 20));
+                    letter-spacing: length(-0.32);
+                }
+            }
+
+            .shipping {
+                @include border-single(bottom, solid, 1, $bagBorderColor);
+                @include flex-center-between;
+                padding: length(28) length(0);
+
+                &-title {
+                    color: $primary;
+                    @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(26, 20));
+                    letter-spacing: length(-0.32);
+                }
+
+                &-price {
+                    color: $primary;
+                    @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(26, 20));
+                    letter-spacing: length(-0.32);
+                }
+            }
+
+            .voucher {
+                @include border-single(bottom, solid, 1, $bagBorderColor);
+                padding: length(28) length(0);
+                
+                .btn-voucher {
+                    @include w100;
+                    @include flex-center-vert;
+                    gap: length(20);
+                    @include transparent-button;
+
+                    .text {
+                        color: $primary;
+                        @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(26, 20));
+                        letter-spacing: length(-0.32);
+                    }
+
+                    .icon {
+                        @include square(length(24));
+                        @include flex-center;
+                        @include transitiontransform;
+                        overflow: hidden;
+                        margin-top: length(4);
+
+                        svg {
+                            @include wh100;
+                        }
+                    }
+
+                    &:not(.collapsed) {
+                        .icon {
+                            @include transform(rotate(180deg));
+                        }
+                    }
+                }
+
+                &-info {
+                    @include flex-center-vert;
+                    padding-top: length(16);
+
+                    .voucherfield {
+                        color: $primary;
+                        padding: length(12) length(24);
+                        @include font-face($futuraBK, style('normal'), size(12), weight('medium'), line-height(19.2, 12));
+                        letter-spacing: length(0.32);
+                        flex: 1;
+                    }
+
+                    .btn-apply {
+                        padding: length(12) length(24);
+                        @include font-face($futuraBK, style('normal'), size(12), weight('medium'), line-height(19.2, 12));
+                        letter-spacing: length(0.32);
+                        @include setBgColor($checkboxbg, $white);
+                        text-align: center;
+                        text-transform: uppercase;
+                        @include transitions;
+
+                        @include hover {
+                            background: $secondary;
+                        }
+                    }
+                }
+            }
+
+            .discount {
+                @include border-single(bottom, solid, 1, $bagBorderColor);
+                @include flex-center-between;
+                padding: length(28) length(0);
+
+                &-title {
+                    color: $primary;
+                    @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(26, 20));
+                    letter-spacing: length(-0.32);
+                }
+
+                &-price {
+                    color: $primary;
+                    @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(26, 20));
+                    letter-spacing: length(-0.32);
+                }
+            }
+
+            .total {
+                @include flex-center-between;
+                padding: length(28) length(0);
+
+                &-title {
+                    color: $primary;
+                    @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(26, 20));
+                    letter-spacing: length(-0.32);
+                }
+
+                &-price {
+                    color: $primary;
+                    @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(26, 20));
+                    letter-spacing: length(-0.32);
+                }
+            }
+        }
+
+        &-footer {
+            .btn-checkout {
+                @include w100;
+                padding: length(12) length(24);
+                @include font-face($futuraBK, style('normal'), size(12), weight('medium'), line-height(19.2, 12));
+                letter-spacing: length(0.32);
+                @include setBgColor($checkboxbg, $white);
+                text-align: center;
+                text-transform: uppercase;
+                @include transitions;
+
+                @include hover {
+                    background: $secondary;
+                }
             }
         }
     }
