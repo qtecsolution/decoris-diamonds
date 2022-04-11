@@ -1,21 +1,3 @@
-.offcanvas-top {
-    height: 100vh;
-    border-bottom: none;
-}
-
-.offcanvas-bottom {
-    height: 100vh;
-    border-top: none;
-}
-
-.offcanvas-start {
-    border-right: none;
-}
-
-.offcanvas-end {
-    border-left: 0;
-}
-
 .offcanvas {
     @include w100;
 
@@ -60,6 +42,10 @@
             @include hover {
                 svg {
                     @include transform(rotate(90deg));
+
+                    path {
+                        stroke: $textdanger;
+                    }
                 }
             }
         }
@@ -296,6 +282,263 @@
         &::-webkit-scrollbar-thumb {
             // background: $primary;
             @include radius(8);
+        }
+    }
+}
+
+.offcanvas-top {
+    height: 100vh;
+    border-bottom: none;
+}
+
+.offcanvas-bottom {
+    height: 100vh;
+    border-top: none;
+}
+
+.offcanvas-start {
+    border-right: none;
+}
+
+.offcanvas-end {
+    border-left: 0;
+    background: $white;
+    max-width: length(340);
+    
+    @include breakpoint(mobile575) {
+        max-width: length(400);
+    }
+
+    .offcanvas-header {
+        padding: length(24);
+        @include border-single(bottom, solid, 1, $dividerBg);
+
+        .bag-title {
+            color: $primary;
+            @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+        }
+    }
+
+    .offcanvas-body {
+        max-height: calc(100% - 19rem);
+        padding: length(0);
+
+        .empty-screen {
+            padding: length(32);
+            @include wh100;
+            @include flex-center-column;
+            gap: length(60);
+
+            &-header {
+                @include flex-center-column;
+                gap: length(12);
+                text-align: center;
+
+                .emptyscreen-title {
+                    color: $black;
+                    @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(26, 20));
+                    letter-spacing: length(-0.32);
+                }
+
+                .emptyscreen-text {
+                    color: $secondary;
+                    @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(18, 12));
+
+                    @include breakpoint(mobile768) {
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                    }
+                }
+            }
+
+            &-body {
+                @include w100;
+
+                .btn-continue {
+                    @include setBgColor($primary, $white);
+                    @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(19.2, 12));
+                    @include w100;
+                    padding: length(12);
+                    text-align: center;
+                    text-transform: uppercase;
+                    @include transitions;
+
+                    @include hover {
+                        background: $textDark;
+                    }
+                }
+            }
+        }
+
+        .baglist {
+            @include flex-column;
+
+            .cardbag {
+                display: flex;
+                gap: length(32);
+                padding: length(40) length(32);
+                @include border-single(bottom, solid, 1, $dividerBg);
+
+                &-cap {
+                    background: rgba($black, 0.03);
+                    @include square(length(150));
+                    overflow: hidden;
+
+                    img {
+                        @include wh100;
+                        object-fit: cover;
+                    }
+                }
+
+                &-details {
+                    @include flex-column;
+                    justify-content: space-between;
+                    width: calc(100% - 9.375rem);
+
+                    .baginfo {
+                        .bagtitle {
+                            color: $black;
+                            @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(28.8, 18));
+                        }
+
+                        .bagmodel {
+                            color: $primary;
+                            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(22.4, 14));
+                        }
+
+                        .bagprice {
+                            color: $black;
+                            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(22.4, 14));
+                        }
+                    }
+
+                    .counter-delete {
+                        @include flex-center-between;
+
+                        .counter {
+                            @include flex-center-vert;
+
+                            .btn-decrement,
+                            .btn-increment {
+                                @include square(length(24));
+                                @include circle;
+                                @include flex-center;
+                                padding: length(6);
+                                overflow: hidden;
+                            }
+
+                            .inputfield {
+                                color: $textDark;
+                                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                                width: length(40);
+                                text-align: center;
+                                padding: length(8);
+                                @include transitions;
+                            }
+
+                            .btn-decrement {
+                                background: $decrementBg;
+                            }
+
+                            .btn-increment {
+                                background: $checkboxbg;
+                            }
+                        }
+
+                        .delete {
+                            .btn-delete {
+                                @include transparent-button;
+                                @include square(length(24));
+                                @include flex-center;
+                                overflow: hidden;
+
+                                svg {
+                                    @include wh100;
+                                }
+
+                                @include hover {
+                                    svg {
+                                        path {
+                                            stroke: $textdanger;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .offcanvas-footer {
+        background: $white;
+        box-shadow: $bag-shadow;
+        padding: length(38);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include w100;
+        height: length(230);
+        @include flex-column;
+        gap: length(24);
+
+        &-head {
+            @include flex-column;
+            gap: length(18);
+            
+            .footertitle {
+                color: $secondary;
+                @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(26, 20));
+                letter-spacing: length(-0.32);
+            }
+
+            .footerlink {
+                @include flex-center-vert;
+                gap: length(12);
+
+                .text {
+                    color: $black;
+                    @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(26, 20));
+                    letter-spacing: length(-0.32);
+                }
+
+                .icon {
+                    @include square(length(24));
+                    @include flex-center;
+                    overflow: hidden;
+                    margin-top: length(4);
+
+                    svg {
+                        @include wh100;
+                    }
+                }
+            }
+        }
+
+        .btn-checks {
+            @include flex-center-between;
+            @include border(solid, 2, $black);
+            padding: length(15) length(22);
+            background: transparent;
+
+            .total {
+                color: $black;
+                @include font-face($futuraBK, style('normal'), size(16), weight('medium'), line-height(25.6, 16));
+            }
+
+            .text {
+                color: $black;
+                @include font-face($futuraBK, style('normal'), size(16), weight('medium'), line-height(25.6, 16));
+                text-transform: uppercase;
+            }
+
+            @include hover {
+                background: $black;
+
+                .total, .text {
+                    color: $white;
+                }
+            }
         }
     }
 }

@@ -1830,3 +1830,10 @@
         @include flex-center;
     }
 }
+
+#view360,
+#mycar {
+    max-width: 100%;
+    @include w100;
+    object-fit: contain;
+}
