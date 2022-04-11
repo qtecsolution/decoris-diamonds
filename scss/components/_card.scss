@@ -1024,6 +1024,10 @@
             object-fit: cover;
             @include transitiontransform;
 
+            @include breakpoint(desktop1366) {
+                object-fit: contain;
+            }
+
             @include hover {
                 @include transform(scale(0.95));
             }

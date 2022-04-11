@@ -3378,6 +3378,13 @@ p {
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
+@media screen and (max-width: 85.375rem) {
+  .homeproduct-header img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
 .homeproduct-header img:not([disabled]):hover {
   -webkit-transform: scale(0.95);
   transform: scale(0.95);
