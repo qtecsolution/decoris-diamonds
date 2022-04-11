@@ -320,7 +320,7 @@
     }
 
     .offcanvas-body {
-        max-height: calc(100% - 19rem);
+        max-height: calc(100% - 21rem);
         padding: length(0);
 
         .empty-screen {
@@ -378,6 +378,10 @@
                 padding: length(40) length(32);
                 @include border-single(bottom, solid, 1, $dividerBg);
 
+                &:last-child {
+                    border-bottom: 0;
+                }
+
                 &-cap {
                     background: rgba($black, 0.03);
                     @include square(length(150));
@@ -407,7 +411,7 @@
 
                         .bagprice {
                             color: $black;
-                            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(22.4, 14));
+                            @include font-face($futuraBK, style('normal'), size(13), weight('normal'), line-height(22.4, 13));
                         }
                     }
 

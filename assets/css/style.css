@@ -5009,7 +5009,7 @@ p {
 }
 
 .offcanvas-end .offcanvas-body {
-  max-height: calc(100% - 19rem);
+  max-height: calc(100% - 21rem);
   padding: 0rem;
 }
 
@@ -5123,6 +5123,10 @@ p {
   border-bottom: solid 0.0625rem #DEE2E6;
 }
 
+.offcanvas-end .offcanvas-body .baglist .cardbag:last-child {
+  border-bottom: 0;
+}
+
 .offcanvas-end .offcanvas-body .baglist .cardbag-cap {
   background: rgba(0, 0, 0, 0.03);
   height: 9.375rem;
@@ -5173,9 +5177,9 @@ p {
   color: #000000;
   font-family: "Futura Bk";
   font-style: normal;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: normal;
-  line-height: 1.6;
+  line-height: 1.72308;
 }
 
 .offcanvas-end .offcanvas-body .baglist .cardbag-details .counter-delete {
