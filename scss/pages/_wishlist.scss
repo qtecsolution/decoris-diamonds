@@ -1,3 +1,77 @@
 .wishlist {
-    
+    &-header {
+        @include flex-center;
+        padding: length(48) length(0);
+        @include border-single(bottom, solid, 1, $dividerBg);
+
+        .nav-tabs {
+            border: none;
+            justify-content: center;
+            gap: length(40);
+            
+            @include breakpoint(mobile768) {
+                gap: length(64);
+            }
+
+            @include breakpoint(tab992) {
+                gap: length(100);
+            }
+
+            .nav-link {
+                margin: 0;
+                padding: 0;
+                border: none;
+                @include radius(0);
+                color: $textStepLink;
+                @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(26, 20));
+                letter-spacing: length(1.04);
+                
+                &:hover:not(.active) {
+                    color: $black;
+                }
+                
+                &.active {
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    &-body {
+        padding: length(48) length(0) length(50);
+
+        @include breakpoint(tab992) {
+            padding: length(60) length(0) length(100);
+        }
+        @include border-single(bottom, solid, 1, $dividerBg);
+
+        .wish-info {
+            @include flex-column;
+            gap: length(60);
+
+            .wish-head {
+                @include flex-center;
+
+                .wishlist-title {
+                    color: $primary;
+                    @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+                    text-align: center;
+                }
+            }
+
+            .wish-body {
+                .product {
+                    @include breakpoint(phone575) {
+                        max-width: length(324);
+                        margin-inline: auto;
+                    }
+
+                    &-header {
+                        @include w100;
+                        height: length(350);
+                    }
+                }
+            }
+        }
+    }
 }
