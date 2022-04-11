@@ -3638,6 +3638,227 @@ p {
   color: #ffffff;
 }
 
+.card-order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: dashed 0.0625rem #B0B0B0;
+}
+
+.card-order:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.card-order-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.card-order-header .orderinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.375rem;
+}
+
+.card-order-header .orderinfo .orderid {
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.47714;
+  letter-spacing: -0.02rem;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .card-order-header .orderinfo .orderid {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1.31556;
+  }
+}
+
+.card-order-header .orderinfo .orderdate {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.88167;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .card-order-header .orderinfo .orderdate {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 0.9375rem;
+    font-weight: normal;
+    line-height: 1.70533;
+  }
+}
+
+.card-order-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.card-order-body .order-thumb {
+  width: 5.625rem;
+  height: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.card-order-body .order-thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-order-body .orderdescript .title {
+  color: #000000;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.card-order-body .orderdescript .model {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.card-order-body .orderdescript .price {
+  color: #000000;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.card-review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: solid 0.0625rem #9296A9;
+}
+
+@media screen and (min-width: 48rem) {
+  .card-review {
+    padding: 2.5rem;
+  }
+}
+
+.card-review-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+}
+
+.card-review-header .reviewer-name {
+  color: #242424;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+}
+
+.card-review-header .reviewer-designation {
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  line-height: 1.66;
+}
+
+@media screen and (min-width: 48rem) {
+  .card-review-header .reviewer-designation {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 0.9375rem;
+    font-weight: normal;
+    line-height: 1.70533;
+  }
+}
+
+.card-review-body .reviewtext {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  line-height: 1.66;
+  text-align: justify;
+}
+
+@media screen and (min-width: 48rem) {
+  .card-review-body .reviewtext {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 0.9375rem;
+    font-weight: normal;
+    line-height: 1.70533;
+  }
+}
+
 .modal-content {
   border-radius: 0rem;
   border-radius: 0rem;
@@ -13578,7 +13799,6 @@ polygon {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0.25rem;
 }
 
 .accountnav .accountlist-link {
@@ -14172,4 +14392,590 @@ polygon {
 .paymentmethods-body .payment .placeorder .btn-order:not([disabled]):hover {
   background: #333333;
   color: #ffffff;
+}
+
+.addresses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.75rem;
+}
+
+.addresses-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.addresses-header .addresses-title {
+  color: #333333;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.addresses-header .addesses-text {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: -0.02rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .addresses-header .addesses-text {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.3;
+  }
+}
+
+.addresses-body .billing-address-shipping-address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .addresses-body .billing-address-shipping-address {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.addresses-body .billing-address-shipping-address .billing-address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.addresses-body .billing-address-shipping-address .billing-address-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+.addresses-body .billing-address-shipping-address .billing-address-header .title {
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+}
+
+.addresses-body .billing-address-shipping-address .billing-address-header .text {
+  color: #000000;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.70533;
+}
+
+.addresses-body .billing-address-shipping-address .billing-address-body {
+  width: 10.1875rem;
+}
+
+.addresses-body .billing-address-shipping-address .billing-address-body .btn-add {
+  background: #ffffff;
+  color: #333333;
+  border: solid 0.125rem #333333;
+  width: 100%;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.005rem;
+  padding: 0.75rem;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.addresses-body .billing-address-shipping-address .billing-address-body .btn-add:not([disabled]):hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+.addresses-body .billing-address-shipping-address .shipping-address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.addresses-body .billing-address-shipping-address .shipping-address-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.875rem;
+}
+
+.addresses-body .billing-address-shipping-address .shipping-address-header .title {
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+}
+
+.addresses-body .billing-address-shipping-address .shipping-address-header .text {
+  color: #000000;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.70533;
+}
+
+.addresses-body .billing-address-shipping-address .shipping-address-body {
+  width: 10.1875rem;
+}
+
+.addresses-body .billing-address-shipping-address .shipping-address-body .btn-add {
+  background: #ffffff;
+  color: #333333;
+  border: solid 0.125rem #333333;
+  width: 100%;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.005rem;
+  padding: 0.75rem;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.addresses-body .billing-address-shipping-address .shipping-address-body .btn-add:not([disabled]):hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+.addresses-body .billing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.addresses-body .billing .billing-header .billing-title {
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  letter-spacing: -0.02rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .addresses-body .billing .billing-header .billing-title {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 1.3;
+  }
+}
+
+.addresses-body .billing .billing-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.75rem;
+}
+
+.addresses-body .billing .billing-body .billingform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.75rem;
+}
+
+.addresses-body .billing .billing-body .billingform .inputbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.75rem;
+}
+
+.addresses-body .billing .billing-body .billingform .inputbox .inputlabel {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.005rem;
+  text-transform: uppercase;
+}
+
+.addresses-body .billing .billing-body .billingform .inputbox .inputfield {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid 0.0625rem #5A5A5A;
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 2;
+  letter-spacing: 0.005rem;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .addresses-body .billing .billing-body .billingform .inputbox .inputfield {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 0.9375rem;
+    font-weight: normal;
+    line-height: 1.6;
+  }
+}
+
+.addresses-body .billing .billing-body .billingform .inputbox .inputfield::-webkit-input-placeholder {
+  color: #B7B7B7;
+}
+
+.addresses-body .billing .billing-body .billingform .inputbox .inputfield:-ms-input-placeholder {
+  color: #B7B7B7;
+}
+
+.addresses-body .billing .billing-body .billingform .inputbox .inputfield::-ms-input-placeholder {
+  color: #B7B7B7;
+}
+
+.addresses-body .billing .billing-body .billingform .inputbox .inputfield::placeholder {
+  color: #B7B7B7;
+}
+
+.addresses-body .billing .billing-body .billingform .inputbox .selectfield {
+  border: solid 0.0625rem #5A5A5A;
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 2;
+  letter-spacing: 0.005rem;
+  padding: 1rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_529_13897' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='11' height='11'%3E%3Cpath d='M4.98252 7.65869L1.68511 3.89022C1.29615 3.4457 1.61184 2.75 2.20251 2.75H8.79733C9.388 2.75 9.70369 3.4457 9.31473 3.89022L6.01732 7.65869C5.74341 7.97173 5.25643 7.97173 4.98252 7.65869Z' fill='black'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_529_13897)'%3E%3Crect width='11' height='11' fill='%23B5B5BD'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center right 4%;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .addresses-body .billing .billing-body .billingform .inputbox .selectfield {
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 0.9375rem;
+    font-weight: normal;
+    line-height: 1.6;
+  }
+}
+
+.addresses-body .billing .billing-body .billingform .inputbox textarea {
+  resize: none;
+}
+
+.addresses-body .billing .billing-body .billingform .inputbox textarea::-webkit-input-placeholder {
+  color: #B7B7B7;
+}
+
+.addresses-body .billing .billing-body .billingform .inputbox textarea:-ms-input-placeholder {
+  color: #B7B7B7;
+}
+
+.addresses-body .billing .billing-body .billingform .inputbox textarea::-ms-input-placeholder {
+  color: #B7B7B7;
+}
+
+.addresses-body .billing .billing-body .billingform .inputbox textarea::placeholder {
+  color: #B7B7B7;
+}
+
+.addresses-body .billing .billing-body .billingform .inputbox textarea:focus {
+  outline: none;
+}
+
+.addresses-body .billing .billing-body .billingform .saveaddress {
+  width: 100%;
+  margin-top: 0.75rem;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .addresses-body .billing .billing-body .billingform .saveaddress {
+    width: 22.25rem;
+  }
+}
+
+.addresses-body .billing .billing-body .billingform .saveaddress .btn-save {
+  background: #ffffff;
+  color: #333333;
+  border: solid 0.125rem #333333;
+  width: 100%;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 0.005rem;
+  padding: 0.75rem;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.addresses-body .billing .billing-body .billingform .saveaddress .btn-save:not([disabled]):hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+.orders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.75rem;
+}
+
+.orders-header .orders-title {
+  color: #333333;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.orders-body .emptyorder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.orders-body .emptyorder .ordertitle {
+  color: #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: -0.02rem;
+}
+
+.orders-body .emptyorder .btn-browse {
+  background: #ffffff;
+  color: #000000;
+  border: solid 0.125rem #333333;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.9375rem;
+  font-weight: normal;
+  line-height: 1.7;
+  padding: 0.75rem 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.orders-body .emptyorder .btn-browse:not([disabled]):hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.orders-body .orderslist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+}
+
+.order-badge {
+  padding: 0.25rem 1.5rem;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.8125rem;
+  font-weight: normal;
+  line-height: 1.66;
+  text-align: center;
+}
+
+@media screen and (min-width: 35.9375rem) {
+  .order-badge {
+    padding: 0.25rem 2.625rem;
+    font-family: "Futura Bk";
+    font-style: normal;
+    font-size: 0.9375rem;
+    font-weight: normal;
+    line-height: 1.70533;
+  }
+}
+
+.badge-picked {
+  background: #FCF1CF;
+  color: #EEB711;
+}
+
+.badge-delivered {
+  background: #CFFCD9;
+  color: #126F1C;
+}
+
+.badge-cancelled {
+  background: #FCDACF;
+  color: #E90A17;
+}
+
+/**=====================================================
+                    REVIEWS-SECTION
+=====================================================**/
+.reviews {
+  border-bottom: solid 0.0625rem #DEE2E6;
+  padding: 3rem 0.5rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .reviews {
+    padding: 3rem 0rem 6.25rem;
+  }
+}
+
+.reviews-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+}
+
+@media screen and (min-width: 62rem) {
+  .reviews-content {
+    gap: 6.25rem;
+  }
+}
+
+.reviews-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.reviews-header .reviewstitle {
+  color: #333333;
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-size: 1.875rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.reviews-header .reviewstext {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.7;
 }

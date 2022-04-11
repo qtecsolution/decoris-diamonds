@@ -2915,7 +2915,7 @@
     <section class="myaccount">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-3 col-12">
+                <div class="col-lg-4 col-12">
                     <nav class="accountnav">
                         <ul class="accountlist">
                             <li class="accountlist-item">
@@ -2983,14 +2983,133 @@
                     </nav>
                 </div>
 
-                <div class="offset-lg-1 offset-0 col-lg-8 col-12">
+                <div class="offset-lg-1 offset-0 col-lg-7 col-12">
                     <div class="addresses">
                         <div class="addresses-header">
                             <h2 class="addresses-title">Addresses</h2>
+                            <p class="addesses-text">The following addresses will be used on the checkout page by default.</p>
                         </div>
 
                         <div class="addresses-body">
-                            
+                            <!-- BILLING-SHIPPING ADDRESS START -->
+                            <div class="billing-address-shipping-address">
+                                <div class="billing-address">
+                                    <div class="billing-address-header">
+                                        <h5 class="title">Billing address</h5>
+                                        <p class="text">You have not set up this type of address yet.</p>
+                                    </div>
+
+                                    <div class="billing-address-body">
+                                        <button class="btn-add" type="button">Add</button>
+                                    </div>
+                                </div>
+
+                                <div class="billing-address">
+                                    <div class="billing-address-header">
+                                        <h5 class="title">Shipping address</h5>
+                                        <p class="text">You have not set up this type of address yet.</p>
+                                    </div>
+
+                                    <div class="billing-address-body">
+                                        <button class="btn-add" type="button">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- BILLING-SHIPPING ADDRESS END -->
+
+                            <!-- BILLING-ADDRESS START -->
+                            <div class="billing d-none">
+                                <div class="billing-header">
+                                    <h2 class="billing-title">Billing Address</h2>
+                                </div>
+
+                                <div class="billing-body">
+                                    <form class="billingform">
+                                        <div class="row g-4">
+                                            <div class="col-md-6 col-12">
+                                                <div class="inputbox">
+                                                    <label for="firstname" class="inputlabel">FIRST NAME <span class="required">*</span></label>
+                                                    <input type="text" id="firstname" placeholder="Your first name" class="inputfield">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6 col-12">
+                                                <div class="inputbox">
+                                                    <label for="lastname" class="inputlabel">FIRST NAME <span class="required">*</span></label>
+                                                    <input type="text" placeholder="Your last name" class="inputfield" id="lastname">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="inputbox">
+                                                    <label for="companyname" class="inputlabel">COMPANY NAME (OPTIONAL)</label>
+                                                    <input type="text" placeholder="Your company name" class="inputfield" id="companyname">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row g-4">
+                                            <div class="col-md-6 col-12">
+                                                <div class="inputbox">
+                                                    <label for="region" class="inputlabel">COUNTRY / REGION <span class="required">*</span></label>
+
+                                                    <select id="region" class="selectfield">
+                                                        <option value="">Bangladesh</option>
+                                                        <option value="">England</option>
+                                                        <option value="">Japan</option>
+                                                        <option value="">China</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6 col-12">
+                                                <div class="inputbox">
+                                                    <label for="town" class="inputlabel">TOWN / CITY <span class="required">*</span></label>
+                                                    <input type="text" placeholder="Your Town/ City" class="inputfield" id="town">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="inputbox">
+                                                    <label for="streetaddress" class="inputlabel">STREET ADDRESS <span class="required">*</span></label>
+                                                    <input type="text" placeholder="House number, street name, apartmen, suit, unit etc." class="inputfield" id="streetaddress">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="inputbox">
+                                                    <label for="billingemail" class="inputlabel">EMAIL ADDRESS <span class="required">*</span></label>
+                                                    <input type="email" placeholder="Your email address" class="inputfield" id="billingemail">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="inputbox">
+                                                    <label for="billingphone" class="inputlabel">Phone Number <span class="required">*</span></label>
+                                                    <input type="tel" placeholder="Your phone number" class="inputfield" id="billingphone">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="saveaddress">
+                                                    <button class="btn-save" type="button">SAVE Address</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- BILLING-ADDRESS END -->
                         </div>
                     </div>
                 </div>
@@ -3024,7 +3143,7 @@
                             </div>
 
                             <div class="morelink">
-                                <a href="#" class="findmore-link">FIND OUT MORE</a>
+                                <a href="about.html" class="findmore-link">FIND OUT MORE</a>
                             </div>
                         </div>
                         <!-- CARD-FINDMORE BODY END -->

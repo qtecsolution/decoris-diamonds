@@ -1,0 +1,36 @@
+/**=====================================================
+                    REVIEWS-SECTION
+=====================================================**/
+.reviews {
+    @include border-single(bottom, solid, 1, $dividerBg);
+    padding: length(48) length(8);
+
+    @include breakpoint(tab992) {
+        padding: length(48) length(0) length(100);
+    }
+
+    &-content {
+        @include flex-column;
+        gap: length(64);
+
+        @include breakpoint(tab992) {
+            gap: length(100);
+        }
+    }
+
+    &-header {
+        @include flex-center-column;
+        gap: length(32);
+        text-align: center;
+
+        .reviewstitle {
+            color: $primary;
+            @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+        }
+
+        .reviewstext {
+            color: $secondary;
+            @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(27.2, 16));
+        }
+    }
+}

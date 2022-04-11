@@ -42,8 +42,19 @@ $account-active: #F2F2F2;
 $black: #000000;
 $white: #ffffff;
 $checklabeltext: #444444;
+$orderBorder: #B0B0B0;
 
 $checkboxbg: linear-gradient(0deg, rgba($black, 0.2), rgba($black, 0.2)), $primary;
+
+// STATUS BADGES COLORS
+$pickedBg: #FCF1CF;
+$pickedColor: #EEB711;
+
+$deliveredBg: #CFFCD9;
+$deliveredColor: #126F1C;
+
+$cancelledBg: #FCDACF;
+$cancelledColor: #E90A17;
 
 // SHADOWS
 $shadow-1: rgba(162, 162, 162, 0.25);

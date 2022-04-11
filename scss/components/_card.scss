@@ -1157,3 +1157,121 @@
         }
     }
 }
+
+.card-order {
+    @include flex-column;
+    gap: length(32);
+    padding-bottom: length(24);
+    @include border-single(bottom, dashed, 1, $orderBorder);
+
+    &:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    &-header {
+        @include flex-between;
+        align-items: flex-start;
+
+        .orderinfo {
+            @include flex-column;
+            gap: length(6);
+
+            .orderid {
+                color: $primary;
+                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20.68, 14));
+                letter-spacing: length(-0.32);
+                
+                @include breakpoint(mobile575) {
+                    @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(23.68, 18));
+                }
+            }
+
+            .orderdate {
+                color: $secondary;
+                @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(22.58, 12));
+                
+                @include breakpoint(mobile575) {
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                }
+            }
+        }
+    }
+
+    &-body {
+        @include flex-center-vert;
+        gap: length(32);
+
+        .order-thumb {
+            width: length(90);
+            height: length(96);
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+                @include wh100;
+                object-fit: cover;
+            }
+        }
+
+        .orderdescript {
+            .title {
+                color: $black;
+                @include font-face($futuraBK, style('normal'), size(18), weight('normal'), line-height(28.8, 18));
+            }
+
+            .model {
+                color: $secondary;
+                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(22.4, 14));
+            }
+
+            .price {
+                color: $black;
+                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(22.4, 14));
+            }
+        }
+    }
+}
+
+.card-review {
+    @include flex-column;
+    gap: length(16);
+    padding: length(20);
+    @include border(solid, 1, $diamondLabelBorder);
+    
+    @include breakpoint(mobile768) {
+        padding: length(40);
+    }
+
+    &-header {
+        @include flex-column;
+        gap: length(4);
+
+        .reviewer-name {
+            color: $textDark;
+            @include font-face($futuraBK, style('normal'), size(20), weight('semibold'), line-height(26, 20));
+            letter-spacing: length(-0.32);
+        }
+
+        .reviewer-designation {
+            color: $primary;
+            @include font-face($futuraBK, style('normal'), size(13), weight('normal'), line-height(21.58, 13));
+    
+            @include breakpoint(mobile768) {
+                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+            }
+        }
+    }
+
+    &-body {
+        .reviewtext {
+            color: $secondary;
+            @include font-face($futuraBK, style('normal'), size(13), weight('normal'), line-height(21.58, 13));
+            text-align: justify;
+    
+            @include breakpoint(mobile768) {
+                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+            }
+        }
+    }
+}
