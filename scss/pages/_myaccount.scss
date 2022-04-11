@@ -1,0 +1,143 @@
+
+.myaccount {
+    @include border-single(bottom, solid, 1, $dividerBg);
+    padding: length(48) length(8);
+
+    @include breakpoint(tab992) {
+        padding: length(48) length(0) length(100);
+    }
+}
+
+.accountnav {
+    .accountlist {
+        @include list-vertical;
+
+        &-link {
+            @include flex-center-between;
+            padding: length(28);
+            @include border-single(bottom, solid, 1, $dividerBg);
+
+            .text {
+                color: $black;
+                @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(26, 20));
+                letter-spacing: length(-0.32);
+            }
+
+            &:hover:not(.active) {
+                background: $account-active;
+                border-color: $account-active;
+            }
+
+            &.active {
+                background: $account-active;
+                border-color: $account-active;
+            }
+        }
+    }
+}
+
+.accountdetails {
+    @include flex-column;
+    gap: length(70);
+
+    &-header {
+        .accountdetails-title {
+            color: $primary;
+            @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+        }
+    }
+
+    &-body {
+        @include flex-column;
+        gap: length(28);
+
+        .inputdetails {
+            @include flex-column;
+            gap: length(12);
+
+            .infotext {
+                color: $secondary;
+                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                letter-spacing: length(0.08);
+            }
+        }
+
+        .inputbox {
+            @include flex-column;
+            gap: length(12);
+
+            .inputlabel {
+                color: $secondary;
+                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                letter-spacing: length(0.08);
+                text-transform: uppercase;
+            }
+
+            .inputfield {
+                @include border(solid, 1, $secondary);
+                color: $primary;
+                @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(24, 12));
+                letter-spacing: length(0.08);
+                padding: length(16);
+
+                @include breakpoint(mobile575) {
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
+                }
+
+                &::placeholder {
+                    color: $textStepLink;
+                }
+            }
+
+            .passbox {
+                @include w100;
+                position: relative;
+
+                .inputfield {
+                    @include w100;
+                    padding-right: length(54);
+                }
+
+                .btn-showhide {
+                    position: absolute;
+                    top: 50%;
+                    right: length(24);
+                    @include transform(translateY(-50%));
+                    @include square(length(20));
+                    @include transparent-button;
+                    @include flex-center;
+                    overflow: hidden;
+                    
+                    svg {
+                        @include wh100;
+                    }
+                }
+            }
+        }
+        
+        .saveinfo {
+            @include w100;
+            margin-top: length(20);
+
+            @include breakpoint(mobile575) {
+                width: length(356);
+            }
+
+            .btn-save {
+                @include setBgColor($white, $primary);
+                @include border(solid, 2, $primary);
+                @include w100;
+                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                letter-spacing: length(0.08);
+                padding: length(12);
+                text-align: center;
+                text-transform: uppercase;
+                @include transitions;
+
+                @include hover {
+                    @include setBgColor($primary, $white);
+                }
+            }
+        }
+    }
+}

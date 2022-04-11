@@ -38,6 +38,7 @@
                     }
 
                     .inputfield {
+                        @include flex-center-vert;
                         @include border(solid, 1, $secondary);
                         color: $primary;
                         @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(24, 12));

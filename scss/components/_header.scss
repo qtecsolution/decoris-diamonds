@@ -64,7 +64,8 @@
             @include flex-center;
             width: length(190);
             max-width: 30%;
-            height: length(56);
+            height: length(64);
+            height: auto;
 
             @include breakpoint(tab992) {
                 width: length(260);
