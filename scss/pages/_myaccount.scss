@@ -11,6 +11,7 @@
 .accountnav {
     .accountlist {
         @include list-vertical;
+        gap: length(4);
 
         &-link {
             @include flex-center-between;
@@ -38,7 +39,7 @@
 
 .accountdetails {
     @include flex-column;
-    gap: length(70);
+    gap: length(60);
 
     &-header {
         .accountdetails-title {
@@ -136,6 +137,262 @@
 
                 @include hover {
                     @include setBgColor($primary, $white);
+                }
+            }
+        }
+    }
+}
+
+.paymentmethods {
+    @include flex-column;
+    gap: length(60);
+    
+    &-header {
+        .paymentmethods-title {
+            color: $primary;
+            @include font-face($playfairDisplay, style('normal'), size(30), weight('normal'), line-height(39, 30));
+        }
+    }
+
+    &-body {
+        .payment {
+            @include flex-column;
+            gap: length(48);
+
+            .creditdescript {
+                @include flex-column;
+                gap: length(24);
+
+                &-header {
+                    @include flex-column;
+                    gap: length(14);
+
+                    @include breakpoint(tab992) {
+                        flex-direction: row;
+                        gap: length(32);
+                    }
+
+                    .credit-title {
+                        color: $secondary;
+                        @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(26, 20));
+                        letter-spacing: length(-0.32);
+                    }
+
+                    .thumbnail {
+                        @include breakpoint(mobile768) {
+                            height: length(24);
+                        }
+
+                        img {
+                            @include wh100;
+                            object-fit: cover;
+                            
+                            @include breakpoint(mobile768) {
+                                object-fit: contain;
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                &-body {
+                    @include flex-column;
+                    gap: length(24);
+
+                    .savedpay {
+                        .savepay {
+                            &:checked ~ .savepaylabel {
+                                &::before {
+                                    background: $checkboxbg;
+                                }
+
+                                &::after {
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        }
+
+                        .savepaylabel {
+                            position: relative;
+                            padding-left: length(32);
+                            cursor: pointer;
+                            color: $checklabeltext;
+                            @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(20, 16));
+                            
+                            @include breakpoint(mobile768) {
+                                @include font-face($futuraBK, style('normal'), size(20), weight('normal'), line-height(26, 20));
+                            }
+
+                            &::selection {
+                                @include setBgColor(transparent, $checklabeltext);
+                            }
+
+                            &::before,
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                            }
+
+                            &::before {
+                                background: $white;
+                                @include square(length(18));
+                                @include border(solid, 1, $primary);
+                                @include circle;
+                                top: 50%;
+                                @include transform(translateY(-50%));
+                            }
+                            
+                            &::after {
+                                width: length(5);
+                                height: length(10);
+                                @include border(solid, 2, $white);
+                                border-top: 0;
+                                border-left: 0;
+                                left: length(7);
+                                top: 46%;
+                                @include transform(translateY(-54%) rotate(45deg));
+                                opacity: 0;
+                                visibility: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .paymentdetails {
+                @include flex-column;
+                gap: length(16);
+
+                .creditinfo {
+                    @include flex-column;
+                    gap: length(24);
+
+                    .inputbox {
+                        @include flex-column;
+                        gap: length(12);
+
+                        .inputlabel {
+                            color: $secondary;
+                            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                            letter-spacing: length(0.08);
+                            text-transform: uppercase;
+                        }
+
+                        .inputfield {
+                            @include border(solid, 1, $secondary);
+                            color: $primary;
+                            @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(24, 12));
+                            letter-spacing: length(0.08);
+                            padding: length(16);
+
+                            @include breakpoint(mobile575) {
+                                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
+                            }
+
+                            &::placeholder {
+                                color: $textStepLink;
+                            }
+                        }
+                        
+                        .inputinfo {
+                            position: relative;
+                            @include w100;
+
+                            .inputfield {
+                                @include w100;
+                                padding-right: length(60);
+                            }
+
+                            .cardicon {
+                                position: absolute;
+                                top: 50%;
+                                @include transform(translateY(-50%));
+                                right: length(24);
+                            }
+                        }
+                    }
+                }
+
+                .saveinfo {
+                    .savecheck {
+                        &:checked ~ .checklabel {
+                            &::before {
+                                background: $checkboxbg;
+                            }
+
+                            &::after {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+
+                    .checklabel {
+                        position: relative;
+                        padding-left: length(32);
+                        cursor: pointer;
+                        color: $checklabeltext;
+                        @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(14, 14));
+
+                        &::selection {
+                            @include setBgColor(transparent, $checklabeltext);
+                        }
+
+                        &::before,
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                        }
+
+                        &::before {
+                            background: $white;
+                            @include square(length(18));
+                            @include border(solid, 1, $primary);
+                            @include radius(2);
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                        }
+                        
+                        &::after {
+                            width: length(5);
+                            height: length(12);
+                            @include border(solid, 2, $white);
+                            border-top: 0;
+                            border-left: 0;
+                            left: length(7);
+                            top: 45%;
+                            @include transform(translateY(-55%) rotate(45deg));
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                    }
+                }
+            }
+
+            .placeorder {
+                @include w100;
+
+                @include breakpoint(mobile575) {
+                    width: length(356);
+                }
+
+                .btn-order {
+                    @include setBgColor($white, $primary);
+                    @include border(solid, 2, $primary);
+                    @include w100;
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(18, 15));
+                    letter-spacing: length(0.08);
+                    padding: length(12);
+                    text-align: center;
+                    text-transform: uppercase;
+                    @include transitions;
+
+                    @include hover {
+                        @include setBgColor($primary, $white);
+                    }
                 }
             }
         }
