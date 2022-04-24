@@ -544,6 +544,29 @@
                         @include flex-column;
                         gap: length(8);
 
+                        .productitem {
+                            @include flex-center-vert;
+                            align-items: flex-start;
+                            gap: length(14);
+
+                            .product-thumb {
+                                @include square(length(30));
+                                @include flex-center;
+                                overflow: hidden;
+
+                                img {
+                                    @include wh100;
+                                    object-fit: cover;
+                                }
+                            }
+
+                            .iteminfos {
+                                @include flex-column;
+                                gap: length(14);
+                                width: calc(100% - 1.875rem);
+                            }
+                        }
+
                         .modelprice {
                             @include flex-center-between;
 
@@ -583,6 +606,29 @@
                     .prodinfos {
                         @include flex-column;
                         gap: length(8);
+
+                        .productitem {
+                            @include flex-center-vert;
+                            align-items: flex-start;
+                            gap: length(14);
+
+                            .product-thumb {
+                                @include square(length(30));
+                                @include flex-center;
+                                overflow: hidden;
+
+                                img {
+                                    @include wh100;
+                                    object-fit: cover;
+                                }
+                            }
+
+                            .iteminfos {
+                                @include flex-column;
+                                gap: length(14);
+                                width: calc(100% - 1.875rem);
+                            }
+                        }
 
                         .caratprice {
                             @include flex-center-between;
