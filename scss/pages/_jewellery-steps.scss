@@ -214,6 +214,10 @@
                     gap: length(20);
                     margin-bottom: length(18);
 
+                    .ringsizebox {
+                        width: length(200);
+                    }
+
                     .btn-bordered {
                         padding: length(12) length(32);
                         @include flex-center;
@@ -776,6 +780,10 @@
                 padding: length(20) length(0);
                 @include flex-column;
                 gap: length(20);
+
+                .ringsizebox {
+                    width: length(200);
+                }
 
                 .btn-addtocart {
                     padding: length(13) length(13) length(11);
@@ -1792,7 +1800,7 @@
         }
     }
 
-    .tabinfo {}
+    // .tabinfo {}
 
     .paginationinfo {
         @include flex-center-between;

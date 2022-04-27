@@ -7,6 +7,8 @@
     <title>Decoris Diamonds | Product Details</title>
     <!-- FAVICON  -->
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
+    <!-- SELECT 2 CSS -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
     <!-- SWIPER SLIDER CSS -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <!-- BOOTSTRAP CSS  -->
@@ -1340,15 +1342,20 @@
 
                 <!-- REVIEW-DETAILS BUTTON START -->
                 <div class="reviewdetails-buttons">
-                    <select name="" id="" class="ringsize">
-                        <option value="">Select Ring size</option>
-                        <option value="">Size 1</option>
-                        <option value="">Size 2</option>
-                        <option value="">Size 3</option>
-                    </select>
+                    <div class="ringsizebox">
+                        <button class="btn-ringsize" type="button" data-bs-toggle="offcanvas" data-bs-target="#ringSizeSidebar" aria-controls="ringSizeSidebar">
+                            <span class="title">Select Ring size</span>
+    
+                            <span class="icon">
+                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1.5L7 7.5L13 1.5" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1 1.5L7 7.5L13 1.5" stroke="black" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                
+                            </span>
+                        </button>
+                    </div>
 
-                    <button class="btn-addtocart" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#myBagSidebar" aria-controls="myBagSidebar">Add to cart</button>
+                    <button class="btn-addtocart" type="button" data-bs-toggle="offcanvas" data-bs-target="#myBagSidebar" aria-controls="myBagSidebar">Add to cart</button>
                 </div>
                 <!-- REVIEW-DETAILS BUTTON END -->
             </div>
@@ -1801,13 +1808,13 @@
     <!-- MY-BAG SIDEBAR START -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="myBagSidebar" aria-labelledby="myBagSidebar">
         <div class="offcanvas-header">
-            <h5 class="bag-title">Your Bag</h5>
+            <div class="titlebox">
+                <h5 class="bag-title">Your Bag</h5>
+            </div>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
+                    <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
             </button>
         </div>
@@ -2005,38 +2012,27 @@
                         <div class="counter-delete">
                             <div class="counter">
                                 <button class="btn-decrement">
-                                    <svg width="13" height="2" viewBox="0 0 13 2" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 1H1" stroke="#616161" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
+                                    <svg width="13" height="2" viewBox="0 0 13 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 1H1" stroke="#616161" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </button>
 
                                 <input type="number" value="1" class="inputfield">
 
                                 <button class="btn-increment">
-                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 6H1M6 1V6V1ZM6 6V11V6ZM6 6H11H6Z" stroke="white"
-                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 6H1M6 1V6V1ZM6 6V11V6ZM6 6H11H6Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </button>
                             </div>
 
                             <div class="delete">
                                 <button class="btn-delete">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3 6H5H21" stroke="#5A5A5A" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z"
-                                            stroke="#5A5A5A" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M10 11V17" stroke="#5A5A5A" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M14 11V17" stroke="#5A5A5A" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 6H5H21" stroke="#5A5A5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M8 6V4C8 3.46957 8.21071 2.96086 8.58579 2.58579C8.96086 2.21071 9.46957 2 10 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4V6M19 6V20C19 20.5304 18.7893 21.0391 18.4142 21.4142C18.0391 21.7893 17.5304 22 17 22H7C6.46957 22 5.96086 21.7893 5.58579 21.4142C5.21071 21.0391 5 20.5304 5 20V6H19Z" stroke="#5A5A5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M10 11V17" stroke="#5A5A5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M14 11V17" stroke="#5A5A5A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </button>
                             </div>
@@ -2070,6 +2066,79 @@
         </div>
     </div>
     <!-- MY-BAG SIDEBAR END -->
+
+    <!-- SELECT RING-SIZE SIDEBAR START -->
+    <div class="offcanvas offcanvas-end selectsize" tabindex="-1" id="ringSizeSidebar" aria-labelledby="ringSizeSidebar">
+        <div class="offcanvas-header">
+            <div class="titlebox">
+                <h5 class="bag-title text-center">Ring Size</h5>
+            </div>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="offcanvas-body">
+            <!-- SELECT RING-SIZE START -->
+            <div class="selectringsize">
+                <div class="selectringsize-header">
+                    <h5 class="selectringtitle">
+                        These are the sizes available for this item, if you are looking for a 
+                        different size, please contact our customer support.
+                    </h5>
+                </div>
+
+                <div class="selectringsize-body">
+                    <div class="countryselect">
+                        <select class="country-select" name="country"></select>
+                    </div>
+
+                    <div class="selectbuttons">
+                        <button class="btn-selectsize" type="button">I DON’T KNOW</button>
+                        <button class="btn-select" type="button">F 1/2</button>
+                        <button class="btn-select" type="button">G</button>
+                        <button class="btn-select" type="button">G 1/2</button>
+                        <button class="btn-select" type="button">H</button>
+                        <button class="btn-select" type="button">H 1/2</button>
+                        <button class="btn-select" type="button">I</button>
+                        <button class="btn-select" type="button">I 1/2</button>
+                        <button class="btn-select" type="button">J</button>
+                        <button class="btn-select" type="button">J 1/2</button>
+                        <button class="btn-select" type="button">K</button>
+                        <button class="btn-select" type="button">K 1/2</button>
+                        <button class="btn-select" type="button">L</button>
+                        <button class="btn-select" type="button">L 1/2</button>
+                        <button class="btn-select" type="button">M</button>
+                        <button class="btn-select" type="button">M 1/2</button>
+                        <button class="btn-select" type="button">N</button>
+                        <button class="btn-select" type="button">N 1/2</button>
+                        <button class="btn-select" type="button">O</button>
+                        <button class="btn-select" type="button">O 1/2</button>
+                        <button class="btn-select" type="button">P</button>
+                        <button class="btn-select" type="button">P 1/2</button>
+                        <button class="btn-select" type="button">Q</button>
+                        <button class="btn-select" type="button">Q 1/2</button>
+                        <button class="btn-select" type="button">R</button>
+                        <button class="btn-select" type="button">R 1/2</button>
+                    </div>
+                </div>
+
+                <div class="selectringsize-footer">
+                    <p class="selectringtext">
+                        If you are unsure of the ring size, please select “I don't know” when
+                        proceeding with the purchase and we will produce your ring to a 
+                        standard size (K1/2-M). We offer a free resizing service for up to 
+                        30 days after you receive the item.
+                    </p>
+                </div>
+            </div>
+            <!-- SELECT RING-SIZE END ---->
+        </div>
+    </div>
+    <!-- SELECT RING-SIZE SIDEBAR END -->
     
     <!-- BOOTSTRAP JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -2086,5 +2155,9 @@
     <script src="assets/js/jquery-3.5.1.min.js"></script>
     <script src="assets/js/tikslus360.js"></script>
     <script src="assets/js/view360.js"></script>
+    <!-- SELECT 2 JS -->
+    <script src="assets/js/select2.min.js"></script>
+    <!-- SELECT JS -->
+    <script src="assets/js/select.js"></script>
 </body>
 </html>

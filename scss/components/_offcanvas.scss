@@ -18,6 +18,10 @@
             }
         }
 
+        .titlebox {
+            width: calc(100% - 2.25rem);
+        }
+
         .btn-close {
             @include square(length(36));
             background: transparent;
@@ -270,6 +274,37 @@
                             }
                         }
                     }
+                }
+            }
+        }
+
+        .selectringsize {
+            @include flex-column;
+            gap: length(48);
+            padding: length(20);
+
+            &-header {
+                .selectringtitle {
+                    color: $black;
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                }
+            }
+            
+            &-body {
+                @include flex-column;
+                gap: length(16);
+
+                .selectbuttons {
+                    @include flex-center-vert;
+                    flex-wrap: wrap;
+                    gap: length(10);
+                }
+            }
+
+            &-footer {
+                .selectringtext {
+                    color: $black;
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
                 }
             }
         }
@@ -544,5 +579,11 @@
                 }
             }
         }
+    }
+}
+
+.selectsize {
+    .offcanvas-body {
+        max-height: 100%;
     }
 }

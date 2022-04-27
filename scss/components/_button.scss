@@ -1,58 +1,55 @@
-// @mixin exist($prop, $val) {
-//     @if ($val) {
-//         #{$prop}: $val;
-//     }
-// }
+.btn-ringsize {
+  @include flex-center;
+  gap: length(16);
+  padding: length(13) length(13) length(11);
+  @include w100;
+  @include setBgColor(transparent, $secondary);
+  @include border(solid, 2, $secondary);
+  @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(19.2, 12));
+  text-align: center;
+  text-transform: uppercase;
+  @include transitions;
 
-// @mixin position($t, $r, $b, $l) {
-//     @include exist(top, $t);
-//     @include exist(right, $r);
-//     @include exist(bottom, $b);
-//     @include exist(left, $l);
-// }
+  .icon {
+      @include flex-center;
+  }
 
+  @include hover {
+      @include setBgColor($secondary, $white);
 
-// .mainlist-link {
-//     position: relative;
-//     width: 140px;
-//     height: 50px;
-//     padding: 0;
-//     outline: 0;
-//     background-color: transparent;
-//     cursor: pointer;
-//     overflow: hidden;
-//     z-index: 1;
-//     border: 0;
-//     perspective: 100px;
-//     transition: all .3s ease-in-out;
+      svg {
+          path {
+              stroke: $white;
+          }
+      }
+  }
+}
 
-//     span {
-//         position: relative;
-//         @include flex-center;
-//         height: 100%;
-//         transform-style: preserve-3d;
-//         transition: all .3s ease-in-out;
+.btn-selectsize {
+  @include setBgColor($white, $secondary);
+  @include border(solid, 1, $inputBorder);
+  @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(14.38, 12));
+  padding: length(10);
+  height: length(48);
+  @include transitions;
+  
+  @include hover {
+    @include setBgColor($secondary, $white);
+  }
+}
 
-//         &::before {
-//             content: attr(data-text);
-//             @include position(100%, -3px, -100%, -3px);
-//             @include flex-center;
-//             color: white;
-//             transform: rotateX(-90deg);
-//         }
-//     }
-
-//     &::before,
-//     &::after,
-//     span::before,
-//     span::after {
-//         content: '';
-//         position: absolute;
-//         z-index: -1;
-//         transition: all .3s ease-in-out;
-//     }
-
-//     &:hover span {
-//         transform: rotateX(90deg) translateY(-100%);
-//     }
-// }
+.btn-select {
+  @include setBgColor($white, $secondary);
+  @include border(solid, 1, $inputBorder);
+  @include flex-center;
+  @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(14.38, 12));
+  padding: length(10);
+  @include transitions;
+  width: length(68);
+  height: length(48);
+  text-align: center;
+  
+  @include hover {
+    @include setBgColor($secondary, $white);
+  }
+}
