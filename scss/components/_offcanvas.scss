@@ -284,6 +284,10 @@
             padding: length(20);
 
             &-header {
+                @include breakpoint(mobile768) {
+                    max-width: 95%;
+                }
+
                 .selectringtitle {
                     color: $black;
                     @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
@@ -302,6 +306,10 @@
             }
 
             &-footer {
+                @include breakpoint(mobile768) {
+                    max-width: 95%;
+                }
+
                 .selectringtext {
                     color: $black;
                     @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
@@ -583,7 +591,22 @@
 }
 
 .selectsize {
+    width: length(500);
+    max-width: length(500);
+
     .offcanvas-body {
         max-height: 100%;
+        
+        .countryselect {
+            @include breakpoint(mobile768) {
+                max-width: 95%;
+            }
+        }
+
+        .selectbuttons {
+            .btn-selectsize{
+                width: length(212);
+            }
+        }
     }
 }

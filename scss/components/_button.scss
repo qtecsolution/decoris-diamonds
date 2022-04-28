@@ -11,17 +11,17 @@
   @include transitions;
 
   .icon {
-      @include flex-center;
+    @include flex-center;
   }
 
   @include hover {
-      @include setBgColor($secondary, $white);
+    @include setBgColor($secondary, $white);
 
-      svg {
-          path {
-              stroke: $white;
-          }
+    svg {
+      path {
+        stroke: $white;
       }
+    }
   }
 }
 
@@ -45,7 +45,7 @@
   @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(14.38, 12));
   padding: length(10);
   @include transitions;
-  width: length(68);
+  width: length(64);
   height: length(48);
   text-align: center;
   
