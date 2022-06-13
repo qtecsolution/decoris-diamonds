@@ -176,7 +176,7 @@
                             &-header {
                                 .megasubmenu-title {
                                     @include font-face($futuraBK, style('normal'), size(15), weight('medium'), line-height(22, 15));
-                                    color: $primary;
+                                    color: $megamenutitle;
                                     position: relative;
                                     letter-spacing: length(1.04);
                                     text-transform: uppercase;
