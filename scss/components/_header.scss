@@ -160,12 +160,12 @@
                         display: none;
                         @extend %animation;
                         @extend %slideUpIn;
+                        padding: length(48) length(48) length(100);
 
                         .megasubmenu {
                             width: 25%;
-                            padding: length(40) length(20);
                             @include flex-column;
-                            gap: length(15);
+                            gap: length(36);
                             @include h100;
                             text-align: left;
 
@@ -208,39 +208,96 @@
 
                                 .megasublist {
                                     @include list-vertical;
-                                    // margin-left: length(-10);
+                                    gap: length(24);
 
                                     &-link {
                                         @include flex-center-vert;
-                                        align-items: baseline;
-                                        padding: length(4) length(0);
-                                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(22, 15));
-                                        color: $footerText;
+                                        gap: length(16);
 
                                         .megaicon {
-                                            width: length(100);
-                                            height: length(30);
+                                            @include square(length(24));
+                                            @include flex-center;
                                             overflow: hidden;
+                                        }
 
-                                            @include breakpoint(desktop1169) {
-                                                width: length(70);
-                                            }
-
-                                            @include breakpoint(desktop1024) {
-                                                width: length(60);
-                                            }
+                                        .text {
+                                            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(22, 15));
+                                            color: $primary;
+                                            text-transform: uppercase;
                                         }
 
                                         @include hover {
-                                            color: $black;
-                                            font-weight: bold;
+                                            .text {
+                                                font-weight: bold;
+                                            }
+                                        }
+                                    }
+                                }
 
-                                            .megaicon {
-                                                svg {
-                                                    path {
-                                                        stroke: $black;
-                                                    }
-                                                }
+                                .menuicon {
+                                    width: length(380);
+                                    height: length(260);
+                                    @include flex-center;
+                                    overflow: hidden;
+
+                                    img {
+                                        @include wh100;
+                                    }
+                                }
+
+                                .textlist {
+                                    @include list-vertical;
+                                    gap: length(24);
+
+                                    &-link {
+                                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(22, 15));
+                                        color: $primary;
+                                        text-transform: uppercase;
+
+                                        @include hover {
+                                            font-weight: bold;
+                                        }
+                                    }
+                                }
+
+                                .ring-thumbnail {
+                                    @include square(length(260));
+                                    @include flex-center;
+                                    overflow: hidden;
+
+                                    img {
+                                        @include wh100;
+                                    }
+                                }
+
+                                .stylelist {
+                                    @include list-vertical;
+                                    gap: length(24);
+
+                                    &-link {
+                                        @include flex-center-vert;
+                                        gap: length(16);
+
+                                        .megaicon {
+                                            width: length(34);
+                                            height: length(8);
+                                            @include flex-center;
+                                            overflow: hidden;
+
+                                            svg {
+                                                @include wh100;
+                                            }
+                                        }
+
+                                        .text {
+                                            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(22, 15));
+                                            color: $primary;
+                                            text-transform: uppercase;
+                                        }
+
+                                        @include hover {
+                                            .text {
+                                                font-weight: bold;
                                             }
                                         }
                                     }
