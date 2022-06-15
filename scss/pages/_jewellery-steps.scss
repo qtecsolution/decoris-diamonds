@@ -1320,33 +1320,70 @@
                 @include list-horizontal;
                 background: $tablistBg;
                 padding: length(6);
+                gap: length(4);
 
                 &-link {
+                    @include transparent-button;
                     padding: length(12) length(32);
+                    @include flex-center;
+                    gap: length(10);
+                    @include setBgColor(transparent, $primary);
+                    text-align: center;
 
                     @include breakpoint(tab992) {
                         padding: length(12) length(40);
                     }
 
-                    display: inline-block;
-                    @include setBgColor(transparent, $primary);
-                    text-align: center;
-                    @include font-face($futuraBK, style('normal'), size(10), weight('normal'), line-height(20, 10));
+                    .text {
+                        color: inherit;
+                        @include font-face($futuraBK, style('normal'), size(10), weight('normal'), line-height(20, 10));
 
-                    @include breakpoint(mobile360) {
-                        @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                        @include breakpoint(mobile360) {
+                            @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                        }
+    
+                        @include breakpoint(mobile768) {
+                            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                        }
                     }
 
-                    @include breakpoint(mobile768) {
-                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                    .help {
+                        @include square(length(16));
+                        @include flex-center;
+                        @include circle;
+                        overflow: hidden;
+
+                        svg {
+                            @include wh100;
+
+                            path {
+                                fill: $primary;
+                            }
+                        }
                     }
 
                     &:hover:not(.active) {
                         @include setBgColor(lighten($secondary, 25%), $white);
+
+                        .help {
+                            svg {
+                                path {
+                                    fill: $white;
+                                }
+                            }
+                        }
                     }
 
                     &.active {
                         @include setBgColor($secondary, $white);
+
+                        .help {
+                            svg {
+                                path {
+                                    fill: $white;
+                                }
+                            }
+                        }
                     }
                 }
             }

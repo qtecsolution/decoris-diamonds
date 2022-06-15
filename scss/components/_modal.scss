@@ -525,3 +525,108 @@
         }
     }
 }
+
+.filtermodal {
+    .modal-content {
+        @include radius(8);
+    }
+
+    .modal-body {
+        padding: length(0) length(24) length(24);
+
+        @include breakpoint(tab992) {
+            padding: length(0) length(48) length(48);
+        }
+
+        .contents {
+            @include flex-column;
+            gap: length(24);
+
+            @include breakpoint(tab992) {
+                gap: length(48);
+            }
+
+            &-header {
+                @include flex-column;
+                gap: length(18);
+
+                .content-title {
+                    color: $black;
+                    @include font-face($futuraBK, style('normal'), size(24), weight('normal'), line-height(24, 24));
+                }
+
+                .content {
+                    &-text {
+                        color: $primary;
+                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                        text-align: justify;
+                    }
+                }
+            }
+
+            .divider {
+                @include w100;
+                height: length(1);
+                background: $dividerBg;
+            }
+
+            &-body {
+                @include flex-center-column;
+                gap: length(16);
+                text-align: center;
+
+                .help-title {
+                    color: $primary;
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
+                }
+
+                .helplist {
+                    @include list-horizontal;
+                    justify-content: center;
+                    gap: length(30);
+
+                    &-link {
+                        @include flex-center-vert;
+                        gap: length(14);
+
+                        .icon {
+                            @include square(length(20));
+                            @include flex-center;
+                            overflow: hidden;
+
+                            svg {
+                                @include wh100;
+                            }
+                        }
+
+                        .text {
+                            color: $primary;
+                            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(19.5, 15));
+                        }
+
+                        @include hover {
+                            .icon {
+                                svg {
+                                    path {
+                                        fill: $black;
+                                    }
+                                }
+
+                                .call {
+                                    path {
+                                        fill: none;
+                                        stroke: $black;
+                                    }
+                                }
+                            }
+
+                            .text {
+                                color: $black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
