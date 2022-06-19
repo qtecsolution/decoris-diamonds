@@ -841,26 +841,41 @@
 
     .stepmenunav {
         @include flex-center;
-        gap: length(80);
         @include w100;
-
-        @include breakpoint(desktop1399) {
-            gap: length(48);
-        }
-
-        @include breakpoint(desktop1199) {
-            gap: length(24);
-        }
-
-        @include breakpoint(phone767) {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: length(16);
-        }
 
         &-link {
             @include flex-center-vert;
             gap: length(16);
+            position: relative;
+            padding: length(8) length(32);
+            flex: 1 0 33.33%;
+            @include border(solid, 1, $textStepLink);
+
+            &:not(:last-of-type):before {
+                border-width: length(24);
+                margin-top: length(-24);
+                border-color: transparent;
+                border-left-color: $textStepLink;
+            }
+
+            &:not(:last-of-type):after {
+                border-width: length(24);
+                margin-top: length(-24);
+                border-color: transparent;
+                border-left-color: $white;
+            }
+
+            &::before {
+                left: 100%;
+                top: 50%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                z-index: 9;
+            }
 
             .counter {
                 color: $textStepLink;
@@ -874,6 +889,10 @@
                 @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(19, 16));
                 color: $textStepLink;
                 letter-spacing: length(1.04);
+
+                @include breakpoint(phone767) {
+                    display: none;
+                }
             }
 
             .texticon {
@@ -886,6 +905,12 @@
                     letter-spacing: length(1.04);
                     @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(18, 14));
                     color: $textStepLink;
+
+                    @include breakpoint(phone767) {
+                        span {
+                            display: none;
+                        }
+                    }
                 }
 
                 .icon {
@@ -893,47 +918,24 @@
                 }
             }
 
-            &:hover:not(.active) {
-                .counter {
-                    color: $black;
-                    border-color: $black;
-                }
-
-                .texticon {
-                    .text {
-                        color: $black;
-                    }
-
-                    .icon {
-                        svg {
-                            path {
-                                stroke: $black;
-                            }
-                        }
-                    }
-                }
+            &:first-child {
+                border-radius: length(4) 0 0 length(4);
             }
 
-            &.active {
-                .counter {
-                    color: $black;
-                    border-color: $black;
-                }
+            &:last-child {
+                border-radius: 0 length(4) length(4) 0;
+            }
 
-                .texticon {
-                    .text {
-                        color: $black;
-                    }
+            &.currentstep {
+                background: $primary;
+                color: $white;
+                border-color: $primary;
 
-                    .icon {
-                        svg {
-                            path {
-                                stroke: $black;
-                            }
-                        }
-                    }
+                &::before {
+                    border-left-color: $primary;
                 }
             }
+            
         }
     }
 }
@@ -1714,6 +1716,10 @@
         .text {
             @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20.46, 12));
             color: $primary;
+
+            @include breakpoint(laptop1200) {
+                @include font-face($futuraBK, style('normal'), size(16), weight('normal'), line-height(20.46, 16));
+            }
         }
 
         .icon {
