@@ -1,0 +1,321 @@
+
+.setting-navigation {
+  z-index:500;
+  @include flex-center;
+  height: length(36);
+
+  @media(min-width:767.98px) {
+    height: length(44);
+  }
+
+  @media(min-width:1023.98px) {
+    height: length(60);
+
+    @include hover {
+      z-index:50001;
+    }
+  }
+
+  @media(max-width:575.9px){
+    justify-content: space-around;
+  }
+}
+
+.setting-item{
+  @include border(solid, 1, $textStepLink);
+  flex: 1 0 33.33%;
+  height: 100%;
+  @include flex-center;
+  position:relative;
+
+  @media(min-width:1024px)and (max-width:1439.98px){
+    padding: 0 length(50) 0 length(90);
+    
+    &:first-child{
+      padding-left: length(70);
+    }
+  }
+
+  .stepinfo {
+    @include flex-center-vert;
+
+    @include breakpoint(mobile768) {
+      gap: length(10);
+    }
+
+    .icon {
+      margin-right: length(10);
+
+      @include breakpoint(mobile768) {
+        margin-right: length(0);
+      }
+    }
+  }
+
+  .step-number {
+    position:absolute;
+    top: length(11);
+    left: length(50);
+    @include square(length(37));
+    @include border(solid, 1, $textStepLink);
+    @include flex-center;
+    @include radius(20);
+    font-family: $futuraBK;
+    font-size: length(22);
+    padding-top: length(1);
+    color: $textStepLink;
+  }
+
+  .stepinfo {
+    .text {
+      color: $textStepLink;
+    }
+  }
+
+  &.current {
+    .step-number {
+      color: $white;
+      border-color: $white;
+    }
+  }
+}
+
+body.iexplorer .setting-item{
+  flex: 1 0 33.5%;
+}
+
+@media(max-width:1023.98px){
+  .setting-item span.step-number{
+    display: none;
+  }
+}
+
+.setting-item:first-child{
+  border-radius: length(4) 0 0 length(4);
+}
+
+.setting-item:first-child.opened{
+  border-bottom-left-radius:0
+}
+
+.setting-item:first-child span.step-number{
+  left: length(30);
+}
+
+.setting-item:last-child{
+  border-radius:0 length(4) length(4) 0;
+}
+
+.setting-item button,.setting-item span{
+  font-size: length(12);
+  margin-left: length(10);
+
+  @include breakpoint(mobile768) {
+    font-size: length(14);
+    letter-spacing: length(.3);
+  }
+}
+
+@media(max-width:375px){
+  .setting-item button,
+  .setting-item p{
+    font-size: length(12);
+  }
+}
+
+@media(max-width:640px){
+  .setting-item span{
+    // max-width: length(80);
+    white-space:normal;
+    text-align:center;
+  }
+}
+
+.setting-item .shopicon{
+  position:absolute;
+  right: 0;
+  top: length(7);
+}
+
+@media(max-width:767.8px){
+  .setting-item .shopicon{
+    zoom: .7;
+  }
+}
+
+@media(min-width:768px){
+  .setting-item .shopicon{
+    top: length(3)
+  }
+}
+
+@media(min-width:1024px){
+  .setting-item .shopicon{
+    top: length(11);
+  }
+}
+
+.setting-item:last-of-type .shopicon{
+  margin-right: length(4)
+}
+
+@media(max-width:375px){
+  .setting-item:not(.active) .shopicon{
+    display:none;
+  }
+}
+
+.setting-item:before,.setting-item:not(:last-of-type):after{
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: 9;
+}
+.setting-item:not(:last-of-type):after{
+  border-color: transparent;
+  border-left-color: $white;
+  border-width: length(17);
+  margin-top: length(-17);
+}
+
+@media(min-width:767.98px){
+  .setting-item:not(:last-of-type):after{
+    border-width: length(22);
+    margin-top: length(-22);
+  }
+}
+
+@media(min-width:1023.98px){
+  .setting-item:not(:last-of-type):after{
+    border-width: length(30);
+    margin-top: length(-30);
+  }
+}
+
+.setting-item:not(:last-of-type):before{
+  border-color:transparent;
+  border-left-color:$textStepLink;
+  border-width: length(18);
+  margin-top: length(-18);
+}
+
+@media(min-width:767.98px){
+  .setting-item:not(:last-of-type):before{
+    border-width: length(23);
+    margin-top: length(-23);
+  }
+}
+
+@media(min-width:1023.98px){
+  .setting-item:not(:last-of-type):before{
+    border-width: length(31);
+    margin-top: length(-31);
+  }
+}
+
+.setting-item span {
+  margin-bottom: 0;
+}
+
+.setting-item img{
+  max-width:100%;
+}
+
+.setting-item button {
+  border:none;
+  background-color:transparent;
+  cursor:pointer
+}
+
+.setting-item button span {
+  cursor:pointer;
+}
+.setting-item.active:hover>span,
+.setting-item button:hover>span {
+  text-shadow: 0 0;
+}
+.setting-item .step3-total {
+  display:inline-flex;
+  align-items:start;
+  justify-content:space-between;
+  flex-direction:column;
+  height: length(25);
+  vertical-align:middle;
+}
+
+.setting-item .step3-total span{
+  font-family:$futuraBK;
+  font-size: length(12);
+  letter-spacing: length(.5);
+  line-height: length(14);
+  margin: 0;
+  display:block;
+}
+
+.setting-item .step3-total p.addToBag{
+  color:#939393
+}
+
+.setting-item.current{
+  cursor:pointer;
+  background: $primary;
+  color: $white;
+  border-color: $primary;
+}
+
+.setting-item.current button{
+  color:$white;
+}
+
+.setting-item.current:not(:last-of-type):after{
+  border-left-color:$primary;
+}
+
+.setting-item.current .step-number{
+  border-width: length(2);
+  border-color: $white;
+}
+
+.setting-item.current .text {
+  color:$white;
+}
+
+.setting-item.current .icon {
+  svg {
+    path {
+      stroke: $white;
+    }
+  }
+}
+
+.setting-item.opened{
+  @include setBgColor($primaryBg, $primary);
+  border-color: $textStepLink;
+  border-bottom-color:transparent;
+}
+
+.setting-item.opened:not(:last-of-type):after{
+  border-left-color: $primaryBg;
+}
+
+.setting-item.opened span{
+  color: $primary;
+}
+
+.setting-item.active.opened .setting-popup{
+  display: block;
+  border: 1px solid;
+}
+
+.setting-item.active{
+  cursor:pointer
+}
+
+.setting-item.active .step-number{
+  @include setBgColor($primary, $white);
+}

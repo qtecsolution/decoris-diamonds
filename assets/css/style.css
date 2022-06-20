@@ -6366,6 +6366,380 @@ polygon {
   cursor: pointer;
 }
 
+.setting-navigation {
+  z-index: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 2.25rem;
+}
+
+@media (min-width: 767.98px) {
+  .setting-navigation {
+    height: 2.75rem;
+  }
+}
+
+@media (min-width: 1023.98px) {
+  .setting-navigation {
+    height: 3.75rem;
+  }
+  .setting-navigation:not([disabled]):hover {
+    z-index: 50001;
+  }
+}
+
+@media (max-width: 575.9px) {
+  .setting-navigation {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.setting-item {
+  border: solid 0.0625rem #B7B7B7;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 33.33%;
+          flex: 1 0 33.33%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+  .setting-item {
+    padding: 0 3.125rem 0 5.625rem;
+  }
+  .setting-item:first-child {
+    padding-left: 4.375rem;
+  }
+}
+
+.setting-item .stepinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 48rem) {
+  .setting-item .stepinfo {
+    gap: 0.625rem;
+  }
+}
+
+.setting-item .stepinfo .icon {
+  margin-right: 0.625rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .setting-item .stepinfo .icon {
+    margin-right: 0rem;
+  }
+}
+
+.setting-item .step-number {
+  position: absolute;
+  top: 0.6875rem;
+  left: 3.125rem;
+  height: 2.3125rem;
+  width: 2.3125rem;
+  border: solid 0.0625rem #B7B7B7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 1.25rem;
+  border-radius: 1.25rem;
+  font-family: "Futura Bk";
+  font-size: 1.375rem;
+  padding-top: 0.0625rem;
+  color: #B7B7B7;
+}
+
+.setting-item .stepinfo .text {
+  color: #B7B7B7;
+}
+
+.setting-item.current .step-number {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+body.iexplorer .setting-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 33.5%;
+          flex: 1 0 33.5%;
+}
+
+@media (max-width: 1023.98px) {
+  .setting-item span.step-number {
+    display: none;
+  }
+}
+
+.setting-item:first-child {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.setting-item:first-child.opened {
+  border-bottom-left-radius: 0;
+}
+
+.setting-item:first-child span.step-number {
+  left: 1.875rem;
+}
+
+.setting-item:last-child {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.setting-item button, .setting-item span {
+  font-size: 0.75rem;
+  margin-left: 0.625rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .setting-item button, .setting-item span {
+    font-size: 0.875rem;
+    letter-spacing: 0.01875rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .setting-item button,
+  .setting-item p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .setting-item span {
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+.setting-item .shopicon {
+  position: absolute;
+  right: 0;
+  top: 0.4375rem;
+}
+
+@media (max-width: 767.8px) {
+  .setting-item .shopicon {
+    zoom: .7;
+  }
+}
+
+@media (min-width: 768px) {
+  .setting-item .shopicon {
+    top: 0.1875rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .setting-item .shopicon {
+    top: 0.6875rem;
+  }
+}
+
+.setting-item:last-of-type .shopicon {
+  margin-right: 0.25rem;
+}
+
+@media (max-width: 375px) {
+  .setting-item:not(.active) .shopicon {
+    display: none;
+  }
+}
+
+.setting-item:before, .setting-item:not(:last-of-type):after {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.setting-item:not(:last-of-type):after {
+  border-color: transparent;
+  border-left-color: #ffffff;
+  border-width: 1.0625rem;
+  margin-top: -1.0625rem;
+}
+
+@media (min-width: 767.98px) {
+  .setting-item:not(:last-of-type):after {
+    border-width: 1.375rem;
+    margin-top: -1.375rem;
+  }
+}
+
+@media (min-width: 1023.98px) {
+  .setting-item:not(:last-of-type):after {
+    border-width: 1.875rem;
+    margin-top: -1.875rem;
+  }
+}
+
+.setting-item:not(:last-of-type):before {
+  border-color: transparent;
+  border-left-color: #B7B7B7;
+  border-width: 1.125rem;
+  margin-top: -1.125rem;
+}
+
+@media (min-width: 767.98px) {
+  .setting-item:not(:last-of-type):before {
+    border-width: 1.4375rem;
+    margin-top: -1.4375rem;
+  }
+}
+
+@media (min-width: 1023.98px) {
+  .setting-item:not(:last-of-type):before {
+    border-width: 1.9375rem;
+    margin-top: -1.9375rem;
+  }
+}
+
+.setting-item span {
+  margin-bottom: 0;
+}
+
+.setting-item img {
+  max-width: 100%;
+}
+
+.setting-item button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.setting-item button span {
+  cursor: pointer;
+}
+
+.setting-item.active:hover > span,
+.setting-item button:hover > span {
+  text-shadow: 0 0;
+}
+
+.setting-item .step3-total {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 1.5625rem;
+  vertical-align: middle;
+}
+
+.setting-item .step3-total span {
+  font-family: "Futura Bk";
+  font-size: 0.75rem;
+  letter-spacing: 0.03125rem;
+  line-height: 0.875rem;
+  margin: 0;
+  display: block;
+}
+
+.setting-item .step3-total p.addToBag {
+  color: #939393;
+}
+
+.setting-item.current {
+  cursor: pointer;
+  background: #333333;
+  color: #ffffff;
+  border-color: #333333;
+}
+
+.setting-item.current button {
+  color: #ffffff;
+}
+
+.setting-item.current:not(:last-of-type):after {
+  border-left-color: #333333;
+}
+
+.setting-item.current .step-number {
+  border-width: 0.125rem;
+  border-color: #ffffff;
+}
+
+.setting-item.current .text {
+  color: #ffffff;
+}
+
+.setting-item.current .icon svg path {
+  stroke: #ffffff;
+}
+
+.setting-item.opened {
+  background: #FDF9F2;
+  color: #333333;
+  border-color: #B7B7B7;
+  border-bottom-color: transparent;
+}
+
+.setting-item.opened:not(:last-of-type):after {
+  border-left-color: #FDF9F2;
+}
+
+.setting-item.opened span {
+  color: #333333;
+}
+
+.setting-item.active.opened .setting-popup {
+  display: block;
+  border: 1px solid;
+}
+
+.setting-item.active {
+  cursor: pointer;
+}
+
+.setting-item.active .step-number {
+  background: #333333;
+  color: #ffffff;
+}
+
 /**=====================================================
                     JEWEL-STEPS
 =====================================================**/
@@ -12072,159 +12446,8 @@ polygon {
 
 @media screen and (max-width: 47.9375rem) {
   .stepmenu .stepnavigation {
-    max-width: 50%;
     margin-inline: auto;
   }
-}
-
-@media screen and (max-width: 30rem) {
-  .stepmenu .stepnavigation {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 25rem) {
-  .stepmenu .stepnavigation {
-    max-width: 75%;
-  }
-}
-
-.stepmenu .stepmenunav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-}
-
-.stepmenu .stepmenunav-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-  position: relative;
-  padding: 0.5rem 2rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 33.33%;
-          flex: 1 0 33.33%;
-  border: solid 0.0625rem #B7B7B7;
-}
-
-.stepmenu .stepmenunav-link:not(:last-of-type):before {
-  border-width: 1.5rem;
-  margin-top: -1.5rem;
-  border-color: transparent;
-  border-left-color: #B7B7B7;
-}
-
-.stepmenu .stepmenunav-link:not(:last-of-type):after {
-  border-width: 1.5rem;
-  margin-top: -1.5rem;
-  border-color: transparent;
-  border-left-color: #ffffff;
-}
-
-.stepmenu .stepmenunav-link::before {
-  left: 100%;
-  top: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  z-index: 9;
-}
-
-.stepmenu .stepmenunav-link .counter {
-  color: #B7B7B7;
-  height: 1.875rem;
-  width: 1.875rem;
-  border-radius: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  border: solid 0.0625rem #B7B7B7;
-  padding: 0.5rem;
-  overflow: hidden;
-  font-family: "Futura Bk";
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.1875;
-  color: #B7B7B7;
-  letter-spacing: 0.065rem;
-}
-
-@media screen and (max-width: 47.9375rem) {
-  .stepmenu .stepmenunav-link .counter {
-    display: none;
-  }
-}
-
-.stepmenu .stepmenunav-link .texticon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.625rem;
-  width: calc(100% - 2.875rem);
-}
-
-.stepmenu .stepmenunav-link .texticon .text {
-  width: calc(100% - 0.625rem);
-  letter-spacing: 0.065rem;
-  font-family: "Futura Bk";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1.28571;
-  color: #B7B7B7;
-}
-
-@media screen and (max-width: 47.9375rem) {
-  .stepmenu .stepmenunav-link .texticon .text span {
-    display: none;
-  }
-}
-
-.stepmenu .stepmenunav-link .texticon .icon {
-  margin-top: -0.25rem;
-}
-
-.stepmenu .stepmenunav-link:first-child {
-  border-radius: 0.25rem 0 0 0.25rem;
-}
-
-.stepmenu .stepmenunav-link:last-child {
-  border-radius: 0 0.25rem 0.25rem 0;
-}
-
-.stepmenu .stepmenunav-link.currentstep {
-  background: #333333;
-  color: #ffffff;
-  border-color: #333333;
-}
-
-.stepmenu .stepmenunav-link.currentstep::before {
-  border-left-color: #333333;
 }
 
 .stepbreadcrumb {
