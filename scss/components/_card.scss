@@ -871,16 +871,24 @@
 
 .card-vertical {
     @include flex-center-column;
-    gap: length(12);
+    gap: length(20);
     @include flex-center;
-    width: calc((100% / 2) - .5rem);
     @include transitions;
+    @include w100;
+
+    @include breakpoint(mobile575) {
+        width: calc((100% / 2) - .5rem);
+    }
 
     @include breakpoint(mobile768) {
-        width: calc((100% / 3) - 1.5rem);
+        width: calc((100% / 2) - 1.5rem);
     }
 
     @include breakpoint(tab992) {
+        width: calc((100% / 3) - 1.5rem);
+    }
+
+    @include breakpoint(laptop1200) {
         width: calc((100% / 4) - 1.5rem);
     }
 
@@ -890,10 +898,12 @@
 
     &-header {
         position: relative;
+        @include w100;
 
         .card-thumbnail {
             overflow: hidden;
             position: relative;
+            @include w100;
             height: length(350);
 
             img {
@@ -939,20 +949,39 @@
     }
 
     &-body {
-        @include flex-center-column;
-        gap: length(16);
+        @include flex-column;
+        gap: length(20);
+        @include w100;
 
         .cardinfo {
-            @include flex-center-column;
+            @include flex-center-between;
+            align-items: flex-start;
             gap: length(8);
-            text-align: center;
+            @include w100;
 
-            .title {
-                @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
-                color: $primary;
+            .info {
+                @include flex-column;
+                gap: length(18);
+
+                &-single {
+                    @include flex-column;
+                    gap: length(4);
+                }
+
+                &-title {
+                    color: $secondary;
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
+                    text-transform: capitalize;
+                }
+
+                &-text {
+                    color: $primary;
+                    @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
+                    text-transform: uppercase;
+                }
             }
 
-            .price {
+            .title {
                 @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
                 color: $primary;
             }
@@ -960,6 +989,16 @@
             .size {
                 @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
                 color: $primary;
+            }
+        }
+
+        .price {
+            color: $primary;
+            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(24, 15));
+            letter-spacing: length(-0.32);
+            
+            @include breakpoint(tab992) {
+                @include font-face($futuraBK, style('normal'), size(24), weight('normal'), line-height(32, 24));
             }
         }
 
@@ -975,6 +1014,7 @@
                 @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(19.2, 12));
                 text-align: center;
                 @include transitions;
+                width: 50%;
             }
 
             .btn-bordered {
