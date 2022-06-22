@@ -14,14 +14,23 @@
             position: relative;
             @include w100;
 
+
+
             @include breakpoint(tab992) {
                 width: 50%;
+                left: length(104);
             }
 
             .slidernavigation {
                 position: absolute;
-                top: length(42);
-                left: length(30);
+                top: 100%;
+                left: 0;
+                bottom: 0;
+
+                @include breakpoint(tab992) {
+                    top: length(42);
+                    left: length(-104);
+                }
             }
 
             .gallery-main {
@@ -33,7 +42,12 @@
 
                         @include breakpoint(phone414) {
                             @include w100;
-                            height: length(400);
+                            height: length(200) !important;
+                        }
+
+                        @include breakpoint(tab992) {
+                            width: length(400) !important;
+                            height: length(400) !important;
                         }
 
                         img {
@@ -49,14 +63,11 @@
                     order: -1;
 
                     .swiper-wrapper {
-                        width: length(100);
-                        height: length(440);
                         @include flex-center-column;
                         gap: length(10);
 
                         @include breakpoint(phone575) {
                             width: length(64);
-                            height: length(296);
                         }
 
                         .swiper-slide {
@@ -64,6 +75,9 @@
                             background: rgba($black, 0.1);
                             @include border(solid, 0.25, transparent);
                             @include flex-center;
+                            width: length(64);
+                            height: length(71) !important;
+                            overflow: hidden;
 
                             img {
                                 transition: 0.3s;

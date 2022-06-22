@@ -9,6 +9,7 @@
   text-align: center;
   text-transform: uppercase;
   @include transitions;
+  @include radius(4);
 
   .icon {
     @include flex-center;
@@ -28,6 +29,7 @@
 .btn-selectsize {
   @include setBgColor($white, $secondary);
   @include border(solid, 1, $inputBorder);
+  @include radius(4);
   @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(14.38, 12));
   padding: length(10);
   height: length(48);
@@ -41,6 +43,7 @@
 .btn-select {
   @include setBgColor($white, $secondary);
   @include border(solid, 1, $inputBorder);
+  @include radius(4);
   @include flex-center;
   @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(14.38, 12));
   padding: length(10);
@@ -52,4 +55,12 @@
   @include hover {
     @include setBgColor($secondary, $white);
   }
+}
+
+button {
+  @include radius(4);
+}
+
+.btn-change {
+  @include radius(0);
 }

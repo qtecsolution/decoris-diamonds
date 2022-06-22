@@ -196,8 +196,10 @@
                                 align-items: flex-start;
 
                                 .menuicon {
-                                    width: length(50);
-                                    max-width: 30%;
+                                    width: length(48);
+                                    height: length(48);
+                                    @include flex-center;
+                                    margin-top: length(-8);
                                     overflow: hidden;
 
                                     img {
@@ -209,10 +211,14 @@
                                 .megasublist {
                                     @include list-vertical;
                                     gap: length(24);
+                                    width: calc(100% - 3rem);
 
                                     &-link {
                                         @include flex-center-vert;
                                         gap: length(16);
+                                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(22, 15));
+                                        color: $footerText;
+                                        text-transform: uppercase;
 
                                         .megaicon {
                                             @include square(length(24));
@@ -221,29 +227,33 @@
                                         }
 
                                         .text {
-                                            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(22, 15));
-                                            color: $primary;
-                                            text-transform: uppercase;
+                                            font-weight: inherit;
+                                            color: inherit;
+                                            text-transform: inherit;
                                         }
 
                                         @include hover {
+                                            color: $black;
+                                            font-weight: bold;
+
                                             .text {
-                                                font-weight: bold;
+                                                font-weight: inherit;
+                                                color: inherit;
                                             }
                                         }
                                     }
                                 }
 
-                                .menuicon {
-                                    width: length(380);
-                                    height: length(260);
-                                    @include flex-center;
-                                    overflow: hidden;
+                                // .menuicon {
+                                //     width: length(380);
+                                //     height: length(260);
+                                //     @include flex-center;
+                                //     overflow: hidden;
 
-                                    img {
-                                        @include wh100;
-                                    }
-                                }
+                                //     img {
+                                //         @include wh100;
+                                //     }
+                                // }
 
                                 .textlist {
                                     @include list-vertical;
@@ -251,10 +261,11 @@
 
                                     &-link {
                                         @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(22, 15));
-                                        color: $primary;
+                                        color: $footerText;
                                         text-transform: uppercase;
 
                                         @include hover {
+                                            color: $black;
                                             font-weight: bold;
                                         }
                                     }
@@ -277,6 +288,9 @@
                                     &-link {
                                         @include flex-center-vert;
                                         gap: length(16);
+                                        @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(22, 15));
+                                        color: $footerText;
+                                        text-transform: uppercase;
 
                                         .megaicon {
                                             width: length(34);
@@ -290,14 +304,18 @@
                                         }
 
                                         .text {
-                                            @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(22, 15));
-                                            color: $primary;
-                                            text-transform: uppercase;
+                                            text-transform: inherit;
+                                            color: inherit;
+                                            font-weight: inherit;
                                         }
 
                                         @include hover {
+                                            color: $black;
+                                            font-weight: bold;
+
                                             .text {
-                                                font-weight: bold;
+                                                color: inherit;
+                                                font-weight: inherit;
                                             }
                                         }
                                     }
@@ -355,7 +373,7 @@
                         top: 100%;
                         left: 0;
                         @include w100;
-                        min-width: length(200);
+                        min-width: length(230);
                         max-width: length(1600);
                         background: $white;
                         padding: length(10);
@@ -373,7 +391,7 @@
                                     padding: length(5) length(16);
                                     @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(22, 15));
                                     color: $footerText;
-                                    @include transitions;
+                                    text-transform: uppercase;
 
                                     @include hover {
                                         color: $black;

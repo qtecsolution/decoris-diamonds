@@ -15,7 +15,7 @@ var galleryMain = new Swiper(".gallery-main", {
     // slidesPerView: 1,
     preventInteractionOnTransition: true,
     effect: 'fade',
-        fadeEffect: {
+    fadeEffect: {
         crossFade: true
     },
     thumbs: {

@@ -1,0 +1,184 @@
+.add-details {
+  padding: length(40) length(0) length(48);
+
+  .diamond-details {
+    &-header {
+      .diamond-details-title {
+        @include font-face($playfairDisplay, style('normal'), size(22), weight('normal'), line-height(30, 22));
+        letter-spacing: length(0.6);
+        color: $black;
+      }
+    }
+
+    &-body {
+      .detailslist {
+        &-item {
+          @include flex-center-between;
+          padding: length(10);
+
+          &:nth-child(even) {
+            background: $listitembg;
+          }
+
+          .title {
+            color: $secondary;
+            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(24, 14));
+          }
+
+          .value {
+            @include flex-center-vert;
+            gap: length(8);
+            color: $secondary;
+            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(24, 14));
+
+            .icon {
+              @include square(length(16));
+              @include flex-center;
+              overflow: hidden;
+
+              svg {
+                @include wh100;
+                cursor: pointer;
+
+                path {
+                  fill: $secondary;
+                }
+              }
+
+              @include hover {
+                svg {
+                  path {
+                    fill: rgba($secondary, .4);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .diamond-descript {
+    @include flex-column;
+    gap: length(36);
+
+    .descriptions {
+      @include flex-column;
+      gap: length(12);
+
+      &-header {
+        .descriptions-title {
+          @include font-face($playfairDisplay, style('normal'), size(22), weight('normal'), line-height(30, 22));
+          letter-spacing: length(0.6);
+          color: $black;
+        }
+      }
+      
+      &-body {
+        @include flex-column;
+        gap: length(20);
+
+        .textinfo {
+          max-width: length(510);
+        }
+
+        .descriptionsinfo {
+          max-width: length(510);
+          @include flex-center;
+        }
+
+        .descriptions-text {
+          color: $secondary;
+          @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(24, 14));
+          
+          strong {
+            font: inherit;
+            font-weight: 600;
+            color: $primary;
+          }
+        }
+
+        .descriptions-figure {
+          width: length(115);
+          height: length(140);
+          @include flex-center;
+          margin-inline: auto;
+          overflow: hidden;
+
+          img {
+            @include wh100;
+            object-fit: cover;
+          }
+        }
+
+        .clarity-figure {
+          width: length(300);
+          height: length(160);
+          @include flex-center;
+          margin-inline: auto;
+          overflow: hidden;
+
+          img {
+            @include wh100;
+            object-fit: cover;
+          }
+        }
+
+        .cut-figure {
+          width: length(300);
+          height: length(200);
+          @include flex-center;
+          margin-inline: auto;
+          overflow: hidden;
+
+          img {
+            @include wh100;
+            object-fit: cover;
+          }
+        }
+
+        .colorlist {
+          @include list-horizontal;
+          flex-wrap: wrap;
+
+          &-item {
+            @include flex-center-column;
+            gap: length(8);
+            // width: 11.1111%;
+
+            .colorlist-thumb {
+              @include border(solid, 1, transparent);
+              border-left-color: $dividerBg;
+              @include square(length(60));
+              @include flex-center;
+              overflow: hidden;
+
+              img {
+                @include wh100;
+                object-fit: contain;
+              }
+            }
+
+            .colorname {
+              color: $secondary;
+              @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(24, 14));
+            }
+
+            &:first-child {
+              .colorlist-thumb {
+                border-left-color: transparent;
+              }
+            }
+
+            &.active {
+              .colorlist-thumb {
+                border-color: $black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
