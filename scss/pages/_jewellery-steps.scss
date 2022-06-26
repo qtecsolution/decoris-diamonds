@@ -1390,6 +1390,7 @@
 
     .filter {
         .btn-filter {
+            @include radius(0);
             @include transparent-button;
             color: $primary;
             @include font-face($futuraBK, style('normal'), size(15), weight('normal'), line-height(25.58, 15));
@@ -1409,6 +1410,10 @@
         @include flex-center-vert;
 
         @include breakpoint(mobile480) {
+            width: length(240);
+        }
+
+        @include breakpoint(laptop1400) {
             width: length(336);
         }
 
@@ -1634,6 +1639,76 @@
 
             svg {
                 @include transitiontransform;
+            }
+        }
+    }
+}
+
+.filterteditems {
+    padding: length(32) length(0) length(48);
+
+    @include breakpoint(tab992) {
+        padding: length(36) length(0) length(48);
+    }
+
+    .filterbadges {
+        @include flex-center-vert;
+        gap: length(8);
+        flex-wrap: wrap;
+        max-width: length(400);
+
+        .badge-filter {
+            width: length(94);
+            @include border(solid, 1, $rangeValueBorder);
+            @include radius(4);
+            padding: length(2) length(8);
+            @include flex-center;
+            gap: length(8);
+
+            .text {
+                color: $primary;
+                @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                width: calc(100% - 0.75rem);
+            }
+
+            .remove {
+                @include square(length(12));
+                @include flex-center;
+                overflow: hidden;
+
+                svg {
+                    @include wh100;
+                    @include transitiontransform;
+                }
+                
+                @include hover {
+                    cursor: pointer;
+
+                    svg {
+                        @include transform(rotate(90deg));
+
+                        path {
+                            stroke: $textdanger;
+                        }
+                    }
+                }
+            }
+        }
+
+        .clearall {
+            padding-left: length(16);
+
+            .badge-clear {
+                display: inline-block;
+                color: $primary;
+                @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                @include border-single(bottom, solid, 1, $secondary);
+                @include transitions;
+    
+                @include hover {
+                    border-color: transparent;
+                    cursor: pointer;
+                }
             }
         }
     }

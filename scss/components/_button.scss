@@ -57,10 +57,15 @@
   }
 }
 
-button {
+.btn-card,
+.findmore-link,
+.btn-addtocart,
+.btn-checks,
+.btn-filter,
+.btn-shop,
+.btn-hero,
+.btn-checkout,
+.btn-view,
+.btn-submit {
   @include radius(4);
-}
-
-.btn-change {
-  @include radius(0);
 }
