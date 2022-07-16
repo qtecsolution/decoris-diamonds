@@ -39,15 +39,20 @@
                         @include w100;
                         background: rgba($black, 0.1);
                         border: none;
+                        width: length(480) !important;
+                        height: length(480) !important;
 
-                        @include breakpoint(phone414) {
-                            @include w100;
-                            height: length(200) !important;
+                        @include breakpoint(desktop1366) {
+                            width: length(400) !important;
+                            height: length(400) !important;
                         }
-
-                        @include breakpoint(tab992) {
-                            width: length(480) !important;
-                            height: length(480) !important;
+                        @include breakpoint(desktop1200) {
+                            width: length(320) !important;
+                            height: length(320) !important;
+                        }
+                        @include breakpoint(tablet991) {
+                            width: 100% !important;
+                            height: 100% !important;
                         }
 
                         img {
@@ -101,7 +106,10 @@
 
         .productinformations {
             padding: length(18) length(0);
-
+            width: 55%;
+            @include breakpoint(tablet991) {
+                width: 100%;
+            }
             &-top {
                 .product-title {
                     @include font-face($playfairDisplay, style('normal'), size(24), weight('normal'), line-height(32, 24));
@@ -533,7 +541,10 @@
         .reviewdetails {
             padding: length(24);
             @include flex-column;
-            @include w100;
+            width: 55%;
+            @include breakpoint(tablet991) {
+                width: 100%;
+            }
 
             &-header {
                 padding-bottom: length(20);
