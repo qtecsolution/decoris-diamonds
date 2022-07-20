@@ -872,16 +872,25 @@
         }
 
         &-item {
-            @include font-face($futuraBK, style('normal'), size(10), weight('normal'), line-height(13, 10));
+            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(24, 14));
             letter-spacing: length(1.04);
-            color: $primary;
-            text-transform: uppercase;
+            // color: $primary;
+            text-transform: capitalize;
 
             a {
-                @include font-face($futuraBK, style('normal'), size(10), weight('normal'), line-height(13, 10));
+                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(24, 14));
                 letter-spacing: length(1.04);
-                color: $primary;
-                text-transform: uppercase;
+                color: $secondary;
+                text-transform: capitalize;
+                @include transitions;
+
+                @include hover {
+                    color: $black;
+                }
+            }
+
+            &.active {
+                color: $black;
             }
         }
     }
@@ -1924,4 +1933,354 @@
     max-width: 100%;
     @include w100;
     object-fit: contain;
+}
+
+.collapsemenu {
+    @include flex-center-vert;
+    gap: length(16);
+    flex-wrap: wrap;
+
+    @include breakpoint(tab992) {
+        gap: length(24);
+    }
+
+    .select-dropdown {
+        display: inline-block;
+        position: relative;
+        background: $white;
+        width: length(284);
+    
+        * {
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+        }
+    
+        &.is-active {
+            border-color: $black;
+    
+            input[type="text"] {
+                border-color: $textStepLink;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+    
+            .toggleicon {
+                @include transform(rotate(180deg) translateY(50%));
+            }
+    
+            ul {
+                display: block;
+            }
+    
+            #js-ddInput {
+                border-bottom-left-radius: length(0);
+                border-bottom-right-radius: length(0);
+            }
+        }
+    
+        #js-ddInput {
+            position: relative;
+            z-index: 1;
+            text-overflow: ellipsis;
+            background: transparent;
+            cursor: pointer;
+            @include flex-center-vert;
+            gap: length(16);
+            padding: length(10) length(16);
+            @include border(solid, 1, $textStepLink);
+            @include radius(4);
+    
+            .icon {
+                @include square(length(24));
+                @include flex-center;
+                overflow: hidden;
+    
+                svg {
+                    @include wh100;
+                }
+            }
+    
+            .text {
+                color: $black;
+                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
+            }
+        }
+    
+        .toggleicon {
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50%));
+            right: length(16);
+        }
+    
+        ul {
+            display: none;
+            position: absolute;
+            z-index: 999;
+            background: $white;
+            width: 100%;
+            list-style-type: none;
+            @include border(solid, 1, $textStepLink);
+            border-top: 0;
+            border-bottom-left-radius: length(4);
+            border-bottom-right-radius: length(4);
+            padding: 0;
+            margin: 0;
+    
+            li {
+                @include flex-center-vert;
+                gap: length(16);
+                padding: length(12) length(16);
+                cursor: pointer;
+                transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+                @include border-single(bottom, solid, 1, $textStepLink);
+    
+                .icon {
+                    @include square(length(32));
+                    @include flex-center;
+                    overflow: hidden;
+        
+                    svg {
+                        @include wh100;
+                    }
+                }
+        
+                .text {
+                    color: $black;
+                    @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                }
+                
+                *{
+                    pointer-events: none;
+                }
+    
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .select-dropdown-2 {
+        display: inline-block;
+        position: relative;
+        background: $white;
+        width: length(284);
+    
+        * {
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+        }
+    
+        &.is-active {
+            border-color: $black;
+    
+            input[type="text"] {
+                border-color: $textStepLink;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+    
+            .toggleicon {
+                @include transform(rotate(180deg) translateY(50%));
+            }
+    
+            ul {
+                display: block;
+            }
+    
+            #js-ddInput-2 {
+                border-bottom-left-radius: length(0);
+                border-bottom-right-radius: length(0);
+            }
+        }
+    
+        #js-ddInput-2 {
+            position: relative;
+            z-index: 1;
+            text-overflow: ellipsis;
+            background: transparent;
+            cursor: pointer;
+            @include flex-center-vert;
+            gap: length(16);
+            padding: length(12) length(16);
+            @include border(solid, 1, $textStepLink);
+            @include radius(4);
+            color: $black;
+            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
+        }
+    
+        .toggleicon {
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50%));
+            right: length(16);
+        }
+    
+        ul {
+            display: none;
+            position: absolute;
+            z-index: 999;
+            background: $white;
+            width: 100%;
+            list-style-type: none;
+            @include border(solid, 1, $textStepLink);
+            border-top: 0;
+            border-bottom-left-radius: length(4);
+            border-bottom-right-radius: length(4);
+            padding: 0;
+            margin: 0;
+    
+            li {
+                @include flex-center-vert;
+                gap: length(16);
+                padding: length(12) length(16);
+                cursor: pointer;
+                transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+                @include border-single(bottom, solid, 1, $textStepLink);
+                color: $black;
+                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                
+                *{
+                    pointer-events: none;
+                }
+    
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+
+
+    .select-size-dropdown {
+        display: inline-block;
+        position: relative;
+        background: $white;
+        width: length(284);
+
+        * {
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+        }
+
+        &.is-active {
+            border-color: $black;
+
+            input[type="text"] {
+                border-color: $textStepLink;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            .toggleicon {
+                @include transform(rotate(180deg) translateY(50%));
+            }
+
+            ul {
+                @include flex-center-vert;
+                flex-wrap: wrap;
+            }
+
+            #ddInput {
+                border-bottom-left-radius: length(0);
+                border-bottom-right-radius: length(0);
+            }
+        }
+
+        #ddInput {
+            position: relative;
+            z-index: 1;
+            text-overflow: ellipsis;
+            background: transparent;
+            cursor: pointer;
+            @include flex-center-vert;
+            gap: length(16);
+            padding: length(12) length(16);
+            @include border(solid, 1, $textStepLink);
+            @include radius(4);
+            color: $black;
+            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
+        }
+
+        .toggleicon {
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50%));
+            right: length(16);
+        }
+
+        ul {
+            display: none;
+            position: absolute;
+            z-index: 999;
+            background: $white;
+            width: 100%;
+            list-style-type: none;
+            @include border(solid, 1, $textStepLink);
+            border-top: 0;
+            border-bottom-left-radius: length(4);
+            border-bottom-right-radius: length(4);
+            padding: 0;
+            margin: 0;
+
+            li {
+                @include flex-center;
+                width: calc(100% / 3);
+                cursor: pointer;
+                transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+                color: $black;
+                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                padding: length(16);
+
+                &:nth-child(1) {
+                    @include border-single(bottom, solid, 1, $textStepLink);
+                    @include border-single(right, solid, 1, $textStepLink);
+                }
+
+                &:nth-child(2) {
+                    @include border-single(bottom, solid, 1, $textStepLink);
+                    @include border-single(right, solid, 1, $textStepLink);
+                }
+
+                &:nth-child(3) {
+                    @include border-single(bottom, solid, 1, $textStepLink);
+                }
+
+                &:nth-child(4) {
+                    @include border-single(bottom, solid, 1, $textStepLink);
+                    @include border-single(right, solid, 1, $textStepLink);
+                }
+
+                &:nth-child(5) {
+                    @include border-single(bottom, solid, 1, $textStepLink);
+                    @include border-single(right, solid, 1, $textStepLink);
+                }
+
+                &:nth-child(6) {
+                    @include border-single(bottom, solid, 1, $textStepLink);
+                }
+
+                &:nth-child(7) {
+                    @include border-single(right, solid, 1, $textStepLink);
+                }
+
+                &:nth-child(8) {
+                    @include border-single(right, solid, 1, $textStepLink);
+                }
+            }
+        }
+    }
 }
