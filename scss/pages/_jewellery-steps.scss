@@ -107,9 +107,11 @@
         .productinformations {
             padding: length(18) length(0);
             width: 55%;
+
             @include breakpoint(tablet991) {
                 width: 100%;
             }
+
             &-top {
                 .product-title {
                     @include font-face($playfairDisplay, style('normal'), size(24), weight('normal'), line-height(32, 24));
@@ -217,6 +219,368 @@
                         }
                     }
                 }
+
+                .collapsemenu {
+                    @include flex-center-vert;
+                    gap: length(16);
+                    flex-wrap: wrap;
+                
+                    @include breakpoint(tab992) {
+                        gap: length(24);
+                    }
+                
+                    .select-dropdown {
+                        display: inline-block;
+                        position: relative;
+                        background: $white;
+                        width: length(284);
+
+                        @include breakpoint(phone575) {
+                            @include w100;
+                        }
+                    
+                        * {
+                            -webkit-touch-callout: none; /* iOS Safari */
+                            -webkit-user-select: none; /* Safari */
+                            -khtml-user-select: none; /* Konqueror HTML */
+                            -moz-user-select: none; /* Firefox */
+                            -ms-user-select: none; /* Internet Explorer/Edge */
+                            user-select: none;
+                        }
+                    
+                        &.is-active {
+                            border-color: $black;
+                    
+                            input[type="text"] {
+                                border-color: $textStepLink;
+                                border-bottom-left-radius: 0;
+                                border-bottom-right-radius: 0;
+                            }
+                    
+                            .toggleicon {
+                                @include transform(rotate(180deg) translateY(50%));
+                            }
+                    
+                            ul {
+                                display: block;
+                            }
+                    
+                            #js-ddInput {
+                                border-bottom-left-radius: length(0);
+                                border-bottom-right-radius: length(0);
+                            }
+                        }
+                    
+                        #js-ddInput {
+                            position: relative;
+                            z-index: 1;
+                            text-overflow: ellipsis;
+                            background: transparent;
+                            cursor: pointer;
+                            @include flex-center-vert;
+                            gap: length(16);
+                            padding: length(10) length(16);
+                            @include border(solid, 1, $textStepLink);
+                            @include radius(4);
+                    
+                            .icon {
+                                @include square(length(24));
+                                @include flex-center;
+                                overflow: hidden;
+                    
+                                svg {
+                                    @include wh100;
+                                }
+                            }
+                    
+                            .text {
+                                color: $black;
+                                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                            }
+                        }
+                    
+                        .toggleicon {
+                            position: absolute;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                            right: length(16);
+                        }
+                    
+                        ul {
+                            display: none;
+                            position: absolute;
+                            z-index: 999;
+                            background: $white;
+                            width: 100%;
+                            list-style-type: none;
+                            @include border(solid, 1, $textStepLink);
+                            border-top: 0;
+                            border-bottom-left-radius: length(4);
+                            border-bottom-right-radius: length(4);
+                            padding: 0;
+                            margin: 0;
+                    
+                            li {
+                                @include flex-center-vert;
+                                gap: length(16);
+                                padding: length(12) length(16);
+                                cursor: pointer;
+                                transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+                                @include border-single(bottom, solid, 1, $textStepLink);
+                    
+                                .icon {
+                                    @include square(length(32));
+                                    @include flex-center;
+                                    overflow: hidden;
+                        
+                                    svg {
+                                        @include wh100;
+                                    }
+                                }
+                        
+                                .text {
+                                    color: $black;
+                                    @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                                }
+                                
+                                *{
+                                    pointer-events: none;
+                                }
+                    
+                                &:last-child {
+                                    border-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                
+                    .select-dropdown-2 {
+                        display: inline-block;
+                        position: relative;
+                        background: $white;
+                        width: length(284);
+
+                        @include breakpoint(phone575) {
+                            @include w100;
+                        }
+                    
+                        * {
+                            -webkit-touch-callout: none; /* iOS Safari */
+                            -webkit-user-select: none; /* Safari */
+                            -khtml-user-select: none; /* Konqueror HTML */
+                            -moz-user-select: none; /* Firefox */
+                            -ms-user-select: none; /* Internet Explorer/Edge */
+                            user-select: none;
+                        }
+                    
+                        &.is-active {
+                            border-color: $black;
+                    
+                            input[type="text"] {
+                                border-color: $textStepLink;
+                                border-bottom-left-radius: 0;
+                                border-bottom-right-radius: 0;
+                            }
+                    
+                            .toggleicon {
+                                @include transform(rotate(180deg) translateY(50%));
+                            }
+                    
+                            ul {
+                                display: block;
+                            }
+                    
+                            #js-ddInput-2 {
+                                border-bottom-left-radius: length(0);
+                                border-bottom-right-radius: length(0);
+                            }
+                        }
+                    
+                        #js-ddInput-2 {
+                            position: relative;
+                            z-index: 1;
+                            text-overflow: ellipsis;
+                            background: transparent;
+                            cursor: pointer;
+                            @include flex-center-vert;
+                            gap: length(16);
+                            padding: length(12) length(16);
+                            @include border(solid, 1, $textStepLink);
+                            @include radius(4);
+                            color: $black;
+                            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                        }
+                    
+                        .toggleicon {
+                            position: absolute;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                            right: length(16);
+                        }
+                    
+                        ul {
+                            display: none;
+                            position: absolute;
+                            z-index: 999;
+                            background: $white;
+                            width: 100%;
+                            list-style-type: none;
+                            @include border(solid, 1, $textStepLink);
+                            border-top: 0;
+                            border-bottom-left-radius: length(4);
+                            border-bottom-right-radius: length(4);
+                            padding: 0;
+                            margin: 0;
+                    
+                            li {
+                                @include flex-center-vert;
+                                gap: length(16);
+                                padding: length(12) length(16);
+                                cursor: pointer;
+                                transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+                                @include border-single(bottom, solid, 1, $textStepLink);
+                                color: $black;
+                                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                                
+                                *{
+                                    pointer-events: none;
+                                }
+                    
+                                &:last-child {
+                                    border-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                
+                
+                    .select-size-dropdown {
+                        display: inline-block;
+                        position: relative;
+                        background: $white;
+                        width: length(284);
+
+                        @include breakpoint(phone575) {
+                            @include w100;
+                        }
+                
+                        * {
+                            -webkit-touch-callout: none; /* iOS Safari */
+                            -webkit-user-select: none; /* Safari */
+                            -khtml-user-select: none; /* Konqueror HTML */
+                            -moz-user-select: none; /* Firefox */
+                            -ms-user-select: none; /* Internet Explorer/Edge */
+                            user-select: none;
+                        }
+                
+                        &.is-active {
+                            border-color: $black;
+                
+                            input[type="text"] {
+                                border-color: $textStepLink;
+                                border-bottom-left-radius: 0;
+                                border-bottom-right-radius: 0;
+                            }
+                
+                            .toggleicon {
+                                @include transform(rotate(180deg) translateY(50%));
+                            }
+                
+                            ul {
+                                @include flex-center-vert;
+                                flex-wrap: wrap;
+                            }
+                
+                            #ddInput {
+                                border-bottom-left-radius: length(0);
+                                border-bottom-right-radius: length(0);
+                            }
+                        }
+                
+                        #ddInput {
+                            position: relative;
+                            z-index: 1;
+                            text-overflow: ellipsis;
+                            background: transparent;
+                            cursor: pointer;
+                            @include flex-center-vert;
+                            gap: length(16);
+                            padding: length(12) length(16);
+                            @include border(solid, 1, $textStepLink);
+                            @include radius(4);
+                            color: $black;
+                            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                        }
+                
+                        .toggleicon {
+                            position: absolute;
+                            top: 50%;
+                            @include transform(translateY(-50%));
+                            right: length(16);
+                        }
+                
+                        ul {
+                            display: none;
+                            position: absolute;
+                            z-index: 999;
+                            background: $white;
+                            width: 100%;
+                            list-style-type: none;
+                            @include border(solid, 1, $textStepLink);
+                            border-top: 0;
+                            border-bottom-left-radius: length(4);
+                            border-bottom-right-radius: length(4);
+                            padding: 0;
+                            margin: 0;
+                
+                            li {
+                                @include flex-center;
+                                width: calc(100% / 3);
+                                cursor: pointer;
+                                transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+                                color: $black;
+                                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                                padding: length(16);
+                
+                                &:nth-child(1) {
+                                    @include border-single(bottom, solid, 1, $textStepLink);
+                                    @include border-single(right, solid, 1, $textStepLink);
+                                }
+                
+                                &:nth-child(2) {
+                                    @include border-single(bottom, solid, 1, $textStepLink);
+                                    @include border-single(right, solid, 1, $textStepLink);
+                                }
+                
+                                &:nth-child(3) {
+                                    @include border-single(bottom, solid, 1, $textStepLink);
+                                }
+                
+                                &:nth-child(4) {
+                                    @include border-single(bottom, solid, 1, $textStepLink);
+                                    @include border-single(right, solid, 1, $textStepLink);
+                                }
+                
+                                &:nth-child(5) {
+                                    @include border-single(bottom, solid, 1, $textStepLink);
+                                    @include border-single(right, solid, 1, $textStepLink);
+                                }
+                
+                                &:nth-child(6) {
+                                    @include border-single(bottom, solid, 1, $textStepLink);
+                                }
+                
+                                &:nth-child(7) {
+                                    @include border-single(right, solid, 1, $textStepLink);
+                                }
+                
+                                &:nth-child(8) {
+                                    @include border-single(right, solid, 1, $textStepLink);
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
             .divider {
@@ -229,6 +593,124 @@
             &-bottom {
                 @include flex-column;
                 gap: length(18);
+
+                .priceinfo-prodinfo {
+                    .priceinfo {
+                        @include flex-column;
+
+                        .price {
+                            color: $black;
+                            @include font-face($futuraBK, style('normal'), size(32), weight('normal'), line-height(48, 32));
+                        }
+
+                        .info {
+                            @include flex-center-vert;
+                            gap: length(8);
+
+                            .text {
+                                color: $secondary;
+                                @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(20, 12));
+                            }
+                            
+                            .icon {
+                                @include square(length(14));
+                                @include flex-center;
+                                overflow: hidden;
+
+                                svg {
+                                    @include wh100;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .detailbuttons {
+                    @include flex-center-vert;
+                    gap: length(16);
+                    flex-wrap: wrap;
+                
+                    @include breakpoint(tab992) {
+                        gap: length(24);
+                    }
+
+                    .sizebox,
+                    .engraving {
+                        width: length(284);
+
+                        @include breakpoint(phone575) {
+                            @include w100;
+                        }
+                    }
+
+                    .sizebox {
+                        .ringsizebox {
+                            .btn-ringsize {
+                                padding-top: length(10.8);
+                                padding-bottom: length(10.8);
+                                border-width: length(1);
+                                border-color: $textStepLink;
+
+                                .title,
+                                .icon {
+                                    margin-left: auto;
+                                }
+
+                                .title {
+                                    @include breakpoint(tab992) {
+                                        font-size: length(14);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .engraving {
+                        .btn-engraving {
+                            @include w100;
+                            z-index: 1;
+                            text-overflow: ellipsis;
+                            @include setBgColor(transparent, $black);
+                            cursor: pointer;
+                            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                            @include flex-center;
+                            padding: length(12) length(16);
+                            @include border(solid, 1, $textStepLink);
+                            @include radius(4);
+                            text-align: center;
+                            @include transitions;
+
+                            @include hover {
+                                @include setBgColor($secondary, $white);
+                            }
+                        }
+                    }
+                }
+
+                .addbag {
+                    max-width: length(592);
+                    margin-top: length(8);
+
+                    .btn-bag {
+                        @include w100;
+                        z-index: 1;
+                        text-overflow: ellipsis;
+                        @include setBgColor($black, $white);
+                        cursor: pointer;
+                        @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
+                        @include flex-center;
+                        padding: length(12) length(16);
+                        @include border(solid, 1, $textStepLink);
+                        @include radius(4);
+                        text-align: center;
+                        text-transform: uppercase;
+                        @include transitions;
+
+                        @include hover {
+                            @include setBgColor($primary, $white);
+                        }
+                    }
+                }
 
                 .detailsbuttons {
                     @include flex-center-vert;
@@ -261,6 +743,10 @@
                     padding: length(18) length(20);
                     background: $bannerBg;
 
+                    @include breakpoint(phone575) {
+                        max-width: 100%;
+                    }
+
                     .note {
                         @include font-face($futuraBK, style('normal'), size(12), weight('normal'), line-height(19.2, 12));
                         color: $secondary;
@@ -270,6 +756,10 @@
                 .sociallist {
                     @include list-horizontal;
                     gap: length(24);
+
+                    @include breakpoint(phone575) {
+                        justify-content: center;
+                    }
 
                     &-link {
                         @include square(length(24));
@@ -1933,354 +2423,4 @@
     max-width: 100%;
     @include w100;
     object-fit: contain;
-}
-
-.collapsemenu {
-    @include flex-center-vert;
-    gap: length(16);
-    flex-wrap: wrap;
-
-    @include breakpoint(tab992) {
-        gap: length(24);
-    }
-
-    .select-dropdown {
-        display: inline-block;
-        position: relative;
-        background: $white;
-        width: length(284);
-    
-        * {
-            -webkit-touch-callout: none; /* iOS Safari */
-            -webkit-user-select: none; /* Safari */
-            -khtml-user-select: none; /* Konqueror HTML */
-            -moz-user-select: none; /* Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
-        }
-    
-        &.is-active {
-            border-color: $black;
-    
-            input[type="text"] {
-                border-color: $textStepLink;
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
-            }
-    
-            .toggleicon {
-                @include transform(rotate(180deg) translateY(50%));
-            }
-    
-            ul {
-                display: block;
-            }
-    
-            #js-ddInput {
-                border-bottom-left-radius: length(0);
-                border-bottom-right-radius: length(0);
-            }
-        }
-    
-        #js-ddInput {
-            position: relative;
-            z-index: 1;
-            text-overflow: ellipsis;
-            background: transparent;
-            cursor: pointer;
-            @include flex-center-vert;
-            gap: length(16);
-            padding: length(10) length(16);
-            @include border(solid, 1, $textStepLink);
-            @include radius(4);
-    
-            .icon {
-                @include square(length(24));
-                @include flex-center;
-                overflow: hidden;
-    
-                svg {
-                    @include wh100;
-                }
-            }
-    
-            .text {
-                color: $black;
-                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
-            }
-        }
-    
-        .toggleicon {
-            position: absolute;
-            top: 50%;
-            @include transform(translateY(-50%));
-            right: length(16);
-        }
-    
-        ul {
-            display: none;
-            position: absolute;
-            z-index: 999;
-            background: $white;
-            width: 100%;
-            list-style-type: none;
-            @include border(solid, 1, $textStepLink);
-            border-top: 0;
-            border-bottom-left-radius: length(4);
-            border-bottom-right-radius: length(4);
-            padding: 0;
-            margin: 0;
-    
-            li {
-                @include flex-center-vert;
-                gap: length(16);
-                padding: length(12) length(16);
-                cursor: pointer;
-                transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-                @include border-single(bottom, solid, 1, $textStepLink);
-    
-                .icon {
-                    @include square(length(32));
-                    @include flex-center;
-                    overflow: hidden;
-        
-                    svg {
-                        @include wh100;
-                    }
-                }
-        
-                .text {
-                    color: $black;
-                    @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
-                }
-                
-                *{
-                    pointer-events: none;
-                }
-    
-                &:last-child {
-                    border-bottom: 0;
-                }
-            }
-        }
-    }
-
-    .select-dropdown-2 {
-        display: inline-block;
-        position: relative;
-        background: $white;
-        width: length(284);
-    
-        * {
-            -webkit-touch-callout: none; /* iOS Safari */
-            -webkit-user-select: none; /* Safari */
-            -khtml-user-select: none; /* Konqueror HTML */
-            -moz-user-select: none; /* Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
-        }
-    
-        &.is-active {
-            border-color: $black;
-    
-            input[type="text"] {
-                border-color: $textStepLink;
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
-            }
-    
-            .toggleicon {
-                @include transform(rotate(180deg) translateY(50%));
-            }
-    
-            ul {
-                display: block;
-            }
-    
-            #js-ddInput-2 {
-                border-bottom-left-radius: length(0);
-                border-bottom-right-radius: length(0);
-            }
-        }
-    
-        #js-ddInput-2 {
-            position: relative;
-            z-index: 1;
-            text-overflow: ellipsis;
-            background: transparent;
-            cursor: pointer;
-            @include flex-center-vert;
-            gap: length(16);
-            padding: length(12) length(16);
-            @include border(solid, 1, $textStepLink);
-            @include radius(4);
-            color: $black;
-            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
-        }
-    
-        .toggleicon {
-            position: absolute;
-            top: 50%;
-            @include transform(translateY(-50%));
-            right: length(16);
-        }
-    
-        ul {
-            display: none;
-            position: absolute;
-            z-index: 999;
-            background: $white;
-            width: 100%;
-            list-style-type: none;
-            @include border(solid, 1, $textStepLink);
-            border-top: 0;
-            border-bottom-left-radius: length(4);
-            border-bottom-right-radius: length(4);
-            padding: 0;
-            margin: 0;
-    
-            li {
-                @include flex-center-vert;
-                gap: length(16);
-                padding: length(12) length(16);
-                cursor: pointer;
-                transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-                @include border-single(bottom, solid, 1, $textStepLink);
-                color: $black;
-                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
-                
-                *{
-                    pointer-events: none;
-                }
-    
-                &:last-child {
-                    border-bottom: 0;
-                }
-            }
-        }
-    }
-
-
-    .select-size-dropdown {
-        display: inline-block;
-        position: relative;
-        background: $white;
-        width: length(284);
-
-        * {
-            -webkit-touch-callout: none; /* iOS Safari */
-            -webkit-user-select: none; /* Safari */
-            -khtml-user-select: none; /* Konqueror HTML */
-            -moz-user-select: none; /* Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
-        }
-
-        &.is-active {
-            border-color: $black;
-
-            input[type="text"] {
-                border-color: $textStepLink;
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
-            }
-
-            .toggleicon {
-                @include transform(rotate(180deg) translateY(50%));
-            }
-
-            ul {
-                @include flex-center-vert;
-                flex-wrap: wrap;
-            }
-
-            #ddInput {
-                border-bottom-left-radius: length(0);
-                border-bottom-right-radius: length(0);
-            }
-        }
-
-        #ddInput {
-            position: relative;
-            z-index: 1;
-            text-overflow: ellipsis;
-            background: transparent;
-            cursor: pointer;
-            @include flex-center-vert;
-            gap: length(16);
-            padding: length(12) length(16);
-            @include border(solid, 1, $textStepLink);
-            @include radius(4);
-            color: $black;
-            @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
-        }
-
-        .toggleicon {
-            position: absolute;
-            top: 50%;
-            @include transform(translateY(-50%));
-            right: length(16);
-        }
-
-        ul {
-            display: none;
-            position: absolute;
-            z-index: 999;
-            background: $white;
-            width: 100%;
-            list-style-type: none;
-            @include border(solid, 1, $textStepLink);
-            border-top: 0;
-            border-bottom-left-radius: length(4);
-            border-bottom-right-radius: length(4);
-            padding: 0;
-            margin: 0;
-
-            li {
-                @include flex-center;
-                width: calc(100% / 3);
-                cursor: pointer;
-                transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-                color: $black;
-                @include font-face($futuraBK, style('normal'), size(14), weight('normal'), line-height(20, 14));
-                padding: length(16);
-
-                &:nth-child(1) {
-                    @include border-single(bottom, solid, 1, $textStepLink);
-                    @include border-single(right, solid, 1, $textStepLink);
-                }
-
-                &:nth-child(2) {
-                    @include border-single(bottom, solid, 1, $textStepLink);
-                    @include border-single(right, solid, 1, $textStepLink);
-                }
-
-                &:nth-child(3) {
-                    @include border-single(bottom, solid, 1, $textStepLink);
-                }
-
-                &:nth-child(4) {
-                    @include border-single(bottom, solid, 1, $textStepLink);
-                    @include border-single(right, solid, 1, $textStepLink);
-                }
-
-                &:nth-child(5) {
-                    @include border-single(bottom, solid, 1, $textStepLink);
-                    @include border-single(right, solid, 1, $textStepLink);
-                }
-
-                &:nth-child(6) {
-                    @include border-single(bottom, solid, 1, $textStepLink);
-                }
-
-                &:nth-child(7) {
-                    @include border-single(right, solid, 1, $textStepLink);
-                }
-
-                &:nth-child(8) {
-                    @include border-single(right, solid, 1, $textStepLink);
-                }
-            }
-        }
-    }
 }

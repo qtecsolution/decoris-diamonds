@@ -1382,7 +1382,48 @@
                 <div class="divider"></div>
 
                 <div class="productinformations-bottom">
-                    <div class="detailsbuttons">
+                    <div class="priceinfo-prodinfo">
+                        <div class="priceinfo">
+                            <h5 class="price">£ 560.84</h5>
+                            
+                            <p class="info">
+                                <span class="text">Prices excludes VAT</span>
+                                <span class="icon">
+                                    <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.5 0C2.9159 0 0 3.07535 0 6.85544C0 10.6355 2.9159 13.7109 6.5 13.7109C10.0841 13.7109 13 10.6355 13 6.85544C13 3.07535 10.0841 0 6.5 0ZM6.5 2.81073C6.66712 2.81073 6.8305 2.863 6.96946 2.96093C7.10842 3.05885 7.21672 3.19804 7.28068 3.36089C7.34463 3.52374 7.36137 3.70293 7.32876 3.87581C7.29616 4.04868 7.21568 4.20748 7.0975 4.33212C6.97933 4.45676 6.82877 4.54164 6.66485 4.57602C6.50094 4.61041 6.33104 4.59276 6.17663 4.52531C6.02223 4.45785 5.89026 4.34363 5.79741 4.19707C5.70456 4.05051 5.655 3.8782 5.655 3.70194C5.655 3.46558 5.74403 3.23889 5.90249 3.07176C6.06096 2.90463 6.27589 2.81073 6.5 2.81073ZM8.06 10.5574H5.2C5.06209 10.5574 4.92982 10.4996 4.8323 10.3967C4.73479 10.2939 4.68 10.1544 4.68 10.0089C4.68 9.86349 4.73479 9.724 4.8323 9.62114C4.92982 9.51829 5.06209 9.46051 5.2 9.46051H6.11V6.44412H5.59C5.45209 6.44412 5.31982 6.38633 5.2223 6.28348C5.12479 6.18063 5.07 6.04114 5.07 5.89568C5.07 5.75023 5.12479 5.61073 5.2223 5.50788C5.31982 5.40503 5.45209 5.34725 5.59 5.34725H6.63C6.76791 5.34725 6.90018 5.40503 6.9977 5.50788C7.09521 5.61073 7.15 5.75023 7.15 5.89568V9.46051H8.06C8.19791 9.46051 8.33018 9.51829 8.4277 9.62114C8.52521 9.724 8.58 9.86349 8.58 10.0089C8.58 10.1544 8.52521 10.2939 8.4277 10.3967C8.33018 10.4996 8.19791 10.5574 8.06 10.5574Z" fill="#B7B7B7"/>
+                                    </svg>
+                                </span>
+                            </p>
+                        </div>
+    
+                        <div class="prodinfo"></div>
+                    </div>
+
+                    <div class="detailbuttons">
+                        <div class="sizebox">
+                            <div class="ringsizebox">
+                                <button class="btn-ringsize" type="button" data-bs-toggle="offcanvas" data-bs-target="#ringSizeSidebar" aria-controls="ringSizeSidebar">
+                                    <span class="title">SIZE: E</span>
+            
+                                    <span class="icon">
+                                        <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.57617 1L11.5762 11L21.5762 1" stroke="#B7B7B7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>                               
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="engraving">
+                            <button class="btn-engraving" type="button" data-bs-toggle="modal" data-bs-target="#engravingModal">ADD ENGRAVING</button>
+                        </div>
+                    </div>
+
+                    <div class="addbag">
+                        <button class="btn-bag">Add to Bag</button>
+                    </div>
+
+                    <div class="detailsbuttons d-none">
                         <button class="btn-bordered" type="button">Find your ring</button>
                         <button class="btn-bordered" type="button">Enquire</button>
                         <button class="btn-bordered" type="button">Appointment booking</button>
@@ -2554,6 +2595,28 @@
         </div>
     </div>
     <!-- SELECT RING-SIZE SIDEBAR END -->
+
+    <!-- ENGRAVING-MODAL START -->
+    <div class="modal fade" id="engravingModal" tabindex="-1" aria-labelledby="engravingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+                <div class="modal-header p-3">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    ENGRAVING-MODAL
+                </div>
+          </div>
+        </div>
+    </div>
+    <!-- ENGRAVING-MODAL END -->
     
     <!-- BOOTSTRAP JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>

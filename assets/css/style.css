@@ -11433,6 +11433,488 @@ body.iexplorer .setting-item {
   stroke: #333333;
 }
 
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (min-width: 62rem) {
+  .decorisproductdetails .decories-container .productinformations-top .collapsemenu {
+    gap: 1.5rem;
+  }
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown {
+  display: inline-block;
+  position: relative;
+  background: #ffffff;
+  width: 17.75rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown {
+    width: 100%;
+  }
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown * {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown.is-active {
+  border-color: #000000;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown.is-active input[type="text"] {
+  border-color: #B7B7B7;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown.is-active .toggleicon {
+  -webkit-transform: rotate(180deg) translateY(50%);
+  transform: rotate(180deg) translateY(50%);
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown.is-active ul {
+  display: block;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown.is-active #js-ddInput {
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown #js-ddInput {
+  position: relative;
+  z-index: 1;
+  text-overflow: ellipsis;
+  background: transparent;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding: 0.625rem 1rem;
+  border: solid 0.0625rem #B7B7B7;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown #js-ddInput .icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown #js-ddInput .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown #js-ddInput .text {
+  color: #000000;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown .toggleicon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 1rem;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown ul {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  background: #ffffff;
+  width: 100%;
+  list-style-type: none;
+  border: solid 0.0625rem #B7B7B7;
+  border-top: 0;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-bottom: solid 0.0625rem #B7B7B7;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown ul li .icon {
+  height: 2rem;
+  width: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown ul li .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown ul li .text {
+  color: #000000;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown ul li * {
+  pointer-events: none;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown ul li:last-child {
+  border-bottom: 0;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown-2 {
+  display: inline-block;
+  position: relative;
+  background: #ffffff;
+  width: 17.75rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown-2 {
+    width: 100%;
+  }
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown-2 * {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown-2.is-active {
+  border-color: #000000;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown-2.is-active input[type="text"] {
+  border-color: #B7B7B7;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown-2.is-active .toggleicon {
+  -webkit-transform: rotate(180deg) translateY(50%);
+  transform: rotate(180deg) translateY(50%);
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown-2.is-active ul {
+  display: block;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown-2.is-active #js-ddInput-2 {
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown-2 #js-ddInput-2 {
+  position: relative;
+  z-index: 1;
+  text-overflow: ellipsis;
+  background: transparent;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border: solid 0.0625rem #B7B7B7;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  color: #000000;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown-2 .toggleicon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 1rem;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown-2 ul {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  background: #ffffff;
+  width: 100%;
+  list-style-type: none;
+  border: solid 0.0625rem #B7B7B7;
+  border-top: 0;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown-2 ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-bottom: solid 0.0625rem #B7B7B7;
+  color: #000000;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown-2 ul li * {
+  pointer-events: none;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-dropdown-2 ul li:last-child {
+  border-bottom: 0;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown {
+  display: inline-block;
+  position: relative;
+  background: #ffffff;
+  width: 17.75rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown {
+    width: 100%;
+  }
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown * {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown.is-active {
+  border-color: #000000;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown.is-active input[type="text"] {
+  border-color: #B7B7B7;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown.is-active .toggleicon {
+  -webkit-transform: rotate(180deg) translateY(50%);
+  transform: rotate(180deg) translateY(50%);
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown.is-active ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown.is-active #ddInput {
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown #ddInput {
+  position: relative;
+  z-index: 1;
+  text-overflow: ellipsis;
+  background: transparent;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border: solid 0.0625rem #B7B7B7;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  color: #000000;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown .toggleicon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 1rem;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown ul {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  background: #ffffff;
+  width: 100%;
+  list-style-type: none;
+  border: solid 0.0625rem #B7B7B7;
+  border-top: 0;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: calc(100% / 3);
+  cursor: pointer;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  color: #000000;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  padding: 1rem;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown ul li:nth-child(1) {
+  border-bottom: solid 0.0625rem #B7B7B7;
+  border-right: solid 0.0625rem #B7B7B7;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown ul li:nth-child(2) {
+  border-bottom: solid 0.0625rem #B7B7B7;
+  border-right: solid 0.0625rem #B7B7B7;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown ul li:nth-child(3) {
+  border-bottom: solid 0.0625rem #B7B7B7;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown ul li:nth-child(4) {
+  border-bottom: solid 0.0625rem #B7B7B7;
+  border-right: solid 0.0625rem #B7B7B7;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown ul li:nth-child(5) {
+  border-bottom: solid 0.0625rem #B7B7B7;
+  border-right: solid 0.0625rem #B7B7B7;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown ul li:nth-child(6) {
+  border-bottom: solid 0.0625rem #B7B7B7;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown ul li:nth-child(7) {
+  border-right: solid 0.0625rem #B7B7B7;
+}
+
+.decorisproductdetails .decories-container .productinformations-top .collapsemenu .select-size-dropdown ul li:nth-child(8) {
+  border-right: solid 0.0625rem #B7B7B7;
+}
+
 .decorisproductdetails .decories-container .productinformations .divider {
   width: 100%;
   height: 0.0625rem;
@@ -11449,6 +11931,188 @@ body.iexplorer .setting-item {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.125rem;
+}
+
+.decorisproductdetails .decories-container .productinformations-bottom .priceinfo-prodinfo .priceinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.decorisproductdetails .decories-container .productinformations-bottom .priceinfo-prodinfo .priceinfo .price {
+  color: #000000;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.decorisproductdetails .decories-container .productinformations-bottom .priceinfo-prodinfo .priceinfo .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+.decorisproductdetails .decories-container .productinformations-bottom .priceinfo-prodinfo .priceinfo .info .text {
+  color: #5A5A5A;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.66667;
+}
+
+.decorisproductdetails .decories-container .productinformations-bottom .priceinfo-prodinfo .priceinfo .info .icon {
+  height: 0.875rem;
+  width: 0.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.decorisproductdetails .decories-container .productinformations-bottom .priceinfo-prodinfo .priceinfo .info .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.decorisproductdetails .decories-container .productinformations-bottom .detailbuttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (min-width: 62rem) {
+  .decorisproductdetails .decories-container .productinformations-bottom .detailbuttons {
+    gap: 1.5rem;
+  }
+}
+
+.decorisproductdetails .decories-container .productinformations-bottom .detailbuttons .sizebox,
+.decorisproductdetails .decories-container .productinformations-bottom .detailbuttons .engraving {
+  width: 17.75rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .decorisproductdetails .decories-container .productinformations-bottom .detailbuttons .sizebox,
+  .decorisproductdetails .decories-container .productinformations-bottom .detailbuttons .engraving {
+    width: 100%;
+  }
+}
+
+.decorisproductdetails .decories-container .productinformations-bottom .detailbuttons .sizebox .ringsizebox .btn-ringsize {
+  padding-top: 0.675rem;
+  padding-bottom: 0.675rem;
+  border-width: 0.0625rem;
+  border-color: #B7B7B7;
+}
+
+.decorisproductdetails .decories-container .productinformations-bottom .detailbuttons .sizebox .ringsizebox .btn-ringsize .title,
+.decorisproductdetails .decories-container .productinformations-bottom .detailbuttons .sizebox .ringsizebox .btn-ringsize .icon {
+  margin-left: auto;
+}
+
+@media screen and (min-width: 62rem) {
+  .decorisproductdetails .decories-container .productinformations-bottom .detailbuttons .sizebox .ringsizebox .btn-ringsize .title {
+    font-size: 0.875rem;
+  }
+}
+
+.decorisproductdetails .decories-container .productinformations-bottom .detailbuttons .engraving .btn-engraving {
+  width: 100%;
+  z-index: 1;
+  text-overflow: ellipsis;
+  background: transparent;
+  color: #000000;
+  cursor: pointer;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.75rem 1rem;
+  border: solid 0.0625rem #B7B7B7;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.decorisproductdetails .decories-container .productinformations-bottom .detailbuttons .engraving .btn-engraving:not([disabled]):hover {
+  background: #5A5A5A;
+  color: #ffffff;
+}
+
+.decorisproductdetails .decories-container .productinformations-bottom .addbag {
+  max-width: 37rem;
+  margin-top: 0.5rem;
+}
+
+.decorisproductdetails .decories-container .productinformations-bottom .addbag .btn-bag {
+  width: 100%;
+  z-index: 1;
+  text-overflow: ellipsis;
+  background: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Futura Bk";
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.42857;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.75rem 1rem;
+  border: solid 0.0625rem #B7B7B7;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.decorisproductdetails .decories-container .productinformations-bottom .addbag .btn-bag:not([disabled]):hover {
+  background: #333333;
+  color: #ffffff;
 }
 
 .decorisproductdetails .decories-container .productinformations-bottom .detailsbuttons {
@@ -11504,6 +12168,12 @@ body.iexplorer .setting-item {
   background: #F9F8F7;
 }
 
+@media screen and (max-width: 35.9375rem) {
+  .decorisproductdetails .decories-container .productinformations-bottom .notebox {
+    max-width: 100%;
+  }
+}
+
 .decorisproductdetails .decories-container .productinformations-bottom .notebox .note {
   font-family: "Futura Bk";
   font-style: normal;
@@ -11524,6 +12194,14 @@ body.iexplorer .setting-item {
       -ms-flex-align: center;
           align-items: center;
   gap: 1.5rem;
+}
+
+@media screen and (max-width: 35.9375rem) {
+  .decorisproductdetails .decories-container .productinformations-bottom .sociallist {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .decorisproductdetails .decories-container .productinformations-bottom .sociallist-link {
@@ -14392,470 +15070,6 @@ body.iexplorer .setting-item {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-.collapsemenu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-@media screen and (min-width: 62rem) {
-  .collapsemenu {
-    gap: 1.5rem;
-  }
-}
-
-.collapsemenu .select-dropdown {
-  display: inline-block;
-  position: relative;
-  background: #ffffff;
-  width: 17.75rem;
-}
-
-.collapsemenu .select-dropdown * {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-}
-
-.collapsemenu .select-dropdown.is-active {
-  border-color: #000000;
-}
-
-.collapsemenu .select-dropdown.is-active input[type="text"] {
-  border-color: #B7B7B7;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.collapsemenu .select-dropdown.is-active .toggleicon {
-  -webkit-transform: rotate(180deg) translateY(50%);
-  transform: rotate(180deg) translateY(50%);
-}
-
-.collapsemenu .select-dropdown.is-active ul {
-  display: block;
-}
-
-.collapsemenu .select-dropdown.is-active #js-ddInput {
-  border-bottom-left-radius: 0rem;
-  border-bottom-right-radius: 0rem;
-}
-
-.collapsemenu .select-dropdown #js-ddInput {
-  position: relative;
-  z-index: 1;
-  text-overflow: ellipsis;
-  background: transparent;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-  padding: 0.625rem 1rem;
-  border: solid 0.0625rem #B7B7B7;
-  border-radius: 0.25rem;
-  border-radius: 0.25rem;
-}
-
-.collapsemenu .select-dropdown #js-ddInput .icon {
-  height: 1.5rem;
-  width: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
-}
-
-.collapsemenu .select-dropdown #js-ddInput .icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.collapsemenu .select-dropdown #js-ddInput .text {
-  color: #000000;
-  font-family: "Futura Bk";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1.42857;
-}
-
-.collapsemenu .select-dropdown .toggleicon {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 1rem;
-}
-
-.collapsemenu .select-dropdown ul {
-  display: none;
-  position: absolute;
-  z-index: 999;
-  background: #ffffff;
-  width: 100%;
-  list-style-type: none;
-  border: solid 0.0625rem #B7B7B7;
-  border-top: 0;
-  border-bottom-left-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  padding: 0;
-  margin: 0;
-}
-
-.collapsemenu .select-dropdown ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-  padding: 0.75rem 1rem;
-  cursor: pointer;
-  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border-bottom: solid 0.0625rem #B7B7B7;
-}
-
-.collapsemenu .select-dropdown ul li .icon {
-  height: 2rem;
-  width: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
-}
-
-.collapsemenu .select-dropdown ul li .icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.collapsemenu .select-dropdown ul li .text {
-  color: #000000;
-  font-family: "Futura Bk";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1.42857;
-}
-
-.collapsemenu .select-dropdown ul li * {
-  pointer-events: none;
-}
-
-.collapsemenu .select-dropdown ul li:last-child {
-  border-bottom: 0;
-}
-
-.collapsemenu .select-dropdown-2 {
-  display: inline-block;
-  position: relative;
-  background: #ffffff;
-  width: 17.75rem;
-}
-
-.collapsemenu .select-dropdown-2 * {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-}
-
-.collapsemenu .select-dropdown-2.is-active {
-  border-color: #000000;
-}
-
-.collapsemenu .select-dropdown-2.is-active input[type="text"] {
-  border-color: #B7B7B7;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.collapsemenu .select-dropdown-2.is-active .toggleicon {
-  -webkit-transform: rotate(180deg) translateY(50%);
-  transform: rotate(180deg) translateY(50%);
-}
-
-.collapsemenu .select-dropdown-2.is-active ul {
-  display: block;
-}
-
-.collapsemenu .select-dropdown-2.is-active #js-ddInput-2 {
-  border-bottom-left-radius: 0rem;
-  border-bottom-right-radius: 0rem;
-}
-
-.collapsemenu .select-dropdown-2 #js-ddInput-2 {
-  position: relative;
-  z-index: 1;
-  text-overflow: ellipsis;
-  background: transparent;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-  padding: 0.75rem 1rem;
-  border: solid 0.0625rem #B7B7B7;
-  border-radius: 0.25rem;
-  border-radius: 0.25rem;
-  color: #000000;
-  font-family: "Futura Bk";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1.42857;
-}
-
-.collapsemenu .select-dropdown-2 .toggleicon {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 1rem;
-}
-
-.collapsemenu .select-dropdown-2 ul {
-  display: none;
-  position: absolute;
-  z-index: 999;
-  background: #ffffff;
-  width: 100%;
-  list-style-type: none;
-  border: solid 0.0625rem #B7B7B7;
-  border-top: 0;
-  border-bottom-left-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  padding: 0;
-  margin: 0;
-}
-
-.collapsemenu .select-dropdown-2 ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-  padding: 0.75rem 1rem;
-  cursor: pointer;
-  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border-bottom: solid 0.0625rem #B7B7B7;
-  color: #000000;
-  font-family: "Futura Bk";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1.42857;
-}
-
-.collapsemenu .select-dropdown-2 ul li * {
-  pointer-events: none;
-}
-
-.collapsemenu .select-dropdown-2 ul li:last-child {
-  border-bottom: 0;
-}
-
-.collapsemenu .select-size-dropdown {
-  display: inline-block;
-  position: relative;
-  background: #ffffff;
-  width: 17.75rem;
-}
-
-.collapsemenu .select-size-dropdown * {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-}
-
-.collapsemenu .select-size-dropdown.is-active {
-  border-color: #000000;
-}
-
-.collapsemenu .select-size-dropdown.is-active input[type="text"] {
-  border-color: #B7B7B7;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.collapsemenu .select-size-dropdown.is-active .toggleicon {
-  -webkit-transform: rotate(180deg) translateY(50%);
-  transform: rotate(180deg) translateY(50%);
-}
-
-.collapsemenu .select-size-dropdown.is-active ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.collapsemenu .select-size-dropdown.is-active #ddInput {
-  border-bottom-left-radius: 0rem;
-  border-bottom-right-radius: 0rem;
-}
-
-.collapsemenu .select-size-dropdown #ddInput {
-  position: relative;
-  z-index: 1;
-  text-overflow: ellipsis;
-  background: transparent;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-  padding: 0.75rem 1rem;
-  border: solid 0.0625rem #B7B7B7;
-  border-radius: 0.25rem;
-  border-radius: 0.25rem;
-  color: #000000;
-  font-family: "Futura Bk";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1.42857;
-}
-
-.collapsemenu .select-size-dropdown .toggleicon {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 1rem;
-}
-
-.collapsemenu .select-size-dropdown ul {
-  display: none;
-  position: absolute;
-  z-index: 999;
-  background: #ffffff;
-  width: 100%;
-  list-style-type: none;
-  border: solid 0.0625rem #B7B7B7;
-  border-top: 0;
-  border-bottom-left-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  padding: 0;
-  margin: 0;
-}
-
-.collapsemenu .select-size-dropdown ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: calc(100% / 3);
-  cursor: pointer;
-  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  color: #000000;
-  font-family: "Futura Bk";
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1.42857;
-  padding: 1rem;
-}
-
-.collapsemenu .select-size-dropdown ul li:nth-child(1) {
-  border-bottom: solid 0.0625rem #B7B7B7;
-  border-right: solid 0.0625rem #B7B7B7;
-}
-
-.collapsemenu .select-size-dropdown ul li:nth-child(2) {
-  border-bottom: solid 0.0625rem #B7B7B7;
-  border-right: solid 0.0625rem #B7B7B7;
-}
-
-.collapsemenu .select-size-dropdown ul li:nth-child(3) {
-  border-bottom: solid 0.0625rem #B7B7B7;
-}
-
-.collapsemenu .select-size-dropdown ul li:nth-child(4) {
-  border-bottom: solid 0.0625rem #B7B7B7;
-  border-right: solid 0.0625rem #B7B7B7;
-}
-
-.collapsemenu .select-size-dropdown ul li:nth-child(5) {
-  border-bottom: solid 0.0625rem #B7B7B7;
-  border-right: solid 0.0625rem #B7B7B7;
-}
-
-.collapsemenu .select-size-dropdown ul li:nth-child(6) {
-  border-bottom: solid 0.0625rem #B7B7B7;
-}
-
-.collapsemenu .select-size-dropdown ul li:nth-child(7) {
-  border-right: solid 0.0625rem #B7B7B7;
-}
-
-.collapsemenu .select-size-dropdown ul li:nth-child(8) {
-  border-right: solid 0.0625rem #B7B7B7;
 }
 
 .mybag {
